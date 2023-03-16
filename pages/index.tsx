@@ -18,9 +18,9 @@ const Home: NextPage = () => {
           </a>
         </h1>
 
-        <p className="mt-3 text-2xl">
+        <p className="mt-6 text-2xl">
           Get started by editing{' '}
-          <code className="p-3 font-mono text-lg text-white bg-purple-700 rounded-md">
+          <code className="p-3 font-mono text-lg bg-blue-100 rounded-md">
             pages/index.tsx
           </code>
         </p>
