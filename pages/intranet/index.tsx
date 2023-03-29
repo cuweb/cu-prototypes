@@ -1,44 +1,109 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import type { NextPage } from 'next'
+// import Head from 'next/head'
+// import Image from 'next/image'
+
+import {
+  Main,
+  TopNav,
+  //   Banner,
+  Section,
+  //   Container,
+  FooterBasic,
+  Column,
+  Aside,
+  Panel,
+  StackedList,
+  EventItem,
+  Container,
+} from '@carletonuniversity/rds'
+
+import { EventData as eventData } from '../../data/EventData'
+import { EventsListing } from 'blocks/EventsListing'
+
+const SinglePara = () => {
+  return (
+    <>
+      <p>
+        <strong>Single Paragraph:</strong> Nobis voluptatem dolorum et eum
+        doloremque cupiditate velit. Praesentium architecto a distinctio aut
+        reprehenderit ducimus. Perferendis excepturi delectus nihil voluptatem
+        non. Molestiae quas dolores accusamus in. Praesent quis ligula quis
+        nulla malesuada tempor.
+      </p>
+    </>
+  )
+}
+
+const DoublePara = () => {
+  return (
+    <>
+      <p>
+        <strong>Double Paragraph:</strong> Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Aenean sit amet tortor pellentesque,
+        posuere tellus vitae, sagittis justo. Vivamus imperdiet turpis nec elit
+        ultricies, sed tempus diam dignissim. Suspendisse condimentum magna vel
+        orci vulputate, eget vulputate neque porttitor. Suspendisse euismod,
+        urna et gravida volutpat, tortor risus vehicula nisl, in vulputate
+        lectus dolor viverra est. Etiam quis interdum nisi, et malesuada lectus.
+        Aliquam luctus, velit eget suscipit tincidunt, sem ex tempus turpis,
+        quis pulvinar metus sapien in urna.
+      </p>
+      <p>
+        Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+        architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi
+        delectus nihil voluptatem non. Molestiae quas dolores accusamus in.
+        Praesent quis ligula quis nulla malesuada tempor.
+      </p>
+    </>
+  )
+}
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>CU Intranet</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <TopNav title="Carleton Intranet" />
 
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <Main>
+        <Section>
+          <Container bgColor="grey">
+            <Column maxWidth="7xl" cols="1/3">
+              <Aside>
+                <Panel hasShadow>
+                  <div className="p-4 h-96">UserInfo</div>
+                </Panel>
+                <Panel hasShadow>
+                  <div className="h-48 p-4">Panel</div>
+                </Panel>
+              </Aside>
+              <div>
+                <EventsListing />
+                <Column cols="2">
+                  <div>
+                    <Panel hasShadow>
+                      <div className="h-32 p-4">Panel</div>
+                    </Panel>
+                    <Panel hasShadow>
+                      <div className="p-4 h-96">Panel</div>
+                    </Panel>
+                  </div>
+                  <div>
+                    <Panel hasShadow>
+                      <div className="h-48 p-4">Panel</div>
+                    </Panel>
+                    <Panel hasShadow>
+                      <div className="p-4 h-60">Panel</div>
+                    </Panel>
+                  </div>
+                </Column>
+              </div>
+            </Column>
+          </Container>
+        </Section>
+      </Main>
 
-        <p className="mt-6 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-blue-100 rounded-md">
-            pages/index.tsx
-          </code>
-        </p>
-      </main>
+      <FooterBasic />
+    </>
+  )
+}
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
-  );
-};
-
-export default Home;
+export default Home

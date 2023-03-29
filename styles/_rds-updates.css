@@ -1,0 +1,3 @@
+.cu-panel + .cu-panel {
+  @apply mt-8 md:mt-12;
+}
