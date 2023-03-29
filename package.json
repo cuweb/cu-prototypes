@@ -1,41 +1,43 @@
 {
-    "name": "prototypes",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "clean": "rm -rf node_modules ; npm ci ; npm run build"
-    },
-    "dependencies": {
-        "next": "latest",
-        "react": "18.2.0",
-        "react-dom": "18.2.0"
-    },
-    "devDependencies": {
-        "@carletonuniversity/rds": "^0.0.22",
-        "@commitlint/cli": "^17.5.0",
-        "@commitlint/config-conventional": "^17.4.4",
-        "@headlessui/react": "1.7.12",
-        "@heroicons/react": "^2.0.16",
-        "@types/node": "^18.15.10",
-        "@types/react": "^18.0.29",
-        "@types/react-dom": "^18.0.11",
-        "@typescript-eslint/eslint-plugin": "^5.56.0",
-        "@typescript-eslint/parser": "^5.56.0",
-        "autoprefixer": "^10.4.14",
-        "concurrently": "^7.6.0",
-        "eslint": "^8.36.0",
-        "eslint-config-next": "13.2.4",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-import-resolver-typescript": "^3.5.3",
-        "eslint-plugin-prettier": "^4.2.1",
-        "postcss": "^8.4.21",
-        "postcss-import": "^15.1.0",
-        "prettier": "^2.8.7",
-        "tailwindcss": "^3.2.7",
-        "typescript": "5.0.2"
-    }
+  "name": "prototypes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier -w .",
+    "clean": "rm -rf node_modules ; npm ci ; npm run build"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@carletonuniversity/rds": "^0.0.25",
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@headlessui/react": "1.7.12",
+    "@heroicons/react": "^2.0.16",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.0",
+    "eslint": "^8.37.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.7",
+    "rds-tailwind-theme": "^0.3.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "5.0.2"
+  }
 }
