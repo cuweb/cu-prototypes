@@ -4,7 +4,7 @@ import { MarketplaceData as marketplaceData } from '../data/MarketplaceData'
 
 export const MarketplaceListing = () => {
   return (
-    <StackedList header="Marketplace" hasShadow>
+    <StackedList header="Marketplace" cols="2" hasShadow>
       {marketplaceData.map(
         ({ id, title, link, image, alt, condition, cost, category }) => (
           <MarketplaceItem key={id} as="li" link={link}>

@@ -31,18 +31,24 @@ const Home: NextPage = () => {
                   <div className="p-4 h-96">UserInfo</div>
                 </Panel>
                 <AppsListing />
+                <LinksListing />
               </div>
 
               <div>
                 <EventsListing />
-                <Column cols="2">
+                <MarketplaceListing />
+                {/* <Column cols="2">
                   <div>
-                    <MarketplaceListing />
+                    <Panel hasShadow>
+                      <div className="p-4 h-96">Panel Area</div>
+                    </Panel>
                   </div>
                   <div>
-                    <LinksListing />
+                    <Panel hasShadow>
+                      <div className="p-4 h-96">Panel Area</div>
+                    </Panel>
                   </div>
-                </Column>
+                </Column> */}
               </div>
             </Column>
           </Container>
