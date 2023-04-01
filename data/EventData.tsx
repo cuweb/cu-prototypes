@@ -9,8 +9,7 @@ export const EventData = [
     on_campus: false,
     on_campus_building: null,
     on_campus_room_number: null,
-    featured_image:
-      'https://images.unsplash.com/photo-1664618221700-c741183ff4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    featured_image: 'https://source.unsplash.com/random/400x175',
     tags: {
       category: [
         {
@@ -49,8 +48,7 @@ export const EventData = [
     on_campus: false,
     on_campus_building: null,
     on_campus_room_number: null,
-    featured_image:
-      'https://images.unsplash.com/photo-1664618221700-c741183ff4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    featured_image: 'https://source.unsplash.com/random/400x175',
     tags: {
       category: [
         {
@@ -89,8 +87,7 @@ export const EventData = [
     on_campus: false,
     on_campus_building: null,
     on_campus_room_number: null,
-    featured_image:
-      'https://images.unsplash.com/photo-1664618221700-c741183ff4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    featured_image: 'https://source.unsplash.com/random/400x175',
     tags: {
       category: [
         {
