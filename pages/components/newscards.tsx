@@ -31,13 +31,15 @@ const Home: NextPage = () => {
               ({ id, title, link, image, alt, date, excerpt, tags }) => (
                 <Card key={id}>
                   <Link href={link}>
-                    <Image
-                      src={image}
-                      alt={alt}
-                      width={400}
-                      height={300}
-                      className="object-cover w-full"
-                    />
+                    <Card.Image>
+                      <Image
+                        src={image}
+                        alt={alt}
+                        width={400}
+                        height={300}
+                        className="object-cover w-full"
+                      />
+                    </Card.Image>
                     <Card.Content>
                       <Card.Header text={title} />
                       <Card.Excerpt text={excerpt} />
