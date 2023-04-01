@@ -37,15 +37,10 @@ const Home: NextPage = () => {
                 <Card key={id}>
                   <Link href={link}>
                     <Card.Image>
-                      <Image
-                        src={image}
-                        alt={alt}
-                        width={400}
-                        height={300}
-                        className="object-cover w-full"
-                      />
+                      <Image src={image} alt={alt} width={400} height={300} />
                     </Card.Image>
                     <Card.Content>
+                      <Card.PostMeta date={date} />
                       <Card.Header text={title} />
                       <Card.Excerpt text={excerpt} />
                     </Card.Content>
@@ -59,21 +54,36 @@ const Home: NextPage = () => {
           <Heading text="Event Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {eventData.map(
-              ({ id, title, link, featured_image, startDateTime, tags }) => (
+              ({
+                id,
+                title,
+                link,
+                image,
+                alt,
+                startDate,
+                endDate,
+                on_campus,
+                on_campus_building,
+                on_campus_room_number,
+                event_address,
+                tags,
+              }) => (
                 <Card key={id}>
                   <Link href={link}>
                     <Card.Image>
-                      <Image
-                        src={featured_image}
-                        alt="Need to add alt prop"
-                        width={400}
-                        height={175}
-                        className="object-cover w-full"
-                      />
+                      <Image src={image} alt={alt} width={400} height={175} />
                     </Card.Image>
                     <Card.Content>
-                      <Card.DateBox startDate={startDateTime} />
+                      <Card.DateBox startDate={startDate} />
                       <Card.Header text={title} />
+                      <Card.EventMeta
+                        startDateTime={startDate}
+                        endDateTime={endDate}
+                        onCampus={on_campus}
+                        onCampusBuilding={on_campus_building}
+                        onCampusRoomNumber={on_campus_room_number}
+                        eventAddress={event_address}
+                      />
                     </Card.Content>
                     <Card.Badges tags={tags} />
                   </Link>

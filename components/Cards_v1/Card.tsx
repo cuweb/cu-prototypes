@@ -4,6 +4,8 @@ import { CardImage } from './CardImage'
 import { CardContent } from './CardContent'
 import { CardDateBox } from './CardDateBox'
 import { CardHeader } from './CardHeader'
+import { CardPostMeta } from './CardPostMeta'
+import { CardEventMeta } from './CardEventMeta'
 import { CardExcerpt } from './CardExcerpt'
 import { CardBadges } from './CardBadges'
 
@@ -20,6 +22,8 @@ export const Card = Object.assign(CardWrapper, {
   Content: CardContent,
   DateBox: CardDateBox,
   Header: CardHeader,
+  PostMeta: CardPostMeta,
+  EventMeta: CardEventMeta,
   Excerpt: CardExcerpt,
   Badges: CardBadges,
 })

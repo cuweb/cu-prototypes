@@ -10,6 +10,10 @@
   @apply relative flex flex-col h-full;
 }
 
+.cu-card img {
+  @apply object-cover w-full;
+}
+
 /* Listing Components */
 
 /* .cu-listings a {
