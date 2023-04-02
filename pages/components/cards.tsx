@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { NewsData as newsData } from '../../data/NewsData'
 import { EventData as eventData } from '../../data/EventData'
+import { PeopleData as peopleData } from '../../data/PeopleData'
 import { VideoData as videoData } from '../../data/VideoData'
 
 import {
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
     <>
       <TopNav title="Carleton University" />
       <Banner
-        title="News Cards"
+        title="Card Views"
         paragraph="Component Prototypes"
         align="left"
         maxWidth="7xl"
@@ -91,6 +92,18 @@ const Home: NextPage = () => {
                 </Card>
               ),
             )}
+          </Column>
+
+          <Heading text="People Cards" maxWidth="7xl" />
+          <Column cols="3" maxWidth="7xl">
+            {peopleData.map(({ id, firstName, lastName, tags }) => (
+              <Card key={id}>
+                <Card.Content>
+                  <Card.Header text={`${firstName} ${lastName}`} />
+                </Card.Content>
+                <Card.Badges tags={tags} />
+              </Card>
+            ))}
           </Column>
 
           <Heading text="Video Cards" maxWidth="7xl" />

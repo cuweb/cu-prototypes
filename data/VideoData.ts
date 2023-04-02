@@ -18,25 +18,25 @@ export const VideoData = [
       ],
     },
   },
-  {
-    id: 2,
-    title: 'Return to Campus',
-    source: 'https://www.youtube.com/watch?v=V2vTFG0zfL8',
-    tags: {
-      category: [
-        {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
-        },
-      ],
-    },
-  },
+  //   {
+  //     id: 2,
+  //     title: 'Return to Campus',
+  //     source: 'https://www.youtube.com/watch?v=V2vTFG0zfL8',
+  //     tags: {
+  //       category: [
+  //         {
+  //           id: 3,
+  //           name: 'Category One',
+  //           slug: 'category-one',
+  //         },
+  //         {
+  //           id: 4,
+  //           name: 'Category Two',
+  //           slug: 'category-two',
+  //         },
+  //       ],
+  //     },
+  //   },
   {
     id: 3,
     title: 'Carleton University - A Place Like No Other',
@@ -75,42 +75,42 @@ export const VideoData = [
       ],
     },
   },
-  {
-    id: 5,
-    title: 'Stories from Carleton Students Abroad: Olivia',
-    source: 'https://www.youtube.com/watch?v=bh2x91LLcEY',
-    tags: {
-      category: [
-        {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
-        },
-      ],
-    },
-  },
-  {
-    id: 6,
-    title: 'New Carleton University home page overview',
-    source: 'https://vimeo.com/108970526',
-    tags: {
-      category: [
-        {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
-        },
-      ],
-    },
-  },
+  //   {
+  //     id: 5,
+  //     title: 'Stories from Carleton Students Abroad: Olivia',
+  //     source: 'https://www.youtube.com/watch?v=bh2x91LLcEY',
+  //     tags: {
+  //       category: [
+  //         {
+  //           id: 3,
+  //           name: 'Category One',
+  //           slug: 'category-one',
+  //         },
+  //         {
+  //           id: 4,
+  //           name: 'Category Two',
+  //           slug: 'category-two',
+  //         },
+  //       ],
+  //     },
+  //   },
+  //   {
+  //     id: 6,
+  //     title: 'New Carleton University home page overview',
+  //     source: 'https://vimeo.com/108970526',
+  //     tags: {
+  //       category: [
+  //         {
+  //           id: 3,
+  //           name: 'Category One',
+  //           slug: 'category-one',
+  //         },
+  //         {
+  //           id: 4,
+  //           name: 'Category Two',
+  //           slug: 'category-two',
+  //         },
+  //       ],
+  //     },
+  //   },
 ]
