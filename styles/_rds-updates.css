@@ -14,6 +14,12 @@
   @apply object-cover w-full;
 }
 
+/* Card Figure Images */
+
+.cu-card .cu-figure--round img {
+  @apply object-cover mx-auto border-4 border-white shadow-md rounded-full w-32 h-32 @sm:md:h-48 @sm:md:w-48;
+}
+
 /* Listing Components */
 
 /* .cu-listings a {

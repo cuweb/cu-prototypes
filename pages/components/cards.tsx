@@ -15,7 +15,6 @@ import {
   Column,
   Banner,
   Heading,
-  Container,
 } from '@carletonuniversity/rds'
 
 import { Card } from '@components/Cards_v1/Card'
@@ -109,19 +108,24 @@ const Home: NextPage = () => {
             ))}
           </Column>
 
-          <Container bgColor="grey">
-            <Heading text="People Cards" maxWidth="7xl" isCenter />
-            <Column cols="3" maxWidth="7xl">
-              {peopleData.map(({ id, firstName, lastName, tags }) => (
+          <Heading text="People Cards" maxWidth="7xl" isCenter />
+          <Column cols="3" maxWidth="7xl">
+            {peopleData.map(
+              ({ id, link, firstName, lastName, image, alt, tags }) => (
                 <Card key={id} isCenter>
-                  <Card.Content>
-                    <Card.Header text={`${firstName} ${lastName}`} />
-                  </Card.Content>
-                  <Card.Badges tags={tags} />
+                  <Link href={link}>
+                    <Card.Figure isRound>
+                      <Image src={image} alt={alt} width={280} height={280} />
+                    </Card.Figure>
+                    <Card.Content>
+                      <Card.Header text={`${firstName} ${lastName}`} />
+                    </Card.Content>
+                    <Card.Badges tags={tags} />
+                  </Link>
                 </Card>
-              ))}
-            </Column>
-          </Container>
+              ),
+            )}
+          </Column>
         </Section>
       </Main>
 
