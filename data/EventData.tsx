@@ -119,4 +119,44 @@ export const EventData = [
     },
     multiday: true,
   },
+  {
+    id: 4,
+    title: 'Carleton University Escape Room',
+    link: '#',
+    startDate: '2023-04-09 19:30:00',
+    endDate: '2023-04-15 20:00:00',
+    event_address: '71953 Schmidt Row Apt. 896\nLaurianefurt, TN 88829-0223',
+    on_campus: false,
+    on_campus_building: null,
+    on_campus_room_number: null,
+    image: 'https://source.unsplash.com/random/400x175',
+    alt: `Images need alt text`,
+    tags: {
+      category: [
+        {
+          id: 3,
+          name: 'Category One',
+          slug: 'category-one',
+        },
+        {
+          id: 4,
+          name: 'Category Two',
+          slug: 'category-two',
+        },
+      ],
+      audience: [
+        {
+          id: 1,
+          name: 'Student',
+          slug: 'student',
+        },
+        {
+          id: 2,
+          name: 'Faculty',
+          slug: 'faculty',
+        },
+      ],
+    },
+    multiday: true,
+  },
 ]

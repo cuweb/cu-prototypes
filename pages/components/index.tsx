@@ -31,7 +31,7 @@ const Content = () => {
   )
 }
 
-const Home: NextPage = () => {
+const Components: NextPage = () => {
   return (
     <>
       <TopNav title="Carleton University" />
@@ -50,4 +50,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Components

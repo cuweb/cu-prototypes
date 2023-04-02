@@ -77,4 +77,30 @@ export const PeopleData = [
       ],
     },
   },
+  {
+    id: 4,
+    firstName: 'Will',
+    lastName: 'Smith',
+    link: '#',
+    image: 'https://source.unsplash.com/random/400x400',
+    alt: 'Image needs alt text',
+    // jobTitle: 'Butler, Former Olympic Runner',
+    email: 'will.smith@freshprince.tv',
+    phone: '613-520-2600',
+    phoneExt: '3825',
+    tags: {
+      category: [
+        {
+          id: 3,
+          name: 'Category One',
+          slug: 'category-one',
+        },
+        {
+          id: 4,
+          name: 'Category Two',
+          slug: 'category-two',
+        },
+      ],
+    },
+  },
 ]

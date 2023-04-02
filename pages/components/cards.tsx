@@ -18,9 +18,8 @@ import {
 } from '@carletonuniversity/rds'
 
 import { Card } from '@components/Cards_v1/Card'
-import { CardPeopleMeta } from '@components/Cards_v1/CardPeopleMeta'
 
-const Home: NextPage = () => {
+const Cards: NextPage = () => {
   return (
     <>
       <TopNav title="Carleton University" />
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <Heading text="News Cards" maxWidth="7xl" />
+          <Heading text="Card Component" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {newsData.map(
               ({ id, title, link, image, alt, date, excerpt, tags }) => (
@@ -117,11 +116,8 @@ const Home: NextPage = () => {
                     </Card.Figure>
                     <Card.Content>
                       <Card.Header text={`${firstName} ${lastName}`} />
-                      <CardPeopleMeta
-                        jobTitle={jobTitle}
-                        email={email}
-                        phone={phone}
-                      />
+                      <Card.Subheader text={jobTitle} />
+                      <Card.PeopleMeta email={email} phone={phone} />
                     </Card.Content>
                     <Card.Badges tags={tags} />
                   </Link>
@@ -151,4 +147,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Cards
