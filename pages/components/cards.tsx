@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { NewsData as newsData } from '../../data/NewsData'
 import { EventData as eventData } from '../../data/EventData'
@@ -17,7 +18,6 @@ import {
 } from '@carletonuniversity/rds'
 
 import { Card } from '@components/Cards_v1/Card'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
             )}
           </Column>
 
-          <Heading text="People Cards" maxWidth="7xl" />
+          {/* <Heading text="People Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {peopleData.map(({ id, firstName, lastName, tags }) => (
               <Card key={id}>
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
                 <Card.Badges tags={tags} />
               </Card>
             ))}
-          </Column>
+          </Column> */}
 
           <Heading text="Video Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
