@@ -18,6 +18,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { Card } from '@components/Cards_v1/Card'
+import { CardPeopleMeta } from '@components/Cards_v1/CardPeopleMeta'
 
 const Home: NextPage = () => {
   return (
@@ -108,10 +109,21 @@ const Home: NextPage = () => {
             ))}
           </Column>
 
-          <Heading text="People Cards" maxWidth="7xl" isCenter />
+          <Heading text="People Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {peopleData.map(
-              ({ id, link, firstName, lastName, image, alt, tags }) => (
+              ({
+                id,
+                link,
+                firstName,
+                lastName,
+                jobTitle,
+                email,
+                phone,
+                image,
+                alt,
+                tags,
+              }) => (
                 <Card key={id} isCenter>
                   <Link href={link}>
                     <Card.Figure isRound>
@@ -119,6 +131,11 @@ const Home: NextPage = () => {
                     </Card.Figure>
                     <Card.Content>
                       <Card.Header text={`${firstName} ${lastName}`} />
+                      <CardPeopleMeta
+                        jobTitle={jobTitle}
+                        email={email}
+                        phone={phone}
+                      />
                     </Card.Content>
                     <Card.Badges tags={tags} />
                   </Link>

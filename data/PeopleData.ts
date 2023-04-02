@@ -59,7 +59,7 @@ export const PeopleData = [
     image: 'https://source.unsplash.com/random/400x400',
     alt: 'Image needs alt text',
     jobTitle: 'Butler, Former Olympic Runner',
-    email: 'philip.banks@freshprince.tv',
+    email: 'geoffrey.butler@freshprince.tv',
     phone: '613-520-2600',
     phoneExt: '3825',
     tags: {

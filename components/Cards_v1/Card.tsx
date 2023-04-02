@@ -9,6 +9,7 @@ import { CardExcerpt } from './CardExcerpt'
 import { CardBadges } from './CardBadges'
 import { CardPostMeta } from './CardPostMeta'
 import { CardEventMeta } from './CardEventMeta'
+import { CardPeopleMeta } from './CardPeopleMeta'
 import { CardVideoMeta } from './CardVideoMeta'
 
 export interface CardProps {
@@ -31,5 +32,6 @@ export const Card = Object.assign(CardWrapper, {
   Badges: CardBadges,
   PostMeta: CardPostMeta,
   EventMeta: CardEventMeta,
+  PeopleMeta: CardPeopleMeta,
   VideoMeta: CardVideoMeta,
 })

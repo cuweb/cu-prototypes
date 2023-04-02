@@ -14,6 +14,7 @@ export const figureStyles = {
 
 export const metaStyles = {
   singleItem: `flex items-start text-sm italic text-cu-black-600`,
+  singleLarge: `text-sm italic text-cu-black-600 @sm:md:text-lg`,
   multiWrapper: `flex flex-col gap-2 mt-4`,
   multiItem: `flex text-sm text-cu-black-600 @sm:md:text-base`,
   icon: `flex-shrink-0 w-6 h-6 mr-2 text-cu-red-300`,
