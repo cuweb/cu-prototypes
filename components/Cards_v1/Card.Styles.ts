@@ -20,3 +20,8 @@ export const eventStyles = {
   dateBoxMonth: `text-xs font-bold uppercase text-cu-red group-hover:text-white`,
   dateBoxDay: `text-2xl font-bold uppercase text-cu-black-800 group-hover:text-white`,
 }
+
+export const videoStyle = {
+  container: `relative pt-[56.25%]`,
+  player: `absolute top-0 left-0`,
+}

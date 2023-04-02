@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { NewsData as newsData } from '../../data/NewsData'
 import { EventData as eventData } from '../../data/EventData'
+import { VideoData as videoData } from '../../data/VideoData'
 
 import {
   Main,
@@ -36,9 +37,9 @@ const Home: NextPage = () => {
               ({ id, title, link, image, alt, date, excerpt, tags }) => (
                 <Card key={id}>
                   <Link href={link}>
-                    <Card.Image>
+                    <Card.Figure>
                       <Image src={image} alt={alt} width={400} height={300} />
-                    </Card.Image>
+                    </Card.Figure>
                     <Card.Content>
                       <Card.PostMeta date={date} />
                       <Card.Header text={title} />
@@ -70,9 +71,9 @@ const Home: NextPage = () => {
               }) => (
                 <Card key={id}>
                   <Link href={link}>
-                    <Card.Image>
+                    <Card.Figure>
                       <Image src={image} alt={alt} width={400} height={175} />
-                    </Card.Image>
+                    </Card.Figure>
                     <Card.Content>
                       <Card.DateBox startDate={startDate} />
                       <Card.Header text={title} />
@@ -90,6 +91,20 @@ const Home: NextPage = () => {
                 </Card>
               ),
             )}
+          </Column>
+
+          <Heading text="Video Cards" maxWidth="7xl" />
+          <Column cols="3" maxWidth="7xl">
+            {videoData.map(({ id, source, title, tags }) => (
+              <Card key={id}>
+                <Card.Video source={source} />
+                <Card.Content>
+                  <Card.VideoMeta duration="2m 38s" />
+                  <Card.Header text={title} />
+                </Card.Content>
+                <Card.Badges tags={tags} />
+              </Card>
+            ))}
           </Column>
         </Section>
       </Main>
