@@ -94,7 +94,7 @@ const Home: NextPage = () => {
             )}
           </Column>
 
-          {/* <Heading text="People Cards" maxWidth="7xl" />
+          <Heading text="People Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {peopleData.map(({ id, firstName, lastName, tags }) => (
               <Card key={id}>
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
                 <Card.Badges tags={tags} />
               </Card>
             ))}
-          </Column> */}
+          </Column>
 
           <Heading text="Video Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
@@ -113,6 +113,7 @@ const Home: NextPage = () => {
                 <Card.Video source={source} />
                 <Card.Content>
                   <Card.VideoMeta duration="2m 38s" />
+                  <Card.VideoMeta />
                   <Card.Header text={title} />
                 </Card.Content>
                 <Card.Badges tags={tags} />

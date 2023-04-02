@@ -22,6 +22,6 @@ export const eventStyles = {
 }
 
 export const videoStyle = {
-  container: `relative pt-[56.25%]`,
+  container: `relative pt-[56.25%] bg-cu-black-900`,
   player: `absolute top-0 left-0`,
 }
