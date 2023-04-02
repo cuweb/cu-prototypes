@@ -15,6 +15,7 @@ import {
   Column,
   Banner,
   Heading,
+  Container,
 } from '@carletonuniversity/rds'
 
 import { Card } from '@components/Cards_v1/Card'
@@ -94,18 +95,6 @@ const Home: NextPage = () => {
             )}
           </Column>
 
-          <Heading text="People Cards" maxWidth="7xl" />
-          <Column cols="3" maxWidth="7xl">
-            {peopleData.map(({ id, firstName, lastName, tags }) => (
-              <Card key={id}>
-                <Card.Content>
-                  <Card.Header text={`${firstName} ${lastName}`} />
-                </Card.Content>
-                <Card.Badges tags={tags} />
-              </Card>
-            ))}
-          </Column>
-
           <Heading text="Video Cards" maxWidth="7xl" />
           <Column cols="3" maxWidth="7xl">
             {videoData.map(({ id, source, title, tags }) => (
@@ -119,6 +108,20 @@ const Home: NextPage = () => {
               </Card>
             ))}
           </Column>
+
+          <Container bgColor="grey">
+            <Heading text="People Cards" maxWidth="7xl" isCenter />
+            <Column cols="3" maxWidth="7xl">
+              {peopleData.map(({ id, firstName, lastName, tags }) => (
+                <Card key={id} isCenter>
+                  <Card.Content>
+                    <Card.Header text={`${firstName} ${lastName}`} />
+                  </Card.Content>
+                  <Card.Badges tags={tags} />
+                </Card>
+              ))}
+            </Column>
+          </Container>
         </Section>
       </Main>
 

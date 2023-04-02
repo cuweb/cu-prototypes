@@ -13,10 +13,12 @@ import { CardVideoMeta } from './CardVideoMeta'
 
 export interface CardProps {
   children: React.ReactNode
+  isCenter?: boolean
 }
 
-export const CardWrapper = ({ children }: CardProps) => {
-  return <div className={styles.card}>{children}</div>
+export const CardWrapper = ({ children, isCenter }: CardProps) => {
+  const centerText = isCenter ? 'text-center' : ''
+  return <div className={`${styles.card} ${centerText}`}>{children}</div>
 }
 
 export const Card = Object.assign(CardWrapper, {
