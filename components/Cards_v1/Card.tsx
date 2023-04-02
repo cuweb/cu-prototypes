@@ -16,7 +16,7 @@ export interface CardProps {
 }
 
 export const CardWrapper = ({ children }: CardProps) => {
-  return <div className={`${styles.card}`}>{children}</div>
+  return <div className={styles.card}>{children}</div>
 }
 
 export const Card = Object.assign(CardWrapper, {

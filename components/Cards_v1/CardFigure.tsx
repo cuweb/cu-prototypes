@@ -6,5 +6,5 @@ export interface CardFigureProps {
 }
 
 export const CardFigure = ({ children }: CardFigureProps) => {
-  return <figure className={`${styles.figure}`}>{children}</figure>
+  return <figure className={styles.figure}>{children}</figure>
 }

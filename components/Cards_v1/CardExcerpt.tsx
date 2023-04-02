@@ -7,9 +7,9 @@ export interface CardExcerptProps {
 
 export const CardExcerpt = ({ text }: CardExcerptProps) => {
   return (
-    <p className={`${styles.excerpt}`}>
+    <p className={styles.excerpt}>
       {text.length > 170 ? `${text.substring(0, 170)}...` : text}
-      <span className={`${styles.more}`}> Read more</span>
+      <span className={styles.more}> Read more</span>
     </p>
   )
 }

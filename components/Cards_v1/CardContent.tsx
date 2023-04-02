@@ -6,5 +6,5 @@ export interface CardContentProps {
 }
 
 export const CardContent = ({ children }: CardContentProps) => {
-  return <div className={`${styles.content}`}>{children}</div>
+  return <div className={styles.content}>{children}</div>
 }

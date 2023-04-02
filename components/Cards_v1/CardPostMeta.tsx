@@ -14,5 +14,5 @@ export const CardPostMeta = ({ date }: CardPostMetaProps) => {
       })
     : null
 
-  return <time className={`${metaStyles.singleItem}`}>{formatedDate}</time>
+  return <time className={metaStyles.singleItem}>{formatedDate}</time>
 }

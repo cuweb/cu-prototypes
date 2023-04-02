@@ -64,20 +64,14 @@ export const CardEventMeta = ({
     if (!isEventSameDay) {
       return (
         <>
-          <CalendarDaysIcon
-            className="flex-shrink-0 w-6 h-6 mr-2 text-cu-red-300"
-            aria-hidden="true"
-          />
+          <CalendarDaysIcon className={metaStyles.icon} aria-hidden="true" />
           {multiDayEvent}
         </>
       )
     } else {
       return (
         <>
-          <ClockIcon
-            className="flex-shrink-0 w-6 h-6 mr-2 text-cu-red-300"
-            aria-hidden="true"
-          />
+          <ClockIcon className={metaStyles.icon} aria-hidden="true" />
           {singleDayEvent}
         </>
       )
@@ -85,10 +79,10 @@ export const CardEventMeta = ({
   }
 
   return (
-    <ul className={`${metaStyles.multiWrapper}`}>
-      <li className={`${metaStyles.multiItem}`}>{multiDayDisplay()}</li>
-      <li className={`${metaStyles.multiItem}`}>
-        <MapPinIcon className={`${metaStyles.icon}`} aria-hidden="true" />
+    <ul className={metaStyles.multiWrapper}>
+      <li className={metaStyles.multiItem}>{multiDayDisplay()}</li>
+      <li className={metaStyles.multiItem}>
+        <MapPinIcon className={metaStyles.icon} aria-hidden="true" />
         {onCampus ? onCampusRoomNumber + ' ' + onCampusBuilding : eventAddress}
       </li>
     </ul>

@@ -7,7 +7,6 @@ export interface CardDateBoxProps {
 }
 
 export const CardDateBox = ({ startDate }: CardDateBoxProps) => {
-  // Get event month
   const getMonthName = (month: number, short = false) => {
     const d = new Date()
     d.setMonth(month)
@@ -17,16 +16,16 @@ export const CardDateBox = ({ startDate }: CardDateBoxProps) => {
     return monthName
   }
 
-  const parseStartDate = parseISO(startDate)
-  const eventStartDate = getDate(parseStartDate)
-  const eventStartMonth = getMonth(parseStartDate)
+  const getStartDate = parseISO(startDate)
+  const eventStartDate = getDate(getStartDate)
+  const eventStartMonth = getMonth(getStartDate)
 
   return (
-    <div className={`${eventStyles.dateBox}`}>
-      <p className={`${eventStyles.dateBoxMonth}`}>
+    <div className={eventStyles.dateBox}>
+      <p className={eventStyles.dateBoxMonth}>
         {getMonthName(eventStartMonth, true)}
       </p>
-      <p className={`${eventStyles.dateBoxDay}`}>{eventStartDate}</p>
+      <p className={eventStyles.dateBoxDay}>{eventStartDate}</p>
     </div>
   )
 }
