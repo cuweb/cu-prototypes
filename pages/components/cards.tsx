@@ -113,7 +113,6 @@ const Home: NextPage = () => {
                 <Card.Video source={source} />
                 <Card.Content>
                   <Card.VideoMeta duration="2m 38s" />
-                  <Card.VideoMeta />
                   <Card.Header text={title} />
                 </Card.Content>
                 <Card.Badges tags={tags} />
