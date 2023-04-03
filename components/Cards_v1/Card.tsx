@@ -5,7 +5,6 @@ import { CardVideo } from './CardVideo'
 import { CardContent } from './CardContent'
 import { CardDateBox } from './CardDateBox'
 import { CardHeader } from './CardHeader'
-import { CardSubheader } from './CardSubheader'
 import { CardExcerpt } from './CardExcerpt'
 import { CardBadges } from './CardBadges'
 import { CardPostMeta } from './CardPostMeta'
@@ -29,7 +28,6 @@ export const Card = Object.assign(CardWrapper, {
   Content: CardContent,
   DateBox: CardDateBox,
   Header: CardHeader,
-  Subheader: CardSubheader,
   Excerpt: CardExcerpt,
   Badges: CardBadges,
   PostMeta: CardPostMeta,

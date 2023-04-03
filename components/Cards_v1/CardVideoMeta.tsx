@@ -7,10 +7,8 @@ export interface CardVideoMetaProps {
 
 export const CardVideoMeta = ({ duration }: CardVideoMetaProps) => {
   return (
-    <div>
-      <p className={metaStyles.singleItem}>
-        {duration && 'Duration: ' + duration}
-      </p>
-    </div>
+    <p className={`${metaStyles.item} ${metaStyles.italic}`}>
+      {duration && 'Duration: ' + duration}
+    </p>
   )
 }

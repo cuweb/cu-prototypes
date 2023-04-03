@@ -57,8 +57,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -94,8 +97,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -131,8 +137,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -168,8 +177,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -208,8 +220,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -245,8 +260,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -282,8 +300,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>
@@ -319,8 +340,11 @@ const PeopleCards: NextPage = () => {
                         </Card.Figure>
                         <Card.Content>
                           <Card.Header text={`${firstName} ${lastName}`} />
-                          <Card.Subheader text={jobTitle} />
-                          <Card.PeopleMeta email={email} phone={phone} />
+                          <Card.PeopleMeta
+                            jobTitle={jobTitle}
+                            email={email}
+                            phone={phone}
+                          />
                         </Card.Content>
                         <Card.Badges tags={tags} />
                       </Link>

@@ -9,6 +9,7 @@ export interface CardVideoProps {
 export const CardVideo = ({ source }: CardVideoProps) => {
   const [initialRender, setInitialRender] = useState(false)
   //   const [videoDuration, setVideoDuration] = useState(0)
+  //   console.log(videoDuration);
 
   // Run after first render and load the video player
   useEffect(() => {

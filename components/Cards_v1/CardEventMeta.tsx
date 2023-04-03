@@ -79,11 +79,11 @@ export const CardEventMeta = ({
   }
 
   return (
-    <ul className={metaStyles.multiWrapper}>
-      <li className={`${metaStyles.multiItem} ${metaStyles.alignIcon}`}>
+    <ul className={metaStyles.wrapper}>
+      <li className={`${metaStyles.item} ${metaStyles.alignIcon}`}>
         {multiDayDisplay()}
       </li>
-      <li className={`${metaStyles.multiItem} ${metaStyles.alignIcon}`}>
+      <li className={`${metaStyles.item} ${metaStyles.alignIcon}`}>
         <MapPinIcon className={metaStyles.redIcon} aria-hidden="true" />
         {onCampus ? onCampusRoomNumber + ' ' + onCampusBuilding : eventAddress}
       </li>

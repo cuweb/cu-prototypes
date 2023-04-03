@@ -2,17 +2,31 @@ import React from 'react'
 import { metaStyles } from './Card.Styles'
 
 export interface CardPeopleMetaProps {
+  jobTitle?: string
   email?: string
   phone?: string
 }
 
-export const CardPeopleMeta = ({ email, phone }: CardPeopleMetaProps) => {
+export const CardPeopleMeta = ({
+  jobTitle,
+  email,
+  phone,
+}: CardPeopleMetaProps) => {
   return (
-    <ul className={metaStyles.multiWrapper}>
-      <li className={`${metaStyles.multiItem} ${metaStyles.itemBold}`}>
-        {email}
-      </li>
-      <li className={metaStyles.multiItem}>{phone}</li>
+    <ul className={metaStyles.wrapper}>
+      {jobTitle && (
+        <li
+          className={`${metaStyles.item} ${metaStyles.itemLarge} ${metaStyles.italic}`}
+        >
+          {jobTitle}
+        </li>
+      )}
+      {email && (
+        <li className={metaStyles.item}>
+          <strong className={metaStyles.bold}>{email}</strong>
+        </li>
+      )}
+      {phone && <li className={metaStyles.item}>{phone}</li>}
     </ul>
   )
 }
