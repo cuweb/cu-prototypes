@@ -9,8 +9,8 @@ export const EventsListing = () => {
         ({
           link,
           title,
-          startDateTime,
-          endDateTime,
+          startDate,
+          endDate,
           event_address,
           on_campus,
           on_campus_building,
@@ -22,8 +22,8 @@ export const EventsListing = () => {
             key={567}
             link={link}
             title={title}
-            startDateTime={startDateTime}
-            endDateTime={endDateTime}
+            startDateTime={startDate}
+            endDateTime={endDate}
             event_address={event_address}
             on_campus={on_campus}
             on_campus_building={on_campus_building}
