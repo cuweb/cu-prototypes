@@ -14,7 +14,7 @@ import {
   Container,
 } from '@carletonuniversity/rds'
 
-import { Card } from '@components/Cards_v1/Card'
+import { Card } from '@components/Card/Card'
 
 const PeopleCards: NextPage = () => {
   return (
