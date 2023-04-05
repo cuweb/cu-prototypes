@@ -16,9 +16,10 @@ import {
   Banner,
   Heading,
   Container,
+  Card,
 } from '@carletonuniversity/rds'
 
-import { Card } from '@components/Card/Card'
+// import { Card } from '@components/Card/Card'
 
 const Cards: NextPage = () => {
   return (
@@ -476,7 +477,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -488,7 +488,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -500,7 +499,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -512,7 +510,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />

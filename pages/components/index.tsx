@@ -6,7 +6,10 @@ import {
   Section,
   FooterBasic,
   Banner,
+  Card,
 } from '@carletonuniversity/rds'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Content = () => {
   return (
@@ -40,6 +43,41 @@ const Components: NextPage = () => {
       <Main>
         <Section hasProse>
           <Content />
+
+          <Card>
+            <Link href="#">
+              <Card.Figure>
+                <Image
+                  alt="Image alt text"
+                  height="266"
+                  src="https://source.unsplash.com/random/400x266"
+                  width="400"
+                />
+              </Card.Figure>
+              <Card.Content>
+                <Card.PostMeta date="2023-03-28 10:27:31" />
+                <Card.Header text="End-of-Year Reflections and Resolutions for Our Web Services Team" />
+                <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst. Nulla porta posuere est, aliquam mollis mi accumsan id. Morbi mauris ex, gravida eu sodales sed, tempor vel mauris." />
+              </Card.Content>
+              <Card.Badges
+                tags={{
+                  category: [
+                    {
+                      id: 3,
+                      name: 'Category One',
+                      slug: 'category-one',
+                    },
+                    {
+                      id: 4,
+                      name: 'Category Two',
+                      slug: 'category-two',
+                    },
+                  ],
+                }}
+              />
+            </Link>
+          </Card>
+
           <Content />
           <Content />
         </Section>
