@@ -1,5 +1,5 @@
 export const styles = {
-  base: `not-prose group relative overflow-hidden @container cu-listings`,
+  base: `not-prose group relative overflow-hidden @container bg-white hover:bg-slate-50`,
   content: `flex flex-1 flex-col gap-1.5 pr-6 md:gap-3.5 @lg:md:pt-1.5`,
   header: `text-lg font-semibold text-cu-black group-hover:text-cu-red @lg:md:text-xl @4xl:lg:text-2xl`,
   excerpt: `text-sm text-cu-black-900 md:text-base @lg:md:text-lg`,
@@ -27,9 +27,4 @@ export const eventStyles = {
   dateBox: `h-20 w-20 @lg:lg:h-32 @lg:lg:w-32 flex-col items-center justify-center rounded-md bg-white shadow-md group-hover:bg-cu-red flex`,
   dateBoxMonth: `text-xs @lg:lg:text-lg font-bold uppercase text-cu-red group-hover:text-white`,
   dateBoxDay: `text-2xl @lg:lg:text-4xl font-bold uppercase text-cu-black-800 group-hover:text-white`,
-}
-
-export const videoStyle = {
-  container: ``,
-  player: ``,
 }

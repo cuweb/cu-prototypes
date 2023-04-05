@@ -6,9 +6,8 @@
 
 /* Listing Components */
 
-.cu-listings a {
-  /* @apply relative flex h-full cursor-pointer flex-col gap-6 bg-white p-6 group-hover:bg-slate-50 focus:outline-none @xl:md:flex-row @2xl:lg:gap-8; */
-  @apply relative flex items-start h-full cursor-pointer flex-col gap-6 bg-white p-6 group-hover:bg-slate-50 focus:outline-none @xl:md:flex-row @2xl:lg:gap-8;
+.cu-listing a {
+  @apply relative flex items-start h-full flex-col gap-6 p-6 focus:outline-none @xl:md:flex-row @2xl:lg:gap-8;
 }
 
 /* Card & Listing Shared */
