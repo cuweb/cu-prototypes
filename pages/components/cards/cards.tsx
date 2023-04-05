@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { NewsData as newsData } from '../../data/NewsData'
-import { EventData as eventData } from '../../data/EventData'
-import { PeopleData as peopleData } from '../../data/PeopleData'
-import { VideoData as videoData } from '../../data/VideoData'
+import { NewsData as newsData } from '../../../data/NewsData'
+import { EventData as eventData } from '../../../data/EventData'
+import { PeopleData as peopleData } from '../../../data/PeopleData'
+import { VideoData as videoData } from '../../../data/VideoData'
 
 import {
   Main,
@@ -16,9 +16,10 @@ import {
   Banner,
   Heading,
   Container,
+  Card,
 } from '@carletonuniversity/rds'
 
-import { Card } from '@components/Card/Card'
+// import { Card } from '@components/Card/Card'
 
 const Cards: NextPage = () => {
   return (
@@ -476,7 +477,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -488,7 +488,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -500,7 +499,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -512,7 +510,6 @@ const Cards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />

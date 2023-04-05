@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { VideoData as videoData } from '../../data/VideoData'
+import { VideoData as videoData } from '../../../data/VideoData'
 
 import {
   Main,
@@ -31,7 +31,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -43,7 +42,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -55,7 +53,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -67,7 +64,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -82,7 +78,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -94,7 +89,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -106,7 +100,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />
@@ -118,7 +111,6 @@ const NewsCards: NextPage = () => {
                 <Card key={id}>
                   <Card.Video source={source} />
                   <Card.Content>
-                    <Card.VideoMeta duration="2m 38s" />
                     <Card.Header text={title} />
                   </Card.Content>
                   <Card.Badges tags={tags} />

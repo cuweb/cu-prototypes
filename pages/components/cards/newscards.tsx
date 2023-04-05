@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { NewsData as newsData } from '../../data/NewsData'
+import { NewsData as newsData } from '../../../data/NewsData'
 
 import {
   Main,
@@ -29,6 +29,23 @@ const NewsCards: NextPage = () => {
       <Main>
         <Section hasProse>
           <Container>
+            {newsData
+              .slice(0, 1)
+              .map(({ id, title, link, image, alt, date, excerpt, tags }) => (
+                <Card key={id}>
+                  <Link href={link}>
+                    <Card.Figure>
+                      <Image src={image} alt={alt} width={400} height={300} />
+                    </Card.Figure>
+                    <Card.Content>
+                      <Card.PostMeta date={date} />
+                      <Card.Header text={title} />
+                      <Card.Excerpt text={excerpt} />
+                    </Card.Content>
+                    <Card.Badges tags={tags} />
+                  </Link>
+                </Card>
+              ))}
             <Column cols="2" maxWidth="5xl">
               {newsData
                 .slice(0, 2)

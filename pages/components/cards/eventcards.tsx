@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { EventData as eventData } from '../../data/EventData'
+import { EventData as eventData } from '../../../data/EventData'
 
 import {
   Main,

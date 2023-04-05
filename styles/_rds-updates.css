@@ -1,27 +1,25 @@
-/* Layouts and Spacing */
-
-.cu-panel + .cu-panel {
-  @apply mt-8 md:mt-12;
-}
-
 /* Card Components */
 
 .cu-card a {
   @apply relative flex flex-col h-full;
 }
 
-.cu-card img {
+/* Listing Components */
+
+.cu-listings a {
+  /* @apply relative flex h-full cursor-pointer flex-col gap-6 bg-white p-6 group-hover:bg-slate-50 focus:outline-none @xl:md:flex-row @2xl:lg:gap-8; */
+  @apply relative flex items-start h-full cursor-pointer flex-col gap-6 bg-white p-6 group-hover:bg-slate-50 focus:outline-none @xl:md:flex-row @2xl:lg:gap-8;
+}
+
+/* Card & Listing Shared */
+
+.cu-card img,
+.cu-listing img {
   @apply object-cover w-full;
 }
 
 /* Card Figure Images */
 
 .cu-card .cu-figure--round img {
-  @apply object-cover mx-auto border-4 border-white shadow-md rounded-full w-32 h-32 @sm:md:h-48 @sm:md:w-48;
+  @apply mx-auto h-32 w-32 rounded-full border-4 border-white object-cover shadow-md @sm:md:h-48 @sm:md:w-48;
 }
-
-/* Listing Components */
-
-/* .cu-listings a {
-  @apply group relative flex h-full cursor-pointer flex-col gap-4 bg-white p-6 hover:bg-slate-50 @lg:md:flex-row @lg:md:gap-8;
-} */
