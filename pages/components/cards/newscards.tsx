@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { NewsData as newsData } from '../../data/NewsData'
+import { NewsData as newsData } from '../../../data/NewsData'
 
 import {
   Main,

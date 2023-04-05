@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { VideoData as videoData } from '../../data/VideoData'
+import { VideoData as videoData } from '../../../data/VideoData'
 
 import {
   Main,
