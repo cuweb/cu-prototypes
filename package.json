@@ -16,7 +16,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@carletonuniversity/rds": "^0.0.30",
+    "@carletonuniversity/rds": "^0.0.33",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@headlessui/react": "1.7.12",
@@ -28,16 +28,16 @@
     "@typescript-eslint/parser": "^5.57.1",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.0.1",
-    "eslint": "^8.37.0",
-    "eslint-config-next": "13.2.4",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.21",
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.7",
     "rds-tailwind-theme": "^0.3.0",
     "tailwindcss": "^3.3.1",
-    "typescript": "5.0.3"
+    "typescript": "5.0.4"
   }
 }

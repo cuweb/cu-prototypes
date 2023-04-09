@@ -15,6 +15,7 @@ import { EventsListing } from 'blocks/EventsListing'
 import { LinksListing } from 'blocks/LinksListing'
 import { AppsListing } from 'blocks/AppsListing'
 import { MarketplaceListing } from 'blocks/MarketplaceListing'
+import { BulletinListing } from 'blocks/BulletinListing'
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
               </div>
 
               <div>
+                <BulletinListing />
                 <EventsListing />
                 <MarketplaceListing />
                 {/* <Column cols="2">
