@@ -1,6 +1,6 @@
 import React from 'react'
 import { MarketplaceItem, StackedList } from '@carletonuniversity/rds'
-import { MarketplaceData as marketplaceData } from '../data/MarketplaceData'
+import { MarketplaceData as marketplaceData } from '../../../data/MarketplaceData'
 
 export const MarketplaceListing = () => {
   return (

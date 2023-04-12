@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Listing, StackedList } from '@carletonuniversity/rds'
-import { EventData as eventData } from '../data/EventData'
+import { EventData as eventData } from '../../../data/EventData'
 
 export const EventsListing = () => {
   return (
