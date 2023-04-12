@@ -3,7 +3,8 @@ export const NewsData = [
     id: 1,
     title: 'End-of-Year Reflections and Resolutions for Our Web Services Team',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam nulla eget est viverra, et tristique velit elementum. Aliquam ultrices vitae felis sit amet pharetra. Vivamus vitae dui mi. Quisque vitae nibh at orci lobortis rhoncus eu at mi. Nulla facilisi. In hac habitasse platea dictumst. Curabitur sed lectus risus.',
@@ -27,7 +28,8 @@ export const NewsData = [
     id: 2,
     title: ' How to Write for the Web',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Proin placerat non nisl sed ullamcorper. Maecenas ultrices diam a lorem feugiat feugiat. Curabitur ultrices egestas tortor vel feugiat. Mauris vitae massa vulputate, dignissim ipsum interdum, maximus nunc.',
@@ -46,7 +48,8 @@ export const NewsData = [
     id: 3,
     title: 'Captivating Captions: Why We Use Captions on Videos',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Donec dolor sapien, aliquet eu nibh vel, laoreet aliquam arcu. Suspendisse potenti. Nulla varius, enim nec maximus.',
@@ -65,7 +68,8 @@ export const NewsData = [
     id: 4,
     title: ' How to Write for the Web',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Proin placerat non nisl sed ullamcorper. Maecenas ultrices diam a lorem feugiat feugiat. Curabitur ultrices egestas tortor vel feugiat. Mauris vitae massa vulputate, dignissim ipsum interdum, maximus nunc.',
@@ -84,7 +88,8 @@ export const NewsData = [
     id: 5,
     title: 'Captivating Captions: Why We Use Captions on Videos',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Donec dolor sapien, aliquet eu nibh vel, laoreet aliquam arcu. Suspendisse potenti. Nulla varius, enim nec maximus.',
@@ -103,7 +108,8 @@ export const NewsData = [
     id: 6,
     title: 'End-of-Year Reflections and Resolutions for Our Web Services Team',
     link: '#',
-    image: 'https://source.unsplash.com/random/400x300',
+    // image: 'https://source.unsplash.com/random/400x300',
+    image: '/sample-imgs/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam nulla eget est viverra, et tristique velit elementum. Aliquam ultrices vitae felis sit amet pharetra. Vivamus vitae dui mi. Quisque vitae nibh at orci lobortis rhoncus eu at mi. Nulla facilisi. In hac habitasse platea dictumst. Curabitur sed lectus risus.',

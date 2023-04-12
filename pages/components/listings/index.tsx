@@ -9,9 +9,9 @@ import {
   FooterBasic,
   Banner,
   StackedList,
+  Listing,
 } from '@carletonuniversity/rds'
 
-import { Listing } from '@components/Listings/Listing'
 import { NewsData as newsData } from '../../../data/NewsData'
 import { EventData as eventData } from '../../../data/EventData'
 import { PeopleData as peopleData } from '../../../data/PeopleData'
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                 <Listing key={id}>
                   <Link href={link}>
                     <Listing.Figure>
-                      <Image src={image} alt={alt} width="400" height="175" />
+                      <Image src={image} alt={alt} width="400" height="266" />
                     </Listing.Figure>
                     <Listing.Content>
                       <Listing.PostMeta date={date} />
@@ -128,8 +128,8 @@ const Home: NextPage = () => {
                 }) => (
                   <Listing key={id}>
                     <Link href={link}>
-                      <Listing.Figure>
-                        <Image src={image} alt={alt} width="400" height="175" />
+                      <Listing.Figure size="small">
+                        <Image src={image} alt={alt} width="400" height="400" />
                       </Listing.Figure>
                       <Listing.Content>
                         <Listing.Header text={`${firstName} ${lastName}`} />
