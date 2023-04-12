@@ -11,7 +11,7 @@ import {
   Container,
 } from '@carletonuniversity/rds'
 
-import { Card } from '@components/Card/Card'
+import { Card } from '@carletonuniversity/rds'
 
 const NewsCards: NextPage = () => {
   return (
