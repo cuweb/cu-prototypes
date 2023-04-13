@@ -13,6 +13,7 @@ import {
 import { EventsListing } from '../../blocks/intranet/EventsListing'
 import { LinksListing } from '../../blocks/intranet/LinksListing'
 import { AppsListing } from '../../blocks/intranet/AppsListing'
+import { FilesListing } from '../../blocks/intranet/FilesListing'
 import { MarketplaceListing } from '../../blocks/intranet/MarketplaceListing'
 import { BulletinListing } from '../../blocks/intranet/BulletinListing'
 
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
                   <div className="p-4 h-96">UserInfo</div>
                 </Panel> */}
                 <BulletinListing />
+                <FilesListing />
                 <AppsListing />
                 <LinksListing />
               </div>
