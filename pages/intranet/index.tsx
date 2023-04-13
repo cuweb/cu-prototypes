@@ -6,16 +6,15 @@ import {
   Section,
   FooterBasic,
   Column,
-  Panel,
   Container,
   Heading,
 } from '@carletonuniversity/rds'
 
-import { EventsListing } from 'blocks/EventsListing'
-import { LinksListing } from 'blocks/LinksListing'
-import { AppsListing } from 'blocks/AppsListing'
-import { MarketplaceListing } from 'blocks/MarketplaceListing'
-import { BulletinListing } from 'blocks/BulletinListing'
+import { EventsListing } from '../../blocks/intranet/EventsListing'
+import { LinksListing } from '../../blocks/intranet/LinksListing'
+import { AppsListing } from '../../blocks/intranet/AppsListing'
+import { MarketplaceListing } from '../../blocks/intranet/MarketplaceListing'
+import { BulletinListing } from '../../blocks/intranet/BulletinListing'
 
 const Home: NextPage = () => {
   return (
@@ -28,15 +27,15 @@ const Home: NextPage = () => {
             <Heading text="Dashboard" maxWidth="7xl" />
             <Column maxWidth="7xl" cols="1/3">
               <div>
-                <Panel hasShadow>
+                {/* <Panel hasShadow>
                   <div className="p-4 h-96">UserInfo</div>
-                </Panel>
+                </Panel> */}
+                <BulletinListing />
                 <AppsListing />
                 <LinksListing />
               </div>
 
               <div>
-                <BulletinListing />
                 <EventsListing />
                 <MarketplaceListing />
                 {/* <Column cols="2">
