@@ -9,7 +9,7 @@ export const MarketplaceListing = () => {
   return (
     <StackedList header="Marketplace" cols="2" hasShadow>
       {marketplaceData
-        .slice(0, 4)
+        .slice(0, 6)
         .map(({ id, title, link, image, alt, condition, cost, tags }) => (
           <Listing key={id}>
             <Link href={link}>

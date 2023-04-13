@@ -114,4 +114,27 @@ export const MarketplaceData = [
       ],
     },
   },
+  {
+    id: 6,
+    title: 'Plastic Boxes',
+    link: '#',
+    cost: '40.00',
+    condition: 'Mint',
+    image: '/images/market-img.jpg',
+    alt: 'Image alt tag',
+    tags: {
+      category: [
+        {
+          id: 3,
+          name: 'Category One',
+          slug: 'category-one',
+        },
+        {
+          id: 4,
+          name: 'Category Two',
+          slug: 'category-two',
+        },
+      ],
+    },
+  },
 ]
