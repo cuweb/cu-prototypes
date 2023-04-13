@@ -1,22 +1,29 @@
 import React from 'react'
-import { MarketplaceItem, StackedList } from '@carletonuniversity/rds'
+import Link from 'next/link'
+import { Listing, StackedList } from '@carletonuniversity/rds'
 import { MarketplaceData as marketplaceData } from '../../../data/MarketplaceData'
+import Image from 'next/image'
+import { ListingMarketMeta } from '@components/ListingMarketMeta'
 
 export const MarketplaceListing = () => {
   return (
     <StackedList header="Marketplace" cols="2" hasShadow>
-      {marketplaceData.map(
-        ({ id, title, link, image, alt, condition, cost, category }) => (
-          <MarketplaceItem key={id} as="li" link={link}>
-            <MarketplaceItem.Image image={image} alt={alt} />
-            <MarketplaceItem.Content>
-              <MarketplaceItem.Title title={title} link={link} />
-              <MarketplaceItem.Details condition={condition} cost={cost} />
-              <MarketplaceItem.Category category={category} />
-            </MarketplaceItem.Content>
-          </MarketplaceItem>
-        ),
-      )}
+      {marketplaceData
+        .slice(0, 4)
+        .map(({ id, title, link, image, alt, condition, cost, tags }) => (
+          <Listing key={id}>
+            <Link href={link}>
+              <Listing.Figure>
+                <Image src={image} alt={alt} width="400" height="266" />
+              </Listing.Figure>
+              <Listing.Content>
+                <Listing.Header text={title} />
+                <ListingMarketMeta condition={condition} cost={cost} />
+                <Listing.Badges tags={tags} />
+              </Listing.Content>
+            </Link>
+          </Listing>
+        ))}
     </StackedList>
   )
 }
