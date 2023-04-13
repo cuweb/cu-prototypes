@@ -1,6 +1,6 @@
 import React from 'react'
 import { Listing, StackedList } from '@carletonuniversity/rds'
-import { NewsData as newsData } from '../../../data/NewsData'
+import { NewsData as newsData } from '../../data/NewsData'
 
 export const BulletinListing = () => {
   return (

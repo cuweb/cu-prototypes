@@ -1,12 +1,12 @@
 import React from 'react'
 import { Listing, StackedList } from '@carletonuniversity/rds'
 import Link from 'next/link'
-import { AppLinkData as appLinkData } from '../../../data/LinkData'
+import { KeyLinksData as keyLinkData } from '../../data/LinkData'
 
-export const AppsListing = () => {
+export const LinksListing = () => {
   return (
-    <StackedList header="My Applications" hasShadow>
-      {appLinkData.map(({ id, title, link }) => (
+    <StackedList header="Links & Resources" hasShadow>
+      {keyLinkData.map(({ id, title, link }) => (
         <Listing key={id}>
           <Link href={link}>
             <Listing.Content isSmall>

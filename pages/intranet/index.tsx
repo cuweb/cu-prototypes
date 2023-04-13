@@ -10,11 +10,11 @@ import {
   Heading,
 } from '@carletonuniversity/rds'
 
-import { EventsListing } from './blocks/EventsListing'
-import { LinksListing } from './blocks/LinksListing'
-import { AppsListing } from './blocks/AppsListing'
-import { MarketplaceListing } from './blocks/MarketplaceListing'
-import { BulletinListing } from './blocks/BulletinListing'
+import { EventsListing } from '../../blocks/intranet/EventsListing'
+import { LinksListing } from '../../blocks/intranet/LinksListing'
+import { AppsListing } from '../../blocks/intranet/AppsListing'
+import { MarketplaceListing } from '../../blocks/intranet/MarketplaceListing'
+import { BulletinListing } from '../../blocks/intranet/BulletinListing'
 
 const Home: NextPage = () => {
   return (
