@@ -6,7 +6,6 @@ import {
   Section,
   FooterBasic,
   Column,
-  Panel,
   Container,
   Heading,
 } from '@carletonuniversity/rds'
