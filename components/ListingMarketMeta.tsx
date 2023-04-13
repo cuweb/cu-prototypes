@@ -14,8 +14,8 @@ export const ListingMarketMeta = ({
     <>
       {cost && (
         <p className={`${metaStyles.itemLarge} ${metaStyles.alignIcon}`}>
-          <BanknotesIcon className={metaStyles.iconLarge} aria-hidden="true" />
-          Item is listed for ${cost}
+          <BanknotesIcon className={metaStyles.iconLarge} aria-hidden="true" />$
+          {cost}
         </p>
       )}
 
