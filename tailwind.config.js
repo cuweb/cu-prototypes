@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'descMeta': '250px auto',
-      }
+        descMeta: '250px auto',
+      },
     },
   },
   plugins: [],
