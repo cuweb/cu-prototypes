@@ -7,8 +7,12 @@ import {
   FooterBasic,
   Container,
   Banner,
+  Heading,
   Column,
 } from '@carletonuniversity/rds'
+
+import { Description } from '@components/Description/Description'
+import { DescriptionData as descriptionData } from '../../data/DescriptionData'
 
 const SinglePara = () => {
   return (
@@ -57,6 +61,27 @@ const Home: NextPage = () => {
       <Main>
         <Section>
           <Container hasProse>
+            <SinglePara />
+
+            <Heading text="DL as Row" />
+            <Description>
+              {descriptionData.map(({ id, term, details }) => (
+                <Description.Meta key={id} term={term} details={details} />
+              ))}
+            </Description>
+
+            <Heading text="DL as Columns" />
+            <Description>
+              {descriptionData.map(({ id, term, details }) => (
+                <Description.Meta
+                  key={id}
+                  term={term}
+                  details={details}
+                  useColumns
+                />
+              ))}
+            </Description>
+
             <SinglePara />
             <h2>This is a header two</h2>
             <DoublePara />
