@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Listing, StackedList } from '@carletonuniversity/rds'
 import { MarketplaceData as marketplaceData } from '../../data/MarketplaceData'
 import Image from 'next/image'
-import { ListingMarketMeta } from '@components/ListingMarketMeta'
+import { ListingMarketMeta } from '@components/ListingMarketMeta/ListingMarketMeta'
 
 export const MarketplaceListing = () => {
   return (
