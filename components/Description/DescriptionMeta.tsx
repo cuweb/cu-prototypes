@@ -1,20 +1,22 @@
+import { metaStyles } from './Description.Styles'
+
 export interface DescriptionMetaProps {
   term?: string
-  details?: React.ReactNode
+  children: React.ReactNode
   useColumns?: boolean
 }
 
 export const DescriptionMeta = ({
   term,
-  details,
+  children,
   useColumns,
 }: DescriptionMetaProps) => {
-  const columns = useColumns ? 'flex flex-row' : 'flex flex-col'
+  const columns = useColumns ? metaStyles.flexRow : metaStyles.flexCol
 
   return (
-    <div className={columns}>
-      <dt>{term}</dt>
-      <dd>{details}</dd>
+    <div className={`${metaStyles.metaBase} ${columns}`}>
+      <dt className={metaStyles.term}>{term}</dt>
+      <dd className={metaStyles.details}>{children}</dd>
     </div>
   )
 }

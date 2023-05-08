@@ -6,7 +6,7 @@ export interface DescriptionProps {
 }
 
 export const DescriptionWrapper = ({ children }: DescriptionProps) => {
-  return <dl className="">{children}</dl>
+  return <dl>{children}</dl>
 }
 
 export const Description = Object.assign(DescriptionWrapper, {
