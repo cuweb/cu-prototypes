@@ -8,10 +8,10 @@ import {
   Container,
   Banner,
   Heading,
+  Description,
   Column,
 } from '@carletonuniversity/rds'
 
-import { Description } from '@components/Description/Description'
 import { DescriptionData as descriptionData } from '../../data/DescriptionData'
 
 const SinglePara = () => {

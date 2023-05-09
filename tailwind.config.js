@@ -6,11 +6,7 @@ module.exports = {
   ],
   presets: [require('rds-tailwind-theme')],
   theme: {
-    extend: {
-      gridTemplateColumns: {
-        descMeta: '250px auto',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
