@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { metaStyles } from './Description.Styles'
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 export interface DescriptionAccordionProps {
   term: string
@@ -9,32 +11,41 @@ export const DescriptionAccordion = ({
   term,
   children,
 }: DescriptionAccordionProps) => {
-  const [isExpanded, setIsExpanded] = useState(false)
-  const uniqueName = term.toLowerCase().replace(/ +/g, '-')
+  const [ariaExpanded, setAriaExpanded] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
+  const [hidden, setHidden] = useState(true)
+
+  const onContentToggle = () => {
+    setAriaExpanded((current) => !current)
+    setCollapsed((current) => !current)
+    setHidden((current) => !current)
+  }
+
+  const termLabel = term.toLowerCase().replace(/ +/g, '-')
 
   return (
-    <>
-      <dt>
+    <div className={`${metaStyles.metaBase}`}>
+      <dt className={metaStyles.term}>
         <button
-          id={`${uniqueName}-header`}
-          aria-controls={`${uniqueName}-panel`}
-          aria-expanded={isExpanded}
+          className={metaStyles.button}
+          id={termLabel}
+          aria-expanded={ariaExpanded}
+          onClick={onContentToggle}
         >
-          {uniqueName}
-          <br />
           {term}
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-          >
-            <path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z" />
-          </svg>
+
+          <ChevronRightIcon
+            className={`${metaStyles.chevron} ${
+              collapsed ? 'rotate-0' : 'rotate-90'
+            }`}
+          />
         </button>
       </dt>
 
-      <dd>{children}</dd>
-    </>
+      <dd className={metaStyles.details} hidden={hidden}>
+        {children}
+      </dd>
+    </div>
   )
 }
 

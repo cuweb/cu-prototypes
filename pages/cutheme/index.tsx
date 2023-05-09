@@ -79,14 +79,14 @@ const Home: NextPage = () => {
               ))}
             </Description>
 
-            {/* <Heading text="Description List as Accordions" />
+            <Heading text="Description List as Accordions" />
             <Description>
               {descriptionData.map(({ id, term, details }) => (
                 <Description.Accordion key={id} term={term}>
                   {details}
                 </Description.Accordion>
               ))}
-            </Description> */}
+            </Description>
 
             <SinglePara />
             <h2>This is a header two</h2>
