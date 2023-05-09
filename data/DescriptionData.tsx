@@ -12,7 +12,7 @@ export const DescriptionData = [
       'Aenean sit amet tortor pellentesque, posuere tellus vitae, sagittis justo. Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.',
   },
   {
-    id: 4,
+    id: 3,
     term: 'Molestiae quas dolores accusamus',
     details:
       'Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim. Suspendisse condimentum magna vel orci vulputate, eget vulputate neque porttitor.',

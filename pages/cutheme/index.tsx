@@ -61,7 +61,7 @@ const Home: NextPage = () => {
           <Container hasProse>
             <SinglePara />
 
-            <Heading text="DL as Row" />
+            <Heading text="Description List in Rows" />
             <Description>
               {descriptionData.map(({ id, term, details }) => (
                 <Description.Meta key={id} term={term}>
@@ -70,12 +70,21 @@ const Home: NextPage = () => {
               ))}
             </Description>
 
-            <Heading text="DL as Columns" />
+            <Heading text="Description List in Columns" />
             <Description>
               {descriptionData.map(({ id, term, details }) => (
                 <Description.Meta key={id} term={term} useColumns>
                   {details}
                 </Description.Meta>
+              ))}
+            </Description>
+
+            <Heading text="Description List as Accordions" />
+            <Description>
+              {descriptionData.map(({ id, term, details }) => (
+                <Description.Accordion key={id} term={term}>
+                  {details}
+                </Description.Accordion>
               ))}
             </Description>
 

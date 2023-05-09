@@ -1,4 +1,4 @@
-import { DescriptionAccordian } from './DescriptionAccordian'
+import { DescriptionAccordion } from './DescriptionAccordion'
 import { DescriptionMeta } from './DescriptionMeta'
 
 export interface DescriptionProps {
@@ -10,6 +10,6 @@ export const DescriptionWrapper = ({ children }: DescriptionProps) => {
 }
 
 export const Description = Object.assign(DescriptionWrapper, {
-  Accordian: DescriptionAccordian,
+  Accordion: DescriptionAccordion,
   Meta: DescriptionMeta,
 })
