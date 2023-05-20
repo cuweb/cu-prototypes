@@ -2,14 +2,13 @@ import type { NextPage } from 'next'
 
 import {
   Main,
+  TopNav,
   Section,
   FooterBasic,
   Column,
   Container,
   Heading,
 } from '@carletonuniversity/rds'
-
-import { TopNav } from '../../components/TopNav/TopNav'
 
 import { EventsListing } from '../../blocks/intranet/EventsListing'
 import { LinksListing } from '../../blocks/intranet/LinksListing'
@@ -21,7 +20,7 @@ import { BulletinListing } from '../../blocks/intranet/BulletinListing'
 const Home: NextPage = () => {
   return (
     <>
-      <TopNav></TopNav>
+      <TopNav title="Carleton Intranet" />
 
       <Main>
         <Section>
