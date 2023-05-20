@@ -12,7 +12,7 @@ export const TopNavWrapper = ({ children }: TopNavProps) => {
   // const addBorder = border ? `${rdsBorderColor[border]} ${styles.border}` : ''
 
   return (
-    <header className="px-6 bg-white cu-topnav md:px-10">
+    <header className="px-5 bg-white cu-topnav">
       <div className="flex py-3.5 mx-auto max-w-screen-2xl">
         <div className="flex items-center h-full gap-3">
           <a
@@ -26,7 +26,7 @@ export const TopNavWrapper = ({ children }: TopNavProps) => {
               height="40"
             />
           </a>
-          <h1 className="max-w-[200px] text-base font-semibold leading-[1.25rem] md:leading-[1.25rem]">
+          <h1 className="max-w-[200px] text-base font-semibold leading-[1.25rem] md:leading-[1.25rem] text-cu-black-800">
             <a href="#" className="">
               Information and Technology Services
             </a>
