@@ -13,6 +13,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { DescriptionData as descriptionData } from '../../data/DescriptionData'
+import { TopBar } from '@components/TopBar/TopBar'
 
 const SinglePara = () => {
   return (
@@ -53,7 +54,13 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopNav title="Carleton University" />
+      <br />
+      <TopBar></TopBar>
+      <br />
+      <TopBar title="Intranet"></TopBar>
+      <br />
+      <TopBar title="Information and Technology Services" isTwoTier></TopBar>
+
       <Banner title="Web Services Prototypes" isType="dark-wave" align="left" />
 
       <Main>

@@ -22,12 +22,7 @@ const styles = {
 const Home: NextPage = () => {
   return (
     <>
-      <br />
-      <TopBar></TopBar>
-      <br />
       <TopBar title="Intranet"></TopBar>
-      <br />
-      <TopBar title="Information and Technology Services" isTwoTier></TopBar>
 
       <Main>
         <Section>
