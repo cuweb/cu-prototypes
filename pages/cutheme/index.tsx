@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 
 import {
   Main,
-  TopNav,
   Section,
   FooterBasic,
   Container,

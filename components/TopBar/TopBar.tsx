@@ -54,7 +54,9 @@ export const TopBarWrapper = ({ title, isTwoTier = false }: TopBarProps) => {
         )}
 
         <div className="flex ml-auto">
-          <p className="px-4 py-2 font-medium text-white bg-cu-red">Buttons</p>
+          <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
+            Buttons
+          </p>
         </div>
       </div>
 
