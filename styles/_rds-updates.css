@@ -2,6 +2,10 @@
   @apply -mt-6 md:-mt-14;
 }
 
+.cu-container > .cu-heading:first-child {
+  @apply mt-0;
+}
+
 /* Card Components */
 
 /* .cu-card a {

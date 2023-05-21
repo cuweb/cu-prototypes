@@ -5,7 +5,7 @@ import {
   Section,
   FooterBasic,
   Container,
-  Banner,
+  // Banner,
   Heading,
   Description,
   Column,
@@ -59,8 +59,10 @@ const Home: NextPage = () => {
       <TopBar title="Intranet"></TopBar>
       <br />
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
+      <br />
 
-      <Banner title="Web Services Prototypes" isType="dark-wave" align="left" />
+      {/* <Banner title="Web Services Prototypes" isType="dark-wave" align="left" /> */}
+      <Heading text="Web Services Prototypes" />
 
       <Main>
         <Section>

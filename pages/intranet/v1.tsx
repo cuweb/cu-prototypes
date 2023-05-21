@@ -10,12 +10,12 @@ import {
   Heading,
 } from '@carletonuniversity/rds'
 
-import { EventsListing } from '../../blocks/intranet/EventsListing'
-import { LinksListing } from '../../blocks/intranet/LinksListing'
-import { AppsListing } from '../../blocks/intranet/AppsListing'
-import { FilesListing } from '../../blocks/intranet/FilesListing'
-import { MarketplaceListing } from '../../blocks/intranet/MarketplaceListing'
-import { BulletinListing } from '../../blocks/intranet/BulletinListing'
+import { EventsListing } from '../../blocks/intranet-v1/EventsListing'
+import { LinksListing } from '../../blocks/intranet-v1/LinksListing'
+import { AppsListing } from '../../blocks/intranet-v1/AppsListing'
+import { FilesListing } from '../../blocks/intranet-v1/FilesListing'
+import { MarketplaceListing } from '../../blocks/intranet-v1/MarketplaceListing'
+import { BulletinListing } from '../../blocks/intranet-v1/BulletinListing'
 
 const Home: NextPage = () => {
   return (
