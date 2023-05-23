@@ -13,3 +13,10 @@
 .cu-herobanner + .cu-container.bg-cu-black-50 {
   @apply mt-0;
 }
+
+/* TESTING ONLY */
+
+.cu-testing > .cu-column,
+.cu-testing > .cu-heading {
+  @apply max-w-none;
+}

@@ -1,8 +1,19 @@
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Column } from '@carletonuniversity/rds'
+import {
+  Main,
+  Section,
+  FooterBasic,
+  Column,
+  Heading,
+  Card,
+} from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
 import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import { ImportantNews } from 'blocks/intranet/ImportantNews'
+import Link from 'next/link'
+import { NewsData } from '../../data/NewsData'
+import Image from 'next/image'
 
 const SinglePara = () => {
   return (
@@ -58,6 +69,82 @@ const Home: NextPage = () => {
 
           <h3>This is a header three</h3>
           <SinglePara />
+
+          <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+            <Heading text="Three col cards @ 1024" />
+            <Column cols="3">
+              {NewsData.slice(0, 3).map(
+                ({ id, title, link, date, image, alt }) => (
+                  <Card key={id}>
+                    <Link href={link}>
+                      <Card.Figure>
+                        <Image src={image} alt={alt} width="400" height="266" />
+                      </Card.Figure>
+                      <Card.Content>
+                        <Card.PostMeta date={date} />
+                        <Card.Header text={title} />
+                        {/* <Card.Excerpt text={excerpt} /> */}
+                      </Card.Content>
+                    </Link>
+                  </Card>
+                ),
+              )}
+            </Column>
+          </div>
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
+          <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+            <Heading text="Four col cards @ 1280" maxWidth="7xl" />
+            <Column cols="4" maxWidth="7xl">
+              {NewsData.slice(0, 4).map(
+                ({ id, title, link, date, image, alt }) => (
+                  <Card key={id}>
+                    <Link href={link}>
+                      <Card.Figure>
+                        <Image src={image} alt={alt} width="400" height="266" />
+                      </Card.Figure>
+                      <Card.Content>
+                        <Card.PostMeta date={date} />
+                        <Card.Header text={title} />
+                        {/* <Card.Excerpt text={excerpt} /> */}
+                      </Card.Content>
+                    </Link>
+                  </Card>
+                ),
+              )}
+            </Column>
+          </div>
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
+          <div className="cu-testing cu-container not-contained rounded-lg mx-auto px-6 lg:px-10 xl:px-14 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+            <Heading text="Four col cards @ 1536" maxWidth="7xl" />
+            <Column cols="4" maxWidth="7xl">
+              {NewsData.slice(0, 4).map(
+                ({ id, title, link, date, image, alt }) => (
+                  <Card key={id}>
+                    <Link href={link}>
+                      <Card.Figure>
+                        <Image src={image} alt={alt} width="400" height="266" />
+                      </Card.Figure>
+                      <Card.Content>
+                        <Card.PostMeta date={date} />
+                        <Card.Header text={title} />
+                        {/* <Card.Excerpt text={excerpt} /> */}
+                      </Card.Content>
+                    </Link>
+                  </Card>
+                ),
+              )}
+            </Column>
+          </div>
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
           <Column cols="2">
             <div>
               <SinglePara />
