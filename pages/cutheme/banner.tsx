@@ -43,34 +43,19 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      {/* <TopBar></TopBar>
-      <br />
-      <TopBar title="Intranet"></TopBar>
-      <br /> */}
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
-      {/* <br /> */}
-
-      <HeroBanner title="Hero Banner as Page Banner" />
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1024" maxWidth="5xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1280" maxWidth="7xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 100%" />
+          <HeroBanner title="Hero banner as a page heading" maxWidth="max" />
+          <span className="block h-6"></span>
 
           <SinglePara />
           <h2>This is a header two</h2>
           <DoublePara />
+
+          <HeroBanner title="Hero banner in the content" maxWidth="max" />
+
           <h3>This is a header three</h3>
           <SinglePara />
           <Column cols="2">

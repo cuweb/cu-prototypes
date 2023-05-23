@@ -1,3 +1,4 @@
+import { Heading } from '@carletonuniversity/rds'
 import React from 'react'
 
 // import Image from 'next/image'
@@ -31,18 +32,18 @@ export const HeroBannerWrapper = ({
 
   return (
     <div
-      className={`cu-herobanner not-contained not-prose py-6 md:py-12 mx-auto ${roundedBg} ${fullWidth} ${rdsMaxWidth[maxWidth]}`}
+      className={`cu-herobanner not-contained not-prose py-6 md:py-20 mx-auto ${roundedBg} ${fullWidth} ${rdsMaxWidth[maxWidth]}`}
     >
       <div className="max-w-5xl mx-auto">
-        {/* <p>Home / Ancestor Page / Parent Page</p>
-        <h1>{title}</h1> */}
-        <p>
+        {/* <p>Home / Ancestor Page / Parent Page</p> */}
+        <h1>{title}</h1>
+        {/* <p>
           Nobis voluptatem dolorum et eum doloremque cupiditate velit.
           Praesentium architecto a distinctio aut reprehenderit ducimus.
           Perferendis excepturi delectus nihil voluptatem non. Molestiae quas
           dolores accusamus in. Praesent quis ligula quis nulla malesuada
           tempor.
-        </p>
+        </p> */}
       </div>
     </div>
   )
