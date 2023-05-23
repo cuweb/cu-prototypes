@@ -5,3 +5,7 @@
 .cu-container > .cu-heading:first-child {
   @apply mt-0;
 }
+
+.cu-herobanner + .cu-container.bg-cu-black-50 {
+  @apply mt-0;
+}

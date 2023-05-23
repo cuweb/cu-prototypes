@@ -13,6 +13,7 @@ import {
 
 import { DescriptionData as descriptionData } from '../../data/DescriptionData'
 import { TopBar } from '@components/TopBar/TopBar'
+import { HeroBanner } from '@components/HeroBanner/HeroBanner'
 
 const SinglePara = () => {
   return (
@@ -53,64 +54,70 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <br />
-      <TopBar></TopBar>
+      {/* <TopBar></TopBar>
       <br />
       <TopBar title="Intranet"></TopBar>
-      <br />
+      <br /> */}
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
-      <br />
+      {/* <br /> */}
 
-      {/* <Banner title="Web Services Prototypes" isType="dark-wave" align="left" /> */}
-      <Heading text="Web Services Prototypes" />
+      {/* <HeroBanner title="Hero Banner as Page Banner" /> */}
 
       <Main>
-        <Section>
-          <Container hasProse>
-            <SinglePara />
+        <Section hasProse>
+          {/* <SinglePara />
+          <HeroBanner title="Hero banner @ 1024" maxWidth="5xl" />
 
-            <Heading text="Description List in Rows" />
-            <Description>
-              {descriptionData.map(({ id, term, details }) => (
-                <Description.Meta key={id} term={term}>
-                  {details}
-                </Description.Meta>
-              ))}
-            </Description>
+          <SinglePara />
+          <HeroBanner title="Hero banner @ 1280" maxWidth="7xl" /> */}
 
-            <Heading text="Description List in Columns" />
-            <Description>
-              {descriptionData.map(({ id, term, details }) => (
-                <Description.Meta key={id} term={term} useColumns>
-                  {details}
-                </Description.Meta>
-              ))}
-            </Description>
+          <SinglePara />
+          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
 
-            <Heading text="Description List as Accordions" />
-            <Description>
-              {descriptionData.map(({ id, term, details }) => (
-                <Description.Accordion key={id} term={term}>
-                  {details}
-                </Description.Accordion>
-              ))}
-            </Description>
+          <SinglePara />
+          <HeroBanner title="Hero banner @ 100%" />
 
-            <SinglePara />
-            <h2>This is a header two</h2>
-            <DoublePara />
-            <h3>This is a header three</h3>
-            <SinglePara />
-            <Column cols="2">
-              <div>
-                <SinglePara />
-              </div>
-              <div>
-                <SinglePara />
-              </div>
-            </Column>
-            <SinglePara />
-          </Container>
+          {/* <Heading text="Description List in Rows" />
+          <Description>
+            {descriptionData.map(({ id, term, details }) => (
+              <Description.Meta key={id} term={term}>
+                {details}
+              </Description.Meta>
+            ))}
+          </Description>
+
+          <Heading text="Description List in Columns" />
+          <Description>
+            {descriptionData.map(({ id, term, details }) => (
+              <Description.Meta key={id} term={term} useColumns>
+                {details}
+              </Description.Meta>
+            ))}
+          </Description>
+
+          <Heading text="Description List as Accordions" />
+          <Description>
+            {descriptionData.map(({ id, term, details }) => (
+              <Description.Accordion key={id} term={term}>
+                {details}
+              </Description.Accordion>
+            ))}
+          </Description> */}
+
+          <SinglePara />
+          <h2>This is a header two</h2>
+          <DoublePara />
+          <h3>This is a header three</h3>
+          <SinglePara />
+          <Column cols="2">
+            <div>
+              <SinglePara />
+            </div>
+            <div>
+              <SinglePara />
+            </div>
+          </Column>
+          <SinglePara />
         </Section>
       </Main>
 
