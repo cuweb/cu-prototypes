@@ -1,8 +1,18 @@
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Column } from '@carletonuniversity/rds'
+import {
+  Main,
+  Section,
+  FooterBasic,
+  Column,
+  Heading,
+  Card,
+} from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
 import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import Link from 'next/link'
+import { NewsData } from '../../data/NewsData'
+import Image from 'next/image'
 
 const SinglePara = () => {
   return (
@@ -43,36 +53,66 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      {/* <TopBar></TopBar>
-      <br />
-      <TopBar title="Intranet"></TopBar>
-      <br /> */}
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
-      {/* <br /> */}
-
-      {/* <HeroBanner title="Hero Banner as Page Banner" /> */}
 
       <Main>
         <Section hasProse>
           <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
 
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1024" maxWidth="5xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1280" maxWidth="7xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 100%" />
-
-          <SinglePara />
-          <h2>This is a header two</h2>
           <DoublePara />
+
+          <Heading text="Three col cards @ 1024" />
+          <Column cols="3">
+            {NewsData.slice(0, 3).map(
+              ({ id, title, link, date, image, alt }) => (
+                <Card key={id}>
+                  <Link href={link}>
+                    <Card.Figure>
+                      <Image src={image} alt={alt} width="400" height="266" />
+                    </Card.Figure>
+                    <Card.Content>
+                      <Card.PostMeta date={date} />
+                      <Card.Header text={title} />
+                      {/* <Card.Excerpt text={excerpt} /> */}
+                    </Card.Content>
+                  </Link>
+                </Card>
+              ),
+            )}
+          </Column>
+
           <h3>This is a header three</h3>
           <SinglePara />
+
+          <Heading text="Four col cards @ 1280" maxWidth="7xl" />
+          <Column cols="4" maxWidth="7xl">
+            {NewsData.slice(0, 4).map(
+              ({ id, title, link, date, image, alt }) => (
+                <Card key={id}>
+                  <Link href={link}>
+                    <Card.Figure>
+                      <Image src={image} alt={alt} width="400" height="266" />
+                    </Card.Figure>
+                    <Card.Content>
+                      <Card.PostMeta date={date} />
+                      <Card.Header text={title} />
+                      {/* <Card.Excerpt text={excerpt} /> */}
+                    </Card.Content>
+                  </Link>
+                </Card>
+              ),
+            )}
+          </Column>
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
+          <h3>This is a header three</h3>
+          <SinglePara />
+
           <Column cols="2">
             <div>
               <SinglePara />
