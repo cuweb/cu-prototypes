@@ -10,7 +10,6 @@ import {
 
 import { TopBar } from '@components/TopBar/TopBar'
 import { HeroBanner } from '@components/HeroBanner/HeroBanner'
-import { ImportantNews } from 'blocks/intranet/ImportantNews'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
@@ -58,17 +57,9 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero banner as a page heading" maxWidth="max" />
-          <span className="block h-6"></span>
+          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
 
-          <SinglePara />
-          <h2>This is a header two</h2>
           <DoublePara />
-
-          <HeroBanner title="Hero banner in the content" maxWidth="max" />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
 
           <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
             <Heading text="Three col cards @ 1024" />
