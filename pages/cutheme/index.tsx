@@ -2,17 +2,17 @@ import type { NextPage } from 'next'
 
 import {
   Main,
-  TopNav,
   Section,
   FooterBasic,
   Container,
-  Banner,
+  // Banner,
   Heading,
   Description,
   Column,
 } from '@carletonuniversity/rds'
 
 import { DescriptionData as descriptionData } from '../../data/DescriptionData'
+import { TopBar } from '@components/TopBar/TopBar'
 
 const SinglePara = () => {
   return (
@@ -53,8 +53,16 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopNav title="Carleton University" />
-      <Banner title="Web Services Prototypes" isType="dark-wave" align="left" />
+      <br />
+      <TopBar></TopBar>
+      <br />
+      <TopBar title="Intranet"></TopBar>
+      <br />
+      <TopBar title="Information and Technology Services" isTwoTier></TopBar>
+      <br />
+
+      {/* <Banner title="Web Services Prototypes" isType="dark-wave" align="left" /> */}
+      <Heading text="Web Services Prototypes" />
 
       <Main>
         <Section>
