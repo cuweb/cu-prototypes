@@ -5,8 +5,8 @@ import Image from 'next/image'
 import priorityPlus from 'priority-plus'
 priorityPlus(document.querySelector('.cu-priority-nav'))
 
-const inst = priorityPlus(document.querySelector('.cu-priority-nav'))
-console.log(inst.getNavElements())
+// const inst = priorityPlus(document.querySelector('.cu-priority-nav'))
+// console.log(inst.getNavElements())
 
 export interface TopBarProps {
   children?: React.ReactNode
