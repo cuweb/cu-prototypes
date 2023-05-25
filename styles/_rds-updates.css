@@ -1,9 +1,17 @@
+/* .cu-section > .cu-container.bg-cu-black-50:first-child {
+  @apply -mt-6 md:-mt-14;
+}
+
+.cu-container > .cu-heading:first-child {
+  @apply mt-0;
+} */
+
 .cu-section {
   @apply pt-10;
 }
 
 .cu-section > .cu-container.bg-cu-black-50:first-child {
-  @apply -mt-6 md:-mt-14;
+  @apply -mt-6 md:-mt-10;
 }
 
 .cu-container > .cu-heading:first-child {
@@ -12,6 +20,10 @@
 
 .cu-herobanner + .cu-container.bg-cu-black-50 {
   @apply mt-0;
+}
+
+.cu-column {
+  @apply mb-8 md:mb-14;
 }
 
 /* TESTING ONLY */

@@ -53,8 +53,15 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
+      {/* <TopBar title="Information and Technology Services" isTwoTier></TopBar> */}
+
+      <br />
+      <TopBar></TopBar>
+      <br />
+      <TopBar title="Intranet"></TopBar>
+      <br />
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
-      {/* <HeroBanner title="Hero banner @ 1536" maxWidth="max" /> */}
+      <br />
 
       <Main>
         <Section hasProse>
