@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
       <Main>
         <Section>
-          <Container bgColor="grey">
+          <Container isGrey>
             <Heading text="Dashboard" maxWidth="7xl" />
             <Column maxWidth="7xl" cols="1/3">
               <div>
