@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 // import { styles } from './TopBar.Styles'
 
-import priorityPlus from 'priority-plus'
-priorityPlus(document.querySelector('.cu-priority-nav'))
+// import priorityPlus from 'priority-plus'
+// priorityPlus(document.querySelector('.cu-priority-nav'))
 
 // const inst = priorityPlus(document.querySelector('.cu-priority-nav'))
 // console.log(inst.getNavElements())
