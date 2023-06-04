@@ -1,4 +1,4 @@
-import { Heading } from '@carletonuniversity/rds'
+// import { Heading } from '@carletonuniversity/rds'
 import React from 'react'
 
 // import Image from 'next/image'
