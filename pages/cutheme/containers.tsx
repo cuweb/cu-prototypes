@@ -128,6 +128,7 @@ const Home: NextPage = () => {
 
           <h3>This is a header three</h3>
           <SinglePara />
+          <DoublePara />
         </Section>
       </Main>
 
