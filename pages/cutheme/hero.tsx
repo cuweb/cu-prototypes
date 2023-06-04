@@ -50,9 +50,17 @@ const Home: NextPage = () => {
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
       {/* <br /> */}
 
-      {/* <HeroBanner title="Hero Banner as Page Banner" /> */}
-
       <Main>
+        <Section hasProse>
+          <HeroBanner title="Hero inside main" maxWidth="max" />
+        </Section>
+        <Section hasProse>
+          <HeroBanner title="Hero inside main" maxWidth="7xl" />
+        </Section>
+        <Section hasProse>
+          <HeroBanner title="Hero inside main" maxWidth="5xl" />
+        </Section>
+
         <Section hasProse>
           <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
 
