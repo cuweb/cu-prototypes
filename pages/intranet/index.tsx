@@ -13,16 +13,16 @@ const Home: NextPage = () => {
 
       <Main>
         <Section>
-          <Container bgColor="grey">
+          <Container isGrey>
             <Profile />
             <ImportantNews />
           </Container>
 
-          <Container bgColor="white">
+          <Container>
             <CommunityConnect />
           </Container>
 
-          <Container bgColor="grey">
+          <Container isGrey>
             <NumberStats />
           </Container>
         </Section>

@@ -30,7 +30,7 @@ export const HeroBannerWrapper = ({
       className={`cu-herobanner not-contained not-prose ${styles.base} ${rdsMaxWidth[maxWidth]}`}
     >
       <Column cols="2" maxWidth="full">
-        <div className="bg-cu-red">One</div>
+        <div className="bg-cu-red">{title}</div>
         <div className="bg-cu-red">Two</div>
       </Column>
     </div>
