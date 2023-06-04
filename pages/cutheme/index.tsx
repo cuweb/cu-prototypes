@@ -94,12 +94,12 @@ const Home: NextPage = () => {
           <SinglePara />
 
           <Column cols="2">
-            <div>
+            <Column.Content>
               <SinglePara />
-            </div>
-            <div>
+            </Column.Content>
+            <Column.Content>
               <SinglePara />
-            </div>
+            </Column.Content>
           </Column>
           <SinglePara />
         </Section>

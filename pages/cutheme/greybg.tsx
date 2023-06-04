@@ -6,6 +6,7 @@ import {
   Column,
   Heading,
   Card,
+  Container,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
@@ -59,9 +60,10 @@ const Home: NextPage = () => {
         <Section hasProse>
           <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
 
+          <SinglePara />
           <DoublePara />
 
-          <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+          <Container isGrey>
             <Heading text="Three col cards @ 1024" />
             <Column cols="3">
               {NewsData.slice(0, 3).map(
@@ -81,12 +83,13 @@ const Home: NextPage = () => {
                 ),
               )}
             </Column>
-          </div>
+          </Container>
 
           <h3>This is a header three</h3>
           <SinglePara />
+          <DoublePara />
 
-          <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+          <Container isGrey>
             <Heading text="Four col cards @ 1280" maxWidth="7xl" />
             <Column cols="4" maxWidth="7xl">
               {NewsData.slice(0, 4).map(
@@ -106,12 +109,13 @@ const Home: NextPage = () => {
                 ),
               )}
             </Column>
-          </div>
+          </Container>
 
           <h3>This is a header three</h3>
           <SinglePara />
+          <DoublePara />
 
-          <div className="cu-testing cu-container not-contained rounded-lg mx-auto px-6 lg:px-10 xl:px-14 max-w-screen-2xl cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+          <Container isGrey>
             <Heading text="Four col cards @ 1536" maxWidth="7xl" />
             <Column cols="4" maxWidth="7xl">
               {NewsData.slice(0, 4).map(
@@ -131,12 +135,13 @@ const Home: NextPage = () => {
                 ),
               )}
             </Column>
-          </div>
+          </Container>
 
           <h3>This is a header three</h3>
           <SinglePara />
+          <DoublePara />
 
-          <div className="cu-container not-contained rounded-lg mx-auto px-6 md:px-10 cu-container-5xl bg-cu-black-50 py-6 md:pt-10 md:pb-14 last:[&>*]:mb-0 [&>*:first-child]:-mt-0">
+          <Container isGrey>
             <Heading text="Grey BG @ full width" maxWidth="7xl" />
             <Column cols="4" maxWidth="7xl">
               {NewsData.slice(0, 4).map(
@@ -156,18 +161,19 @@ const Home: NextPage = () => {
                 ),
               )}
             </Column>
-          </div>
+          </Container>
 
           <h3>This is a header three</h3>
           <SinglePara />
+          <DoublePara />
 
           <Column cols="2">
-            <div>
+            <Column.Content>
               <SinglePara />
-            </div>
-            <div>
+            </Column.Content>
+            <Column.Content>
               <SinglePara />
-            </div>
+            </Column.Content>
           </Column>
           <SinglePara />
         </Section>

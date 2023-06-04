@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <Container isGrey>
             <Heading text="Dashboard" maxWidth="7xl" />
             <Column maxWidth="7xl" cols="1/3">
-              <div>
+              <Column.Content>
                 {/* <Panel hasShadow>
                   <div className="p-4 h-96">UserInfo</div>
                 </Panel> */}
@@ -35,9 +35,9 @@ const Home: NextPage = () => {
                 <FilesListing />
                 <AppsListing />
                 <LinksListing />
-              </div>
+              </Column.Content>
 
-              <div>
+              <Column.Content>
                 <EventsListing />
                 <MarketplaceListing />
                 {/* <Column cols="2">
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                     </Panel>
                   </div>
                 </Column> */}
-              </div>
+              </Column.Content>
             </Column>
           </Container>
         </Section>

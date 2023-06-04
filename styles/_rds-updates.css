@@ -1,34 +1,28 @@
-/* .cu-section > .cu-container.bg-cu-black-50:first-child {
-  @apply -mt-6 md:-mt-14;
+/* Added to RDS styles/spacing.css */
+.cu-container.bg-white + .cu-container.bg-white {
+  @apply mt-4;
 }
 
-.cu-container > .cu-heading:first-child {
-  @apply mt-0;
-} */
+/* Added to RDS styles/spacing.css */
+.cu-container.bg-white + .cu-container.bg-cu-black-50 {
+  @apply mt-6 md:mt-10;
+}
 
+/* Applied to section in globalStyles */
 .cu-section {
-  @apply pt-10;
+  @apply px-8 py-6 md:py-10 md:p-10;
 }
 
-.cu-section > .cu-container.bg-cu-black-50:first-child {
-  @apply -mt-6 md:-mt-10;
+/* Applied to containerGrey in globalStyles */
+.cu-container.bg-cu-black-50 {
+  @apply px-8 py-8 md:py-10 md:p-10;
 }
 
-.cu-container > .cu-heading:first-child {
-  @apply mt-0;
-}
-
-.cu-herobanner + .cu-container.bg-cu-black-50 {
-  @apply mt-0;
-}
-
+/* Added to globalOptions under gap */
 .cu-column {
-  @apply mb-8 md:mb-14;
+  @apply gap-6 md:gap-10;
 }
 
-/* TESTING ONLY */
-
-.cu-testing > .cu-column,
-.cu-testing > .cu-heading {
-  @apply max-w-none;
+.cu-section + .cu-section {
+  @apply pt-0;
 }
