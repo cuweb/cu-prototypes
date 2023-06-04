@@ -1,42 +1,66 @@
-import { Column } from '@carletonuniversity/rds'
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import { HeroBannerContent } from './HeroBannerContent'
+import { HeroBannerFigure } from './HeroBannerFigure'
 
-// import Image from 'next/image'
 // import { styles } from './HeroBanner.Styles'
 
 export const rdsMaxWidth = {
   '5xl': 'max-w-5xl',
   '7xl': 'max-w-7xl',
   max: 'max-w-screen-2xl',
-  none: 'max-w-none',
 }
 
 export interface HeroBannerProps {
   children?: React.ReactNode
   title?: string
-  maxWidth?: 'none' | 'max' | '5xl' | '7xl'
+  maxWidth?: 'max' | '5xl' | '7xl'
 }
 
-const styles = {
-  base: 'py-4 md:py-6 px-4 md:px-6 mx-auto rounded-lg bg-cu-black-50',
-}
+// const styles = {
+//   base: 'mx-auto rounded-lg',
+// }
+
+// MQ / CQ
+// sm:640px /
+// md:768px (48rem) / @3xl
+// lg:1024px (64rem) / @5xl
+// xl:1280px (80rem) / @7xl
+// 2xl:1536px /
 
 export const HeroBannerWrapper = ({
-  title,
-  maxWidth = 'none',
+  children,
+  maxWidth = '5xl',
 }: HeroBannerProps) => {
+  let imageSize = ''
+  switch (maxWidth) {
+    case '5xl':
+      imageSize = ''
+      break
+    case '7xl':
+      imageSize = 'xl:grid-cols-hero-md'
+      break
+    case 'max':
+      imageSize = 'xl:grid-cols-hero-md 2xl:grid-cols-hero-lg'
+      break
+    default:
+      imageSize = ''
+  }
+
   return (
     <div
-      className={`cu-herobanner not-contained not-prose ${styles.base} ${rdsMaxWidth[maxWidth]}`}
+      className={`cu-herobanner not-contained @container not-prose mx-auto ${rdsMaxWidth[maxWidth]}`}
     >
-      <Column cols="2" maxWidth="full">
-        <div className="bg-cu-red">{title}</div>
-        <div className="bg-cu-red">Two</div>
-      </Column>
+      <div
+        className={`grid gap-6 md:gap-10 lg:grid-cols-hero-sm items-start sm:items-center ${imageSize}`}
+      >
+        {children}
+      </div>
     </div>
   )
 }
 
 export const HeroBanner = Object.assign(HeroBannerWrapper, {
-  // Nav: HeroBannerFigure,
+  Content: HeroBannerContent,
+  Figure: HeroBannerFigure,
 })

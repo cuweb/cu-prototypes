@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import { Main, Section, FooterBasic, Column } from '@carletonuniversity/rds'
 
@@ -52,44 +53,111 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="max" />
+          <HeroBanner maxWidth="max">
+            <HeroBanner.Content title="Website and Application Development (max)">
+              <p>Test</p>
+            </HeroBanner.Content>
+            <HeroBanner.Figure>
+              <img
+                src="https://picsum.photos/400/266"
+                alt="Text"
+                className="w-full h-auto rounded-lg"
+              />
+            </HeroBanner.Figure>
+          </HeroBanner>
         </Section>
-        <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="7xl" />
-        </Section>
-        <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="5xl" />
-        </Section>
 
         <Section hasProse>
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
           <SinglePara />
-          <HeroBanner title="Hero banner @ 1024" maxWidth="5xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1280" maxWidth="7xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 100%" />
-
-          <SinglePara />
-          <h2>This is a header two</h2>
           <DoublePara />
-          <h3>This is a header three</h3>
+        </Section>
+
+        <br />
+        <br />
+
+        <Section hasProse>
+          <HeroBanner maxWidth="7xl">
+            <HeroBanner.Content title="Website and Application Development (7xl)">
+              <p>Test</p>
+            </HeroBanner.Content>
+            <HeroBanner.Figure>
+              <img
+                src="https://picsum.photos/400/266"
+                alt="Text"
+                className="w-full h-auto rounded-lg"
+              />
+            </HeroBanner.Figure>
+          </HeroBanner>
+        </Section>
+
+        <Section hasProse>
           <SinglePara />
-          <Column cols="2">
-            <div>
-              <SinglePara />
-            </div>
-            <div>
-              <SinglePara />
-            </div>
-          </Column>
+          <DoublePara />
+        </Section>
+
+        <br />
+        <br />
+
+        <Section hasProse>
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Website and Application Development (5xl)">
+              <p>Test</p>
+            </HeroBanner.Content>
+            <HeroBanner.Figure>
+              <img
+                src="https://picsum.photos/400/266"
+                alt="Text"
+                className="w-full h-auto rounded-lg"
+              />
+            </HeroBanner.Figure>
+          </HeroBanner>
+        </Section>
+
+        <Section hasProse>
           <SinglePara />
+          <DoublePara />
+        </Section>
+
+        <br />
+        <br />
+
+        <Section hasProse>
+          <HeroBanner maxWidth="7xl">
+            <HeroBanner.Content title="Hero Inside content flow (7xl)">
+              <p>Test</p>
+            </HeroBanner.Content>
+            <HeroBanner.Figure>
+              <img
+                src="https://picsum.photos/400/266"
+                alt="Text"
+                className="w-full h-auto rounded-lg"
+              />
+            </HeroBanner.Figure>
+          </HeroBanner>
+
+          <SinglePara />
+          <DoublePara />
+        </Section>
+
+        <br />
+        <br />
+
+        <Section hasProse>
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Hero Inside content flow (5xl)">
+              <p>Test</p>
+            </HeroBanner.Content>
+            <HeroBanner.Figure>
+              <img
+                src="https://picsum.photos/400/266"
+                alt="Text"
+                className="w-full h-auto rounded-lg"
+              />
+            </HeroBanner.Figure>
+          </HeroBanner>
+
+          <SinglePara />
+          <DoublePara />
         </Section>
       </Main>
 

@@ -7,7 +7,13 @@ module.exports = {
   ],
   presets: [require('rds-tailwind-theme')],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'hero-lg': 'auto 650px',
+        'hero-md': 'auto 550px',
+        'hero-sm': 'auto 400px',
+      },
+    },
   },
   plugins: [],
 }
