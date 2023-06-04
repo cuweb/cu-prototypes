@@ -1,7 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 // import { styles } from './TopBar.Styles'
+
 // import priorityPlus from 'priority-plus'
+// priorityPlus(document.querySelector('.cu-priority-nav'))
+
+// const inst = priorityPlus(document.querySelector('.cu-priority-nav'))
+// console.log(inst.getNavElements())
 
 export interface TopBarProps {
   children?: React.ReactNode
@@ -43,7 +48,7 @@ export const TopBarWrapper = ({ title, isTwoTier = false }: TopBarProps) => {
 
         {!isTwoTier && (
           <nav>
-            <ul className="flex gap-8 text-[0.925rem]">
+            <ul className="flex gap-8 text-[0.925rem] cu-priority-nav">
               {navigationItems.slice(0, 3).map((item, index) => (
                 <li key={index}>
                   <a href={item.url}>{item.label}</a>
@@ -62,7 +67,7 @@ export const TopBarWrapper = ({ title, isTwoTier = false }: TopBarProps) => {
 
       {isTwoTier && (
         <nav className="border-t border-b-cu-black-100">
-          <ul className="flex gap-8 pr-4 pl-5 py-2 mx-auto text-[0.925rem] max-w-screen-2xl">
+          <ul className="flex gap-8 pr-4 pl-5 py-2 mx-auto text-[0.925rem] max-w-screen-2xl cu-priority-nav">
             {navigationItems.slice(3, 8).map((item, index) => (
               <li key={index}>
                 <a href={item.url}>{item.label}</a>
