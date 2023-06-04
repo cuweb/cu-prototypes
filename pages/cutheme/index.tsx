@@ -9,7 +9,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import { HeroBanner } from '@components/Hero/TextImageAlt/TextImageAlt'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'

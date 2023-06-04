@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { HeroBannerContent } from './HeroBannerContent'
-import { HeroBannerFigure } from './HeroBannerFigure'
+import { HeroBannerContent } from './TextImageAltContent'
+import { HeroBannerFigure } from './TextImageAltFigure'
 
 // import { styles } from './HeroBanner.Styles'
 

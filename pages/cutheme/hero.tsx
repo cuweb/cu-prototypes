@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Column } from '@carletonuniversity/rds'
+import { Main, Section, FooterBasic, Button } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import { ImageText } from '@components/Hero/ImageText/ImageText'
 
 const SinglePara = () => {
   return (
@@ -53,110 +53,83 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner maxWidth="max">
-            <HeroBanner.Content title="Website and Application Development (max)">
-              <p>Test</p>
-            </HeroBanner.Content>
-            <HeroBanner.Figure>
-              <img
-                src="https://picsum.photos/400/266"
-                alt="Text"
-                className="w-full h-auto rounded-lg"
-              />
-            </HeroBanner.Figure>
-          </HeroBanner>
+          <ImageText
+            maxWidth="max"
+            title="Website and Application Development (max)"
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </ImageText>
         </Section>
 
         <Section hasProse>
-          <SinglePara />
           <DoublePara />
         </Section>
 
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
 
         <Section hasProse>
-          <HeroBanner maxWidth="7xl">
-            <HeroBanner.Content title="Website and Application Development (7xl)">
-              <p>Test</p>
-            </HeroBanner.Content>
-            <HeroBanner.Figure>
-              <img
-                src="https://picsum.photos/400/266"
-                alt="Text"
-                className="w-full h-auto rounded-lg"
-              />
-            </HeroBanner.Figure>
-          </HeroBanner>
+          <ImageText
+            maxWidth="7xl"
+            title="Website and Application Development (7xl)"
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <button
+                type="button"
+                aria-label="Primary Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
+              >
+                Primary Button
+              </button>
+              <button
+                type="button"
+                aria-label="Light Grey Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
+              >
+                Secondary Button
+              </button>
+            </div>
+          </ImageText>
         </Section>
 
         <Section hasProse>
-          <SinglePara />
           <DoublePara />
         </Section>
 
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
 
         <Section hasProse>
-          <HeroBanner maxWidth="5xl">
-            <HeroBanner.Content title="Website and Application Development (5xl)">
-              <p>Test</p>
-            </HeroBanner.Content>
-            <HeroBanner.Figure>
-              <img
-                src="https://picsum.photos/400/266"
-                alt="Text"
-                className="w-full h-auto rounded-lg"
-              />
-            </HeroBanner.Figure>
-          </HeroBanner>
+          <ImageText
+            maxWidth="5xl"
+            title="Website and Application Development (5xl)"
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <button
+                type="button"
+                aria-label="Primary Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
+              >
+                Primary Button
+              </button>
+              <button
+                type="button"
+                aria-label="Light Grey Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
+              >
+                Secondary Button
+              </button>
+            </div>
+          </ImageText>
         </Section>
 
         <Section hasProse>
-          <SinglePara />
-          <DoublePara />
-        </Section>
-
-        <br />
-        <br />
-
-        <Section hasProse>
-          <HeroBanner maxWidth="7xl">
-            <HeroBanner.Content title="Hero Inside content flow (7xl)">
-              <p>Test</p>
-            </HeroBanner.Content>
-            <HeroBanner.Figure>
-              <img
-                src="https://picsum.photos/400/266"
-                alt="Text"
-                className="w-full h-auto rounded-lg"
-              />
-            </HeroBanner.Figure>
-          </HeroBanner>
-
-          <SinglePara />
-          <DoublePara />
-        </Section>
-
-        <br />
-        <br />
-
-        <Section hasProse>
-          <HeroBanner maxWidth="5xl">
-            <HeroBanner.Content title="Hero Inside content flow (5xl)">
-              <p>Test</p>
-            </HeroBanner.Content>
-            <HeroBanner.Figure>
-              <img
-                src="https://picsum.photos/400/266"
-                alt="Text"
-                className="w-full h-auto rounded-lg"
-              />
-            </HeroBanner.Figure>
-          </HeroBanner>
-
-          <SinglePara />
           <DoublePara />
         </Section>
       </Main>
