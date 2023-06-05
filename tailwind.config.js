@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'hero-txtimg': 'auto 40%'
+        'hero-txtimg-40': 'auto 40%',
+        'hero-txtimg-20': 'auto 20%'
       },
     },
   },

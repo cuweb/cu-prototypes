@@ -54,9 +54,8 @@ const Home: NextPage = () => {
       <Main>
         <Section hasProse>
           <HeroTextImage
-            // maxWidth="7xl"
             title="Website and Application Development"
-            isPageBanner
+            image="https://picsum.photos/400/266"
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -64,30 +63,15 @@ const Home: NextPage = () => {
               <Button title="Secondary" color="grey" />
             </div>
           </HeroTextImage>
-        </Section>
 
-        <Section hasProse>
           <SinglePara />
           <DoublePara />
-          <SinglePara />
 
           <HeroTextImage title="Website and Application Development">
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
-              <button
-                type="button"
-                aria-label="Primary Button"
-                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
-              >
-                Primary Button
-              </button>
-              <button
-                type="button"
-                aria-label="Light Grey Button"
-                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
-              >
-                Secondary Button
-              </button>
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
             </div>
           </HeroTextImage>
 
@@ -96,9 +80,22 @@ const Home: NextPage = () => {
           <SinglePara />
 
           <HeroTextImage
-            maxWidth="max"
             title="Website and Application Development"
+            image="https://picsum.photos/400/266"
+            isSmall
           >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </HeroTextImage>
+
+          <SinglePara />
+          <DoublePara />
+          <SinglePara />
+
+          <HeroTextImage title="Website and Application Development" isSmall>
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
               <button
