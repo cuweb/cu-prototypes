@@ -6,8 +6,9 @@ export interface HeroTextImageProps {
   children?: React.ReactNode
   title: string
   image?: string
-  isSmall?: boolean
-  hasAngle?: boolean
+  headerSmall?: boolean
+  imageAngle?: boolean
+  imageTall?: boolean
 }
 
 export const rdsMaxWidth = {
@@ -20,10 +21,11 @@ export const HeroTextImage = ({
   children,
   title,
   image,
-  hasAngle,
-  isSmall,
+  headerSmall,
+  imageAngle,
+  imageTall,
 }: HeroTextImageProps) => {
-  const headerSize = isSmall ? '' : 'xl:text-5xl xl:leading-[3.5rem]'
+  const headerSize = headerSmall ? '' : 'xl:text-5xl xl:leading-[3.5rem]'
 
   // Set background image
   const imageUrl = image
@@ -36,6 +38,9 @@ export const HeroTextImage = ({
   const maxWidth = imageUrl ? rdsMaxWidth['7xl'] : rdsMaxWidth['5xl']
   const contentPadding = imageUrl ? 'md:py-8' : 'md:pt-6'
 
+  // Image height for mobile
+  const hasTallImage = imageTall ? 'min-h-[420px]' : 'min-h-[220px]'
+
   return (
     <div
       className={`${styles.base} ${styles.grid} ${gridClasses} ${styles.bottom} ${maxWidth}`}
@@ -46,16 +51,14 @@ export const HeroTextImage = ({
       </div>
 
       {imageUrl && (
-        <div
-          className={`min-h-[240px] md:min-h-[360px] h-full ${styles.image}`}
-          style={inlineStyle}
-        >
-          {hasAngle && (
+        <div className={` ${hasTallImage} ${styles.image}`} style={inlineStyle}>
+          {imageAngle && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="136"
               height="450"
               fill="none"
+              className="hidden lg:block"
             >
               <path fill="#fff" d="M0 0h135.796L14.046 450H0V0Z" />
             </svg>
