@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Column } from '@carletonuniversity/rds'
+import { Main, Section, FooterBasic, Button } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 
 const SinglePara = () => {
   return (
@@ -52,43 +53,70 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="max" />
-        </Section>
-        <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="7xl" />
-        </Section>
-        <Section hasProse>
-          <HeroBanner title="Hero inside main" maxWidth="5xl" />
-        </Section>
-
-        <Section hasProse>
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1024" maxWidth="5xl" />
+          <HeroTextImage
+            title="Website and Application Development"
+            image="https://picsum.photos/400/266"
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </HeroTextImage>
 
           <SinglePara />
-          <HeroBanner title="Hero banner @ 1280" maxWidth="7xl" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
-
-          <SinglePara />
-          <HeroBanner title="Hero banner @ 100%" />
-
-          <SinglePara />
-          <h2>This is a header two</h2>
           <DoublePara />
-          <h3>This is a header three</h3>
+
+          <HeroTextImage title="Website and Application Development">
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </HeroTextImage>
+
           <SinglePara />
-          <Column cols="2">
-            <div>
-              <SinglePara />
+          <DoublePara />
+          <SinglePara />
+
+          <HeroTextImage
+            title="Website and Application Development"
+            image="https://picsum.photos/400/266"
+            isSmall
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
             </div>
-            <div>
-              <SinglePara />
+          </HeroTextImage>
+
+          <SinglePara />
+          <DoublePara />
+          <SinglePara />
+
+          <HeroTextImage title="Website and Application Development" isSmall>
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <button
+                type="button"
+                aria-label="Primary Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
+              >
+                Primary Button
+              </button>
+              <button
+                type="button"
+                aria-label="Light Grey Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
+              >
+                Secondary Button
+              </button>
             </div>
-          </Column>
+          </HeroTextImage>
+
+          <SinglePara />
+          <DoublePara />
           <SinglePara />
         </Section>
       </Main>

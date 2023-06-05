@@ -9,7 +9,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroBanner } from '@components/HeroBanner/HeroBanner'
+import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
@@ -54,11 +54,10 @@ const Home: NextPage = () => {
   return (
     <>
       <TopBar title="Information and Technology Services" isTwoTier></TopBar>
-      {/* <HeroBanner title="Hero banner @ 1536" maxWidth="max" /> */}
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
+          <HeroTextImage title="Hero banner @ 1536" />
 
           <DoublePara />
 
@@ -88,7 +87,7 @@ const Home: NextPage = () => {
           <h3>This is a header three</h3>
           <SinglePara />
 
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
+          <HeroTextImage title="Hero banner @ 1536" />
 
           <h3>This is a header three</h3>
           <SinglePara />

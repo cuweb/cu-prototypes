@@ -7,7 +7,12 @@ module.exports = {
   ],
   presets: [require('rds-tailwind-theme')],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'hero-txtimg-40': 'auto 40%',
+        'hero-txtimg-20': 'auto 20%'
+      },
+    },
   },
   plugins: [],
 }
