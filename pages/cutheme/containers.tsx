@@ -10,7 +10,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroBanner } from '@components/Hero/TextImageAlt/TextImageAlt'
+import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner title="Hero banner @ 1536" maxWidth="max" />
+          <HeroTextImage title="Hero banner @ 1536" />
 
           <DoublePara />
 
