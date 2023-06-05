@@ -70,7 +70,8 @@ const Home: NextPage = () => {
           <HeroTextImage
             title="Website and Application Development"
             image="https://picsum.photos/400/266"
-            hasAngle
+            imageAngle
+            imageTall
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -97,7 +98,7 @@ const Home: NextPage = () => {
           <HeroTextImage
             title="Website and Application Development"
             image="https://picsum.photos/400/266"
-            isSmall
+            headerSmall
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -113,8 +114,9 @@ const Home: NextPage = () => {
           <HeroTextImage
             title="Website and Application Development"
             image="https://picsum.photos/400/266"
-            isSmall
-            hasAngle
+            headerSmall
+            imageAngle
+            imageTall
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -127,7 +129,10 @@ const Home: NextPage = () => {
           <DoublePara />
           <SinglePara />
 
-          <HeroTextImage title="Website and Application Development" isSmall>
+          <HeroTextImage
+            title="Website and Application Development"
+            headerSmall
+          >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
               <button
