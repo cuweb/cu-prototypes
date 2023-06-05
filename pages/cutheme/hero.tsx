@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import { Main, Section, FooterBasic, Button } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { ImageText } from '@components/Hero/ImageText/ImageText'
+import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 
 const SinglePara = () => {
   return (
@@ -53,29 +53,51 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <ImageText
-            maxWidth="max"
-            title="Website and Application Development (max)"
+          <HeroTextImage
+            // maxWidth="7xl"
+            title="Website and Application Development"
+            isPageBanner
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
               <Button title="Primary" />
               <Button title="Secondary" color="grey" />
             </div>
-          </ImageText>
+          </HeroTextImage>
         </Section>
 
         <Section hasProse>
+          <SinglePara />
           <DoublePara />
-        </Section>
+          <SinglePara />
 
-        {/* <br />
-        <br /> */}
+          <HeroTextImage title="Website and Application Development">
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <button
+                type="button"
+                aria-label="Primary Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
+              >
+                Primary Button
+              </button>
+              <button
+                type="button"
+                aria-label="Light Grey Button"
+                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
+              >
+                Secondary Button
+              </button>
+            </div>
+          </HeroTextImage>
 
-        <Section hasProse>
-          <ImageText
-            maxWidth="7xl"
-            title="Website and Application Development (7xl)"
+          <SinglePara />
+          <DoublePara />
+          <SinglePara />
+
+          <HeroTextImage
+            maxWidth="max"
+            title="Website and Application Development"
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -94,43 +116,11 @@ const Home: NextPage = () => {
                 Secondary Button
               </button>
             </div>
-          </ImageText>
-        </Section>
+          </HeroTextImage>
 
-        <Section hasProse>
+          <SinglePara />
           <DoublePara />
-        </Section>
-
-        {/* <br />
-        <br /> */}
-
-        <Section hasProse>
-          <ImageText
-            maxWidth="5xl"
-            title="Website and Application Development (5xl)"
-          >
-            <SinglePara />
-            <div className="flex flex-wrap gap-6 buttons md:flex-1">
-              <button
-                type="button"
-                aria-label="Primary Button"
-                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium text-white rounded-md cu-button not-prose hover:text-white focus:outline-none bg-cu-red hover:bg-cu-black-600"
-              >
-                Primary Button
-              </button>
-              <button
-                type="button"
-                aria-label="Light Grey Button"
-                className="inline-flex items-center justify-center gap-1 px-4 py-3 text-base font-medium rounded-md cu-button not-prose hover:text-white focus:outline-none text-cu-black-800 bg-cu-black-50 hover:bg-cu-black-600"
-              >
-                Secondary Button
-              </button>
-            </div>
-          </ImageText>
-        </Section>
-
-        <Section hasProse>
-          <DoublePara />
+          <SinglePara />
         </Section>
       </Main>
 

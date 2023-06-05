@@ -26,3 +26,8 @@
 .cu-section + .cu-section {
   @apply pt-0;
 }
+
+/* TO BE ADDED */
+.cu-herotxtimg p {
+  @apply text-lg font-light md:leading-9 md:text-2xl text-cu-black-600;
+}
