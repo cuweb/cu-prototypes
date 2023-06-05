@@ -6,5 +6,6 @@ export const styles = {
   gridNoImage: 'md:grid-cols-hero-txtimg-20',
   content: 'grid gap-5 italic order-2 md:order-1',
   header: 'font-semibold md:leading-10 text-2xl sm:text-3xl not-italic',
-  image: 'bg-center bg-cover rounded-lg shadow-lg order-1 md:order-2',
+  image: 'bg-center bg-cover rounded-lg order-1 md:order-2',
+  // image: 'bg-center bg-cover rounded-lg shadow-lg order-1 md:order-2',
 }
