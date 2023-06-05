@@ -67,6 +67,21 @@ const Home: NextPage = () => {
           <SinglePara />
           <DoublePara />
 
+          <HeroTextImage
+            title="Website and Application Development"
+            image="https://picsum.photos/400/266"
+            hasAngle
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </HeroTextImage>
+
+          <SinglePara />
+          <DoublePara />
+
           <HeroTextImage title="Website and Application Development">
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">
@@ -83,6 +98,23 @@ const Home: NextPage = () => {
             title="Website and Application Development"
             image="https://picsum.photos/400/266"
             isSmall
+          >
+            <SinglePara />
+            <div className="flex flex-wrap gap-6 buttons md:flex-1">
+              <Button title="Primary" />
+              <Button title="Secondary" color="grey" />
+            </div>
+          </HeroTextImage>
+
+          <SinglePara />
+          <DoublePara />
+          <SinglePara />
+
+          <HeroTextImage
+            title="Website and Application Development"
+            image="https://picsum.photos/400/266"
+            isSmall
+            hasAngle
           >
             <SinglePara />
             <div className="flex flex-wrap gap-6 buttons md:flex-1">

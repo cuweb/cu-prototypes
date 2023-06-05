@@ -7,6 +7,7 @@ export interface HeroTextImageProps {
   title: string
   image?: string
   isSmall?: boolean
+  hasAngle?: boolean
 }
 
 export const rdsMaxWidth = {
@@ -19,6 +20,7 @@ export const HeroTextImage = ({
   children,
   title,
   image,
+  hasAngle,
   isSmall,
 }: HeroTextImageProps) => {
   const headerSize = isSmall ? '' : 'xl:text-5xl xl:leading-[3.5rem]'
@@ -47,7 +49,18 @@ export const HeroTextImage = ({
         <div
           className={`min-h-[240px] md:min-h-[360px] h-full ${styles.image}`}
           style={inlineStyle}
-        />
+        >
+          {hasAngle && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="136"
+              height="450"
+              fill="none"
+            >
+              <path fill="#fff" d="M0 0h135.796L14.046 450H0V0Z" />
+            </svg>
+          )}
+        </div>
       )}
     </div>
   )
