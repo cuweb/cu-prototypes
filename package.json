@@ -16,7 +16,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@carletonuniversity/rds": "^0.0.55",
+    "@carletonuniversity/rds": "^0.0.57",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@headlessui/react": "1.7.15",
@@ -37,7 +37,7 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.8",
     "priority-plus": "^1.5.1",
-    "rds-tailwind-theme": "^0.5.3",
+    "rds-tailwind-theme": "^0.5.4",
     "tailwindcss": "^3.3.2",
     "typescript": "5.1.3"
   }

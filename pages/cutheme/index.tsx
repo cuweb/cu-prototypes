@@ -6,10 +6,10 @@ import {
   Column,
   Heading,
   Card,
+  HeroTextImage,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'

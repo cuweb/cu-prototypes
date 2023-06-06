@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Button } from '@carletonuniversity/rds'
-
+import {
+  Main,
+  Section,
+  FooterBasic,
+  Button,
+  HeroTextImage,
+} from '@carletonuniversity/rds'
 import { TopBar } from '@components/TopBar/TopBar'
-import { HeroTextImage } from '@components/Hero/TextImage/TextImage'
 
 const SinglePara = () => {
   return (
