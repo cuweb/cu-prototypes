@@ -63,7 +63,9 @@ const Home: NextPage = () => {
               <Button title="Secondary" color="grey" />
             </div>
           </HeroTextImage>
+        </Section>
 
+        <Section hasProse>
           <SinglePara />
           <DoublePara />
 
