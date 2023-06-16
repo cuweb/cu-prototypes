@@ -13,7 +13,6 @@ import { TopBar } from '@components/TopBar/TopBar'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
-import { HeroBannerContent } from '@carletonuniversity/rds/dist/components/Hero/HeroBanner/HeroBannerContent'
 
 const SinglePara = () => {
   return (
@@ -90,7 +89,9 @@ const Home: NextPage = () => {
           <h3>This is a header three</h3>
           <SinglePara />
 
-          <HeroBanner title="Hero banner @ 1536" />
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Hero banner @ 1536" />
+          </HeroBanner>
 
           <h3>This is a header three</h3>
           <SinglePara />
