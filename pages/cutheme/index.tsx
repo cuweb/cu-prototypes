@@ -6,13 +6,14 @@ import {
   Column,
   Heading,
   Card,
-  HeroTextImage,
+  HeroBanner,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
 import Link from 'next/link'
 import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
+import { HeroBannerContent } from '@carletonuniversity/rds/dist/components/Hero/HeroBanner/HeroBannerContent'
 
 const SinglePara = () => {
   return (
@@ -57,7 +58,9 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroTextImage title="Hero banner @ 1536" />
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Hero banner @ 1536" />
+          </HeroBanner>
 
           <DoublePara />
 
@@ -87,7 +90,7 @@ const Home: NextPage = () => {
           <h3>This is a header three</h3>
           <SinglePara />
 
-          <HeroTextImage title="Hero banner @ 1536" />
+          <HeroBanner title="Hero banner @ 1536" />
 
           <h3>This is a header three</h3>
           <SinglePara />
