@@ -6,7 +6,7 @@ import {
   Column,
   Heading,
   Card,
-  HeroTextImage,
+  HeroBanner,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
@@ -65,7 +65,9 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroTextImage title="Hero banner @ 1536" />
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Hero banner @ 1280" />
+          </HeroBanner>
 
           <DoublePara />
 
@@ -95,7 +97,9 @@ const Home: NextPage = () => {
           <h3>This is a header three</h3>
           <SinglePara />
 
-          <HeroTextImage title="Hero banner @ 1536" />
+          <HeroBanner maxWidth="5xl">
+            <HeroBanner.Content title="Hero banner @ 1536" />
+          </HeroBanner>
 
           <h3>This is a header three</h3>
           <SinglePara />

@@ -1,27 +1,45 @@
-# Next.js + Tailwind CSS Example
+# CU Prototypes
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This project aims to provide a quick development environment for new components that can be easily migrated to the RDS component library. This project uses:
 
-## Deploy your own
+- Next.Js
+- Typescript
+- Raven Design System (RDS)
+- Tailwind CSS
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Getting Setup
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Getting setup with our prototypes can be done in a few easy steps. First, open a terminal window and navigate to where you'd like to store the code. From here, run the following commands:
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```
+git clone https://github.com/cuweb/cu-prototypes.git
+cd cu-prototypes
+npm run clean
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+**Note:** you must use `npm` on this project.
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+That's it. Now you're ready to start up the project and get to work! All that's left is to visit http://localhost:3000 in your favourite browser.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## How to Work with Prototypes
+
+This section provides an overview of the best approach to building and testing a new component for potential inclusion into RDS. This process follows the approach that the RDS component is built in full during the prototyping phase and once approved it only needs to be ported to RDS and stories will be created.
+
+The process is simple:
+
+- In the `/components` folder you'll build the component, much like you would in RDS
+- In the `pages` folder you will create a page that the component will be imported into and testing in all possible variations
+- In the `/data` folder you will add file(s) for any data required to test the component
+
+That's it. Well, 95% of it. In some cases you may be building page layouts for upcoming projects.
+
+## Page Layouts
+
+In some cases you will need to create groupings of components in column or other layouts. This is where we can leverage the blocks folder. If you need to group components together for layout purposes follow these steps:
+
+- In the `/blocks` folder create a folder for your project
+- In the `/projectName` folder add as many files as needed
+- In the `/pages` folder import the blocks into your layout examples
+
+**Note** — If building new components inside the blocks area the same rule for building a component apply and we use the `/components`, `/pages`, and `/data` folder for our component code.
