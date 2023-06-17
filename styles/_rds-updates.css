@@ -1,0 +1,4 @@
+/* This could be a boolean option on column for more flexible layouts */
+.cu-column + .cu-column {
+  @apply mt-4 md:mt-10;
+}

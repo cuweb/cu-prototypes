@@ -1,10 +1,18 @@
 import type { NextPage } from 'next'
-import { Main, Section, FooterBasic, Container } from '@carletonuniversity/rds'
+import {
+  Main,
+  Section,
+  FooterBasic,
+  Container,
+  Heading,
+} from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
-import { ImportantNews } from 'blocks/intranet/ImportantNews'
-import { CommunityConnect } from 'blocks/intranet/Community'
+import { CommunityNews } from 'blocks/intranet/CommunityNews'
+import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
 import { NumberStats } from 'blocks/intranet/NumberStats'
 import { Profile } from 'blocks/intranet/Profile'
+import { Resources } from 'blocks/intranet/Resources'
+import { NewsEvents } from 'blocks/intranet/NewsEvents'
 
 const Home: NextPage = () => {
   return (
@@ -15,11 +23,18 @@ const Home: NextPage = () => {
         <Section>
           <Container isGrey>
             <Profile />
-            <ImportantNews />
           </Container>
 
           <Container>
-            <CommunityConnect />
+            <Heading text="Community News" maxWidth="7xl" />
+            <CommunityNews />
+            <BulletinBoard />
+            <NewsEvents />
+          </Container>
+
+          <Container>
+            <Heading text="Resources" maxWidth="7xl" />
+            <Resources />
           </Container>
 
           <Container isGrey>
