@@ -21,8 +21,8 @@ const IntranetMyInfo: NextPage = () => {
   return (
     <>
       <TopBar
-        title="Intranet 111"
-        homeLink="/intranet/resources"
+        title="Intranet"
+        homeLink="/intranet"
         navLinks={intranetNavData}
       ></TopBar>
 
