@@ -6,8 +6,8 @@ export const NumberStats = () => {
   return (
     <>
       <Heading text="By the Numbers" maxWidth="7xl" />
-      <Column cols="4" maxWidth="7xl">
-        {StatsData.slice(0, 8).map(({ id, stat, desc }) => (
+      <Column cols="3" maxWidth="7xl">
+        {StatsData.slice(0, 6).map(({ id, stat, desc }) => (
           <Card key={id} border="red" noLink>
             <Card.Content>
               <Card.Stats desc={desc} stat={stat} />

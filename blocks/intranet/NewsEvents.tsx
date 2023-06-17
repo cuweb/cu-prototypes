@@ -8,7 +8,7 @@ export const NewsEvents = () => {
   return (
     <Column cols="3" maxWidth="7xl">
       <Column.Content>
-        <StackedList header="Top 5" hasBorder>
+        <StackedList header="Top 5" hasShadow>
           {NewsData.slice(0, 5).map(({ id, title, link, excerpt }) => (
             <Listing key={id}>
               <Link href={link}>
@@ -22,7 +22,7 @@ export const NewsEvents = () => {
       </Column.Content>
 
       <Column.Content>
-        <StackedList header="Internal News" hasBorder>
+        <StackedList header="Internal News" hasShadow>
           {NewsData.slice(0, 4).map(({ id, title, link, date }) => (
             <Listing key={id}>
               <Link href={link}>
@@ -37,7 +37,7 @@ export const NewsEvents = () => {
       </Column.Content>
 
       <Column.Content>
-        <StackedList header="Internal News" hasBorder>
+        <StackedList header="Internal Events" hasShadow>
           {eventData
             .slice(0, 3)
             .map(
