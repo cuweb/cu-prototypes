@@ -13,11 +13,16 @@ import { NumberStats } from 'blocks/intranet/NumberStats'
 import { Profile } from 'blocks/intranet/Profile'
 import { Resources } from 'blocks/intranet/Resources'
 import { NewsEvents } from 'blocks/intranet/NewsEvents'
+import { intranetNavData } from 'data/TopNavData'
 
-const Home: NextPage = () => {
+const IntranetHome: NextPage = () => {
   return (
     <>
-      <TopBar title="Intranet"></TopBar>
+      <TopBar
+        title="Intranet"
+        homeLink="/intranet"
+        navLinks={intranetNavData}
+      ></TopBar>
 
       <Main>
         <Section>
@@ -48,4 +53,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default IntranetHome
