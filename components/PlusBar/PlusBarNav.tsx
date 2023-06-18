@@ -9,14 +9,11 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
 
   // add or remove menu item to sub menu based on visisbility
   const updateMenu = (inView: any, entry: any, menuItem: any) => {
-    console.log(inView)
     if (inView) {
       subMenu.pop()
       setSubMenu((subMenu: any) => [...subMenu])
-      entry.target.classList.toggle('invisible')
     } else {
       setSubMenu((subMenu: any) => [...subMenu, menuItem])
-      entry.target.classList.toggle('invisible')
     }
   }
 
@@ -36,7 +33,7 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
                 <Link
                   ref={ref}
                   href={navMenuItem.link}
-                  className="text-sm font-semibold leading-6 text-gray-900 invisible"
+                  className="text-sm font-semibold leading-6 text-gray-900"
                 >
                   {navMenuItem.label}
                 </Link>
