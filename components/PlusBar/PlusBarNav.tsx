@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { PlusBarSubNav } from './PlusBarSubNav'
+import Link from 'next/link'
 
 export const PlusBarNav = ({ navLinks, className }: any) => {
   // create sub menu for invisible items
@@ -8,13 +9,14 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
 
   // add or remove menu item to sub menu based on visisbility
   const updateMenu = (inView: any, entry: any, menuItem: any) => {
+    console.log(inView)
     if (inView) {
       subMenu.pop()
+      setSubMenu((subMenu: any) => [...subMenu])
       entry.target.classList.toggle('invisible')
-      setSubMenu([...subMenu])
     } else {
+      setSubMenu((subMenu: any) => [...subMenu, menuItem])
       entry.target.classList.toggle('invisible')
-      setSubMenu([...subMenu, menuItem])
     }
   }
 
@@ -24,16 +26,21 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
         {navLinks &&
           navLinks.map((navMenuItem: any, index: any) => (
             <InView
-              as="a"
               key={index}
+              threshold={0.99}
               onChange={(inView, entry) =>
                 updateMenu(inView, entry, navMenuItem)
               }
-              threshold={0.99}
-              href={navMenuItem.link}
-              className="text-sm font-semibold leading-6 text-gray-900 invisible"
             >
-              {navMenuItem.label}
+              {({ ref }) => (
+                <Link
+                  ref={ref}
+                  href={navMenuItem.link}
+                  className="text-sm font-semibold leading-6 text-gray-900 invisible"
+                >
+                  {navMenuItem.label}
+                </Link>
+              )}
             </InView>
           ))}
       </div>
