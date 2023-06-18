@@ -15,8 +15,6 @@ import Image from 'next/image'
 import { NewsData } from '../../data/NewsData'
 import {
   homepageNavData,
-  intranetNavData,
-  cuthemeNavData,
 } from 'data/TopNavData'
 
 import { PlusBar } from '@components/PlusBar/PlusBar'
@@ -60,24 +58,7 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      {/* <TopBar title="Information and Technology Services" isTwoTier></TopBar> */}
-
-      <br />
-      <PlusBar homeLink="/topnav" navLinks={homepageNavData}></PlusBar>
-      <br />
-      <PlusBar
-        title="Intranet"
-        homeLink="/topnav"
-        navLinks={intranetNavData}
-      ></PlusBar>
-      <br />
-      <PlusBar
-        title="Information and Technology Services"
-        homeLink="/topnav"
-        navLinks={cuthemeNavData}
-        isTwoTier
-      ></PlusBar>
-      <br />
+      <PlusBar homeLink="/plusnav" navLinks={homepageNavData} />
 
       <Main>
         <Section hasProse>
