@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import {
   Main,
   Section,
-  FooterBasic,
   Column,
   Heading,
   Card,
@@ -10,6 +9,8 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
+import { FooterSimple } from '@components/FooterSimple/FooterSimple'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -115,7 +116,7 @@ const Home: NextPage = () => {
         </Section>
       </Main>
 
-      <FooterBasic />
+      <FooterSimple />
     </>
   )
 }
