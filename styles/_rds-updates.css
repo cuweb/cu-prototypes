@@ -1,0 +1,9 @@
+/* This could be a boolean option on column for more flexible layouts */
+.cu-column + .cu-column {
+  @apply mt-4 md:mt-10;
+}
+
+/* DONE for v0.0.63 - removed width restrictions on panel */
+.cu-panel {
+  @apply max-w-none;
+}

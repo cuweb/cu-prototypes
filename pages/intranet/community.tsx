@@ -5,6 +5,7 @@ import {
   FooterBasic,
   Container,
   Heading,
+  Column,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
 import { CommunityNews } from 'blocks/intranet/CommunityNews'
@@ -14,8 +15,9 @@ import { Profile } from 'blocks/intranet/Profile'
 import { Resources } from 'blocks/intranet/Resources'
 import { NewsEvents } from 'blocks/intranet/NewsEvents'
 import { intranetNavData } from 'data/TopNavData'
+import { styles } from '../../blocks/intranet/Intranet.Styles'
 
-const IntranetHome: NextPage = () => {
+const IntranetCommunity: NextPage = () => {
   return (
     <>
       <TopBar
@@ -27,23 +29,19 @@ const IntranetHome: NextPage = () => {
       <Main>
         <Section>
           <Container isGrey>
-            <Profile />
-          </Container>
-
-          <Container>
-            <Heading text="Community News" maxWidth="7xl" />
-            <CommunityNews />
             <BulletinBoard />
-            <NewsEvents />
           </Container>
 
           <Container>
-            <Heading text="Popular Resources" maxWidth="7xl" />
-            <Resources />
-          </Container>
-
-          <Container isGrey>
-            <NumberStats />
+            <Column cols="2" maxWidth="7xl">
+              <div className={styles.placeholder}>Ideas @ Carleton</div>
+              <div className={styles.placeholder}>Marketplace</div>
+            </Column>
+            <Column cols="3" maxWidth="7xl">
+              <div className={styles.placeholder}>Healthy Workplace</div>
+              <div className={styles.placeholder}>Community News</div>
+              <div className={styles.placeholder}>Community Events</div>
+            </Column>
           </Container>
         </Section>
       </Main>
@@ -53,4 +51,4 @@ const IntranetHome: NextPage = () => {
   )
 }
 
-export default IntranetHome
+export default IntranetCommunity

@@ -5,46 +5,55 @@ import {
   FooterBasic,
   Container,
   Heading,
+  Column,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
+import { Profile } from 'blocks/intranet-alt/Profile'
+import { Resources } from 'blocks/intranet-alt/Resources'
+
 import { CommunityNews } from 'blocks/intranet/CommunityNews'
 import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
 import { NumberStats } from 'blocks/intranet/NumberStats'
-import { Profile } from 'blocks/intranet/Profile'
-import { Resources } from 'blocks/intranet/Resources'
 import { NewsEvents } from 'blocks/intranet/NewsEvents'
-import { intranetNavData } from 'data/TopNavData'
 
-const IntranetHome: NextPage = () => {
+import { intranetAltNavData } from 'data/TopNavData'
+import { LeaveDays } from 'blocks/intranet-alt/LeaveDays'
+
+const IntranetAltHome: NextPage = () => {
   return (
     <>
       <TopBar
         title="Intranet"
         homeLink="/intranet"
-        navLinks={intranetNavData}
+        navLinks={intranetAltNavData}
       ></TopBar>
 
       <Main>
         <Section>
           <Container isGrey>
             <Profile />
+            {/* <Heading text="Leave Information" maxWidth="7xl" />
+            <LeaveDays /> */}
           </Container>
 
           <Container>
             <Heading text="Community News" maxWidth="7xl" />
+            <Column cols="2/3" maxWidth="7xl">
+              <Resources />
+              <Resources />
+            </Column>
+          </Container>
+
+          {/* <Container>
+            <Heading text="Community News" maxWidth="7xl" />
             <CommunityNews />
             <BulletinBoard />
             <NewsEvents />
-          </Container>
+          </Container> */}
 
-          <Container>
-            <Heading text="Popular Resources" maxWidth="7xl" />
-            <Resources />
-          </Container>
-
-          <Container isGrey>
+          {/* <Container isGrey>
             <NumberStats />
-          </Container>
+          </Container> */}
         </Section>
       </Main>
 
@@ -53,4 +62,4 @@ const IntranetHome: NextPage = () => {
   )
 }
 
-export default IntranetHome
+export default IntranetAltHome

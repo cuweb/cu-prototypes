@@ -11,8 +11,14 @@ import {
 
 import { TopBar } from '@components/TopBar/TopBar'
 import Link from 'next/link'
-import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
+
+import { NewsData } from '../../data/NewsData'
+import {
+  homepageNavData,
+  intranetNavData,
+  cuthemeNavData,
+} from 'data/TopNavData'
 
 const SinglePara = () => {
   return (
@@ -56,11 +62,20 @@ const Home: NextPage = () => {
       {/* <TopBar title="Information and Technology Services" isTwoTier></TopBar> */}
 
       <br />
-      <TopBar></TopBar>
+      <TopBar homeLink="/topnav" navLinks={homepageNavData}></TopBar>
       <br />
-      <TopBar title="Intranet"></TopBar>
+      <TopBar
+        title="Intranet"
+        homeLink="/topnav"
+        navLinks={intranetNavData}
+      ></TopBar>
       <br />
-      <TopBar title="Information and Technology Services" isTwoTier></TopBar>
+      <TopBar
+        title="Information and Technology Services"
+        homeLink="/topnav"
+        navLinks={cuthemeNavData}
+        isTwoTier
+      ></TopBar>
       <br />
 
       <Main>

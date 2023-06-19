@@ -5,6 +5,7 @@ import {
   FooterBasic,
   Container,
   Heading,
+  Column,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
 import { CommunityNews } from 'blocks/intranet/CommunityNews'
@@ -14,8 +15,9 @@ import { Profile } from 'blocks/intranet/Profile'
 import { Resources } from 'blocks/intranet/Resources'
 import { NewsEvents } from 'blocks/intranet/NewsEvents'
 import { intranetNavData } from 'data/TopNavData'
+import { styles } from '../../blocks/intranet/Intranet.Styles'
 
-const IntranetHome: NextPage = () => {
+const IntranetMyInfo: NextPage = () => {
   return (
     <>
       <TopBar
@@ -27,23 +29,21 @@ const IntranetHome: NextPage = () => {
       <Main>
         <Section>
           <Container isGrey>
-            <Profile />
+            <Column cols="2/3" maxWidth="7xl">
+              <div className={styles.placeholder}>Profile Details</div>
+              <div className={styles.placeholder}>Internal Sites</div>
+            </Column>
           </Container>
 
           <Container>
-            <Heading text="Community News" maxWidth="7xl" />
-            <CommunityNews />
-            <BulletinBoard />
-            <NewsEvents />
-          </Container>
-
-          <Container>
-            <Heading text="Popular Resources" maxWidth="7xl" />
-            <Resources />
-          </Container>
-
-          <Container isGrey>
-            <NumberStats />
+            <Column maxWidth="7xl">
+              <div className={styles.placeholder}>Annual Leave</div>
+            </Column>
+            <Column cols="3" maxWidth="7xl">
+              <div className={styles.placeholder}>Pay Dates</div>
+              <div className={styles.placeholder}>Pension Statements</div>
+              <div className={styles.placeholder}>Tax Forms</div>
+            </Column>
           </Container>
         </Section>
       </Main>
@@ -53,4 +53,4 @@ const IntranetHome: NextPage = () => {
   )
 }
 
-export default IntranetHome
+export default IntranetMyInfo

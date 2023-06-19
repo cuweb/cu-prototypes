@@ -12,8 +12,10 @@ import {
 
 import { TopBar } from '@components/TopBar/TopBar'
 import Link from 'next/link'
-import { NewsData } from '../../data/NewsData'
 import Image from 'next/image'
+
+import { NewsData } from '../../data/NewsData'
+import { cuthemeNavData } from 'data/TopNavData'
 
 const SinglePara = () => {
   return (
@@ -54,7 +56,12 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopBar title="Information and Technology Services" isTwoTier></TopBar>
+      <TopBar
+        title="Information and Technology Services"
+        homeLink="/cutheme"
+        navLinks={cuthemeNavData}
+        isTwoTier
+      ></TopBar>
 
       <Main>
         <Section hasProse>
