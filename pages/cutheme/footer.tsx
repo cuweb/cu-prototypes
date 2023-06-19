@@ -70,48 +70,6 @@ const Home: NextPage = () => {
           </HeroBanner>
 
           <DoublePara />
-
-          <Heading text="Three col cards @ 1024" />
-          <Column cols="3">
-            {NewsData.slice(0, 3).map(
-              ({ id, title, link, date, image, alt }) => (
-                <Card key={id}>
-                  <Link href={link}>
-                    <Card.Figure>
-                      <Image src={image} alt={alt} width="400" height="266" />
-                    </Card.Figure>
-                    <Card.Content>
-                      <Card.PostMeta date={date} />
-                      <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
-                    </Card.Content>
-                  </Link>
-                </Card>
-              ),
-            )}
-          </Column>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroBanner maxWidth="5xl">
-            <HeroBanner.Content title="Hero banner @ 1536" />
-          </HeroBanner>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <Column cols="2">
-            <Column.Content>
-              <SinglePara />
-            </Column.Content>
-            <Column.Content>
-              <SinglePara />
-            </Column.Content>
-          </Column>
           <SinglePara />
         </Section>
       </Main>
