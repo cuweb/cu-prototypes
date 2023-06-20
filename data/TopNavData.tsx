@@ -6,7 +6,6 @@ export const homepageNavData = [
   { id: 5, label: 'About', link: '/homepage' },
   { id: 6, label: 'Academics2', link: '/homepage' },
   { id: 7, label: 'Students2', link: '/homepage' },
-  { id: 8, label: 'Research2', link: '/homepage' },
 ]
 
 export const intranetNavData = [

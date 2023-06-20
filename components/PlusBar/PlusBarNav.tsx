@@ -11,8 +11,10 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
   const updateMenu = (inView: any, entry: any, menuItem: any) => {
     if (inView) {
       subMenu.pop()
+      entry.target.classList.toggle('invisible')
       setSubMenu((subMenu: any) => [...subMenu])
     } else {
+      entry.target.classList.toggle('invisible')
       setSubMenu((subMenu: any) => [...subMenu, menuItem])
     }
   }
@@ -33,7 +35,7 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
                 <Link
                   ref={ref}
                   href={navMenuItem.link}
-                  className="text-sm font-semibold leading-6 text-gray-900"
+                  className="text-sm font-semibold leading-6 text-gray-900 invisible"
                 >
                   {navMenuItem.label}
                 </Link>
@@ -42,7 +44,10 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
           ))}
       </div>
       <div className="flex-none">
-        {subMenu.length > 0 && <PlusBarSubNav subMenu={subMenu} />}
+        <div className='inline-block mr-4'>{subMenu.length > 0 && <PlusBarSubNav subMenu={subMenu} />}</div>
+        <div className="inline-block px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
+          Buttons
+        </div>
       </div>
     </>
   )
