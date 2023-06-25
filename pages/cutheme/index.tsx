@@ -3,18 +3,12 @@ import {
   Main,
   Section,
   Column,
-  Heading,
-  Card,
-  HeroBanner,
+  FooterBasic,
+  HeroTextImage,
+  Button,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { FooterSimple } from '@components/FooterSimple/FooterSimple'
-
-import Link from 'next/link'
-import Image from 'next/image'
-
-import { NewsData } from '../../data/NewsData'
 import { cuthemeNavData } from 'data/TopNavData'
 
 const SinglePara = () => {
@@ -65,44 +59,24 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroBanner maxWidth="5xl">
-            <HeroBanner.Content title="Hero banner @ 1536" />
-          </HeroBanner>
+          <HeroTextImage hasBorder>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              headerType="h1"
+              paragraph="Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+              architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi
+              delectus nihil voluptatem."
+              image="https://picsum.photos/400/266"
+              imageAngle
+            >
+              <div className="flex flex-wrap gap-6 buttons md:flex-1">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+          </HeroTextImage>
 
           <DoublePara />
-
-          <Heading text="Three col cards @ 1024" />
-          <Column cols="3">
-            {NewsData.slice(0, 3).map(
-              ({ id, title, link, date, image, alt }) => (
-                <Card key={id}>
-                  <Link href={link}>
-                    <Card.Figure>
-                      <Image src={image} alt={alt} width="400" height="266" />
-                    </Card.Figure>
-                    <Card.Content>
-                      <Card.PostMeta date={date} />
-                      <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
-                    </Card.Content>
-                  </Link>
-                </Card>
-              ),
-            )}
-          </Column>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroBanner maxWidth="5xl">
-            <HeroBanner.Content title="Hero banner @ 1536" />
-          </HeroBanner>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
 
           <Column cols="2">
             <Column.Content>
@@ -112,11 +86,12 @@ const Home: NextPage = () => {
               <SinglePara />
             </Column.Content>
           </Column>
-          <SinglePara />
+
+          <DoublePara />
         </Section>
       </Main>
 
-      <FooterSimple />
+      <FooterBasic />
     </>
   )
 }

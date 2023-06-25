@@ -11,13 +11,7 @@ import { TopBar } from '../../components/TopBar/TopBar'
 import { Profile } from 'blocks/intranet-alt/Profile'
 import { Resources } from 'blocks/intranet-alt/Resources'
 
-import { CommunityNews } from 'blocks/intranet/CommunityNews'
-import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
-import { NumberStats } from 'blocks/intranet/NumberStats'
-import { NewsEvents } from 'blocks/intranet/NewsEvents'
-
 import { intranetAltNavData } from 'data/TopNavData'
-import { LeaveDays } from 'blocks/intranet-alt/LeaveDays'
 
 const IntranetAltHome: NextPage = () => {
   return (
