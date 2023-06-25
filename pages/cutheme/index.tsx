@@ -3,12 +3,12 @@ import {
   Main,
   Section,
   Column,
+  FooterBasic,
   HeroTextImage,
   Button,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { FooterSimple } from '@components/FooterSimple/FooterSimple'
 import { cuthemeNavData } from 'data/TopNavData'
 
 const SinglePara = () => {
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
         </Section>
       </Main>
 
-      <FooterSimple />
+      <FooterBasic />
     </>
   )
 }
