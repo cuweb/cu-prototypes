@@ -15,6 +15,13 @@ export const intranetNavData = [
   { id: 4, label: 'Resource Center', link: '/intranet/resources' },
 ]
 
+export const intranetAltNavData = [
+  { id: 1, label: 'Community', link: '/intranet/community' },
+  { id: 2, label: 'Employees', link: '/intranet/working-here' },
+  { id: 3, label: 'Managers', link: '/intranet/working-here' },
+  { id: 4, label: 'Resources', link: '/intranet/resources' },
+]
+
 export const cuthemeNavData = [
   { id: 1, label: 'About Us', link: '/cutheme' },
   { id: 2, label: 'News', link: '/cutheme' },

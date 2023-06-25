@@ -38,7 +38,7 @@ const IntranetHome: NextPage = () => {
           </Container>
 
           <Container>
-            <Heading text="Resources" maxWidth="7xl" />
+            <Heading text="Popular Resources" maxWidth="7xl" />
             <Resources />
           </Container>
 
