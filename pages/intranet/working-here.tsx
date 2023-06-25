@@ -6,16 +6,10 @@ import {
   Container,
   Heading,
   Column,
-  HeroBanner,
+  HeroTextImage,
   Button,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
-import { CommunityNews } from 'blocks/intranet/CommunityNews'
-import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
-import { NumberStats } from 'blocks/intranet/NumberStats'
-import { Profile } from 'blocks/intranet/Profile'
-import { Resources } from 'blocks/intranet/Resources'
-import { NewsEvents } from 'blocks/intranet/NewsEvents'
 import { intranetNavData } from 'data/TopNavData'
 import { styles } from '../../blocks/intranet/Intranet.Styles'
 
@@ -31,8 +25,8 @@ const IntranetWorkingCarleton: NextPage = () => {
       <Main>
         <Section>
           <Container isGrey>
-            <HeroBanner>
-              <HeroBanner.Content
+            <HeroTextImage>
+              <HeroTextImage.Content
                 title="Working at Carleton"
                 paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 facilisis id neque sit amet convallis. Proin rutrum leo
@@ -49,8 +43,8 @@ const IntranetWorkingCarleton: NextPage = () => {
                     }}
                   />
                 </div>
-              </HeroBanner.Content>
-            </HeroBanner>
+              </HeroTextImage.Content>
+            </HeroTextImage>
           </Container>
 
           <Container>

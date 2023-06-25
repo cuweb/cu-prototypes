@@ -4,16 +4,10 @@ import {
   Section,
   FooterBasic,
   Container,
-  Heading,
   Column,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
-import { CommunityNews } from 'blocks/intranet/CommunityNews'
 import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
-import { NumberStats } from 'blocks/intranet/NumberStats'
-import { Profile } from 'blocks/intranet/Profile'
-import { Resources } from 'blocks/intranet/Resources'
-import { NewsEvents } from 'blocks/intranet/NewsEvents'
 import { intranetNavData } from 'data/TopNavData'
 import { styles } from '../../blocks/intranet/Intranet.Styles'
 
