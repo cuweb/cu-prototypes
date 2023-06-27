@@ -2,6 +2,7 @@ import React from 'react'
 import { HeroTextImageContent } from './HeroTextImageContent'
 import { HeroTextImageEvent } from './HeroTextImageEvent'
 import { HeroTextImagePeople } from './HeroTextImagePeople'
+import { HeroTextImageSocial } from './HeroTextImageSocial'
 import { HeroTextImageMedia } from './HeroTextImageMedia'
 import { styles } from './HeroTextImage.Styles'
 
@@ -43,5 +44,6 @@ export const HeroTextImage = Object.assign(HeroTextImageWrapper, {
   Content: HeroTextImageContent,
   Event: HeroTextImageEvent,
   People: HeroTextImagePeople,
+  Social: HeroTextImageSocial,
   Media: HeroTextImageMedia,
 })

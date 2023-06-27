@@ -22,3 +22,9 @@ export const mediaStyles = {
   svgRight:
     'hidden md:block absolute -right-px top-0 z-10 h-full transform scale-[-1]',
 }
+
+export const socialStyles = {
+  flex: 'flex items-center gap-4',
+  link: 'text-cu-black-400',
+  icon: 'w-6 h-6 md:w-8 md:h-8',
+}
