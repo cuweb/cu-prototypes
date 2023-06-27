@@ -8,6 +8,7 @@ import {
   FooterBasic,
   // HeroTextImage,
   Button,
+  Container,
 } from '@carletonuniversity/rds'
 
 // import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
@@ -61,15 +62,15 @@ const Home: NextPage = () => {
       <TopBar
         title="Information and Technology Services"
         homeLink="/cutheme"
-        navLinks={cuthemeNavData}
-        isTwoTier
+        // navLinks={cuthemeNavData}
+        // isTwoTier
       ></TopBar>
 
       <Main>
         <Section hasProse>
           <HeroTextImage hasBorder>
             <HeroTextImage.Content
-              title="Website and Application Development"
+              title="Homepage banner variation"
               paragraph={heroPara}
               headerType="h1"
               hasMediaCol
@@ -84,158 +85,126 @@ const Home: NextPage = () => {
         </Section>
 
         <Section hasProse>
-          <HeroTextImage reverse hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media image="https://picsum.photos/400/266" />
-          </HeroTextImage>
-        </Section>
+          <Container>
+            <HeroTextImage reverse>
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                hasMediaCol
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media image="https://picsum.photos/400/266" />
+            </HeroTextImage>
+          </Container>
 
-        <Section hasProse>
-          <HeroTextImage hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="left"
-            />
-          </HeroTextImage>
-        </Section>
+          <DoublePara />
 
-        <Section hasProse>
-          <HeroTextImage reverse hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="left"
-            />
-          </HeroTextImage>
-        </Section>
+          <Container>
+            <HeroTextImage>
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                hasMediaCol
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media
+                image="https://picsum.photos/400/266"
+                angle="left"
+              />
+            </HeroTextImage>
+          </Container>
 
-        <Section hasProse>
-          <HeroTextImage hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="full"
-            />
-          </HeroTextImage>
-        </Section>
+          <DoublePara />
 
-        <Section hasProse>
-          <HeroTextImage reverse hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="full"
-            />
-          </HeroTextImage>
-        </Section>
+          <Container>
+            <HeroTextImage reverse>
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                headerType="h1"
+                hasMediaCol
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media
+                image="https://picsum.photos/400/266"
+                angle="left"
+              />
+            </HeroTextImage>
+          </Container>
 
-        <Section hasProse>
-          <HeroTextImage maxWidth="5xl" hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType="h1"
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-          </HeroTextImage>
-        </Section>
+          <DoublePara />
 
-        {/* <Section hasProse>
-          <HeroTextImage reverse hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType='h1'
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="right"
-            />
-          </HeroTextImage>
-        </Section>
+          <Container>
+            <HeroTextImage>
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                headerType="h1"
+                hasMediaCol
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media
+                image="https://picsum.photos/400/266"
+                angle="full"
+              />
+            </HeroTextImage>
+          </Container>
 
-        <Section hasProse>
-          <HeroTextImage hasBorder>
-            <HeroTextImage.Content
-              title="Website and Application Development"
-              paragraph={heroPara}
-              headerType='h1'
-              hasMediaCol
-            >
-              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                <Button title="Primary" />
-                <Button title="Secondary" color="grey" />
-              </div>
-            </HeroTextImage.Content>
-            <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              angle="right"
-            />
-          </HeroTextImage>
-        </Section> */}
+          <DoublePara />
 
-        <Section hasProse>
+          <Container>
+            <HeroTextImage reverse>
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                headerType="h1"
+                hasMediaCol
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media
+                image="https://picsum.photos/400/266"
+                angle="full"
+              />
+            </HeroTextImage>
+          </Container>
+
+          <DoublePara />
+
+          <Container>
+            <HeroTextImage maxWidth="5xl">
+              <HeroTextImage.Content
+                title="Website and Application Development"
+                paragraph={heroPara}
+                headerType="h1"
+              >
+                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                  <Button title="Primary" />
+                  <Button title="Secondary" color="grey" />
+                </div>
+              </HeroTextImage.Content>
+            </HeroTextImage>
+          </Container>
+
           <DoublePara />
 
           <Column cols="2">
