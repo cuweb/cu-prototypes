@@ -1,5 +1,6 @@
 import React from 'react'
 import { HeroTextImageContent } from './HeroTextImageContent'
+import { HeroTextImagePeople } from './HeroTextImagePeople'
 import { HeroTextImageMedia } from './HeroTextImageMedia'
 import { styles } from './HeroTextImage.Styles'
 
@@ -39,5 +40,6 @@ export const HeroTextImageWrapper = ({
 
 export const HeroTextImage = Object.assign(HeroTextImageWrapper, {
   Content: HeroTextImageContent,
+  People: HeroTextImagePeople,
   Media: HeroTextImageMedia,
 })

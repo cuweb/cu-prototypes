@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from './HeroTextImage.Styles'
+import { mediaStyles } from './HeroTextImage.Styles'
 
 export interface HeroTextImageMediaProps {
   children?: React.ReactNode
@@ -25,8 +25,9 @@ export const HeroTextImageMedia = ({
   focalPointX = '50',
   focalPointY = '50',
 }: HeroTextImageMediaProps) => {
-  const hasImage = image ? styles.mediaBgImage : ''
-  const hasAngle = angle === 'right' ? styles.svgRight : styles.svgLeft
+  const hasImage = image ? mediaStyles.mediaBgImage : ''
+  const hasAngle =
+    angle === 'right' ? mediaStyles.svgRight : mediaStyles.svgLeft
   const inlineStyle = {
     backgroundImage: `url(${image})`,
     backgroundPosition: `${focalPointX}% ${focalPointY}%`,
@@ -34,13 +35,13 @@ export const HeroTextImageMedia = ({
 
   return (
     <div
-      className={`${styles.mediaWrapper} ${rdsImageWidth[imageWidth]} ${hasImage}`}
+      className={`${mediaStyles.mediaWrapper} ${rdsImageWidth[imageWidth]} ${hasImage}`}
       style={inlineStyle}
     >
       {angle === 'full' && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={styles.svgRight}
+          className={mediaStyles.svgRight}
           fill="none"
           viewBox="0 0 123 440"
         >
