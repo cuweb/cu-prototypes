@@ -39,11 +39,7 @@ export const HeroTextImagePeople = ({
       <h1 className={`${contentStyles.header} ${contentStyles.headerOne}`}>
         {designation && `${designation} `}
         {title}{' '}
-        {pronoun && (
-          <span className="text-3xl font-light lowercase text-cu-black-500">
-            ({pronoun})
-          </span>
-        )}
+        {pronoun && <span className={contentStyles.pronoun}>({pronoun})</span>}
       </h1>
       {jobTitle && <p className={contentStyles.largeText}>{jobTitle}</p>}
 
