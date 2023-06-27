@@ -1,5 +1,5 @@
 import React from 'react'
-import { styles } from './HeroTextImage.Styles'
+import { contentStyles } from './HeroTextImage.Styles'
 
 export interface HeroTextImageContentProps {
   children?: React.ReactNode
@@ -19,13 +19,17 @@ export const HeroTextImageContent = ({
   const contentPadding = hasMediaCol ? 'md:py-4' : ''
 
   return (
-    <div className={`${styles.contentWrapper} ${contentPadding}`}>
+    <div className={`${contentStyles.contentWrapper} ${contentPadding}`}>
       {headerType === 'h1' && (
-        <h1 className={`${styles.header} ${styles.headerOne}`}>{title}</h1>
+        <h1 className={`${contentStyles.header} ${contentStyles.headerOne}`}>
+          {title}
+        </h1>
       )}
-      {headerType === 'h2' && <h2 className={`${styles.header}`}>{title}</h2>}
+      {headerType === 'h2' && (
+        <h2 className={`${contentStyles.header}`}>{title}</h2>
+      )}
 
-      {paragraph && <p className={styles.paragraph}>{paragraph}</p>}
+      {paragraph && <p className={contentStyles.largeText}>{paragraph}</p>}
 
       {children}
     </div>
