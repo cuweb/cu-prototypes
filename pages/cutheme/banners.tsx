@@ -69,6 +69,41 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType="h1"
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media image="https://picsum.photos/400/266" />
+          </HeroTextImage>
+        </Section>
+
+        <Section hasProse>
+          <HeroTextImage reverse hasBorder>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              headerType="h1"
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media image="https://picsum.photos/400/266" />
+          </HeroTextImage>
+        </Section>
+
+        <Section hasProse>
+          <HeroTextImage hasBorder>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              headerType="h1"
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
@@ -88,6 +123,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType="h1"
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
@@ -107,6 +143,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType="h1"
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
@@ -126,6 +163,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType="h1"
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
@@ -145,6 +183,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType="h1"
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
                 <Button title="Primary" />
@@ -159,6 +198,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType='h1'
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
@@ -178,6 +218,7 @@ const Home: NextPage = () => {
             <HeroTextImage.Content
               title="Website and Application Development"
               paragraph={heroPara}
+              headerType='h1'
               hasMediaCol
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">

@@ -16,18 +16,15 @@ export const HeroTextImageMedia = ({
   focalPointX = '50',
   focalPointY = '50',
 }: HeroTextImageMediaProps) => {
+  const hasImage = image ? styles.mediaBgImage : ''
+  const hasAngle = angle === 'right' ? styles.svgRight : styles.svgLeft
   const inlineStyle = {
     backgroundImage: `url(${image})`,
     backgroundPosition: `${focalPointX}% ${focalPointY}%`,
   }
 
-  const hasAngle = angle === 'right' ? styles.svgRight : styles.svgLeft
-
   return (
-    <div
-      className={`${styles.mediaWrapper} bg-cu-red relative rounded bg-cover bg-no-repeat`}
-      style={inlineStyle}
-    >
+    <div className={`${styles.mediaWrapper} ${hasImage}`} style={inlineStyle}>
       {angle === 'full' && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
