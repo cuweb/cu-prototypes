@@ -6,6 +6,7 @@ import {
   Section,
   Column,
   FooterBasic,
+  Button,
   // HeroTextImage,
 } from '@carletonuniversity/rds'
 
@@ -62,20 +63,19 @@ const Home: NextPage = () => {
       <Main>
         <Section hasProse>
           <HeroTextImage maxWidth="5xl" hasBorder>
-            <HeroTextImage.People
-              designation="Dr."
-              title="Employee Profile"
-              jobTitle="Financial Analyst, Business Office"
-              degrees="Master of Business Administration"
-              pronoun="They/Them"
-              building="Dunton Tower"
-              room="148-A"
-              email="employee.email@carleton.ca"
-              phone="613-520-2600"
-              phoneExt="2497"
-            />
+            <HeroTextImage.Event
+              title="Capital Hoops Classic"
+              startDate="March 21st, 2023 at 6:00pm"
+              location="Raven’s Nest, 1125 Colonel By Drive"
+              cost="$20 per adult, $15 for youth/senior"
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Get Tickets" />
+                <Button title="Request Info" color="grey" />
+              </div>
+            </HeroTextImage.Event>
             <HeroTextImage.Media imageWidth="40">
-              <img src="https://picsum.photos/400/400" alt="Demo" />
+              <img src="https://picsum.photos/400/266" alt="Demo" />
             </HeroTextImage.Media>
           </HeroTextImage>
 
