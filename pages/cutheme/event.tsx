@@ -56,8 +56,8 @@ const Home: NextPage = () => {
       <TopBar
         title="Information and Technology Services"
         homeLink="/cutheme"
-        navLinks={cuthemeNavData}
-        isTwoTier
+        // navLinks={cuthemeNavData}
+        // isTwoTier
       ></TopBar>
 
       <Main>
