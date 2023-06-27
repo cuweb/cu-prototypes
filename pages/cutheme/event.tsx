@@ -74,9 +74,10 @@ const Home: NextPage = () => {
                 <Button title="Request Info" color="grey" />
               </div>
             </HeroTextImage.Event>
-            <HeroTextImage.Media imageWidth="40">
-              <img src="https://picsum.photos/400/266" alt="Demo" />
-            </HeroTextImage.Media>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              imageWidth="40"
+            ></HeroTextImage.Media>
           </HeroTextImage>
 
           <DoublePara />
