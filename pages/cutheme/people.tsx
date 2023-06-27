@@ -73,7 +73,14 @@ const Home: NextPage = () => {
               email="employee.email@carleton.ca"
               phone="613-520-2600"
               phoneExt="2497"
-            />
+            >
+              <HeroTextImage.Social
+                resume="#"
+                linkedin="#"
+                twitter="#"
+                facebook="#"
+              />
+            </HeroTextImage.People>
             <HeroTextImage.Media imageWidth="40">
               <img src="https://picsum.photos/400/400" alt="Demo" />
             </HeroTextImage.Media>
