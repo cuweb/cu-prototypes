@@ -28,10 +28,12 @@ export const HeroTextImageMedia = ({
   const hasImage = image ? mediaStyles.mediaBgImage : ''
   const hasAngle =
     angle === 'right' ? mediaStyles.svgRight : mediaStyles.svgLeft
-  const inlineStyle = {
-    backgroundImage: `url(${image})`,
-    backgroundPosition: `${focalPointX}% ${focalPointY}%`,
-  }
+  const inlineStyle = hasImage
+    ? {
+        backgroundImage: `url(${image})`,
+        backgroundPosition: `${focalPointX}% ${focalPointY}%`,
+      }
+    : {}
 
   return (
     <div

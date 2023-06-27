@@ -7,3 +7,9 @@
 .cu-panel {
   @apply max-w-none;
 }
+
+/* TO BE ADDED */
+
+.cu-hero-textimage img {
+  @apply w-full h-auto rounded-md;
+}

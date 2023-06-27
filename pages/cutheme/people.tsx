@@ -7,10 +7,7 @@ import {
   Column,
   FooterBasic,
   // HeroTextImage,
-  Button,
 } from '@carletonuniversity/rds'
-
-// import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 import { TopBar } from '@components/TopBar/TopBar'
 import { cuthemeNavData } from 'data/TopNavData'
