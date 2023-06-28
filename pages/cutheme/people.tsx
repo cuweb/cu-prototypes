@@ -10,7 +10,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
+// import { cuthemeNavData } from 'data/TopNavData'
 import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {

@@ -147,7 +147,7 @@ const Home: NextPage = () => {
             </HeroTextImage.Content>
             <HeroTextImage.Media
               image="https://picsum.photos/400/266"
-              angle="full"
+              angle="dual"
             />
           </HeroTextImage>
 
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
             </HeroTextImage.Content>
             <HeroTextImage.Media
               image="https://picsum.photos/400/266"
-              angle="full"
+              angle="dual"
             />
           </HeroTextImage>
 
