@@ -8,13 +8,10 @@ import {
   FooterBasic,
   // HeroTextImage,
   Button,
-  Container,
 } from '@carletonuniversity/rds'
 
-// import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
-
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
+// import { cuthemeNavData } from 'data/TopNavData'
 import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {
@@ -82,128 +79,110 @@ const Home: NextPage = () => {
             </HeroTextImage.Content>
             <HeroTextImage.Media image="https://picsum.photos/400/266" />
           </HeroTextImage>
-        </Section>
 
-        <Section hasProse>
-          <Container>
-            <HeroTextImage reverse>
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                hasMediaCol
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-              <HeroTextImage.Media image="https://picsum.photos/400/266" />
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage reverse>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media image="https://picsum.photos/400/266" />
+          </HeroTextImage>
 
           <DoublePara />
 
-          <Container>
-            <HeroTextImage>
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                hasMediaCol
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-              <HeroTextImage.Media
-                image="https://picsum.photos/400/266"
-                angle="left"
-              />
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              angle="left"
+            />
+          </HeroTextImage>
 
           <DoublePara />
 
-          <Container>
-            <HeroTextImage reverse>
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                headerType="h1"
-                hasMediaCol
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-              <HeroTextImage.Media
-                image="https://picsum.photos/400/266"
-                angle="left"
-              />
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage reverse>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              angle="left"
+            />
+          </HeroTextImage>
 
           <DoublePara />
 
-          <Container>
-            <HeroTextImage>
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                headerType="h1"
-                hasMediaCol
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-              <HeroTextImage.Media
-                image="https://picsum.photos/400/266"
-                angle="full"
-              />
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              angle="dual"
+            />
+          </HeroTextImage>
 
           <DoublePara />
 
-          <Container>
-            <HeroTextImage reverse>
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                headerType="h1"
-                hasMediaCol
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-              <HeroTextImage.Media
-                image="https://picsum.photos/400/266"
-                angle="full"
-              />
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage reverse>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              angle="dual"
+            />
+          </HeroTextImage>
 
           <DoublePara />
 
-          <Container>
-            <HeroTextImage maxWidth="5xl">
-              <HeroTextImage.Content
-                title="Website and Application Development"
-                paragraph={heroPara}
-                headerType="h1"
-              >
-                <div className="flex flex-wrap gap-4 md:gap-6 buttons">
-                  <Button title="Primary" />
-                  <Button title="Secondary" color="grey" />
-                </div>
-              </HeroTextImage.Content>
-            </HeroTextImage>
-          </Container>
+          <HeroTextImage maxWidth="5xl">
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph={heroPara}
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+          </HeroTextImage>
 
           <DoublePara />
 

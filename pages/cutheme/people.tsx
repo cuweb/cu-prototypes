@@ -10,7 +10,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
+// import { cuthemeNavData } from 'data/TopNavData'
 import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {
@@ -64,10 +64,10 @@ const Home: NextPage = () => {
           <HeroTextImage maxWidth="5xl" hasBorder>
             <HeroTextImage.People
               designation="Dr."
-              title="Employee Profile"
-              jobTitle="Financial Analyst, Business Office"
-              degrees="Master of Business Administration"
-              pronoun="They/Them"
+              title="Dougie Howser"
+              pronoun="He/Him"
+              jobTitle="Resident Surgeon, Eastman Medical Center"
+              degrees="Finished medical school at 14"
               building="Dunton Tower"
               room="148-A"
               email="employee.email@carleton.ca"
@@ -81,8 +81,11 @@ const Home: NextPage = () => {
                 facebook="#"
               />
             </HeroTextImage.People>
-            <HeroTextImage.Media imageWidth="40">
-              <img src="https://picsum.photos/400/400" alt="Demo" />
+            <HeroTextImage.Media>
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BNzk0ODYzNjkxNV5BMl5BanBnXkFtZTgwNDY3MTY1MTE@._V1_.jpg"
+                alt="Demo"
+              />
             </HeroTextImage.Media>
           </HeroTextImage>
 
