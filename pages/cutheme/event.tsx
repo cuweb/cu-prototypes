@@ -11,7 +11,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
+// import { cuthemeNavData } from 'data/TopNavData'
 import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {
@@ -68,6 +68,9 @@ const Home: NextPage = () => {
               startDate="March 21st, 2023 at 6:00pm"
               location="Raven’s Nest, 1125 Colonel By Drive"
               cost="$20 per adult, $15 for youth/senior"
+              contactName="Michael Jordan"
+              contactEmail="michael.jordan@basketball.god"
+              contactPhone="613-520-2600 x4827"
             >
               <div className="flex flex-wrap gap-4 md:gap-6 buttons">
                 <Button title="Get Tickets" />
@@ -75,9 +78,9 @@ const Home: NextPage = () => {
               </div>
             </HeroTextImage.Event>
             <HeroTextImage.Media
-              image="https://picsum.photos/400/266"
-              imageWidth="40"
-            ></HeroTextImage.Media>
+              image="https://goravens.ca/wp-content/uploads/19-11-02-MBB-v-Laurier-3-Marcus-Anderson-VWX_0002-640x480.jpg"
+              angle="left"
+            />
           </HeroTextImage>
 
           <DoublePara />
