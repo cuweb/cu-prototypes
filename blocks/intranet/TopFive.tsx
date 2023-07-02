@@ -2,10 +2,10 @@ import React from 'react'
 import { Column, Heading } from '@carletonuniversity/rds'
 import { styles, colStyles } from './Intranet.Styles'
 
-export const BulletinBoard = () => {
+export const TopFive = () => {
   return (
     <>
-      <Heading text="Bulletin Board" maxWidth="7xl" />
+      <Heading text="Top Five" maxWidth="7xl" />
       <Column maxWidth="7xl">
         <div
           className={`${styles.placeholder} ${colStyles.colSpan2} h-72`}

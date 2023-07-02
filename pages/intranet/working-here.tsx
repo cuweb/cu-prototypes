@@ -6,7 +6,7 @@ import {
   Container,
   Heading,
   Column,
-  HeroBanner,
+  HeroTextImage,
   Button,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
@@ -31,14 +31,14 @@ const IntranetWorkingCarleton: NextPage = () => {
       <Main>
         <Section>
           <Container isGrey>
-            <HeroBanner>
-              <HeroBanner.Content
+            <HeroTextImage>
+              <HeroTextImage.Content
                 title="Working at Carleton"
                 paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 facilisis id neque sit amet convallis. Proin rutrum leo
                 turpis, quis fringilla nisi facilisis eget. Nunc nec
                 sollicitudin orci. Aenean a nibh ex."
-                image="https://picsum.photos/800/266"
+                headerType="h1"
               >
                 <div className="flex flex-wrap gap-6 buttons md:flex-1">
                   <Button
@@ -49,8 +49,9 @@ const IntranetWorkingCarleton: NextPage = () => {
                     }}
                   />
                 </div>
-              </HeroBanner.Content>
-            </HeroBanner>
+              </HeroTextImage.Content>
+              <HeroTextImage.Media image="https://picsum.photos/800/266" />
+            </HeroTextImage>
           </Container>
 
           <Container>
