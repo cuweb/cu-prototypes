@@ -31,14 +31,32 @@ export const cuthemeNavData = [
   { id: 6, label: 'Support', link: '/cutheme' },
 ]
 
-
-
 export const PlusNavMenuData = [
   { id: 1, label: 'Academics', link: '/homepage' },
-  { id: 2, label: 'Students', link: '/homepage' },
+  {
+    id: 2,
+    label: 'Students',
+    link: '/homepage',
+    subMenu: [
+      { id: 1.1, label: 'Community', link: '/intranet/community' },
+      { id: 1.2, label: 'Employees', link: '/intranet/working-here' },
+      { id: 1.3, label: 'Managers', link: '/intranet/working-here' },
+      { id: 1.4, label: 'Resources', link: '/intranet/resources' },
+    ],
+  },
   { id: 3, label: 'Research', link: '/homepage' },
   { id: 4, label: 'Priorities', link: '/homepage' },
-  { id: 5, label: 'About', link: '/homepage' },
+  {
+    id: 5,
+    label: 'About',
+    link: '/homepage',
+    subMenu: [
+      { id: 5.1, label: 'Community', link: '/intranet/community' },
+      { id: 5.2, label: 'Employees', link: '/intranet/working-here' },
+      { id: 5.3, label: 'Managers', link: '/intranet/working-here' },
+      { id: 5.4, label: 'Resources', link: '/intranet/resources' },
+    ],
+  },
   { id: 6, label: 'Academics2', link: '/homepage' },
   { id: 7, label: 'Students2', link: '/homepage' },
 ]

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
+import { PlusBarItem } from './PlusBarItem'
 
 export const PlusBarNav = ({ navLinks, className }: any) => {
   // create sub menu for invisible items
@@ -32,19 +33,35 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
               }
             >
               {({ ref }) => (
-                <Link
-                  ref={ref}
-                  href={navMenuItem.link}
-                  className="text-sm font-semibold leading-6 text-gray-900 invisible"
-                >
-                  {navMenuItem.label}
-                </Link>
+                <>
+                  {!navMenuItem.subMenu && (
+                    <div ref={ref} className="invisible">
+                      <Link
+                        ref={ref}
+                        href={navMenuItem.link}
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                      >
+                        {navMenuItem.label}
+                      </Link>
+                    </div>
+                  )}
+                  {navMenuItem.subMenu && (
+                    <div ref={ref} className="invisible">
+                      <PlusBarItem
+                        navItemLabel={navMenuItem.label}
+                        navSubMenu={navMenuItem.subMenu}
+                      />
+                    </div>
+                  )}
+                </>
               )}
             </InView>
           ))}
       </div>
       <div className="flex-none">
-        <div className='inline-block mr-4'>{sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}</div>
+        <div className="inline-block mr-4">
+          {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
+        </div>
         <div className="inline-block px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
           Buttons
         </div>
