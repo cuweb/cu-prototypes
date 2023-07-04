@@ -1,21 +1,21 @@
 import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import { PlusBarSubNav } from './PlusBarSubNav'
+import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
 
 export const PlusBarNav = ({ navLinks, className }: any) => {
   // create sub menu for invisible items
-  const [subMenu, setSubMenu] = useState<any>([])
+  const [sideMenu, setSideMenu] = useState<any>([])
 
   // add or remove menu item to sub menu based on visisbility
   const updateMenu = (inView: any, entry: any, menuItem: any) => {
     if (inView) {
-      subMenu.pop()
+      sideMenu.pop()
       entry.target.classList.toggle('invisible')
-      setSubMenu((subMenu: any) => [...subMenu])
+      setSideMenu((sideMenu: any) => [...sideMenu])
     } else {
       entry.target.classList.toggle('invisible')
-      setSubMenu((subMenu: any) => [...subMenu, menuItem])
+      setSideMenu((sideMenu: any) => [...sideMenu, menuItem])
     }
   }
 
@@ -44,7 +44,7 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
           ))}
       </div>
       <div className="flex-none">
-        <div className='inline-block mr-4'>{subMenu.length > 0 && <PlusBarSubNav subMenu={subMenu} />}</div>
+        <div className='inline-block mr-4'>{sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}</div>
         <div className="inline-block px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
           Buttons
         </div>

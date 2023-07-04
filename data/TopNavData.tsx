@@ -30,3 +30,15 @@ export const cuthemeNavData = [
   { id: 5, label: 'Accessibility', link: '/cutheme' },
   { id: 6, label: 'Support', link: '/cutheme' },
 ]
+
+
+
+export const PlusNavMenuData = [
+  { id: 1, label: 'Academics', link: '/homepage' },
+  { id: 2, label: 'Students', link: '/homepage' },
+  { id: 3, label: 'Research', link: '/homepage' },
+  { id: 4, label: 'Priorities', link: '/homepage' },
+  { id: 5, label: 'About', link: '/homepage' },
+  { id: 6, label: 'Academics2', link: '/homepage' },
+  { id: 7, label: 'Students2', link: '/homepage' },
+]

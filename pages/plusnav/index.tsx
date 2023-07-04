@@ -13,9 +13,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
-import {
-  homepageNavData,
-} from 'data/TopNavData'
+import { PlusNavMenuData } from 'data/TopNavData'
 
 import { PlusBar } from '@components/PlusBar/PlusBar'
 
@@ -58,7 +56,7 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <PlusBar homeLink="/plusnav" navLinks={homepageNavData} />
+      <PlusBar homeLink="/plusnav" navLinks={PlusNavMenuData} />
 
       <Main>
         <Section hasProse>
