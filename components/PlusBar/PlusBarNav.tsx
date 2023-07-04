@@ -10,12 +10,11 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
 
   // add or remove menu item to sub menu based on visisbility
   const updateMenu = (inView: any, entry: any, menuItem: any) => {
+    entry.target.classList.toggle('invisible', !inView)
     if (inView) {
       sideMenu.pop()
-      entry.target.classList.toggle('invisible')
       setSideMenu((sideMenu: any) => [...sideMenu])
     } else {
-      entry.target.classList.toggle('invisible')
       setSideMenu((sideMenu: any) => [...sideMenu, menuItem])
     }
   }
@@ -33,27 +32,23 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
               }
             >
               {({ ref }) => (
-                <>
+                <div ref={ref} className="invisible">
                   {!navMenuItem.subMenu && (
-                    <div ref={ref} className="invisible">
-                      <Link
-                        ref={ref}
-                        href={navMenuItem.link}
-                        className="text-sm font-semibold leading-6 text-gray-900"
-                      >
-                        {navMenuItem.label}
-                      </Link>
-                    </div>
+                    <Link
+                      ref={ref}
+                      href={navMenuItem.link}
+                      className="text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      {navMenuItem.label}
+                    </Link>
                   )}
                   {navMenuItem.subMenu && (
-                    <div ref={ref} className="invisible">
-                      <PlusBarItem
-                        navItemLabel={navMenuItem.label}
-                        navSubMenu={navMenuItem.subMenu}
-                      />
-                    </div>
+                    <PlusBarItem
+                      navItemLabel={navMenuItem.label}
+                      navSubMenu={navMenuItem.subMenu}
+                    />
                   )}
-                </>
+                </div>
               )}
             </InView>
           ))}
