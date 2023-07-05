@@ -66,14 +66,16 @@ const Home: NextPage = () => {
               paragraph="Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
               architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi
               delectus nihil voluptatem."
-              image="https://picsum.photos/400/266"
-              imageAngle
             >
               <div className="flex flex-wrap gap-6 buttons md:flex-1">
                 <Button title="Primary" />
                 <Button title="Secondary" color="grey" />
               </div>
             </HeroTextImage.Content>
+            <HeroTextImage.Media
+              image="https://picsum.photos/400/266"
+              angle="left"
+            />
           </HeroTextImage>
 
           <DoublePara />
