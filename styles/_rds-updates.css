@@ -1,9 +1,27 @@
 /* This could be a boolean option on column for more flexible layouts */
-.cu-column + .cu-column {
+/* .cu-column + .cu-column {
   @apply mt-4 md:mt-10;
-}
+} */
 
 /* DONE for v0.0.63 - removed width restrictions on panel */
-.cu-panel {
+/* .cu-panel {
   @apply max-w-none;
+} */
+
+/* Hero Banner */
+.cu-hero-textimage + :not(.not-contained) {
+  @apply mt-2 md:mt-6;
+}
+
+:not(.not-contained) + .cu-hero-textimage {
+  @apply mb-8 md:mb-12;
+}
+
+/* Hero Banner */
+.cu-hero-textimage > :not(.not-contained) {
+  @apply mt-0 md:mt-0;
+}
+
+:not(.not-contained) > .cu-hero-textimage {
+  @apply mb-0 md:mb-0;
 }
