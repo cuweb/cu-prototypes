@@ -18,8 +18,8 @@ export interface PlusBarProps {
 
 export const PlusBarWrapper = ({ navLinks, homeLink }: PlusBarProps) => {
   return (
-    <header className="bg-white border-t-2 border-b cu-topnav border-b-cu-black-100 border-t-cu-red">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6">
+    <header className="relative z-50 bg-white border-t-2 border-b cu-topnav border-b-cu-black-100 border-t-cu-red">
+      <nav className="flex items-center justify-between p-6 mx-auto max-w-7xl">
         <div className="flex-none">
           <Link href={homeLink}>
             <Image
@@ -31,7 +31,7 @@ export const PlusBarWrapper = ({ navLinks, homeLink }: PlusBarProps) => {
           </Link>
         </div>
         <PlusBarNav
-          className="flex gap-x-12 mx-8 overflow-hidden"
+          className="flex mx-8 overflow-hidden gap-x-12"
           navLinks={navLinks}
         />
       </nav>
