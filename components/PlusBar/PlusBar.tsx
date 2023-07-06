@@ -31,7 +31,7 @@ export const PlusBarWrapper = ({ navLinks, homeLink }: PlusBarProps) => {
           </Link>
         </div>
         <PlusBarNav
-          className="flex gap-x-12 overflow-x-clip mx-8"
+          className="flex gap-x-12 mx-8 overflow-hidden"
           navLinks={navLinks}
         />
       </nav>

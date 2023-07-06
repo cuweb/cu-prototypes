@@ -58,7 +58,7 @@ const Home: NextPage = () => {
     <>
       <PlusBar homeLink="/plusnav" navLinks={PlusNavMenuData} />
 
-      <Main>
+      <div>
         <Section hasProse>
           <HeroTextImage maxWidth="5xl">
             <HeroTextImage.Content title="Hero banner @ 1280" />
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
           </Column>
           <SinglePara />
         </Section>
-      </Main>
+      </div>
 
       <FooterBasic />
     </>
