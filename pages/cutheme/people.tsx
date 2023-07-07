@@ -1,20 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
+
 import type { NextPage } from 'next'
 import {
   Main,
   Section,
-  FooterBasic,
   Column,
-  Heading,
-  Card,
-  HeroTextImage,
+  FooterBasic,
+  // HeroTextImage,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
-import Link from 'next/link'
-import Image from 'next/image'
-
-import { NewsData } from 'data/NewsData'
+// import { cuthemeNavData } from 'data/TopNavData'
+import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {
   return (
@@ -58,50 +55,41 @@ const Home: NextPage = () => {
       <TopBar
         title="Information and Technology Services"
         homeLink="/cutheme"
-        navLinks={cuthemeNavData}
-        isTwoTier
+        // navLinks={cuthemeNavData}
+        // isTwoTier
       ></TopBar>
 
       <Main>
         <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
+          <HeroTextImage maxWidth="5xl" hasBorder>
+            <HeroTextImage.People
+              designation="Dr."
+              title="Dougie Howser"
+              pronoun="He/Him"
+              jobTitle="Resident Surgeon, Eastman Medical Center"
+              degrees="Finished medical school at 14"
+              building="Dunton Tower"
+              room="148-A"
+              email="employee.email@carleton.ca"
+              phone="613-520-2600"
+              phoneExt="2497"
+            >
+              <HeroTextImage.Social
+                resume="#"
+                linkedin="#"
+                twitter="#"
+                facebook="#"
+              />
+            </HeroTextImage.People>
+            <HeroTextImage.Media>
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BNzk0ODYzNjkxNV5BMl5BanBnXkFtZTgwNDY3MTY1MTE@._V1_.jpg"
+                alt="Demo"
+              />
+            </HeroTextImage.Media>
           </HeroTextImage>
 
           <DoublePara />
-
-          <Heading text="Three col cards @ 1024" />
-          <Column cols="3">
-            {NewsData.slice(0, 3).map(
-              ({ id, title, link, date, image, alt }) => (
-                <Card key={id}>
-                  <Link href={link}>
-                    <Card.Figure>
-                      <Image src={image} alt={alt} width="400" height="266" />
-                    </Card.Figure>
-                    <Card.Content>
-                      <Card.PostMeta date={date} />
-                      <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
-                    </Card.Content>
-                  </Link>
-                </Card>
-              ),
-            )}
-          </Column>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
 
           <Column cols="2">
             <Column.Content>

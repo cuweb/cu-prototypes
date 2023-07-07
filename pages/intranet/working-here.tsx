@@ -44,6 +44,7 @@ const IntranetWorkingCarleton: NextPage = () => {
                   />
                 </div>
               </HeroTextImage.Content>
+              <HeroTextImage.Media image="https://picsum.photos/800/266" />
             </HeroTextImage>
           </Container>
 

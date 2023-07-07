@@ -1,20 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
+
 import type { NextPage } from 'next'
 import {
   Main,
   Section,
-  FooterBasic,
   Column,
-  Heading,
-  Card,
-  HeroTextImage,
+  FooterBasic,
+  Button,
+  // HeroTextImage,
 } from '@carletonuniversity/rds'
 
 import { TopBar } from '@components/TopBar/TopBar'
-import { cuthemeNavData } from 'data/TopNavData'
-import Link from 'next/link'
-import Image from 'next/image'
-
-import { NewsData } from 'data/NewsData'
+// import { cuthemeNavData } from 'data/TopNavData'
+import { HeroTextImage } from '@components/HeroTextImage/HeroTextImage'
 
 const SinglePara = () => {
   return (
@@ -58,50 +56,34 @@ const Home: NextPage = () => {
       <TopBar
         title="Information and Technology Services"
         homeLink="/cutheme"
-        navLinks={cuthemeNavData}
-        isTwoTier
+        // navLinks={cuthemeNavData}
+        // isTwoTier
       ></TopBar>
 
       <Main>
         <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
+          <HeroTextImage maxWidth="5xl" hasBorder>
+            <HeroTextImage.Event
+              title="Capital Hoops Classic"
+              startDate="March 21st, 2023 at 6:00pm"
+              location="Raven’s Nest, 1125 Colonel By Drive"
+              cost="$20 per adult, $15 for youth/senior"
+              contactName="Michael Jordan"
+              contactEmail="michael.jordan@basketball.god"
+              contactPhone="613-520-2600 x4827"
+            >
+              <div className="flex flex-wrap gap-4 md:gap-6 buttons">
+                <Button title="Get Tickets" />
+                <Button title="Request Info" color="grey" />
+              </div>
+            </HeroTextImage.Event>
+            <HeroTextImage.Media
+              image="https://goravens.ca/wp-content/uploads/19-11-02-MBB-v-Laurier-3-Marcus-Anderson-VWX_0002-640x480.jpg"
+              angle="left"
+            />
           </HeroTextImage>
 
           <DoublePara />
-
-          <Heading text="Three col cards @ 1024" />
-          <Column cols="3">
-            {NewsData.slice(0, 3).map(
-              ({ id, title, link, date, image, alt }) => (
-                <Card key={id}>
-                  <Link href={link}>
-                    <Card.Figure>
-                      <Image src={image} alt={alt} width="400" height="266" />
-                    </Card.Figure>
-                    <Card.Content>
-                      <Card.PostMeta date={date} />
-                      <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
-                    </Card.Content>
-                  </Link>
-                </Card>
-              ),
-            )}
-          </Column>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
 
           <Column cols="2">
             <Column.Content>
