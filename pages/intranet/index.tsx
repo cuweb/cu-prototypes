@@ -9,6 +9,7 @@ import {
 import { TopBar } from '../../components/TopBar/TopBar'
 import { CommunityNews } from 'blocks/intranet/CommunityNews'
 import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
+import { TopFive } from 'blocks/intranet/TopFive'
 import { NumberStats } from 'blocks/intranet/NumberStats'
 import { Profile } from 'blocks/intranet/Profile'
 import { Resources } from 'blocks/intranet/Resources'
@@ -33,6 +34,7 @@ const IntranetHome: NextPage = () => {
           <Container>
             <Heading text="Community News" maxWidth="7xl" />
             <CommunityNews />
+            <TopFive />
             <BulletinBoard />
             <NewsEvents />
           </Container>

@@ -32,7 +32,7 @@ const IntranetWorkingCarleton: NextPage = () => {
                 facilisis id neque sit amet convallis. Proin rutrum leo
                 turpis, quis fringilla nisi facilisis eget. Nunc nec
                 sollicitudin orci. Aenean a nibh ex."
-                image="https://picsum.photos/800/266"
+                headerType="h1"
               >
                 <div className="flex flex-wrap gap-6 buttons md:flex-1">
                   <Button
@@ -44,6 +44,7 @@ const IntranetWorkingCarleton: NextPage = () => {
                   />
                 </div>
               </HeroTextImage.Content>
+              <HeroTextImage.Media image="https://picsum.photos/800/266" />
             </HeroTextImage>
           </Container>
 
