@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import {
   Main,
   Section,
-  Column,
   FooterBasic,
   Column,
   Heading,
@@ -12,6 +11,10 @@ import {
 
 import { TopBar } from '@components/TopBar/TopBar'
 import { cuthemeNavData } from 'data/TopNavData'
+import Link from 'next/link'
+import Image from 'next/image'
+
+import { NewsData } from 'data/NewsData'
 
 const SinglePara = () => {
   return (

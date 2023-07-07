@@ -7,7 +7,6 @@ import {
   Heading,
   Column,
   HeroTextImage,
-  HeroTextImage,
   Button,
 } from '@carletonuniversity/rds'
 import { TopBar } from '../../components/TopBar/TopBar'
@@ -26,8 +25,6 @@ const IntranetWorkingCarleton: NextPage = () => {
       <Main>
         <Section>
           <Container isGrey>
-            <HeroTextImage>
-              <HeroTextImage.Content
             <HeroTextImage>
               <HeroTextImage.Content
                 title="Working at Carleton"
