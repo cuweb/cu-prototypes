@@ -9,7 +9,7 @@ import {
   HeroTextImage,
 } from '@carletonuniversity/rds'
 
-import { TopBar } from '@components/TopBar/TopBar'
+import { TopBarOld } from '@components/TopBarOld/TopBarOld'
 import { cuthemeNavData } from 'data/TopNavData'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -55,12 +55,12 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopBar
+      <TopBarOld
         title="Information and Technology Services"
         homeLink="/cutheme"
         navLinks={cuthemeNavData}
         isTwoTier
-      ></TopBar>
+      ></TopBarOld>
 
       <Main>
         <Section hasProse>

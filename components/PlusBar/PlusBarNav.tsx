@@ -4,7 +4,7 @@ import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
 import { PlusBarItem } from './PlusBarItem'
 
-export const PlusBarNav = ({ navLinks, className }: any) => {
+export const PlusBarNav = ({ navLinks }: any) => {
   // create sub menu for invisible items
   const [sideMenu, setSideMenu] = useState<any>([])
 
@@ -21,7 +21,7 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
 
   return (
     <>
-      <div className={className}>
+      <div className="flex gap-8 overflow-hidden">
         {navLinks &&
           navLinks.map((navMenuItem: any, index: any) => (
             <InView
@@ -37,7 +37,8 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
                     <Link
                       ref={ref}
                       href={navMenuItem.link}
-                      className="text-sm font-semibold leading-6 text-gray-900"
+                      className="text-base"
+                      // className="text-sm font-semibold leading-6 text-gray-900"
                     >
                       {navMenuItem.label}
                     </Link>
@@ -53,13 +54,14 @@ export const PlusBarNav = ({ navLinks, className }: any) => {
             </InView>
           ))}
       </div>
-      <div className="flex-none">
+
+      <div className="flex items-center ml-auto">
         <div className="inline-block mr-4">
           {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
         </div>
-        <div className="inline-block px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
+        <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
           Buttons
-        </div>
+        </p>
       </div>
     </>
   )

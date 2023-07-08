@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-// import { styles } from './TopBar.Styles'
+// import { styles } from './TopBarOld.Styles'
 
 export interface LinkProps {
   label: string
@@ -9,7 +9,7 @@ export interface LinkProps {
   // active: boolean
 }
 
-export interface TopBarProps {
+export interface TopBarOldProps {
   children?: React.ReactNode
   title?: string
   homeLink: string
@@ -17,12 +17,12 @@ export interface TopBarProps {
   isTwoTier?: boolean
 }
 
-export const TopBarWrapper = ({
+export const TopBarOldWrapper = ({
   title,
   homeLink,
   navLinks,
   isTwoTier = false,
-}: TopBarProps) => {
+}: TopBarOldProps) => {
   return (
     <header className="bg-white border-t-2 border-b cu-topnav border-b-cu-black-100 border-t-cu-red">
       <div className="flex gap-8 px-4 items-center py-3.5 mx-auto max-w-screen-2xl">
@@ -35,7 +35,6 @@ export const TopBarWrapper = ({
               height="40"
             />
           </Link>
-
           {title && (
             <h1 className="max-w-[200px] h-full text-lg hover:text-cu-red font-semibold leading-[1.25rem] md:leading-[1.25rem] text-cu-black-800 pl-3.5 border-l border-cu-black-200">
               <Link href={homeLink}>{title}</Link>
@@ -89,6 +88,6 @@ export const TopBarWrapper = ({
   )
 }
 
-export const TopBar = Object.assign(TopBarWrapper, {
-  // Nav: TopBarFigure,
+export const TopBarOld = Object.assign(TopBarOldWrapper, {
+  // Nav: TopBarOldFigure,
 })

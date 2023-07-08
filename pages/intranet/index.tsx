@@ -6,7 +6,7 @@ import {
   Container,
   Heading,
 } from '@carletonuniversity/rds'
-import { TopBar } from '../../components/TopBar/TopBar'
+import { TopBarOld } from '../../components/TopBarOld/TopBarOld'
 import { CommunityNews } from 'blocks/intranet/CommunityNews'
 import { BulletinBoard } from 'blocks/intranet/BulletinBoard'
 import { TopFive } from 'blocks/intranet/TopFive'
@@ -19,11 +19,11 @@ import { intranetNavData } from 'data/TopNavData'
 const IntranetHome: NextPage = () => {
   return (
     <>
-      <TopBar
+      <TopBarOld
         title="Intranet"
         homeLink="/intranet"
         navLinks={intranetNavData}
-      ></TopBar>
+      ></TopBarOld>
 
       <Main>
         <Section>

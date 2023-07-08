@@ -16,12 +16,12 @@ export interface PlusBarProps {
   isTwoTier?: boolean
 }
 
-export const PlusBarWrapper = ({ navLinks, homeLink }: PlusBarProps) => {
+export const PlusBarWrapper = ({ title, homeLink, navLinks }: PlusBarProps) => {
   return (
     <header className="relative z-50 bg-white border-t-2 border-b cu-topnav border-b-cu-black-100 border-t-cu-red">
-      <nav className="flex items-center justify-between p-6 mx-auto max-w-7xl">
-        <div className="flex-none">
-          <Link href={homeLink}>
+      <div className="flex gap-8 px-4 items-center py-3.5 mx-auto max-w-screen-2xl">
+        <div className="flex items-center h-full gap-3 [&>a]:w-[145px]">
+          <Link href="https://carleton.ca">
             <Image
               src="/assets/_new/cu-logo-shield-right-black-text.svg"
               alt="Carleton University logo"
@@ -29,12 +29,14 @@ export const PlusBarWrapper = ({ navLinks, homeLink }: PlusBarProps) => {
               height="40"
             />
           </Link>
+          {title && (
+            <h1 className="h-full text-lg hover:text-cu-red font-semibold leading-[1.25rem] md:leading-[1.25rem] text-cu-black-800 pl-3.5 border-l border-cu-black-200">
+              <Link href={homeLink}>{title}</Link>
+            </h1>
+          )}
         </div>
-        <PlusBarNav
-          className="flex mx-8 overflow-hidden gap-x-12"
-          navLinks={navLinks}
-        />
-      </nav>
+        <PlusBarNav navLinks={navLinks} />
+      </div>
     </header>
   )
 }

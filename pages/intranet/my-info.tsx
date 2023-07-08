@@ -6,18 +6,18 @@ import {
   Container,
   Column,
 } from '@carletonuniversity/rds'
-import { TopBar } from '../../components/TopBar/TopBar'
+import { TopBarOld } from '../../components/TopBarOld/TopBarOld'
 import { intranetNavData } from 'data/TopNavData'
 import { styles } from '../../blocks/intranet/Intranet.Styles'
 
 const IntranetMyInfo: NextPage = () => {
   return (
     <>
-      <TopBar
+      <TopBarOld
         title="Intranet"
         homeLink="/intranet"
         navLinks={intranetNavData}
-      ></TopBar>
+      ></TopBarOld>
 
       <Main>
         <Section>

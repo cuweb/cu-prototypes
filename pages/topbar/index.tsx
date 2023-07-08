@@ -44,7 +44,11 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <PlusBar homeLink="/plusnav" navLinks={PlusNavMenuData} />
+      <PlusBar
+        title="Web Services"
+        homeLink="/topbar"
+        navLinks={PlusNavMenuData}
+      />
 
       <Main>
         <Section hasProse>
@@ -68,16 +72,16 @@ const Home: NextPage = () => {
 
           <DoublePara />
 
-          <h3>This is a header three</h3>
+          <h2>How can we help you?</h2>
           <DoublePara />
 
           <Column cols="2">
-            <div>
+            <Column.Content>
               <DoublePara />
-            </div>
-            <div>
+            </Column.Content>
+            <Column.Content>
               <DoublePara />
-            </div>
+            </Column.Content>
           </Column>
 
           <Heading text="Recent News" />
