@@ -60,3 +60,27 @@ export const PlusNavMenuData = [
   { id: 6, label: 'Academics2', link: '/homepage' },
   { id: 7, label: 'Students2', link: '/homepage' },
 ]
+
+export const testingNav = [
+  {
+    label: 'Home',
+    link: '/',
+  },
+  {
+    label: 'Services',
+    link: '/services',
+    subLinks: [
+      { label: 'Service 1', link: '/services/service1' },
+      { label: 'Service 2', link: '/services/service2' },
+      { label: 'Service 3', link: '/services/service3' },
+    ],
+  },
+  {
+    label: 'About',
+    link: '/about',
+  },
+  {
+    label: 'Contact',
+    link: '/contact',
+  },
+]

@@ -24,12 +24,8 @@ export const TopBarWrapper = ({
 }: TopBarProps) => {
   const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null)
 
-  const handleMenuClick = (index: number) => {
-    if (openMenuIndex === index) {
-      setOpenMenuIndex(null)
-    } else {
-      setOpenMenuIndex(index)
-    }
+  const handleMenuEnter = (index: number) => {
+    setOpenMenuIndex(index)
   }
 
   const handleMenuLeave = () => {
@@ -63,13 +59,12 @@ export const TopBarWrapper = ({
                   <li
                     key={index}
                     className="relative"
-                    onClick={() => handleMenuClick(index)}
+                    onMouseEnter={() => handleMenuEnter(index)}
                     onMouseLeave={handleMenuLeave}
                   >
                     <a
                       href={item.link}
                       className={openMenuIndex === index ? 'text-cu-red' : ''}
-                      onClick={(e) => e.preventDefault()}
                     >
                       {item.label}
                     </a>
@@ -87,12 +82,7 @@ export const TopBarWrapper = ({
             </ul>
           </nav>
         )}
-
-        <div className="flex ml-auto">
-          <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
-            Buttons
-          </p>
-        </div>
+        {/* Rest of the code */}
       </div>
 
       {isTwoTier && (
@@ -102,14 +92,13 @@ export const TopBarWrapper = ({
               navLinks.map((item, index) => (
                 <li
                   key={index}
-                  className="relative"
-                  onClick={() => handleMenuClick(index)}
+                  className="relative" // Add relative class here
+                  onMouseEnter={() => handleMenuEnter(index)}
                   onMouseLeave={handleMenuLeave}
                 >
                   <a
                     href={item.link}
                     className={openMenuIndex === index ? 'text-cu-red' : ''}
-                    onClick={(e) => e.preventDefault()}
                   >
                     {item.label}
                   </a>

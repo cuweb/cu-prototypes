@@ -7,7 +7,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const TopBarSideNav = ({ sideMenu }: any) => {
+export const PlusBarSideNav = ({ sideMenu }: any) => {
   return (
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center text-sm font-semibold leading-6 text-red-500 gap-x-1">

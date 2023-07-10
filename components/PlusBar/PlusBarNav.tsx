@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import { TopBarSideNav } from './TopBarSideNav'
+import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
-import { TopBarDropDown } from './TopBarDropDown'
+import { PlusBarDropDown } from './PlusBarDropDown'
 
-export const TopBarNav = ({ navLinks }: any) => {
+export const PlusBarNav = ({ navLinks }: any) => {
   // create sub menu for invisible items
   const [sideMenu, setSideMenu] = useState<any>([])
 
@@ -43,7 +43,7 @@ export const TopBarNav = ({ navLinks }: any) => {
                     </Link>
                   )}
                   {navMenuItem.subMenu && (
-                    <TopBarDropDown
+                    <PlusBarDropDown
                       navItemLabel={navMenuItem.label}
                       navSubMenu={navMenuItem.subMenu}
                     />
@@ -56,7 +56,7 @@ export const TopBarNav = ({ navLinks }: any) => {
 
       <div className="flex items-center ml-auto">
         <div className="inline-block mr-4">
-          {sideMenu.length > 0 && <TopBarSideNav sideMenu={sideMenu} />}
+          {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
         </div>
         <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
           CU-Nav
