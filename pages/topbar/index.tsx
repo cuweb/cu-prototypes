@@ -7,31 +7,16 @@ import {
   Heading,
   Card,
   HeroTextImage,
+  Button,
 } from '@carletonuniversity/rds'
 
-import { TopBar } from '@components/TopBar/TopBar'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
-import {
-  homepageNavData,
-  intranetNavData,
-  cuthemeNavData,
-} from 'data/TopNavData'
+import { PlusNavMenuData } from 'data/TopNavData'
 
-const SinglePara = () => {
-  return (
-    <>
-      <p>
-        Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
-        architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi
-        delectus nihil voluptatem non. Molestiae quas dolores accusamus in.
-        Praesent quis ligula quis nulla malesuada tempor.
-      </p>
-    </>
-  )
-}
+import { PlusBar } from '@components/PlusBar/PlusBar'
 
 const DoublePara = () => {
   return (
@@ -59,34 +44,47 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      {/* <TopBar title="Information and Technology Services" isTwoTier></TopBar> */}
-
-      <br />
-      <TopBar homeLink="/topnav" navLinks={homepageNavData}></TopBar>
-      <br />
-      <TopBar
-        title="Intranet"
-        homeLink="/topnav"
-        navLinks={intranetNavData}
-      ></TopBar>
-      <br />
-      <TopBar
-        title="Information and Technology Services"
-        homeLink="/topnav"
-        navLinks={cuthemeNavData}
-        isTwoTier
-      ></TopBar>
-      <br />
+      <PlusBar
+        title="Web Services"
+        homeLink="/topbar"
+        navLinks={PlusNavMenuData}
+      />
 
       <Main>
         <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1280" />
+          <HeroTextImage hasBorder>
+            <HeroTextImage.Content
+              title="Website and Application Development"
+              paragraph="Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+              architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi
+              delectus nihil voluptatem non. Molestiae quas dolores accusamus in.
+              Praesent quis ligula quis nulla malesuada tempor."
+              headerType="h1"
+              hasMediaCol
+            >
+              <div className="flex flex-wrap gap-4 buttons md:gap-6">
+                <Button title="Primary" />
+                <Button title="Secondary" color="grey" />
+              </div>
+            </HeroTextImage.Content>
+            <HeroTextImage.Media image="https://picsum.photos/400/266" />
           </HeroTextImage>
 
           <DoublePara />
 
-          <Heading text="Three col cards @ 1024" />
+          <h2>How can we help you?</h2>
+          <DoublePara />
+
+          <Column cols="2">
+            <Column.Content>
+              <DoublePara />
+            </Column.Content>
+            <Column.Content>
+              <DoublePara />
+            </Column.Content>
+          </Column>
+
+          <Heading text="Recent News" />
           <Column cols="3">
             {NewsData.slice(0, 3).map(
               ({ id, title, link, date, image, alt }) => (
@@ -98,7 +96,6 @@ const Home: NextPage = () => {
                     <Card.Content>
                       <Card.PostMeta date={date} />
                       <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
                     </Card.Content>
                   </Link>
                 </Card>
@@ -107,27 +104,8 @@ const Home: NextPage = () => {
           </Column>
 
           <h3>This is a header three</h3>
-          <SinglePara />
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <Column cols="2">
-            <div>
-              <SinglePara />
-            </div>
-            <div>
-              <SinglePara />
-            </div>
-          </Column>
-          <SinglePara />
+          <DoublePara />
+          <DoublePara />
         </Section>
       </Main>
 
