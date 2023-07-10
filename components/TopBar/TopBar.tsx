@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PlusBarNav } from './PlusBarNav'
+import { TopBarNav } from './TopBarNav'
 
 export interface LinkProps {
   label: string
   link: string
 }
 
-export interface PlusBarProps {
+export interface TopBarProps {
   children?: React.ReactNode
   title?: string
   homeLink: string
@@ -16,7 +16,7 @@ export interface PlusBarProps {
   isTwoTier?: boolean
 }
 
-export const PlusBarWrapper = ({ title, homeLink, navLinks }: PlusBarProps) => {
+export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
   return (
     <header className="relative z-50 bg-white border-t-2 border-b cu-topnav border-b-cu-black-100 border-t-cu-red">
       <div className="flex gap-8 px-4 items-center py-3.5 mx-auto max-w-screen-2xl">
@@ -35,10 +35,10 @@ export const PlusBarWrapper = ({ title, homeLink, navLinks }: PlusBarProps) => {
             </h1>
           )}
         </div>
-        <PlusBarNav navLinks={navLinks} />
+        <TopBarNav navLinks={navLinks} />
       </div>
     </header>
   )
 }
 
-export const PlusBar = Object.assign(PlusBarWrapper, {})
+export const TopBar = Object.assign(TopBarWrapper, {})

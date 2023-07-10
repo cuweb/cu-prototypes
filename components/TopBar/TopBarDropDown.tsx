@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
-export const PlusBarItem = ({ navItemLabel, navSubMenu }: any) => {
+export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
   return (
     <Popover>
       {/* Nav item with submenu */}

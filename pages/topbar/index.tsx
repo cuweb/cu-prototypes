@@ -16,7 +16,7 @@ import Image from 'next/image'
 import { NewsData } from '../../data/NewsData'
 import { PlusNavMenuData } from 'data/TopNavData'
 
-import { PlusBar } from '@components/PlusBar/PlusBar'
+import { TopBar } from '@components/TopBar/TopBar'
 
 const DoublePara = () => {
   return (
@@ -44,7 +44,7 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <PlusBar
+      <TopBar
         title="Web Services"
         homeLink="/topbar"
         navLinks={PlusNavMenuData}

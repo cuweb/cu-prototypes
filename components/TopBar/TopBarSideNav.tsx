@@ -7,12 +7,12 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const PlusBarSideNav = ({ sideMenu }: any) => {
+export const TopBarSideNav = ({ sideMenu }: any) => {
   return (
     <Popover className="relative">
-      <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-red-500">
+      <Popover.Button className="inline-flex items-center text-sm font-semibold leading-6 text-red-500 gap-x-1">
         <span>Browse</span>
-        <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+        <ChevronDownIcon className="w-5 h-5" aria-hidden="true" />
       </Popover.Button>
 
       <Transition
@@ -24,7 +24,7 @@ export const PlusBarSideNav = ({ sideMenu }: any) => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 max-w-md overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
+        <Popover.Panel className="absolute z-10 max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg -left-10 top-full ring-1 ring-gray-900/5">
           <div className="p-4">
             {sideMenu.map((sideMenuItem: any, index: any) => (
               <div key={index}>
@@ -56,7 +56,7 @@ export const PlusBarSideNav = ({ sideMenu }: any) => {
                               key={navSubMenuItem.id}
                               as="a"
                               href={navSubMenuItem.link}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                              className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                             >
                               {navSubMenuItem.label}
                             </Disclosure.Button>
