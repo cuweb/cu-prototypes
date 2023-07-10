@@ -21,7 +21,7 @@ export const PlusBarNav = ({ navLinks }: any) => {
 
   return (
     <>
-      <div className="flex gap-8 overflow-hidden">
+      <div className="flex items-center gap-6 overflow-hidden">
         {navLinks &&
           navLinks.map((navMenuItem: any, index: any) => (
             <InView
@@ -37,8 +37,7 @@ export const PlusBarNav = ({ navLinks }: any) => {
                     <Link
                       ref={ref}
                       href={navMenuItem.link}
-                      className="text-base"
-                      // className="text-sm font-semibold leading-6 text-gray-900"
+                      className="text-sm text-cu-black-800"
                     >
                       {navMenuItem.label}
                     </Link>
@@ -60,7 +59,7 @@ export const PlusBarNav = ({ navLinks }: any) => {
           {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
         </div>
         <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
-          Buttons
+          CU-Nav
         </p>
       </div>
     </>

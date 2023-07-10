@@ -6,10 +6,11 @@ import Link from 'next/link'
 export const PlusBarItem = ({ navItemLabel, navSubMenu }: any) => {
   return (
     <Popover>
-      <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+      {/* Nav item with submenu */}
+      <Popover.Button className="flex items-center -mb-0.5 text-sm text-cu-black-800">
         {navItemLabel}
         <ChevronDownIcon
-          className="h-5 w-5 flex-none text-gray-400"
+          className="flex-none w-5 h-5 text-gray-400"
           aria-hidden="true"
         />
       </Popover.Button>
@@ -23,7 +24,8 @@ export const PlusBarItem = ({ navItemLabel, navSubMenu }: any) => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute mt-3 max-w-md overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
+        {/* Submenu */}
+        <Popover.Panel className="absolute max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg ring-1 ring-gray-900/5">
           <div className="p-4">
             {navSubMenu.map((navSubMenuItem: any, index: any) => (
               <Link
@@ -31,7 +33,7 @@ export const PlusBarItem = ({ navItemLabel, navSubMenu }: any) => {
                 href={navSubMenuItem.link}
                 className="block p-2 hover:text-indigo-600"
               >
-                {navSubMenuItem.label}
+                {navSubMenuItem.label} -- item1
               </Link>
             ))}
           </div>

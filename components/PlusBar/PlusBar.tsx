@@ -30,7 +30,7 @@ export const PlusBarWrapper = ({ title, homeLink, navLinks }: PlusBarProps) => {
             />
           </Link>
           {title && (
-            <h1 className="h-full text-lg hover:text-cu-red font-semibold leading-[1.25rem] md:leading-[1.25rem] text-cu-black-800 pl-3.5 border-l border-cu-black-200">
+            <h1 className="h-full text-lg hover:text-cu-red font-semibold leading-[1.25rem] md:leading-[1.25rem] text-cu-black-800 pl-4">
               <Link href={homeLink}>{title}</Link>
             </h1>
           )}
