@@ -9,6 +9,7 @@ import {
   HeroTextImage,
   Listing,
   SearchForm,
+  Pagination,
 } from '@carletonuniversity/rds'
 
 import React, { useState, useCallback } from 'react';
@@ -26,6 +27,10 @@ const SearchBar = () => {
     setMessage(message);
   }, [setMessage]);
   return <SearchForm callback={callback} />;
+}
+
+const PageSelect = () => {
+  return <Pagination hasBorder totalCount={48} siblingCount={1} pageSize={5} callback={() => undefined} />;
 }
 
 const Home: NextPage = () => {
@@ -59,6 +64,7 @@ const Home: NextPage = () => {
                     </Listing>
                     ),
                   )}
+      <PageSelect/>
       </Column.Content>
         </Section>
       </Main>
