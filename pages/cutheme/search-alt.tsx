@@ -119,7 +119,7 @@ const Home: NextPage = () => {
               )}
             </StackedList>
 
-            <Aside>
+            <Aside isSticky>
               <StackedList hasBorder>
                 <li className="px-6 py-5 text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
