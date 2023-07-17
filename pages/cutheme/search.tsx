@@ -12,9 +12,11 @@ import {
   StackedList,
   Aside,
   Container,
+  DropDown,
 } from '@carletonuniversity/rds'
 
 import { Listing } from '@components/Listing/Listing'
+import { Checkbox } from '@components/Checkbox/Checkbox'
 
 import React, { useState, useCallback } from 'react'
 
@@ -67,34 +69,41 @@ const Home: NextPage = () => {
           <Column cols="2/3">
             <StackedList>
               {NewsData.slice(0, 5).map(
-                ({ id, title, link, date, image, alt, excerpt, tags }) => (
+                ({ id, title, link, date, image, alt, excerpt, tags, video }) => (
                   <Listing key={id}>
                     <a href="https://carleton.ca/webservices">
+                    
                       <Listing.Content>
                         <Listing.PostMeta date={date} />
                         <Listing.Header text={title} />
                         <Listing.Excerpt text={excerpt} />
                         <Listing.Badges tags={tags} />
                       </Listing.Content>
+                      <Listing.Video url={video}/>
                     </a>
                   </Listing>
                 ),
               )}
             </StackedList>
             <Aside>
-              <StackedList hasBorder>
-                <li className="text-sm px-6 py-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam augue turpis, feugiat vitae viverra in, egestas vitae
-                  nulla.
-                </li>
-                <li className="text-sm px-6 py-5">
-                  Quisque auctor ultrices mauris, et semper urna aliquam quis.
-                </li>
-                <li className="text-sm px-6 py-5">
-                  Suspendisse vestibulum hendrerit.
-                </li>
-              </StackedList>
+                            <DropDown
+                buttonText="Sort Results"
+                listItems={[
+                  {
+                    href: '',
+                    title: 'By Name',
+                  },
+                  {
+                    onClick: function Xa() {},
+                    title: 'By Date',
+                  },
+                  {
+                    href: '',
+                    title: 'By Type',
+                  },
+                ]}
+              />
+              <Checkbox/>
             </Aside>
           </Column>
           <PageSelect />
