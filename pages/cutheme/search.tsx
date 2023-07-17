@@ -74,6 +74,7 @@ const Home: NextPage = () => {
                         <Listing.PostMeta date={date} />
                         <Listing.Header text={title} />
                         <Listing.Excerpt text={excerpt} />
+                        <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
                   </Listing>
