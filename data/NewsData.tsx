@@ -12,12 +12,12 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category One',
+          name: 'Page',
           slug: 'category-one',
         },
         {
           id: 4,
-          name: 'Category Two',
+          name: 'Video',
           slug: 'category-two',
         },
       ],
@@ -36,7 +36,7 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category Three',
+          name: 'News',
           slug: 'category-three',
         },
       ],
@@ -55,7 +55,7 @@ export const NewsData = [
       category: [
         {
           id: 4,
-          name: 'Category Four',
+          name: 'Event',
           slug: 'category-four',
         },
       ],
@@ -74,7 +74,7 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category Three',
+          name: 'News',
           slug: 'category-three',
         },
       ],
@@ -93,7 +93,7 @@ export const NewsData = [
       category: [
         {
           id: 4,
-          name: 'Category Four',
+          name: 'Event',
           slug: 'category-four',
         },
       ],
@@ -112,12 +112,12 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category One',
+          name: 'Page',
           slug: 'category-one',
         },
         {
           id: 4,
-          name: 'Category Two',
+          name: 'Video',
           slug: 'category-two',
         },
       ],
@@ -136,12 +136,12 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category One',
+          name: 'Page',
           slug: 'category-one',
         },
         {
           id: 4,
-          name: 'Category Two',
+          name: 'Video',
           slug: 'category-two',
         },
       ],
@@ -160,7 +160,7 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category Three',
+          name: 'News',
           slug: 'category-three',
         },
       ],
@@ -179,7 +179,7 @@ export const NewsData = [
       category: [
         {
           id: 4,
-          name: 'Category Four',
+          name: 'Event',
           slug: 'category-four',
         },
       ],
@@ -198,7 +198,7 @@ export const NewsData = [
       category: [
         {
           id: 3,
-          name: 'Category Three',
+          name: 'News',
           slug: 'category-three',
         },
       ],
