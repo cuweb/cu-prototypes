@@ -4,8 +4,6 @@ import {
   Section,
   FooterBasic,
   Column,
-  Heading,
-  Card,
   HeroTextImage,
   Listing,
   SearchForm,
@@ -13,6 +11,7 @@ import {
   StackedList,
   Aside,
   Container,
+  Heading,
 } from '@carletonuniversity/rds'
 
 import React, { useState, useCallback } from 'react'
@@ -57,12 +56,15 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
+          <HeroTextImage maxWidth="5xl">
+            <HeroTextImage.Content title="Site Search" />
+          </HeroTextImage>
+
           <Container>
-            <HeroTextImage maxWidth="5xl">
-              <HeroTextImage.Content title="Site Search" />
-            </HeroTextImage>
             <SearchBar />
-            <Column cols="2/3">
+          </Container>
+
+          {/* <Column cols="2/3">
               <Column.Content>
                 <StackedList>
                   {NewsData.slice(0, 5).map(
@@ -83,24 +85,58 @@ const Home: NextPage = () => {
               <Column.Content>
                 <Aside>
                   <StackedList hasBorder>
-                    <li className="text-sm px-6 py-5">
+                    <li className="px-6 py-5 text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Aliquam augue turpis, feugiat vitae viverra in, egestas
                       vitae nulla.
                     </li>
-                    <li className="text-sm px-6 py-5">
+                    <li className="px-6 py-5 text-sm">
                       Quisque auctor ultrices mauris, et semper urna aliquam
                       quis.
                     </li>
-                    <li className="text-sm px-6 py-5">
+                    <li className="px-6 py-5 text-sm">
                       Suspendisse vestibulum hendrerit.
                     </li>
                   </StackedList>
                 </Aside>
               </Column.Content>
-            </Column>
-            <PageSelect />
-          </Container>
+            </Column> */}
+
+          <Column cols="2/3">
+            <StackedList>
+              {NewsData.slice(0, 5).map(
+                ({ id, title, link, date, image, alt, excerpt }) => (
+                  <Listing key={id}>
+                    <a href="https://carleton.ca/webservices">
+                      <Listing.Content>
+                        <Listing.PostMeta date={date} />
+                        <Listing.Header text={title} />
+                        <Listing.Excerpt text={excerpt} />
+                      </Listing.Content>
+                    </a>
+                  </Listing>
+                ),
+              )}
+            </StackedList>
+
+            <Aside>
+              <StackedList hasBorder>
+                <li className="px-6 py-5 text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam augue turpis, feugiat vitae viverra in, egestas vitae
+                  nulla.
+                </li>
+                <li className="px-6 py-5 text-sm">
+                  Quisque auctor ultrices mauris, et semper urna aliquam quis.
+                </li>
+                <li className="px-6 py-5 text-sm">
+                  Suspendisse vestibulum hendrerit.
+                </li>
+              </StackedList>
+            </Aside>
+          </Column>
+
+          <PageSelect />
         </Section>
       </Main>
 

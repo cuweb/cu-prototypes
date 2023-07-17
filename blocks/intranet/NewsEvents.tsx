@@ -48,7 +48,10 @@ export const NewsEvents = () => {
                 }) => (
                   <Listing key={id}>
                     <Link href={link}>
-                      <Listing.DateBox startDate={startDate} endDate={endDate} />
+                      <Listing.DateBox
+                        startDate={startDate}
+                        endDate={endDate}
+                      />
                       <Listing.Content>
                         <Listing.Header text={title} />
                         <Listing.EventMeta
