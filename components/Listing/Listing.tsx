@@ -3,6 +3,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 import { styles, linkStyles } from './Listing.Styles'
 import { ListingFigure } from './ListingFigure'
+import { ListingVideo } from './ListingVideo'
 import { ListingInitials } from './ListingInitials'
 import { ListingContent } from './ListingContent'
 import { ListingDateBox } from './ListingDateBox'
@@ -44,4 +45,5 @@ export const Listing = Object.assign(ListingWrapper, {
   EventMeta: ListingEventMeta,
   PeopleMeta: ListingPeopleMeta,
   Initials: ListingInitials,
+  Video: ListingVideo,
 })
