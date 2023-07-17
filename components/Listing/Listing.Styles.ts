@@ -21,7 +21,7 @@ export const figureStyles = {
 }
 
 export const videoStyles = {
-  default: `max-w-[50%] @lg:md:max-w-[45%] mr-6`,
+  default: `max-w-[50%] @lg:md:max-w-[45%] mr-8 self-center`,
   small: `max-w-[50%] @lg:md:max-w-[25%]`,
 }
 
