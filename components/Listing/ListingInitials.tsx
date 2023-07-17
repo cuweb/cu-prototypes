@@ -6,7 +6,9 @@ export interface ListingInitialsProps {
 
 export const ListingInitials = ({ initials }: ListingInitialsProps) => {
   return (
-    <figure className={`cu-figure ${figureStyles.figure} ${figureStyles['small']}`}>
+    <figure
+      className={`cu-figure ${figureStyles.figure} ${figureStyles['small']}`}
+    >
       <div className="relative">
         <img
           src="https://cu-production.s3.amazonaws.com/rds/assets/grey-bg.jpg"

@@ -30,7 +30,12 @@ export const NewsItem: Story = {
     children: (
       <a href={singleNews?.link}>
         <Listing.Figure>
-          <img src={singleNews?.image} alt={singleNews?.alt} width="400" height="266" />
+          <img
+            src={singleNews?.image}
+            alt={singleNews?.alt}
+            width="400"
+            height="266"
+          />
         </Listing.Figure>
         <Listing.Content>
           <Listing.PostMeta date={singleNews?.date} />
@@ -46,7 +51,10 @@ export const EventListing: Story = {
   args: {
     children: (
       <a href={singleEvent?.link}>
-        <Listing.DateBox startDate={singleEvent?.startDate} endDate={singleEvent?.endDate} />
+        <Listing.DateBox
+          startDate={singleEvent?.startDate}
+          endDate={singleEvent?.endDate}
+        />
         <Listing.Content>
           <Listing.Header text={singleEvent?.title} />
           <Listing.EventMeta
@@ -68,10 +76,17 @@ export const PeopleListing: Story = {
     children: (
       <a href={singlePeople?.link}>
         <Listing.Figure size="small">
-          <img src={singlePeople?.image} alt={singlePeople?.alt} width="200" height="200" />
+          <img
+            src={singlePeople?.image}
+            alt={singlePeople?.alt}
+            width="200"
+            height="200"
+          />
         </Listing.Figure>
         <Listing.Content>
-          <Listing.Header text={`${singlePeople?.firstName} ${singlePeople?.lastName}`} />
+          <Listing.Header
+            text={`${singlePeople?.firstName} ${singlePeople?.lastName}`}
+          />
           <Listing.PeopleMeta
             jobTitle={singlePeople?.jobTitle}
             email={singlePeople?.email}
@@ -89,7 +104,9 @@ export const PeopleListingInitials: Story = {
       <a href={singlePeople?.link}>
         <Listing.Initials initials="CU" />
         <Listing.Content>
-          <Listing.Header text={`${singlePeople?.firstName} ${singlePeople?.lastName}`} />
+          <Listing.Header
+            text={`${singlePeople?.firstName} ${singlePeople?.lastName}`}
+          />
           <Listing.PeopleMeta
             jobTitle={singlePeople?.jobTitle}
             email={singlePeople?.email}
