@@ -5,12 +5,12 @@ export interface ListingExcerptProps {
 }
 
 export const ListingExcerpt = ({ text }: ListingExcerptProps) => {
-  return (
+  return text ? (
     <p className={styles.excerpt}>
       {text.length > 170 ? `${text.substring(0, 170)}...` : text}
       <span className={styles.more}> Read more</span>
     </p>
-  )
+  ) : null;
 }
 
 ListingExcerpt.displayName = 'Listing.Excerpt'
