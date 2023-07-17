@@ -20,6 +20,11 @@ export const figureStyles = {
   small: `max-w-[50%] @lg:md:max-w-[25%]`,
 }
 
+export const videoStyles = {
+  default: `max-w-[50%] @lg:md:max-w-[45%] mr-6`,
+  small: `max-w-[50%] @lg:md:max-w-[25%]`,
+}
+
 export const metaStyles = {
   wrapper: `flex flex-col flex-wrap gap-2`,
   item: `text-sm text-cu-black-600 @2xl:md:text-base`,
