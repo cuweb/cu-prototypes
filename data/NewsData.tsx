@@ -6,15 +6,11 @@ export const NewsData = [
     image: '/images/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam nulla eget est viverra, et tristique velit elementum. Aliquam ultrices vitae felis sit amet pharetra. Vivamus vitae dui mi. Quisque vitae nibh at orci lobortis rhoncus eu at mi. Nulla facilisi. In hac habitasse platea dictumst. Curabitur sed lectus risus.',
+      '',
     date: '2022-12-23 10:27:31',
+    video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     tags: {
       category: [
-        {
-          id: 3,
-          name: 'Page',
-          slug: 'category-one',
-        },
         {
           id: 4,
           name: 'Video',
