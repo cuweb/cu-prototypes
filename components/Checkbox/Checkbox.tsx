@@ -1,4 +1,5 @@
 import React from 'react';
+import { formStyles, formErrorStyles } from '../../styles/formClasses'
 
 const CheckboxWrapper = () => {
   // Component logic and state can be defined here
@@ -7,7 +8,10 @@ const CheckboxWrapper = () => {
     // JSX structure and component rendering
 <fieldset>
   <legend className="sr-only">Notifications</legend>
-  <div className="space-y-3 mt-6">
+  <div className="space-y-2 mt-6">
+  <label className={formStyles.label}>
+            Filter results by type
+          </label>
     <div className="relative flex items-start">
       <div className="flex h-6 items-center">
         <input
