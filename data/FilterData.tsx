@@ -8,7 +8,7 @@ export const FilterData = {
   ],
   sortDirection: [
     { name: 'Ascending', href: '#', current: false },
-    { name: 'Decending', href: '#', current: false },
+    { name: 'Descending', href: '#', current: false },
   ],
   filters: [
     {
