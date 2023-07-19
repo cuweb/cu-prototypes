@@ -233,7 +233,7 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
               {sortOptions && sortOptions?.length > 0 && (
                 <div>
                   <Menu.Button className={styles.dropDownTitles}>
-                    Sort
+                    Sort by Date
                     <ChevronDownIcon className={styles.chevron} aria-hidden="true" />
                   </Menu.Button>
                 </div>
