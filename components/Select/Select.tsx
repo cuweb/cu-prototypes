@@ -16,15 +16,28 @@ export interface SelectProps {
 }
 
 const SelectWrapper = ({
-  label = "Select a sorting option",
+  label = "Sort results by:",
   options = [{
-    label: "Date",
+    label: "Date - Descending",
     value: "date"
-  }, {
-    label: "Type",
+  },{
+    label: "Date - Ascending",
+    value: "date"
+  },
+  {
+    label: "Type - Descending",
     value: "type"
-  }, {
-    label: "Name",
+  },
+  {
+    label: "Type - Ascending",
+    value: "type"
+  },
+  {
+    label: "Name - Descending",
+    value: "name"
+  },
+  {
+    label: "Name - Ascending",
     value: "name"
   }],
   condition = () => true,
