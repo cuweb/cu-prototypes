@@ -10,7 +10,7 @@ const CheckboxWrapper = () => {
   <legend className="sr-only">Notifications</legend>
   <div className="space-y-2 mt-6">
   <label className={formStyles.label}>
-            Filter results by type
+            Filter results to include:
           </label>
     <div className="relative flex items-start">
       <div className="flex h-6 items-center">
