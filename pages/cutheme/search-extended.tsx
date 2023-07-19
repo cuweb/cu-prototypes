@@ -49,6 +49,23 @@ const PageSelect = () => {
   )
 }
 
+const FilterData = {
+  filters: [{
+    id: "",
+    name: "",
+    options: {
+      value: "",
+      label: "",
+      checked: false,
+    }
+  }],
+  sortOptions: [{
+    name: "",
+    href: "",
+    current: false,
+  }]
+}
+
 const Home: NextPage = () => {
   return (
     <>
@@ -87,22 +104,6 @@ const Home: NextPage = () => {
               )}
             </StackedList>
             <Aside>
-                            <DropDown
-                buttonText="Sort Results"
-                listItems={[
-                  {
-                    href: '',
-                    title: 'By Name',
-                  },
-                  {
-                    onClick: function Xa() {},
-                    title: 'By Date',
-                  },
-                  {
-                    href: '',
-                    title: 'By Type',
-                  },
-                ]}
               <Select />
               <Checkbox/>
             </Aside>
