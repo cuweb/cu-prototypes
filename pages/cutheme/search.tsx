@@ -17,6 +17,7 @@ import {
 
 import { Listing } from '@components/Listing/Listing'
 import { Checkbox } from '@components/Checkbox/Checkbox'
+import { Select } from '@components/Select/Select'
 
 import React, { useState, useCallback } from 'react'
 
@@ -102,7 +103,7 @@ const Home: NextPage = () => {
                     title: 'By Type',
                   },
                 ]}
-              />
+              <Select />
               <Checkbox/>
             </Aside>
           </Column>
