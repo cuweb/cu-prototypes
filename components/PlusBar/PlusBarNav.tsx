@@ -54,13 +54,19 @@ export const PlusBarNav = ({ navLinks }: any) => {
           ))}
       </div>
 
-      <div className="flex items-center ml-auto">
-        <div className="inline-block mr-4">
+      <div className="flex items-center gap-6 ml-auto">
+        <div className="">
           {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
         </div>
-        <p className="px-4 py-2 font-medium rounded text-cu-black-800 bg-cu-black-100">
-          CU-Nav
-        </p>
+
+        {/* Mega Menu Button */}
+        <button
+          type="button"
+          aria-label="Small Button"
+          className="px-3 py-2 text-sm font-semibold rounded text-cu-black-700 md:px-4 md:py-3 whitespace-nowrap cu-button hover:text-white focus:outline-none bg-cu-black-100 hover:bg-cu-red"
+        >
+          Menu
+        </button>
       </div>
     </>
   )
