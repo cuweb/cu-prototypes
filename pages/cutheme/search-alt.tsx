@@ -106,7 +106,7 @@ const Home: NextPage = () => {
                         <Image alt={alt} height="266" src={image} width="400" />
                       </Listing.Figure>
                       <Listing.Content>
-                        <Listing.PostMeta date="2023-03-28 10:27:31" />
+                        <Listing.PostMeta date={date} />
                         <Listing.Header text={title} />
                         <Listing.Excerpt text={excerpt} />
                         <Listing.Badges tags={tags} />
