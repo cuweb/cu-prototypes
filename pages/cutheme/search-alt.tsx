@@ -85,6 +85,7 @@ const Home: NextPage = () => {
                 link,
                 excerpt,
                 image,
+                date,
                 alt,
                 tags,
                 startDate,
