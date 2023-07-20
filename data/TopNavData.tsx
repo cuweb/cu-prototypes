@@ -40,8 +40,14 @@ export const TopBarNavData = [
     subMenu: [
       { id: 1.1, label: 'Community', link: '/intranet/community' },
       { id: 1.2, label: 'Employees', link: '/intranet/working-here' },
-      { id: 1.3, label: 'Managers', link: '/intranet/working-here' },
-      { id: 1.4, label: 'Resources', link: '/intranet/resources' },
+      {
+        id: 1.3,
+        label:
+          'Testing a longer than usual sub navigation item that should never be used',
+        link: '/intranet/working-here',
+      },
+      { id: 1.4, label: 'Managers', link: '/intranet/working-here' },
+      { id: 1.5, label: 'Resources', link: '/intranet/resources' },
     ],
   },
   { id: 3, label: 'Research', link: '/homepage' },

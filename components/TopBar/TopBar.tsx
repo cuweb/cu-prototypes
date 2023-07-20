@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { TopBarNav } from './TopBarNav'
-import { primaryStyles } from './TopBar.Styles'
+import { navBaseStyles } from './TopBar.Styles'
 
 export interface LinkProps {
   label: string
@@ -19,19 +19,19 @@ export interface TopBarProps {
 
 export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
   return (
-    <header className={primaryStyles.header}>
-      <div className={primaryStyles.topbarWrapper}>
-        <div className={primaryStyles.logoContainer}>
+    <header className={navBaseStyles.header}>
+      <div className={navBaseStyles.topbarContainer}>
+        <div className={navBaseStyles.logoContainer}>
           <Link href="https://carleton.ca">
             <img
-              className={primaryStyles.cuLogo}
+              className={navBaseStyles.cuLogo}
               src="/assets/cu-logo-color-right-horiztonal.svg"
               width="130"
               height="35"
               alt="Logo"
             />
             <img
-              className={primaryStyles.cuShield}
+              className={navBaseStyles.cuShield}
               src="/assets/cu-shield-color.svg"
               width="28"
               height="35"
@@ -40,7 +40,7 @@ export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
           </Link>
 
           {title && (
-            <h1 className={primaryStyles.siteTitle}>
+            <h1 className={navBaseStyles.siteTitle}>
               <Link href={homeLink}>{title}</Link>
             </h1>
           )}

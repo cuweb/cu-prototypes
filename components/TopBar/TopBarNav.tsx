@@ -3,6 +3,7 @@ import { InView } from 'react-intersection-observer'
 import Link from 'next/link'
 import { TopBarSideNav } from './TopBarSideNav'
 import { TopBarDropDown } from './TopBarDropDown'
+import { navItemStyles, navAsideStyles } from './TopBar.Styles'
 
 export const TopBarNav = ({ navLinks }: any) => {
   // create sub menu for invisible items
@@ -21,9 +22,9 @@ export const TopBarNav = ({ navLinks }: any) => {
 
   return (
     <>
-      <div className="flex items-center gap-5 overflow-hidden">
-        {navLinks &&
-          navLinks.map((navMenuItem: any, index: any) => (
+      {navLinks && (
+        <nav className={navItemStyles.navContainer}>
+          {navLinks.map((navMenuItem: any, index: any) => (
             <InView
               key={index}
               threshold={0.99}
@@ -37,7 +38,7 @@ export const TopBarNav = ({ navLinks }: any) => {
                     <Link
                       ref={ref}
                       href={navMenuItem.link}
-                      className="text-sm font-medium text-cu-black-700 hover:text-cu-red"
+                      className={navItemStyles.navItem}
                     >
                       {navMenuItem.label}
                     </Link>
@@ -52,16 +53,17 @@ export const TopBarNav = ({ navLinks }: any) => {
               )}
             </InView>
           ))}
-      </div>
+        </nav>
+      )}
 
-      <div className="flex items-center gap-4 ml-auto">
+      <div className={navAsideStyles.asideContainer}>
         {sideMenu.length > 0 && <TopBarSideNav sideMenu={sideMenu} />}
 
         {/* Mega Menu Button */}
         <button
           type="button"
-          aria-label="Small Button"
-          className="px-3 py-2 text-sm font-semibold rounded text-cu-black-700 md:px-4 md:py-3 whitespace-nowrap cu-button hover:text-white focus:outline-none bg-cu-black-100 hover:bg-cu-red"
+          aria-label="global-carleton-navigation"
+          className={navAsideStyles.megaMenuButton}
         >
           Menu
         </button>
