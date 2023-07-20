@@ -76,7 +76,7 @@ const Home: NextPage = () => {
             />
           </Container>
 
-          <StackedList hasBorder cols="2">
+          <StackedList hasBorder>
             {SearchData.slice(0, 12).map(
               ({
                 id,
