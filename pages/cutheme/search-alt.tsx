@@ -17,9 +17,9 @@ import { FilterData as dataFilter } from 'data/FilterData'
 import React, { useState, useCallback } from 'react'
 
 import { TopBarOld } from '@components/TopBarOld/TopBarOld'
-import { cuthemeNavData } from 'data/TopNavData'
 
-import { NewsData } from 'data/NewsData'
+import { cuthemeNavData } from 'data/TopNavData'
+import { SearchData } from 'data/SearchData'
 
 const SearchBar = () => {
   const [, setMessage] = useState('')
@@ -76,14 +76,13 @@ const Home: NextPage = () => {
           </Container>
 
           <StackedList hasBorder cols="2">
-            {NewsData.slice(0, 8).map(({ id, title, date, excerpt, tags }) => (
+            {SearchData.slice(0, 12).map(({ id, type }) => (
               <Listing key={id}>
                 <a href="https://carleton.ca/webservices">
-                  <Listing.Content>
-                    <Listing.Header text={title} />
-                    <Listing.Excerpt text={excerpt} />
-                    <Listing.Badges tags={tags} />
-                  </Listing.Content>
+                  {type === 'news' && <p>This is a news item</p>}
+                  {type === 'event' && <p>This is an event item</p>}
+                  {type === 'people' && <p>This is a people item</p>}
+                  {type === 'video' && <p>This is a video item</p>}
                 </a>
               </Listing>
             ))}

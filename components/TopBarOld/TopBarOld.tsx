@@ -68,8 +68,8 @@ export const TopBarOldWrapper = ({
       </div>
 
       {isTwoTier && (
-        <nav className="border-t border-b-cu-black-100">
-          <ul className="flex gap-8 pr-4 pl-5 py-2 mx-auto text-[0.925rem] max-w-screen-2xl cu-priority-nav">
+        <nav className="border-t border-b-cu-black-100 bg-cu-black-50">
+          <ul className="flex gap-8 pr-4 pl-5 py-3 mx-auto text-[0.925rem] max-w-screen-2xl cu-priority-nav">
             {navLinks &&
               navLinks.map((item, index) => (
                 <li key={index}>
