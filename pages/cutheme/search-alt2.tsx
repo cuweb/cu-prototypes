@@ -81,15 +81,15 @@ const Home: NextPage = () => {
               ({
                 id,
                 type,
-                title,
+                title = '',
                 link,
-                excerpt,
+                excerpt = '',
                 image,
                 date,
                 alt,
                 tags,
-                startDate,
-                endDate,
+                startDate = '',
+                endDate = '',
                 on_campus_building,
                 on_campus_room_number,
                 firstName,
@@ -130,6 +130,7 @@ const Home: NextPage = () => {
                           onCampusBuilding={on_campus_building}
                           onCampusRoomNumber={on_campus_room_number}
                         />
+                        <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
                   )}
@@ -147,6 +148,7 @@ const Home: NextPage = () => {
                           jobTitle={jobTitle}
                           phone={phone}
                         />
+                        <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
                   )}
