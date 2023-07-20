@@ -12,14 +12,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
@@ -37,9 +32,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category Three',
-          slug: 'category-three',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
@@ -57,33 +52,16 @@ export const SearchData = [
     on_campus_room_number: '420',
     image: 'https://source.unsplash.com/random/400x175',
     alt: `Images need alt text`,
+    multiday: false,
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
-        },
-      ],
-      audience: [
-        {
           id: 1,
-          name: 'Student',
-          slug: 'student',
-        },
-        {
-          id: 2,
-          name: 'Faculty',
-          slug: 'faculty',
+          name: 'Event',
+          slug: 'event',
         },
       ],
     },
-    multiday: false,
   },
   {
     id: 4,
@@ -100,14 +78,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
+          id: 1,
+          name: 'People',
+          slug: 'people',
         },
       ],
     },
@@ -127,14 +100,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
+          id: 1,
+          name: 'People',
+          slug: 'people',
         },
       ],
     },
@@ -152,9 +120,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 4,
-          name: 'Category Four',
-          slug: 'category-four',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
@@ -172,9 +140,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category Three',
-          slug: 'category-three',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
@@ -192,33 +160,16 @@ export const SearchData = [
     on_campus_room_number: null,
     image: 'https://source.unsplash.com/random/400x175',
     alt: `Images need alt text`,
+    multiday: true,
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
-        },
-      ],
-      audience: [
-        {
           id: 1,
-          name: 'Student',
-          slug: 'student',
-        },
-        {
-          id: 2,
-          name: 'Faculty',
-          slug: 'faculty',
+          name: 'Event',
+          slug: 'event',
         },
       ],
     },
-    multiday: true,
   },
   {
     id: 9,
@@ -233,9 +184,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 4,
-          name: 'Category Four',
-          slug: 'category-four',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
@@ -245,6 +196,7 @@ export const SearchData = [
     type: 'video',
     title: 'Carleton Battle of the Bands - A Hit!',
     link: '#',
+    image: '/images/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
       'Donec dolor sapien, aliquet eu nibh vel, laoreet aliquam arcu. Suspendisse potenti. Nulla varius, enim nec maximus.',
@@ -253,9 +205,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 4,
+          id: 1,
           name: 'Video',
-          slug: 'category-two',
+          slug: 'video',
         },
       ],
     },
@@ -275,14 +227,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
+          id: 1,
+          name: 'People',
+          slug: 'people',
         },
       ],
     },
@@ -300,14 +247,9 @@ export const SearchData = [
     tags: {
       category: [
         {
-          id: 3,
-          name: 'Category One',
-          slug: 'category-one',
-        },
-        {
-          id: 4,
-          name: 'Category Two',
-          slug: 'category-two',
+          id: 1,
+          name: 'News',
+          slug: 'news',
         },
       ],
     },
