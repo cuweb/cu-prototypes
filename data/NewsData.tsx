@@ -17,6 +17,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'page'
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'video'
   },
   {
     id: 3,
@@ -55,6 +57,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'event'
   },
   {
     id: 4,
@@ -74,6 +77,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'news'
   },
   {
     id: 5,
@@ -93,6 +97,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'event'
   },
   {
     id: 6,
@@ -117,6 +122,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'page'
   },
   {
     id: 7,
@@ -141,6 +147,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'page'
   },
   {
     id: 8,
@@ -160,6 +167,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'news'
   },
   {
     id: 9,
@@ -179,6 +187,7 @@ export const NewsData = [
         },
       ],
     },
+    type: 'event'
   },
   {
     id: 10,
@@ -198,5 +207,6 @@ export const NewsData = [
         },
       ],
     },
+    type: 'news'
   },
 ]
