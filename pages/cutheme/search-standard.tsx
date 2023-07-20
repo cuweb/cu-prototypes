@@ -79,9 +79,11 @@ const Home: NextPage = () => {
               ({ id, title, link, date, image, alt, excerpt }) => (
                 <Listing key={id}>
                   <a href="https://carleton.ca/webservices">
+                    {image && ( // <-- Add the check for image here
                     <Listing.Figure>
                       <img src={image} alt={title} width="400" height="266" />
                     </Listing.Figure>
+                    )}
                     <Listing.Content>
                       <Listing.PostMeta date={date} />
                       <Listing.Header text={title} />
