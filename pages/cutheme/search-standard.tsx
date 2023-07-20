@@ -24,7 +24,6 @@ import { cuthemeNavData } from 'data/TopNavData'
 
 import { NewsData } from 'data/NewsData'
 
-
 const SearchBar = () => {
   const [, setMessage] = useState('')
   const callback = useCallback(
@@ -61,37 +60,38 @@ const Home: NextPage = () => {
       <Main>
         <Section hasProse>
           <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Site Search" />
+            <HeroTextImage.Content title="Site Search" headerType="h1" />
           </HeroTextImage>
 
           <Container>
             <SearchBar />
+            <br />
+            <Filter
+              filters={dataFilter.filters}
+              callback={() => undefined}
+              sortOptions={dataFilter.sortOptions}
+              sortDirection={dataFilter.sortDirection}
+            />
           </Container>
 
-          <Container>
-          <Filter filters={dataFilter.filters} callback={() => undefined} sortOptions={dataFilter.sortOptions} sortDirection={dataFilter.sortDirection}/>
-          </Container>
-
-          <Column cols="">
-            <StackedList>
-              {NewsData.slice(0, 5).map(
-                ({ id, title, link, date, image, alt, excerpt }) => (
-                  <Listing key={id}>
-                    <a href="https://carleton.ca/webservices">
-                      <Listing.Figure>
-                          <img src={image} alt={title} width="400" height="266" />
-                      </Listing.Figure>
-                      <Listing.Content>
-                        <Listing.PostMeta date={date} />
-                        <Listing.Header text={title} />
-                        <Listing.Excerpt text={excerpt} />
-                      </Listing.Content>
-                    </a>
-                  </Listing>
-                ),
-              )}
-            </StackedList>
-          </Column>
+          <StackedList>
+            {NewsData.slice(0, 5).map(
+              ({ id, title, link, date, image, alt, excerpt }) => (
+                <Listing key={id}>
+                  <a href="https://carleton.ca/webservices">
+                    <Listing.Figure>
+                      <img src={image} alt={title} width="400" height="266" />
+                    </Listing.Figure>
+                    <Listing.Content>
+                      <Listing.PostMeta date={date} />
+                      <Listing.Header text={title} />
+                      <Listing.Excerpt text={excerpt} />
+                    </Listing.Content>
+                  </a>
+                </Listing>
+              ),
+            )}
+          </StackedList>
 
           <PageSelect />
         </Section>
