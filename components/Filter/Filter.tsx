@@ -1,7 +1,18 @@
 import { Fragment, useState, useEffect } from 'react'
-import { Dialog, Disclosure, Menu, Popover, Transition, Listbox } from '@headlessui/react'
+import {
+  Dialog,
+  Disclosure,
+  Menu,
+  Popover,
+  Transition,
+  Listbox,
+} from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import {
+  ChevronDownIcon,
+  CheckIcon,
+  ChevronUpDownIcon,
+} from '@heroicons/react/20/solid'
 import { Link } from '../Link/Link'
 import styles from './Filter.styles'
 
@@ -32,7 +43,12 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const Filter = ({ sortOptions, sortDirection, filters, callback }: FilterProps) => {
+export const Filter = ({
+  sortOptions,
+  sortDirection,
+  filters,
+  callback,
+}: FilterProps) => {
   const [open, setOpen] = useState(false)
   const [sortItem, setSortItem] = useState('')
   const [selectedItems, setSelectedItems] = useState<string[]>([])
@@ -44,12 +60,16 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
     if (!selectedItems.includes(selected)) {
       return setSelectedItems([...selectedItems, selected])
     }
-    return setSelectedItems([...selectedItems].filter((item) => item !== selected))
+    return setSelectedItems(
+      [...selectedItems].filter((item) => item !== selected),
+    )
   }
 
   const handleRemove = (name: string) => {
     const selected: string = name
-    return setSelectedItems([...selectedItems].filter((item) => item !== selected))
+    return setSelectedItems(
+      [...selectedItems].filter((item) => item !== selected),
+    )
   }
 
   useEffect(() => {
@@ -61,23 +81,22 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
     callback(selectedItems)
   }, [selectedItems, callback])
 
-  const direction = [
-    { name: 'Ascending' },
-    { name: 'Descending' },
-  ]
-  
+  const direction = [{ name: 'Ascending' }, { name: 'Descending' }]
+
   function SortDirection() {
     const [selected, setSelected] = useState(direction[0])
-  
+
     return (
-      <Listbox value={selected} onChange={setSelected} as="div" className="relative mx-4">
+      <Listbox
+        value={selected}
+        onChange={setSelected}
+        as="div"
+        className="relative mx-4"
+      >
         <div className="">
           <Listbox.Button className={styles.dropDownTitles}>
             <span className="">{selected.name}</span>
-            <ChevronUpDownIcon
-                className={styles.chevron}
-                aria-hidden="true"
-              />
+            <ChevronUpDownIcon className={styles.chevron} aria-hidden="true" />
             {/* <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronDownIcon
                 className={styles.chevron}
@@ -156,7 +175,9 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
             >
               <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white shadow-xl">
                 <div className="flex items-center justify-between bg-cu-black-50 px-4 py-3">
-                  <h2 className="text-base font-medium text-cu-black-800">Filters</h2>
+                  <h2 className="text-base font-medium text-cu-black-800">
+                    Filters
+                  </h2>
                   <button
                     type="button"
                     className="-mr-1 flex h-8 w-8 items-center justify-center rounded-md bg-white p-2 text-cu-black-600"
@@ -170,15 +191,24 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                 {/* Filters */}
                 <form>
                   {filters.map((section) => (
-                    <Disclosure as="div" key={section.name} className="border-t border-cu-black-100 px-4 py-6">
+                    <Disclosure
+                      as="div"
+                      key={section.name}
+                      className="border-t border-cu-black-100 px-4 py-6"
+                    >
                       {({ open }) => (
                         <>
                           <h3 className="group -mx-2 -my-3 flow-root">
                             <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-sm text-cu-black-300 group-hover:text-cu-black-600">
-                              <span className="font-medium text-cu-black-600">{section.name}</span>
+                              <span className="font-medium text-cu-black-600">
+                                {section.name}
+                              </span>
                               <span className="ml-6 flex items-center">
                                 <ChevronDownIcon
-                                  className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-5 w-5 transform')}
+                                  className={classNames(
+                                    open ? '-rotate-180' : 'rotate-0',
+                                    'h-5 w-5 transform',
+                                  )}
                                   aria-hidden="true"
                                 />
                               </span>
@@ -187,7 +217,10 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                           <Disclosure.Panel className="pt-6">
                             <div className="space-y-6">
                               {section.options.map((option, optionIdx) => (
-                                <div key={optionIdx} className="flex items-center">
+                                <div
+                                  key={optionIdx}
+                                  className="flex items-center"
+                                >
                                   <input
                                     id={`filter-mobile-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
@@ -218,8 +251,6 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
         </Dialog>
       </Transition.Root>
 
-   
-
       <section aria-labelledby="filter-heading">
         <h2 id="filter-heading" className="sr-only">
           Filters
@@ -228,13 +259,15 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
         {/* Filter selectors */}
         <div className="rounded-tl-lg rounded-tr-lg border border-cu-black-100 bg-gray-50 py-4">
           <div className="flex px-4 sm:px-6">
-          
             <Menu as="div" className="relative">
               {sortOptions && sortOptions?.length > 0 && (
                 <div>
                   <Menu.Button className={styles.dropDownTitles}>
                     Sort by Date
-                    <ChevronDownIcon className={styles.chevron} aria-hidden="true" />
+                    <ChevronDownIcon
+                      className={styles.chevron}
+                      aria-hidden="true"
+                    />
                   </Menu.Button>
                 </div>
               )}
@@ -257,7 +290,9 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                             <Link
                               href={option.href}
                               className={classNames(
-                                option.name === sortItem ? 'font-medium text-cu-black-800' : 'text-cu-black-600',
+                                option.name === sortItem
+                                  ? 'font-medium text-cu-black-800'
+                                  : 'text-cu-black-600',
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm',
                               )}
@@ -273,7 +308,7 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                 </Menu.Items>
               </Transition>
             </Menu>
-            <SortDirection/>
+            <SortDirection />
 
             <button
               type="button"
@@ -287,10 +322,16 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
               <div className="flow-root">
                 <Popover.Group className="-mx-4 flex items-center divide-x divide-gray-200">
                   {filters.map((section, sectionIdx) => (
-                    <Popover key={sectionIdx} className="relative inline-block px-4 text-left">
+                    <Popover
+                      key={sectionIdx}
+                      className="relative inline-block px-4 text-left"
+                    >
                       <Popover.Button className={styles.dropDownTitles}>
                         <span>{section.name}</span>
-                        <ChevronDownIcon className={styles.chevron} aria-hidden="true" />
+                        <ChevronDownIcon
+                          className={styles.chevron}
+                          aria-hidden="true"
+                        />
                       </Popover.Button>
 
                       <Transition
@@ -305,7 +346,10 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                         <Popover.Panel className="absolute right-0 z-10 mt-2 rounded-md bg-white p-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <form className="space-y-4">
                             {section.options.map((option, optionIdx) => (
-                              <div key={optionIdx} className="flex items-center">
+                              <div
+                                key={optionIdx}
+                                className="flex items-center"
+                              >
                                 <input
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
@@ -342,7 +386,10 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
               <span className="sr-only">, active</span>
             </h3>
 
-            <div aria-hidden="true" className="hidden h-5 w-px bg-gray-300 sm:ml-4 sm:block" />
+            <div
+              aria-hidden="true"
+              className="hidden h-5 w-px bg-gray-300 sm:ml-4 sm:block"
+            />
 
             <div className="mt-4 sm:ml-4 sm:mt-0">
               <div className="-m-1 flex flex-wrap items-center gap-3">
@@ -357,9 +404,20 @@ export const Filter = ({ sortOptions, sortDirection, filters, callback }: Filter
                       onClick={() => handleRemove(activeFilter)}
                       className="ml-1 inline-flex h-4 w-4 flex-shrink-0 rounded-full p-1 text-cu-black-400 hover:bg-cu-red hover:text-white"
                     >
-                      <span className="sr-only">Remove filter for {activeFilter}</span>
-                      <svg className="h-2 w-2" stroke="currentColor" fill="none" viewBox="0 0 8 8">
-                        <path strokeLinecap="round" strokeWidth="1.5" d="M1 1l6 6m0-6L1 7" />
+                      <span className="sr-only">
+                        Remove filter for {activeFilter}
+                      </span>
+                      <svg
+                        className="h-2 w-2"
+                        stroke="currentColor"
+                        fill="none"
+                        viewBox="0 0 8 8"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeWidth="1.5"
+                          d="M1 1l6 6m0-6L1 7"
+                        />
                       </svg>
                     </button>
                   </span>
