@@ -1,8 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 import { SelectHTMLAttributes, ClassAttributes } from 'react'
 import { useField } from 'formik'
-import { ExclamationCircleIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
+import {
+  ExclamationCircleIcon,
+  ChevronDownIcon,
+} from '@heroicons/react/24/solid'
 import { formStyles, formErrorStyles } from '../../styles/formClasses'
 
 export interface SelectProps {
@@ -16,39 +19,42 @@ export interface SelectProps {
 }
 
 const SelectWrapper = ({
-  label = "Sort results by:",
-  options = [{
-    label: "Date - Descending",
-    value: "date"
-  },{
-    label: "Date - Ascending",
-    value: "date"
-  },
-  {
-    label: "Type - Descending",
-    value: "type"
-  },
-  {
-    label: "Type - Ascending",
-    value: "type"
-  },
-  {
-    label: "Name - Descending",
-    value: "name"
-  },
-  {
-    label: "Name - Ascending",
-    value: "name"
-  }],
+  label = 'Sort results by:',
+  options = [
+    {
+      label: 'Date - Descending',
+      value: 'date',
+    },
+    {
+      label: 'Date - Ascending',
+      value: 'date',
+    },
+    {
+      label: 'Type - Descending',
+      value: 'type',
+    },
+    {
+      label: 'Type - Ascending',
+      value: 'type',
+    },
+    {
+      label: 'Name - Descending',
+      value: 'name',
+    },
+    {
+      label: 'Name - Ascending',
+      value: 'name',
+    },
+  ],
   condition = () => true,
   ...props
-}: SelectProps & SelectHTMLAttributes<HTMLSelectElement> & ClassAttributes<HTMLSelectElement>) => {
+}: SelectProps &
+  SelectHTMLAttributes<HTMLSelectElement> &
+  ClassAttributes<HTMLSelectElement>) => {
   //const [field, meta] = useField(props)
 
-
-
-  let field = {name: "test"};
-  let meta = {tocuhed: "", error: ""};
+  const field = { name: 'test' }
+  const meta = { tocuhed: '', error: '' }
 
   return (
     <>
@@ -64,9 +70,13 @@ const SelectWrapper = ({
               {...{ ...props, required: false }}
               id={field.name}
               name={field.name}
-              className={`${formStyles.input} ${meta.touched && meta.error ? formErrorStyles.inputBorder : ''} bg-none`}
+              className={`${formStyles.input} ${
+                meta.touched && meta.error ? formErrorStyles.inputBorder : ''
+              } bg-none`}
               aria-invalid={meta.touched && meta.error ? true : false}
-              aria-describedby={field.name + (meta.touched && meta.error ? '-error' : '')}
+              aria-describedby={
+                field.name + (meta.touched && meta.error ? '-error' : '')
+              }
             >
               {options?.map((option) => (
                 <option value={option.value} key={option.value}>
@@ -82,7 +92,10 @@ const SelectWrapper = ({
           {/* Validation Error Icon*/}
           {meta.touched && meta.error && (
             <div className={formErrorStyles.messageDiv}>
-              <ExclamationCircleIcon className={formErrorStyles.errorIcon} aria-hidden="true" />
+              <ExclamationCircleIcon
+                className={formErrorStyles.errorIcon}
+                aria-hidden="true"
+              />
               <p className={formErrorStyles.errorText} id="email-error">
                 {meta.error}
               </p>
@@ -95,4 +108,3 @@ const SelectWrapper = ({
 }
 
 export const Select = Object.assign(SelectWrapper, {})
-

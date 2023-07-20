@@ -22,10 +22,8 @@ export const NewsData = [
     id: 2,
     title: 'Carleton Battle of the Bands - A Hit!',
     link: '#',
-    image: '/images/news-img.jpg',
     alt: 'Image alt text',
-    excerpt:
-      '',
+    excerpt: '',
     date: '2022-12-23 10:27:31',
     video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     tags: {

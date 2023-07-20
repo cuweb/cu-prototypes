@@ -4,18 +4,16 @@ import {
   Section,
   FooterBasic,
   Column,
-  Heading,
-  Card,
   HeroTextImage,
   SearchForm,
   Pagination,
   StackedList,
+  Listing,
   Aside,
   Container,
-  DropDown,
 } from '@carletonuniversity/rds'
 
-import { Listing } from '@components/Listing/Listing'
+import { ListingVideo } from '@components/Listing/ListingVideo'
 import { Checkbox } from '@components/Checkbox/Checkbox'
 import { Select } from '@components/Select/Select'
 
@@ -25,6 +23,7 @@ import { TopBarOld } from '@components/TopBarOld/TopBarOld'
 import { cuthemeNavData } from 'data/TopNavData'
 
 import { NewsData } from 'data/NewsData'
+import Image from 'next/image'
 
 const SearchBar = () => {
   const [, setMessage] = useState('')
@@ -49,22 +48,26 @@ const PageSelect = () => {
   )
 }
 
-const FilterData = {
-  filters: [{
-    id: "",
-    name: "",
-    options: {
-      value: "",
-      label: "",
-      checked: false,
-    }
-  }],
-  sortOptions: [{
-    name: "",
-    href: "",
-    current: false,
-  }]
-}
+// const FilterData = {
+//   filters: [
+//     {
+//       id: '',
+//       name: '',
+//       options: {
+//         value: '',
+//         label: '',
+//         checked: false,
+//       },
+//     },
+//   ],
+//   sortOptions: [
+//     {
+//       name: '',
+//       href: '',
+//       current: false,
+//     },
+//   ],
+// }
 
 const Home: NextPage = () => {
   return (
@@ -77,37 +80,52 @@ const Home: NextPage = () => {
       ></TopBarOld>
 
       <Main>
-        <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Site Search" />
+        <Section maxWidth="7xl" hasProse>
+          <HeroTextImage maxWidth="7xl">
+            <HeroTextImage.Content title="Site Search" headerType="h1" />
           </HeroTextImage>
-          <Container>
+
+          <Container maxWidth="7xl">
             <SearchBar />
           </Container>
-          <Column cols="2/3">
+
+          <Column cols="2/3" maxWidth="7xl">
             <StackedList>
               {NewsData.slice(0, 5).map(
-                ({ id, title, link, date, image, alt, excerpt, tags, video }) => (
+                ({ id, title, date, excerpt, image, alt, tags, video }) => (
                   <Listing key={id}>
                     <a href="https://carleton.ca/webservices">
-                    
+                      {(video || image) && (
+                        <Listing.Figure>
+                          {video && !image && <ListingVideo source={video} />}
+                          {image && !video && (
+                            <Image
+                              src={image}
+                              alt={alt}
+                              width="400"
+                              height="266"
+                            />
+                          )}
+                        </Listing.Figure>
+                      )}
                       <Listing.Content>
                         <Listing.PostMeta date={date} />
                         <Listing.Header text={title} />
                         <Listing.Excerpt text={excerpt} />
                         <Listing.Badges tags={tags} />
                       </Listing.Content>
-                      <Listing.Video url={video}/>
                     </a>
                   </Listing>
                 ),
               )}
             </StackedList>
-            <Aside>
+
+            <Aside isSticky>
               <Select />
-              <Checkbox/>
+              <Checkbox />
             </Aside>
           </Column>
+
           <PageSelect />
         </Section>
       </Main>
