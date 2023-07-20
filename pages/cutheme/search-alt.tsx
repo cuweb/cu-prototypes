@@ -81,15 +81,15 @@ const Home: NextPage = () => {
               ({
                 id,
                 type,
-                title,
+                title = '',
                 link,
-                excerpt,
+                excerpt = '',
                 image,
                 date,
                 alt,
                 tags,
-                startDate,
-                endDate,
+                startDate = '',
+                endDate = '',
                 on_campus_building,
                 on_campus_room_number,
                 firstName,
@@ -102,9 +102,9 @@ const Home: NextPage = () => {
                   {/* If type is news render as news listing */}
                   {type === 'news' && (
                     <a href={link}>
-                      <Listing.Figure>
+                      {/* <Listing.Figure>
                         <Image alt={alt} height="266" src={image} width="400" />
-                      </Listing.Figure>
+                      </Listing.Figure> */}
                       <Listing.Content>
                         <Listing.PostMeta date={date} />
                         <Listing.Header text={title} />
@@ -130,6 +130,7 @@ const Home: NextPage = () => {
                           onCampusBuilding={on_campus_building}
                           onCampusRoomNumber={on_campus_room_number}
                         />
+                        <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
                   )}
@@ -143,10 +144,11 @@ const Home: NextPage = () => {
                       <Listing.Content>
                         <Listing.Header text={`${firstName} ${lastName}`} />
                         <Listing.PeopleMeta
-                          email={email}
+                          // email={email}
                           jobTitle={jobTitle}
-                          phone={phone}
+                          // phone={phone}
                         />
+                        <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
                   )}
@@ -158,9 +160,9 @@ const Home: NextPage = () => {
                         <Image alt={alt} height="266" src={image} width="400" />
                       </Listing.Figure>
                       <Listing.Content>
-                        <Listing.PostMeta date="2023-03-28 10:27:31" />
+                        {/* <Listing.PostMeta date="2023-03-28 10:27:31" /> */}
                         <Listing.Header text={title} />
-                        <Listing.Excerpt text={excerpt} />
+                        {/* <Listing.Excerpt text={excerpt} /> */}
                         <Listing.Badges tags={tags} />
                       </Listing.Content>
                     </a>
