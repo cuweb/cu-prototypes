@@ -31,7 +31,7 @@ export const cuthemeNavData = [
   { id: 6, label: 'Support', link: '/cutheme' },
 ]
 
-export const PlusNavMenuData = [
+export const TopBarNavData = [
   { id: 1, label: 'Academics', link: '/homepage' },
   {
     id: 2,

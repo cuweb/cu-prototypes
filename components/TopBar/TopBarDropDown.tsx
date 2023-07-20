@@ -3,11 +3,11 @@ import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
-export const PlusBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
+export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
   return (
     <Popover>
       {/* Nav item with submenu */}
-      <Popover.Button className="flex items-center -mb-0.5 text-sm text-cu-black-800">
+      <Popover.Button className="flex font-medium items-center -mb-0.5 text-sm text-cu-black-700 hover:text-cu-red">
         {navItemLabel}
         <ChevronDownIcon
           className="flex-none w-5 h-5 text-gray-400"

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
-import { PlusBarDropDown } from './PlusBarDropDown'
+import { TopBarSideNav } from './TopBarSideNav'
+import { TopBarDropDown } from './TopBarDropDown'
 
-export const PlusBarNav = ({ navLinks }: any) => {
+export const TopBarNav = ({ navLinks }: any) => {
   // create sub menu for invisible items
   const [sideMenu, setSideMenu] = useState<any>([])
 
@@ -21,7 +21,7 @@ export const PlusBarNav = ({ navLinks }: any) => {
 
   return (
     <>
-      <div className="flex items-center gap-6 overflow-hidden">
+      <div className="flex items-center gap-5 overflow-hidden">
         {navLinks &&
           navLinks.map((navMenuItem: any, index: any) => (
             <InView
@@ -37,13 +37,13 @@ export const PlusBarNav = ({ navLinks }: any) => {
                     <Link
                       ref={ref}
                       href={navMenuItem.link}
-                      className="text-sm text-cu-black-800"
+                      className="text-sm font-medium text-cu-black-700 hover:text-cu-red"
                     >
                       {navMenuItem.label}
                     </Link>
                   )}
                   {navMenuItem.subMenu && (
-                    <PlusBarDropDown
+                    <TopBarDropDown
                       navItemLabel={navMenuItem.label}
                       navSubMenu={navMenuItem.subMenu}
                     />
@@ -55,7 +55,7 @@ export const PlusBarNav = ({ navLinks }: any) => {
       </div>
 
       <div className="flex items-center gap-4 ml-auto">
-        {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
+        {sideMenu.length > 0 && <TopBarSideNav sideMenu={sideMenu} />}
 
         {/* Mega Menu Button */}
         <button
