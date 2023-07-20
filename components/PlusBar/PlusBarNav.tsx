@@ -54,10 +54,8 @@ export const PlusBarNav = ({ navLinks }: any) => {
           ))}
       </div>
 
-      <div className="flex items-center gap-6 ml-auto">
-        <div className="">
-          {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
-        </div>
+      <div className="flex items-center gap-4 ml-auto">
+        {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
 
         {/* Mega Menu Button */}
         <button
