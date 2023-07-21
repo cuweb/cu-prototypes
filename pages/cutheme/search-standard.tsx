@@ -61,7 +61,11 @@ const Home: NextPage = () => {
       <Main>
         <Section hasProse>
           <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Site Search" headerType="h1" />
+          <HeroTextImage.Content
+              title="Search Results"
+              paragraph="You search for Academic Dates and got 1,376 results."
+              headerType="h1"
+            />
           </HeroTextImage>
 
           <Container>
