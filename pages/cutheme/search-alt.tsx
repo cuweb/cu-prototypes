@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           <HeroTextImage maxWidth="5xl">
             <HeroTextImage.Content
               title="Search Results"
-              paragraph="You search for Academic Dates and got 1, 376 results."
+              paragraph="You search for Academic Dates and got 1,376 results."
               headerType="h1"
             />
           </HeroTextImage>
