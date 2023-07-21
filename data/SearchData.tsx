@@ -20,21 +20,22 @@ export const SearchData = [
     },
   },
   {
-    id: 2,
-    type: 'news',
-    title: ' How to Write for the Web',
-    link: '#',
+    id: 10,
+    type: 'video',
+    title: 'Carleton Battle of the Bands - A Hit!',
+    link: 'https://www.youtube.com/watch?v=E8-WHslFhbU',
     image: '/images/news-img.jpg',
     alt: 'Image alt text',
     excerpt:
-      'Proin placerat non nisl sed ullamcorper. Maecenas ultrices diam a lorem feugiat feugiat. Curabitur ultrices egestas tortor vel feugiat. Mauris vitae massa vulputate, dignissim ipsum interdum, maximus nunc.',
-    date: '2022-12-14 10:27:31',
+      '',
+    date: '2022-12-23 10:27:31',
+    video: 'https://www.youtube.com/embed/tgbNymZ7vqY',
     tags: {
       category: [
         {
           id: 1,
-          name: 'News',
-          slug: 'news',
+          name: 'Video',
+          slug: 'video',
         },
       ],
     },
@@ -44,6 +45,7 @@ export const SearchData = [
     type: 'event',
     title: 'Ottawa Trivia Session #2',
     link: '#',
+    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam nulla eget est viverra, et tristique velit elementum. Aliquam ultrices vitae felis sit amet pharetra. Vivamus vitae dui mi. Quisque vitae nibh at orci lobortis rhoncus eu at mi. Nulla facilisi. In hac habitasse platea dictumst. Curabitur sed lectus risus.',
     startDate: '2023-03-31 20:00:00',
     endDate: '2023-03-31 11:00:00',
     event_address: '71953 Schmidt Row Apt. 896\nLaurianefurt, TN 88829-0223',
@@ -66,7 +68,7 @@ export const SearchData = [
   {
     id: 4,
     type: 'people',
-    title: '',
+    title: 'Adam Januszkiewicz',
     firstName: 'Carlton',
     lastName: 'Banks',
     link: '#',
@@ -89,7 +91,7 @@ export const SearchData = [
   {
     id: 5,
     type: 'people',
-    title: '',
+    title: 'Troy Chaplin',
     firstName: 'Philip',
     lastName: 'Banks',
     link: '#',
