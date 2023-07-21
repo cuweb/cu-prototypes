@@ -44,11 +44,10 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopBar
-      // title="Web Services"
-      // homeLink="/topbar"
-      // navLinks={TopBarNavData}
-      />
+      <TopBar>
+        <TopBar.Logo />
+        <TopBar.Aside />
+      </TopBar>
 
       <Main>
         <Section hasProse>
