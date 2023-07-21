@@ -14,6 +14,7 @@ import {
   Heading,
 } from '@carletonuniversity/rds'
 
+import { ListingVideo } from '@components/Listing/ListingVideo'
 import { Filter } from '@components/Filter/Filter'
 import { FilterData as dataFilter } from 'data/FilterData'
 
@@ -89,6 +90,19 @@ const Home: NextPage = () => {
                       <Listing.Header text={title} />
                       <Listing.Excerpt text={excerpt} />
                     </Listing.Content>
+                    {(type === ('video' || 'image')) && (
+                        <Listing.Figure>
+                          {type === 'video' && <ListingVideo source={link} />}
+                          {type === 'image' && (
+                            <Image
+                              src={image}
+                              alt={alt}
+                              width="400"
+                              height="266"
+                            />
+                          )}
+                        </Listing.Figure>
+                      )}
                   </a>
                 </Listing>
               ),
