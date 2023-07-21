@@ -24,6 +24,7 @@ import { TopBarOld } from '@components/TopBarOld/TopBarOld'
 import { cuthemeNavData } from 'data/TopNavData'
 
 import { NewsData } from 'data/NewsData'
+import { SearchData } from 'data/SearchData'
 
 const SearchBar = () => {
   const [, setMessage] = useState('')
