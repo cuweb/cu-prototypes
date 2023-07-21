@@ -33,7 +33,7 @@ export const PlusBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
                 href={navSubMenuItem.link}
                 className="block p-2 hover:text-indigo-600"
               >
-                {navSubMenuItem.label} -- item1
+                {navSubMenuItem.label}
               </Link>
             ))}
           </div>

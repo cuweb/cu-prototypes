@@ -9,7 +9,7 @@ export interface LinkProps {
   link: string
 }
 
-export interface TopBarProps {
+export interface PlusNavNewProps {
   children?: React.ReactNode
   title?: string
   homeLink: string
@@ -17,7 +17,11 @@ export interface TopBarProps {
   isTwoTier?: boolean
 }
 
-export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
+export const PlusNavNewWrapper = ({
+  title,
+  homeLink,
+  navLinks,
+}: PlusNavNewProps) => {
   return (
     <header className={navBaseStyles.header}>
       <div className={navBaseStyles.topbarContainer}>
@@ -52,4 +56,4 @@ export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
   )
 }
 
-export const TopBar = Object.assign(TopBarWrapper, {})
+export const PlusNavNew = Object.assign(PlusNavNewWrapper, {})
