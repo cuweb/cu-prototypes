@@ -34,8 +34,6 @@ export const TopBarWrapper = ({ children, levels = '1' }: TopBarProps) => {
 }
 
 export const TopBar = Object.assign(TopBarWrapper, {
-  TopTier: TopBarTopTier,
-  BottomTier: TopBarBottomTier,
   Logo: TopBarLogo,
   Menu: TopBarMenu,
   Aside: TopBarAside,
