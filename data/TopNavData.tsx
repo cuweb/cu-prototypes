@@ -32,61 +32,95 @@ export const cuthemeNavData = [
 ]
 
 export const TopBarNavData = [
-  { id: 1, label: 'Academics', link: '/homepage' },
   {
-    id: 2,
-    label: 'Students',
-    link: '/homepage',
+    id: 1,
+    label: 'About Us',
+    link: '#',
     subMenu: [
-      { id: 1.1, label: 'Community', link: '/intranet/community' },
-      { id: 1.2, label: 'Employees', link: '/intranet/working-here' },
-      {
-        id: 1.3,
-        label:
-          'Testing a longer than usual sub navigation item that should never be used',
-        link: '/intranet/working-here',
-      },
-      { id: 1.4, label: 'Managers', link: '/intranet/working-here' },
-      { id: 1.5, label: 'Resources', link: '/intranet/resources' },
+      { id: 1.1, label: 'Roadmap for 2022/23', link: '#' },
+      { id: 1.2, label: 'Testimonials', link: '#' },
     ],
   },
-  { id: 3, label: 'Research', link: '/homepage' },
-  { id: 4, label: 'Priorities', link: '/homepage' },
+  { id: 2, label: 'News', link: '#' },
+  {
+    id: 3,
+    label: 'Talks and Workshops',
+    link: '#',
+    subMenu: [
+      { id: 3.1, label: 'Web Workshop Wednesadays', link: '#' },
+      { id: 3.2, label: 'Coffee Break Events', link: '#' },
+    ],
+  },
+  {
+    id: 4,
+    label: 'Carleton E-Commerce',
+    link: '#',
+    subMenu: [
+      { id: 4.1, label: 'E-Commerce Checklist', link: '#' },
+      { id: 4.2, label: 'New CU Ecommerce Engagement Requests', link: '#' },
+      { id: 4.3, label: 'Disbursement of Funds Requests', link: '#' },
+    ],
+  },
   {
     id: 5,
-    label: 'About',
-    link: '/homepage',
+    label: 'Carleton CMS',
+    link: '#',
     subMenu: [
-      { id: 5.1, label: 'Community', link: '/intranet/community' },
-      { id: 5.2, label: 'Employees', link: '/intranet/working-here' },
-      { id: 5.3, label: 'Managers', link: '/intranet/working-here' },
-      { id: 5.4, label: 'Resources', link: '/intranet/resources' },
+      { id: 5.1, label: 'CCMS Help Centre', link: '#' },
+      { id: 5.2, label: 'Request a CMS Website', link: '#' },
     ],
   },
-  { id: 6, label: 'Academics2', link: '/homepage' },
-  { id: 7, label: 'Students2', link: '/homepage' },
+  {
+    id: 6,
+    label: 'Web Accessibility',
+    link: '#',
+    subMenu: [
+      { id: 6.1, label: 'Accessibility News', link: '#' },
+      { id: 6.2, label: 'Web Accessibility Checklist', link: '#' },
+      { id: 6.3, label: 'Creating Accessible Documents', link: '#' },
+      { id: 6.4, label: 'Accessibility Resources', link: '#' },
+    ],
+  },
+  {
+    id: 7,
+    label: 'Get Support',
+    link: '#',
+    subMenu: [{ id: 7.1, label: 'CMS Help Centre', link: '#' }],
+  },
 ]
 
-export const testingNav = [
-  {
-    label: 'Home',
-    link: '/',
-  },
-  {
-    label: 'Services',
-    link: '/services',
-    subLinks: [
-      { label: 'Service 1', link: '/services/service1' },
-      { label: 'Service 2', link: '/services/service2' },
-      { label: 'Service 3', link: '/services/service3' },
-    ],
-  },
-  {
-    label: 'About',
-    link: '/about',
-  },
-  {
-    label: 'Contact',
-    link: '/contact',
-  },
-]
+// export const TopBarNavData = [
+//   { id: 1, label: 'Academics', link: '/homepage' },
+//   {
+//     id: 2,
+//     label: 'Students',
+//     link: '/homepage',
+//     subMenu: [
+//       { id: 1.1, label: 'Community', link: '/intranet/community' },
+//       { id: 1.2, label: 'Employees', link: '/intranet/working-here' },
+//       {
+//         id: 1.3,
+//         label:
+//           'Testing a longer than usual sub navigation item that should never be used',
+//         link: '/intranet/working-here',
+//       },
+//       { id: 1.4, label: 'Managers', link: '/intranet/working-here' },
+//       { id: 1.5, label: 'Resources', link: '/intranet/resources' },
+//     ],
+//   },
+//   { id: 3, label: 'Research', link: '/homepage' },
+//   { id: 4, label: 'Priorities', link: '/homepage' },
+//   {
+//     id: 5,
+//     label: 'About',
+//     link: '/homepage',
+//     subMenu: [
+//       { id: 5.1, label: 'Community', link: '/intranet/community' },
+//       { id: 5.2, label: 'Employees', link: '/intranet/working-here' },
+//       { id: 5.3, label: 'Managers', link: '/intranet/working-here' },
+//       { id: 5.4, label: 'Resources', link: '/intranet/resources' },
+//     ],
+//   },
+//   { id: 6, label: 'Academics2', link: '/homepage' },
+//   { id: 7, label: 'Students2', link: '/homepage' },
+// ]

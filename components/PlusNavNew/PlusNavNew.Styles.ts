@@ -8,8 +8,8 @@ export const navBaseStyles = {
 }
 
 export const navItemStyles = {
-  navContainer: `flex items-center gap-8 overflow-hidden`,
-  navItem: `text-sm font-medium text-cu-black-600 hover:text-cu-red`,
+  navContainer: `flex items-center gap-8 overflow-hidden pr-2`,
+  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
   navItemChildren: `flex items-center -mb-px -mr-2`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }

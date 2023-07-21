@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { InView } from 'react-intersection-observer'
+import { PlusBarSideNav } from './PlusBarSideNav'
 import Link from 'next/link'
-import { TopBarSideNav } from './TopBarSideNav'
-import { TopBarDropDown } from './TopBarDropDown'
-import { navItemStyles, navAsideStyles } from './TopBar.Styles'
+import { PlusBarDropDown } from './PlusBarDropDown'
 
-export const TopBarNav = ({ navLinks }: any) => {
+export const PlusBarNav = ({ navLinks }: any) => {
   // create sub menu for invisible items
   const [sideMenu, setSideMenu] = useState<any>([])
 
@@ -22,9 +21,9 @@ export const TopBarNav = ({ navLinks }: any) => {
 
   return (
     <>
-      {navLinks && (
-        <nav className={navItemStyles.navContainer}>
-          {navLinks.map((navMenuItem: any, index: any) => (
+      <div className="flex items-center gap-6 overflow-hidden">
+        {navLinks &&
+          navLinks.map((navMenuItem: any, index: any) => (
             <InView
               key={index}
               threshold={0.99}
@@ -38,13 +37,13 @@ export const TopBarNav = ({ navLinks }: any) => {
                     <Link
                       ref={ref}
                       href={navMenuItem.link}
-                      className={navItemStyles.navItem}
+                      className="text-sm text-cu-black-800"
                     >
                       {navMenuItem.label}
                     </Link>
                   )}
                   {navMenuItem.subMenu && (
-                    <TopBarDropDown
+                    <PlusBarDropDown
                       navItemLabel={navMenuItem.label}
                       navSubMenu={navMenuItem.subMenu}
                     />
@@ -53,17 +52,16 @@ export const TopBarNav = ({ navLinks }: any) => {
               )}
             </InView>
           ))}
-        </nav>
-      )}
+      </div>
 
-      <div className={navAsideStyles.asideContainer}>
-        {sideMenu.length > 0 && <TopBarSideNav sideMenu={sideMenu} />}
+      <div className="flex items-center gap-4 ml-auto">
+        {sideMenu.length > 0 && <PlusBarSideNav sideMenu={sideMenu} />}
 
         {/* Mega Menu Button */}
         <button
           type="button"
-          aria-label="global-carleton-navigation"
-          className={navAsideStyles.megaMenuButton}
+          aria-label="Small Button"
+          className="px-3 py-2 text-sm font-semibold rounded text-cu-black-700 md:px-4 md:py-3 whitespace-nowrap cu-button hover:text-white focus:outline-none bg-cu-black-100 hover:bg-cu-red"
         >
           Menu
         </button>

@@ -1,19 +1,16 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 import Link from 'next/link'
 
-export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
+export const PlusBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
   return (
     <Popover>
       {/* Nav item with submenu */}
-      <Popover.Button
-        className={`${navItemStyles.navItem} ${navItemStyles.navItemChildren}`}
-      >
+      <Popover.Button className="flex items-center -mb-0.5 text-sm text-cu-black-800">
         {navItemLabel}
         <ChevronDownIcon
-          className={navItemStyles.navArrow}
+          className="flex-none w-5 h-5 text-gray-400"
           aria-hidden="true"
         />
       </Popover.Button>
@@ -28,18 +25,18 @@ export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
         leaveTo="opacity-0 translate-y-1"
       >
         {/* Submenu */}
-        <Popover.Panel className={navDropDownStyles.dropDownContainer}>
-          {/* <div className=""> */}
-          {navSubMenu.map((navSubMenuItem: any, index: any) => (
-            <Link
-              key={navSubMenuItem.id}
-              href={navSubMenuItem.link}
-              className={navDropDownStyles.dropDownItems}
-            >
-              {navSubMenuItem.label}
-            </Link>
-          ))}
-          {/* </div> */}
+        <Popover.Panel className="absolute max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg ring-1 ring-gray-900/5">
+          <div className="p-4">
+            {navSubMenu.map((navSubMenuItem: any, index: any) => (
+              <Link
+                key={navSubMenuItem.id}
+                href={navSubMenuItem.link}
+                className="block p-2 hover:text-indigo-600"
+              >
+                {navSubMenuItem.label} -- item1
+              </Link>
+            ))}
+          </div>
         </Popover.Panel>
       </Transition>
     </Popover>

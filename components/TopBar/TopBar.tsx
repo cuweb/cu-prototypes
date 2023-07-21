@@ -1,55 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Link from 'next/link'
-import { TopBarNav } from './TopBarNav'
-import { navBaseStyles } from './TopBar.Styles'
+import { TopBarLogo } from './TopBarLogo'
+import { TopBarMenu } from './TopBarMenu'
+import { TopBarAside } from './TopBarAside'
 
-export interface LinkProps {
-  label: string
-  link: string
-}
-
-export interface TopBarProps {
-  children?: React.ReactNode
-  title?: string
-  homeLink: string
-  navLinks?: LinkProps[]
-  isTwoTier?: boolean
-}
-
-export const TopBarWrapper = ({ title, homeLink, navLinks }: TopBarProps) => {
+export const TopBarWrapper = () => {
   return (
-    <header className={navBaseStyles.header}>
-      <div className={navBaseStyles.topbarContainer}>
-        <div className={navBaseStyles.logoContainer}>
-          <Link href="https://carleton.ca">
-            <img
-              className={navBaseStyles.cuLogo}
-              src="/assets/cu-logo-color-right-horiztonal.svg"
-              width="130"
-              height="35"
-              alt="Logo"
-            />
-            <img
-              className={navBaseStyles.cuShield}
-              src="/assets/cu-shield-color.svg"
-              width="28"
-              height="35"
-              alt="Logo"
-            />
-          </Link>
-
-          {title && (
-            <h1 className={navBaseStyles.siteTitle}>
-              <Link href={homeLink}>{title}</Link>
-            </h1>
-          )}
-        </div>
-
-        <TopBarNav navLinks={navLinks} />
+    <header className="sticky top-0 z-50 bg-white border-b cu-navbar border-cu-black-100">
+      <div className="flex items-center gap-8 px-8 py-4 mx-auto max-w-screen-2xl">
+        <TopBar.Logo />
+        <TopBar.Menu />
+        <TopBar.Aside />
       </div>
     </header>
   )
 }
 
-export const TopBar = Object.assign(TopBarWrapper, {})
+export const TopBar = Object.assign(TopBarWrapper, {
+  Logo: TopBarLogo,
+  Menu: TopBarMenu,
+  Aside: TopBarAside,
+})
