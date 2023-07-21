@@ -14,7 +14,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
-// import { TopBarNavData } from 'data/TopNavData'
+// import { TopBarNavData as navData } from 'data/TopNavData'
+import { cuthemeNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
 
@@ -49,7 +50,7 @@ const Home: NextPage = () => {
           title="Web Services"
           link="https://carleton.ca/webservices"
         />
-        <TopBar.Menu />
+        <TopBar.Menu navLinks={navData} />
         <TopBar.Aside />
       </TopBar>
 

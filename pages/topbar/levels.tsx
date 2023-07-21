@@ -14,7 +14,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
-// import { TopBarNavData } from 'data/TopNavData'
+// import { TopBarNavData as navData } from 'data/TopNavData'
+import { cuthemeNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
 
@@ -44,7 +45,7 @@ const DoublePara = () => {
 const Home: NextPage = () => {
   return (
     <>
-      <TopBar levels="2">
+      <TopBar tier="2" navLinks={navData}>
         <TopBar.Logo
           title="Information and Technology Services"
           link="https://carleton.ca/its"
