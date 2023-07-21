@@ -39,7 +39,7 @@ export const TopBarAside = () => {
         aria-label="global-carleton-navigation"
         className="px-3 py-2 text-sm font-medium rounded md:text-[15px] text-cu-black-700 md:px-3.5 md:py-2.5 whitespace-nowrap cu-topnav--mega hover:text-white focus:outline-none bg-cu-black-50 hover:bg-cu-red"
       >
-        Mega Manu
+        Mega Man
       </button>
     </div>
   )
