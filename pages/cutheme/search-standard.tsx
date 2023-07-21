@@ -75,9 +75,26 @@ const Home: NextPage = () => {
             />
           </Container>
 
-          <StackedList>
-            {NewsData.slice(0, 5).map(
-              ({ id, title, link, date, image, alt, excerpt }) => (
+          <StackedList hasBorder>
+            {SearchData.slice(0, 5).map(
+              ({                 id,
+                type,
+                title = '',
+                link,
+                excerpt = '',
+                image,
+                date,
+                alt,
+                tags,
+                startDate = '',
+                endDate = '',
+                on_campus_building,
+                on_campus_room_number,
+                firstName,
+                lastName,
+                jobTitle,
+                email,
+                phone, }) => (
                 <Listing key={id}>
                   <a href="https://carleton.ca/webservices">
                     {image && ( // <-- Add the check for image here
