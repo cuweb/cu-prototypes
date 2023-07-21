@@ -22,7 +22,7 @@ import React, { useState, useCallback } from 'react'
 import { TopBarOld } from '@components/TopBarOld/TopBarOld'
 import { cuthemeNavData } from 'data/TopNavData'
 
-import { NewsData } from 'data/NewsData'
+import { SearchData } from 'data/SearchData'
 import Image from 'next/image'
 
 const SearchBar = () => {
@@ -91,14 +91,38 @@ const Home: NextPage = () => {
 
           <Column cols="2/3" maxWidth="7xl">
             <StackedList>
-              {NewsData.slice(0, 5).map(
-                ({ id, title, date, excerpt, image, alt, tags, video }) => (
+              {SearchData.map(
+                ({
+                  id,
+                  type,
+                  title = '',
+                  link,
+                  excerpt = '',
+                  image,
+                  date,
+                  alt,
+                  tags,
+                  startDate = '',
+                  endDate = '',
+                  on_campus_building,
+                  on_campus_room_number,
+                  firstName,
+                  lastName,
+                  jobTitle,
+                  email,
+                  phone, }) => (
                   <Listing key={id}>
                     <a href="https://carleton.ca/webservices">
-                      {(video || image) && (
+                      <Listing.Content>
+                        <Listing.PostMeta date={date} />
+                        <Listing.Header text={title} />
+                        <Listing.Excerpt text={excerpt} />
+                        <Listing.Badges tags={tags} />
+                      </Listing.Content>
+                      {(type === ('video' || 'image')) && (
                         <Listing.Figure>
-                          {video && !image && <ListingVideo source={video} />}
-                          {image && !video && (
+                          {type === 'video' && <ListingVideo source={link} />}
+                          {type === 'image' && (
                             <Image
                               src={image}
                               alt={alt}
@@ -108,12 +132,6 @@ const Home: NextPage = () => {
                           )}
                         </Listing.Figure>
                       )}
-                      <Listing.Content>
-                        <Listing.PostMeta date={date} />
-                        <Listing.Header text={title} />
-                        <Listing.Excerpt text={excerpt} />
-                        <Listing.Badges tags={tags} />
-                      </Listing.Content>
                     </a>
                   </Listing>
                 ),
