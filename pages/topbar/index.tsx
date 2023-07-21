@@ -45,7 +45,11 @@ const Home: NextPage = () => {
   return (
     <>
       <TopBar>
-        <TopBar.Logo />
+        <TopBar.Logo
+          title="Web Services"
+          link="https://carleton.ca/webservices"
+        />
+        <TopBar.Menu />
         <TopBar.Aside />
       </TopBar>
 

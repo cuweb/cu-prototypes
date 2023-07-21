@@ -2,7 +2,12 @@
 import React from 'react'
 import Link from 'next/link'
 
-export const TopBarLogo = () => {
+export interface TopBarLogoProps {
+  title?: string
+  link?: string
+}
+
+export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
   return (
     <div className="flex items-center gap-3 md:gap-5 cu-navbar--logo shrink-0">
       <Link href="https://carleton.ca">
@@ -21,9 +26,11 @@ export const TopBarLogo = () => {
           alt="Logo"
         />
       </Link>
-      <h1 className="text-base font-semibold leading-tight md:text-lg hover:text-cu-red text-cu-black-800">
-        <Link href="#">Web Services</Link>
-      </h1>
+      {title && link && (
+        <h1 className="text-base font-semibold leading-tight md:text-lg hover:text-cu-red text-cu-black-800">
+          <a href={link}>{title}</a>
+        </h1>
+      )}
     </div>
   )
 }
