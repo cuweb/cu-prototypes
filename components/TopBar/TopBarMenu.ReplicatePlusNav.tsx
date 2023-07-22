@@ -50,19 +50,12 @@ export const TopBarMenu = ({ navLinks }: any) => {
                       {navMenuItem.label}
                     </Link>
                   )}
-                  {navMenuItem.subMenu && (
-                    <Link
-                      ref={ref}
-                      href={navMenuItem.link}
-                      className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
-                    >
-                      {navMenuItem.label}
-                    </Link>
-                    // <PlusNavNewDropDown
-                    //   navItemLabel={navMenuItem.label}
-                    //   navSubMenu={navMenuItem.subMenu}
-                    // />
-                  )}
+                  {/* {navMenuItem.subMenu && (
+                      <PlusNavNewDropDown
+                        navItemLabel={navMenuItem.label}
+                        navSubMenu={navMenuItem.subMenu}
+                      />
+                    )} */}
                 </div>
               )}
             </InView>

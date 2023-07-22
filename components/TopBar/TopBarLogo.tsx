@@ -9,17 +9,17 @@ export interface TopBarLogoProps {
 
 export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
   return (
-    <div className="flex items-center gap-3 md:gap-5 cu-navbar--logo shrink-0">
+    <div className="flex items-center gap-3 md:gap-5 cu-navbar--logo lg:shrink-0 [&>a]:shrink-0">
       <Link href="https://carleton.ca">
         <img
-          className="w-[130px] h-[35px] hidden md:block"
+          className="w-[130px] h-[35px] hidden md:block shrink-0"
           src="/assets/cu-logo-color-right-horiztonal.svg"
           width="130"
           height="35"
           alt="Logo"
         />
         <img
-          className="w-[28px] h-[35px] block md:hidden"
+          className="w-[28px] h-[35px] block md:hidden shrink-0"
           src="/assets/cu-shield-color.svg"
           width="28"
           height="35"

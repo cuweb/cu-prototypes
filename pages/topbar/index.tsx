@@ -14,8 +14,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
-// import { TopBarNavData as navData } from 'data/TopNavData'
-import { cuthemeNavData as navData } from 'data/TopNavData'
+import { TopBarNavData as navData } from 'data/TopNavData'
+// import { cuthemeNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
 
@@ -46,12 +46,14 @@ const Home: NextPage = () => {
   return (
     <>
       <TopBar>
-        <TopBar.Logo
-          title="Web Services"
-          link="https://carleton.ca/webservices"
-        />
-        <TopBar.Menu navLinks={navData} />
-        <TopBar.Aside />
+        <TopBar.Primary>
+          <TopBar.Logo
+            title="Web Services"
+            link="https://carleton.ca/webservices"
+          />
+          <TopBar.Menu navLinks={navData} />
+          <TopBar.Aside />
+        </TopBar.Primary>
       </TopBar>
 
       <Main>
@@ -71,7 +73,7 @@ const Home: NextPage = () => {
                 <Button title="Secondary" color="grey" />
               </div>
             </HeroTextImage.Content>
-            <HeroTextImage.Media image="https://picsum.photos/400/266" />
+            <HeroTextImage.Media image="https://picsum.photos/800/532" />
           </HeroTextImage>
 
           <DoublePara />
