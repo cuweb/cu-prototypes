@@ -56,18 +56,6 @@ const Home: NextPage = () => {
         </TopBar.Primary>
       </TopBar>
 
-      <br />
-
-      <TopBar>
-        <TopBar.Primary>
-          <TopBar.Logo title="Web Services" link="https://carleton.ca/its" />
-          <TopBar.Aside />
-        </TopBar.Primary>
-        <TopBar.Secondary>
-          <TopBar.Menu navLinks={navData} />
-        </TopBar.Secondary>
-      </TopBar>
-
       <Main>
         <Section hasProse>
           <HeroTextImage hasBorder>

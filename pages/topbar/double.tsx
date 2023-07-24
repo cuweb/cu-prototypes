@@ -48,19 +48,9 @@ const Home: NextPage = () => {
       <TopBar>
         <TopBar.Primary>
           <TopBar.Logo
-            title="Web Services"
-            link="https://carleton.ca/webservices"
+            title="Information and Technology Services"
+            link="https://carleton.ca/its"
           />
-          <TopBar.Menu navLinks={navData} />
-          <TopBar.Aside />
-        </TopBar.Primary>
-      </TopBar>
-
-      <br />
-
-      <TopBar>
-        <TopBar.Primary>
-          <TopBar.Logo title="Web Services" link="https://carleton.ca/its" />
           <TopBar.Aside />
         </TopBar.Primary>
         <TopBar.Secondary>
@@ -85,7 +75,7 @@ const Home: NextPage = () => {
                 <Button title="Secondary" color="grey" />
               </div>
             </HeroTextImage.Content>
-            <HeroTextImage.Media image="https://picsum.photos/800/532" />
+            <HeroTextImage.Media image="https://picsum.photos/400/266" />
           </HeroTextImage>
 
           <DoublePara />
