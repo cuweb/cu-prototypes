@@ -27,7 +27,7 @@ export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
         />
       </Link>
       {title && link && (
-        <h1 className="text-base font-semibold leading-tight md:text-lg hover:text-cu-red text-cu-black-800">
+        <h1 className="text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800">
           <a href={link}>{title}</a>
         </h1>
       )}

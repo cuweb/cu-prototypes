@@ -2,11 +2,12 @@
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import Link from 'next/link'
+import { TopBarDropDown } from './TopBarDropDown'
 
 export const styles = {
-  navWrapper: `flex max-w-screen-2xl w-full gap-6 text-sm md:text-[15px] overflow-hidden items-center mx-auto px-8 py-3`,
-  navItem: `hover:text-cu-red`,
-  navMore: `font-medium text-cu-red`,
+  navWrapper: ``,
+  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red whitespace-nowrap`,
+  navMore: `text-cu-red`,
 }
 
 export const TopBarMenu = ({ navLinks }: any) => {
@@ -26,48 +27,52 @@ export const TopBarMenu = ({ navLinks }: any) => {
 
   console.log(navLinks)
   console.log(sideMenu)
+  console.log(sideMenu.length)
 
   return (
     <>
       {navLinks && (
-        <ul className={styles.navWrapper}>
-          {navLinks.map((navMenuItem: any, index: any) => (
-            <InView
-              key={index}
-              threshold={0.99}
-              onChange={(inView, entry) =>
-                updateMenu(inView, entry, navMenuItem)
-              }
-            >
-              {({ ref }) => (
-                <li ref={ref} className="invisible">
-                  {!navMenuItem.subMenu && (
-                    <Link
-                      ref={ref}
-                      href={navMenuItem.link}
-                      className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
-                    >
-                      {navMenuItem.label}
-                    </Link>
-                  )}
-                  {navMenuItem.subMenu && (
-                    <Link
-                      ref={ref}
-                      href={navMenuItem.link}
-                      className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
-                    >
-                      {navMenuItem.label}
-                    </Link>
-                    // <PlusNavNewDropDown
-                    //   navItemLabel={navMenuItem.label}
-                    //   navSubMenu={navMenuItem.subMenu}
-                    // />
-                  )}
-                </li>
-              )}
-            </InView>
-          ))}
-        </ul>
+        <>
+          <ul className="flex gap-6 text-sm md:text-[15px] items-center overflow-hidden">
+            {navLinks.map((navMenuItem: any, index: any) => (
+              <InView
+                key={index}
+                threshold={0.99}
+                onChange={(inView, entry) =>
+                  updateMenu(inView, entry, navMenuItem)
+                }
+              >
+                {({ ref }) => (
+                  <li ref={ref} className="invisible">
+                    {!navMenuItem.subMenu && (
+                      <a
+                        ref={ref}
+                        href={navMenuItem.link}
+                        className={styles.navItem}
+                      >
+                        {navMenuItem.label}
+                      </a>
+                    )}
+                    {navMenuItem.subMenu && (
+                      <TopBarDropDown
+                        navItemLabel={navMenuItem.label}
+                        navSubMenu={navMenuItem.subMenu}
+                      />
+                    )}
+                  </li>
+                )}
+              </InView>
+            ))}
+          </ul>
+
+          <ul>
+            <li>
+              <a href="#" className={`${styles.navItem} ${styles.navMore}`}>
+                Browse
+              </a>
+            </li>
+          </ul>
+        </>
       )}
     </>
   )
