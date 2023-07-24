@@ -6,7 +6,7 @@ export interface TopBarPrimaryProps {
 
 export const TopBarPrimary = ({ children }: TopBarPrimaryProps) => {
   return (
-    <div className="flex items-center gap-8 px-8 py-3 mx-auto max-w-screen-2xl">
+    <div className="flex items-center h-[64px] gap-8 px-8 py-3 mx-auto max-w-screen-2xl">
       {children}
     </div>
   )

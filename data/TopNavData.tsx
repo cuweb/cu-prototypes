@@ -37,55 +37,81 @@ export const TopBarNavData = [
     label: 'About Us',
     link: '#',
     subMenu: [
-      { id: 1.1, label: 'Roadmap for 2022/23', link: '#' },
-      { id: 1.2, label: 'Testimonials', link: '#' },
+      { id: 1.1, label: 'Roadmap for 2022/23', link: 'https://carleton.ca' },
+      { id: 1.2, label: 'Testimonials', link: 'https://carleton.ca' },
     ],
   },
-  { id: 2, label: 'News', link: '#' },
+  { id: 2, label: 'News', link: 'https://carleton.ca' },
   {
     id: 3,
     label: 'Talks and Workshops',
-    link: '#',
+    link: 'https://carleton.ca',
     subMenu: [
-      { id: 3.1, label: 'Web Workshop Wednesadays', link: '#' },
-      { id: 3.2, label: 'Coffee Break Events', link: '#' },
+      {
+        id: 3.1,
+        label: 'Web Workshop Wednesadays',
+        link: 'https://carleton.ca',
+      },
+      { id: 3.2, label: 'Coffee Break Events', link: 'https://carleton.ca' },
     ],
   },
   {
     id: 4,
     label: 'Carleton E-Commerce',
-    link: '#',
+    link: 'https://carleton.ca',
     subMenu: [
-      { id: 4.1, label: 'E-Commerce Checklist', link: '#' },
-      { id: 4.2, label: 'New CU Ecommerce Engagement Requests', link: '#' },
-      { id: 4.3, label: 'Disbursement of Funds Requests', link: '#' },
+      { id: 4.1, label: 'E-Commerce Checklist', link: 'https://carleton.ca' },
+      {
+        id: 4.2,
+        label: 'New CU Ecommerce Engagement Requests',
+        link: 'https://carleton.ca',
+      },
+      {
+        id: 4.3,
+        label: 'Disbursement of Funds Requests',
+        link: 'https://carleton.ca',
+      },
     ],
   },
   {
     id: 5,
     label: 'Carleton CMS',
-    link: '#',
+    link: 'https://carleton.ca',
     subMenu: [
-      { id: 5.1, label: 'CCMS Help Centre', link: '#' },
-      { id: 5.2, label: 'Request a CMS Website', link: '#' },
+      { id: 5.1, label: 'CCMS Help Centre', link: 'https://carleton.ca' },
+      { id: 5.2, label: 'Request a CMS Website', link: 'https://carleton.ca' },
     ],
   },
   {
     id: 6,
     label: 'Web Accessibility',
-    link: '#',
+    link: 'https://carleton.ca',
     subMenu: [
-      { id: 6.1, label: 'Accessibility News', link: '#' },
-      { id: 6.2, label: 'Web Accessibility Checklist', link: '#' },
-      { id: 6.3, label: 'Creating Accessible Documents', link: '#' },
-      { id: 6.4, label: 'Accessibility Resources', link: '#' },
+      { id: 6.1, label: 'Accessibility News', link: 'https://carleton.ca' },
+      {
+        id: 6.2,
+        label: 'Web Accessibility Checklist',
+        link: 'https://carleton.ca',
+      },
+      {
+        id: 6.3,
+        label: 'Creating Accessible Documents',
+        link: 'https://carleton.ca',
+      },
+      {
+        id: 6.4,
+        label: 'Accessibility Resources',
+        link: 'https://carleton.ca',
+      },
     ],
   },
   {
     id: 7,
     label: 'Get Support',
-    link: '#',
-    subMenu: [{ id: 7.1, label: 'CMS Help Centre', link: '#' }],
+    link: 'https://carleton.ca',
+    subMenu: [
+      { id: 7.1, label: 'CMS Help Centre', link: 'https://carleton.ca' },
+    ],
   },
 ]
 

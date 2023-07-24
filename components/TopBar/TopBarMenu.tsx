@@ -4,7 +4,7 @@ import { InView } from 'react-intersection-observer'
 import Link from 'next/link'
 
 export const styles = {
-  navWrapper: `flex w-full gap-6 text-sm md:text-[15px] overflow-hidden`,
+  navWrapper: `flex max-w-screen-2xl w-full gap-6 text-sm md:text-[15px] overflow-hidden items-center mx-auto px-8 py-3`,
   navItem: `hover:text-cu-red`,
   navMore: `font-medium text-cu-red`,
 }
@@ -30,7 +30,7 @@ export const TopBarMenu = ({ navLinks }: any) => {
   return (
     <>
       {navLinks && (
-        <nav className={styles.navWrapper}>
+        <ul className={styles.navWrapper}>
           {navLinks.map((navMenuItem: any, index: any) => (
             <InView
               key={index}
@@ -40,7 +40,7 @@ export const TopBarMenu = ({ navLinks }: any) => {
               }
             >
               {({ ref }) => (
-                <div ref={ref} className="invisible">
+                <li ref={ref} className="invisible">
                   {!navMenuItem.subMenu && (
                     <Link
                       ref={ref}
@@ -63,11 +63,11 @@ export const TopBarMenu = ({ navLinks }: any) => {
                     //   navSubMenu={navMenuItem.subMenu}
                     // />
                   )}
-                </div>
+                </li>
               )}
             </InView>
           ))}
-        </nav>
+        </ul>
       )}
     </>
   )
