@@ -6,23 +6,22 @@ export const navBaseStyles = {
 }
 
 export const navLogoTitle = {
-  logoWrapper: `flex items-center gap-3 md:gap-5 cu-navbar--logo lg:shrink-0`,
+  logoWrapper: `flex items-center gap-3 md:gap-5 cu-navbar--logo shrink-1 md:shrink-0`,
   cuLogoLink: `shrink-0`, // needs to move to a css file in RDS, /src/styles/components.css, target -- .cu-topbar--logo a
-  cuLogo: `w-[130px] h-[35px] hidden md:block shrink-0`,
-  cuShield: `w-[28px] h-[35px] block md:hidden shrink-0`,
+  cuLogo: `w-[130px] h-[35px] hidden md:block shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
+  cuShield: `w-[28px] h-[35px] block md:hidden shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
   siteTitle: `text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800`,
 }
 
 export const navItemStyles = {
-  navContainer: ``,
-  navItem: ``,
-  navItemChildren: ``,
-  navArrow: ``,
+  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
+  navItemChildren: `flex items-center -mb-px`,
+  navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }
 
 export const navDropDownStyles = {
-  dropDownContainer: ``,
-  dropDownItems: ``,
+  dropDownContainer: `absolute max-w-xs mt-2.5 -ml-3 overflow-hidden text-sm font-medium bg-white border rounded shadow-lg text-cu-black-600 border-cu-black-100`,
+  dropDownItems: `block px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50/75 last:border-b-0`,
 }
 
 export const navAsideStyles = {
