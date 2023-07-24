@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import Link from 'next/link'
 import { TopBarDropDown } from './TopBarDropDown'
+import { TopBarMoreNav } from './TopBarMoreNav'
 
 export const styles = {
   navWrapper: ``,
@@ -65,12 +65,8 @@ export const TopBarMenu = ({ navLinks }: any) => {
             ))}
           </ul>
 
-          <ul>
-            <li>
-              <a href="#" className={`${styles.navItem} ${styles.navMore}`}>
-                Browse
-              </a>
-            </li>
+          <ul className="flex items-center">
+            {sideMenu.length > 0 && <TopBarMoreNav sideMenu={sideMenu} />}
           </ul>
         </>
       )}

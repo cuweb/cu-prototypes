@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
 export const navItemStyles = {
-  navContainer: `flex items-center gap-8 overflow-hidden pr-2`,
+  // navContainer: `flex items-center gap-8 overflow-hidden pr-2`,
   navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
   navItemChildren: `flex items-center -mb-px`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,

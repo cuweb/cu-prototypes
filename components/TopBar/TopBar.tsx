@@ -4,6 +4,7 @@ import { TopBarMenu } from './TopBarMenu'
 import { TopBarAside } from './TopBarAside'
 import { TopBarPrimary } from './TopBarPrimary'
 import { TopBarSecondary } from './TopBarSecondary'
+import { navBaseStyles } from './TopBar.Styles'
 
 export interface TopBarProps {
   children: React.ReactNode
@@ -33,9 +34,7 @@ export const TopBarWrapper = ({ children }: TopBarProps) => {
   }, [navScroll])
 
   return (
-    <header
-      className={`${navPosition} sticky z-50 bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red transition-top duration-300 ease-in-out`}
-    >
+    <header className={`${navPosition} ${navBaseStyles.header}`}>
       {children}
     </header>
   )
