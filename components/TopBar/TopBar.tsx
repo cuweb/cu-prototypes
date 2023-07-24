@@ -11,7 +11,8 @@ export interface TopBarProps {
 
 export const TopBarWrapper = ({ children }: TopBarProps) => {
   return (
-    <header className="sticky top-0 z-50 bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red">
+    <header className="bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red">
+      {/* <header className="sticky top-0 z-50 bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red"> */}
       {children}
     </header>
   )
