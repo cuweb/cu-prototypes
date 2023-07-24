@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Link from 'next/link'
+import { navLogoTitle } from './TopBar.Styles'
 
 export interface TopBarLogoProps {
   title?: string
@@ -9,25 +9,25 @@ export interface TopBarLogoProps {
 
 export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
   return (
-    <div className="flex items-center gap-3 md:gap-5 cu-navbar--logo lg:shrink-0 [&>a]:shrink-0">
-      <Link href="https://carleton.ca">
+    <div className={navLogoTitle.logoWrapper}>
+      <a href="https://carleton.ca" className={navLogoTitle.cuLogoLink}>
         <img
-          className="w-[130px] h-[35px] hidden md:block shrink-0"
-          src="/assets/cu-logo-color-right-horiztonal.svg"
+          className={navLogoTitle.cuLogo}
+          src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-logo-color-right-horiztonal.svg"
           width="130"
           height="35"
           alt="Logo"
         />
         <img
-          className="w-[28px] h-[35px] block md:hidden shrink-0"
-          src="/assets/cu-shield-color.svg"
+          className={navLogoTitle.cuShield}
+          src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-shield-color.svg"
           width="28"
           height="35"
           alt="Logo"
         />
-      </Link>
+      </a>
       {title && link && (
-        <h1 className="text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800">
+        <h1 className={navLogoTitle.siteTitle}>
           <a href={link}>{title}</a>
         </h1>
       )}
