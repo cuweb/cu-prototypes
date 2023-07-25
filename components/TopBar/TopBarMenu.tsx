@@ -3,12 +3,7 @@ import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { TopBarDropDown } from './TopBarDropDown'
 import { TopBarMoreNav } from './TopBarMoreNav'
-
-export const styles = {
-  navWrapper: ``,
-  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red whitespace-nowrap`,
-  navMore: `text-cu-red`,
-}
+import { navItemStyles } from './TopBar.Styles'
 
 export const TopBarMenu = ({ navLinks }: any) => {
   // create sub menu for invisible items
@@ -23,20 +18,18 @@ export const TopBarMenu = ({ navLinks }: any) => {
     } else {
       setSideMenu((sideMenu: any) => [...sideMenu, menuItem])
     }
+    console.log(inView)
   }
-
-  console.log(navLinks)
-  console.log(sideMenu)
-  console.log(sideMenu.length)
 
   return (
     <>
       {navLinks && (
         <>
-          <ul className="flex gap-6 text-sm md:text-[15px] items-center overflow-hidden">
-            {navLinks.map((navMenuItem: any, index: any) => (
+          <ul className={`${navItemStyles.navWrapper}`}>
+            {/* <ul className={`${navItemStyles.navWrapper} max-w-3xl bg-cyan-300`}> */}
+            {navLinks.map((navMenuItem: any) => (
               <InView
-                key={index}
+                key={navMenuItem.id}
                 threshold={0.99}
                 onChange={(inView, entry) =>
                   updateMenu(inView, entry, navMenuItem)
@@ -48,7 +41,7 @@ export const TopBarMenu = ({ navLinks }: any) => {
                       <a
                         ref={ref}
                         href={navMenuItem.link}
-                        className={styles.navItem}
+                        className={navItemStyles.navItem}
                       >
                         {navMenuItem.label}
                       </a>
@@ -65,9 +58,9 @@ export const TopBarMenu = ({ navLinks }: any) => {
             ))}
           </ul>
 
-          <ul className="flex items-center">
-            {sideMenu.length > 0 && <TopBarMoreNav sideMenu={sideMenu} />}
-          </ul>
+          {/* <ul className="flex items-center"> */}
+          {sideMenu.length > 0 && <TopBarMoreNav sideMenu={sideMenu} />}
+          {/* </ul> */}
         </>
       )}
     </>

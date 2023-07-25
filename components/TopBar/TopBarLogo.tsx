@@ -8,6 +8,10 @@ export interface TopBarLogoProps {
 }
 
 export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
+  const titleLength = title ? title.length : 0
+  const titleLengthStyles =
+    titleLength > 15 ? navLogoTitle.twoLineHeader : navLogoTitle.oneLineHeader
+
   return (
     <div className={navLogoTitle.logoWrapper}>
       <a href="https://carleton.ca" className={navLogoTitle.cuLogoLink}>
@@ -27,7 +31,7 @@ export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
         />
       </a>
       {title && link && (
-        <h1 className={navLogoTitle.siteTitle}>
+        <h1 className={`${navLogoTitle.siteTitle} ${titleLengthStyles}`}>
           <a href={link}>{title}</a>
         </h1>
       )}

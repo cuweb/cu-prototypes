@@ -28,7 +28,7 @@ export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
       >
         {/* Submenu */}
         <Popover.Panel className={navDropDownStyles.dropDownContainer}>
-          {navSubMenu.map((navSubMenuItem: any, index: any) => (
+          {navSubMenu.map((navSubMenuItem: any) => (
             <a
               key={navSubMenuItem.id}
               href={navSubMenuItem.link}

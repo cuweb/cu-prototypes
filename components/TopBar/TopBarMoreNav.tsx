@@ -1,76 +1,82 @@
-import { Fragment } from 'react'
-import { Disclosure, Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Link from 'next/link'
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+import { Fragment, useState } from 'react'
+import { Menu, Disclosure, Transition } from '@headlessui/react'
+import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 
 export const TopBarMoreNav = ({ sideMenu }: any) => {
   return (
-    <Popover className="relative">
-      <Popover.Button className="inline-flex items-center text-sm font-semibold leading-6 text-red-500 gap-x-1">
-        <span>Browse</span>
-        <ChevronDownIcon className="w-5 h-5" aria-hidden="true" />
-      </Popover.Button>
+    <Menu as="ul" className="relative inline-block text-left">
+      <Menu.Button
+        className={`${navItemStyles.navItemChildren} ${navItemStyles.navItemMoreNav}`}
+      >
+        Browse
+        <ChevronDownIcon
+          className={navItemStyles.navArrow}
+          aria-hidden="true"
+        />
+      </Menu.Button>
 
       <Transition
         as={Fragment}
-        enter="transition ease-out duration-200"
-        enterFrom="opacity-0 translate-y-1"
-        enterTo="opacity-100 translate-y-0"
-        leave="transition ease-in duration-150"
-        leaveFrom="opacity-100 translate-y-0"
-        leaveTo="opacity-0 translate-y-1"
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
       >
-        <Popover.Panel className="absolute z-10 max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg -left-10 top-full ring-1 ring-gray-900/5">
-          <div className="p-4">
-            {sideMenu.map((sideMenuItem: any, index: any) => (
-              <div key={index}>
-                {!sideMenuItem.subMenu && (
-                  <Link
-                    href={sideMenuItem.link}
-                    className="block p-2 hover:text-indigo-600"
-                  >
+        <Menu.Items
+          as="nav"
+          className={`${navDropDownStyles.dropDownContainer} ${navDropDownStyles.moreMenuContainer}`}
+        >
+          {sideMenu.map((sideMenuItem: any) => (
+            <>
+              {!sideMenuItem.subMenu && (
+                <li className={navDropDownStyles.dropDownItems}>
+                  <a key={sideMenuItem.id} href={sideMenuItem.link}>
                     {sideMenuItem.label}
-                  </Link>
-                )}
-                {sideMenuItem.subMenu && (
-                  <Disclosure as="div" className="-mx-3" key={index}>
-                    {({ open }) => (
-                      <>
-                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  </a>
+                </li>
+              )}
+              {sideMenuItem.subMenu && (
+                <Disclosure>
+                  {({ open }) => (
+                    <>
+                      <ul className={navDropDownStyles.moreMenuDropDown}>
+                        <Disclosure.Button
+                          className={`${open ? 'text-cu-red' : ''} ${
+                            navDropDownStyles.moreMenuParentItem
+                          }`}
+                        >
                           {sideMenuItem.label}
-                          <ChevronDownIcon
-                            className={classNames(
-                              open ? 'rotate-180' : '',
-                              'h-5 w-5 flex-none',
-                            )}
-                            aria-hidden="true"
+                          <ChevronRightIcon
+                            className={`${open ? 'rotate-90' : ''} ${
+                              navDropDownStyles.moreMenuParentArrow
+                            }`}
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className="mt-2 space-y-2">
+                        <Disclosure.Panel as="ul" className="pb-2">
                           {sideMenuItem.subMenu.map((navSubMenuItem: any) => (
-                            <Disclosure.Button
-                              key={navSubMenuItem.id}
-                              as="a"
-                              href={navSubMenuItem.link}
-                              className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                            >
-                              {navSubMenuItem.label}
-                            </Disclosure.Button>
+                            <li key={navSubMenuItem.id}>
+                              <Disclosure.Button
+                                as="a"
+                                href={navSubMenuItem.link}
+                                className={navDropDownStyles.moreMenuChildItem}
+                              >
+                                {navSubMenuItem.label}
+                              </Disclosure.Button>
+                            </li>
                           ))}
                         </Disclosure.Panel>
-                      </>
-                    )}
-                  </Disclosure>
-                )}
-              </div>
-            ))}
-          </div>
-        </Popover.Panel>
+                      </ul>
+                    </>
+                  )}
+                </Disclosure>
+              )}
+            </>
+          ))}
+        </Menu.Items>
       </Transition>
-    </Popover>
+    </Menu>
   )
 }

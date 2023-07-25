@@ -1,8 +1,8 @@
 export const navBaseStyles = {
-  header: `sticky z-50 bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red transition-top duration-300 ease-in-out`,
+  header: `sticky z-50 duration-300 ease-in-out bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red transition-top`,
   primaryWrapper: `flex items-center h-[64px] gap-8 px-8 py-3 mx-auto max-w-screen-2xl`,
-  secondaryWrapper: `border-t bg-cu-black-25 border-t-cu-black-100`,
-  navInnerWrapper: `flex gap-6 px-8 py-3 mx-auto max-w-screen-2xl`,
+  secondaryWrapper: `border-t border-t-cu-black-100 bg-cu-black-25`,
+  navInnerWrapper: `flex gap-6 px-8 py-3.5 mx-auto max-w-screen-2xl`,
 }
 
 export const navLogoTitle = {
@@ -10,18 +10,28 @@ export const navLogoTitle = {
   cuLogoLink: `shrink-0`, // needs to move to a css file in RDS, /src/styles/components.css, target -- .cu-topbar--logo a
   cuLogo: `w-[130px] h-[35px] hidden md:block shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
   cuShield: `w-[28px] h-[35px] block md:hidden shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
-  siteTitle: `text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800`,
+  // siteTitle: `text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800`,
+  siteTitle: `font-semibold md:text-lg hover:text-cu-red text-cu-black-800`,
+  oneLineHeader: `text-base whitespace-nowrap`,
+  twoLineHeader: `text-sm ms:text-base line-clamp-2`,
 }
 
 export const navItemStyles = {
-  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
+  navWrapper: `flex gap-6 text-sm md:text-[15px] items-center overflow-hidden cu-topbar--nav`,
+  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red whitespace-nowrap`,
   navItemChildren: `flex items-center -mb-px`,
+  navItemMoreNav: `text-sm font-medium text-cu-red-700 whitespace-nowrap hover:text-cu-red hover:text-cyan-600`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }
 
 export const navDropDownStyles = {
-  dropDownContainer: `absolute max-w-xs mt-2.5 -ml-3 overflow-hidden text-sm font-medium bg-white border rounded shadow-lg text-cu-black-600 border-cu-black-100`,
-  dropDownItems: `block px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50/75 last:border-b-0`,
+  dropDownContainer: `absolute max-w-xs w-64 mt-2.5 -ml-3 overflow-hidden bg-white border rounded shadow-lg border-cu-black-100`,
+  dropDownItems: `block text-sm font-medium text-cu-black-600 px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50 last:border-b-0`,
+  moreMenuContainer: `origin-top-right focus:outline-none`,
+  moreMenuDropDown: `border-b border-b-cu-black-50 last:border-b-0`,
+  moreMenuParentItem: `flex justify-between w-full px-5 py-4 text-sm font-medium text-cu-black-600 hover:text-cu-black-900 hover:bg-cu-black-50/50`,
+  moreMenuChildItem: `block px-5 py-3 text-sm font-medium text-cu-black-600 hover:text-cu-black-900 hover:bg-cu-black-50/50`,
+  moreMenuParentArrow: `h-5 w-5 text-cu-black-400 transform duration-300 ease-in-out`,
 }
 
 export const navAsideStyles = {
