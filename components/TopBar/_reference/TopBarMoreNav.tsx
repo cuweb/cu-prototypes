@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { navItemStyles, navDropDownStyles } from '../TopBar.Styles'
+import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')

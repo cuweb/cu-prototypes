@@ -1,8 +1,8 @@
 export const navBaseStyles = {
-  header: `sticky z-50 bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red transition-top duration-300 ease-in-out`,
+  header: `sticky z-50 duration-300 ease-in-out bg-white border-t-2 border-b cu-navbar border-b-cu-black-100 border-t-cu-red transition-top`,
   primaryWrapper: `flex items-center h-[64px] gap-8 px-8 py-3 mx-auto max-w-screen-2xl`,
-  secondaryWrapper: `border-t bg-cu-black-25 border-t-cu-black-100`,
-  navInnerWrapper: `flex gap-6 px-8 py-3 mx-auto max-w-screen-2xl`,
+  secondaryWrapper: `border-t border-t-cu-black-100 bg-cu-black-25`,
+  navInnerWrapper: `flex gap-6 px-8 py-3.5 mx-auto max-w-screen-2xl`,
 }
 
 export const navLogoTitle = {
