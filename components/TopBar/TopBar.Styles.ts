@@ -14,9 +14,10 @@ export const navLogoTitle = {
 }
 
 export const navItemStyles = {
-  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
+  navWrapper: `flex gap-6 text-sm md:text-[15px] items-center overflow-hidden`,
+  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red whitespace-nowrap`,
   navItemChildren: `flex items-center -mb-px`,
-  navItemMoreNav: `text-sm font-medium text-cu-red whitespace-nowrap hover:text-cu-red hover:text-cyan-600`,
+  navItemMoreNav: `text-sm font-medium text-cu-red-700 whitespace-nowrap hover:text-cu-red hover:text-cyan-600`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }
 
@@ -26,6 +27,7 @@ export const navDropDownStyles = {
   moreMenuContainer: `origin-top-right focus:outline-none`,
   moreMenuDropDown: `border-b border-b-cu-black-50 last:border-b-0`,
   moreMenuParentItem: `flex justify-between w-full px-5 py-4 text-sm font-medium text-cu-black-600 hover:text-cu-black-900 hover:bg-cu-black-50/50`,
+  moreMenuChildItem: `block px-5 py-3 text-sm font-medium text-cu-black-600 hover:text-cu-black-900 hover:bg-cu-black-50/50`,
   moreMenuParentArrow: `h-5 w-5 text-cu-black-400 transform duration-300 ease-in-out`,
 }
 

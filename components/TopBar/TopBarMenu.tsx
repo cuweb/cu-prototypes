@@ -3,12 +3,7 @@ import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import { TopBarDropDown } from './TopBarDropDown'
 import { TopBarMoreNav } from './TopBarMoreNav'
-
-export const styles = {
-  navWrapper: ``,
-  navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red whitespace-nowrap`,
-  navMore: `text-cu-red`,
-}
+import { navItemStyles } from './TopBar.Styles'
 
 export const TopBarMenu = ({ navLinks }: any) => {
   // create sub menu for invisible items
@@ -25,15 +20,11 @@ export const TopBarMenu = ({ navLinks }: any) => {
     }
   }
 
-  // console.log(navLinks)
-  // console.log(sideMenu)
-  // console.log(sideMenu.length)
-
   return (
     <>
       {navLinks && (
         <>
-          <ul className="flex gap-6 text-sm md:text-[15px] items-center overflow-x-hidden">
+          <ul className={navItemStyles.navWrapper}>
             {navLinks.map((navMenuItem: any) => (
               <InView
                 key={navMenuItem.id}
@@ -48,7 +39,7 @@ export const TopBarMenu = ({ navLinks }: any) => {
                       <a
                         ref={ref}
                         href={navMenuItem.link}
-                        className={styles.navItem}
+                        className={navItemStyles.navItem}
                       >
                         {navMenuItem.label}
                       </a>
