@@ -45,7 +45,9 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                     <>
                       <div className={navDropDownStyles.moreMenuDropDown}>
                         <Disclosure.Button
-                          className={navDropDownStyles.moreMenuParentItem}
+                          className={`${open ? 'text-cu-red' : ''} ${
+                            navDropDownStyles.moreMenuParentItem
+                          }`}
                         >
                           {sideMenuItem.label}
                           <ChevronRightIcon
@@ -54,13 +56,13 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                             }`}
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                        <Disclosure.Panel className="pb-2">
                           {sideMenuItem.subMenu.map((navSubMenuItem: any) => (
                             <Disclosure.Button
                               key={navSubMenuItem.id}
                               as="a"
                               href={navSubMenuItem.link}
-                              className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                              className={navDropDownStyles.moreMenuChildItem}
                             >
                               {navSubMenuItem.label}
                             </Disclosure.Button>
