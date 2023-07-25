@@ -10,7 +10,10 @@ export const navLogoTitle = {
   cuLogoLink: `shrink-0`, // needs to move to a css file in RDS, /src/styles/components.css, target -- .cu-topbar--logo a
   cuLogo: `w-[130px] h-[35px] hidden md:block shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
   cuShield: `w-[28px] h-[35px] block md:hidden shrink-0`, // move to css file, need to discuss how we approach <img> vs <Image>
-  siteTitle: `text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800`,
+  // siteTitle: `text-sm font-semibold leading-3 md:leading-none md:text-lg hover:text-cu-red text-cu-black-800`,
+  siteTitle: `font-semibold md:text-lg hover:text-cu-red text-cu-black-800`,
+  oneLineHeader: `text-base whitespace-nowrap`,
+  twoLineHeader: `text-sm ms:text-base line-clamp-2`,
 }
 
 export const navItemStyles = {
