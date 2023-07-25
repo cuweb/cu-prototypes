@@ -22,8 +22,11 @@ export const navItemStyles = {
 
 export const navDropDownStyles = {
   dropDownContainer: `absolute max-w-xs w-64 mt-2.5 -ml-3 overflow-hidden bg-white border rounded shadow-lg border-cu-black-100`,
-  dropDownItems: `block text-sm font-medium text-cu-black-600 px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50/75 last:border-b-0`,
-  moreDropDown: `origin-top-right focus:outline-none`,
+  dropDownItems: `block text-sm font-medium text-cu-black-600 px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50 last:border-b-0`,
+  moreMenuContainer: `origin-top-right focus:outline-none`,
+  moreMenuDropDown: `border-b border-b-cu-black-50 last:border-b-0`,
+  moreMenuParentItem: `flex justify-between w-full px-5 py-4 text-sm font-medium text-cu-black-600 hover:text-cu-black-900 hover:bg-cu-black-50/50`,
+  moreMenuParentArrow: `h-5 w-5 text-cu-black-400 transform duration-300 ease-in-out`,
 }
 
 export const navAsideStyles = {
