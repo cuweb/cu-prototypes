@@ -16,7 +16,7 @@ export const navLogoTitle = {
 export const navItemStyles = {
   navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
   navItemChildren: `flex items-center -mb-px`,
-  navItemMoreNav: `text-sm font-medium text-cu-red whitespace-nowrap hover:text-cu-red`,
+  navItemMoreNav: `text-sm font-medium text-cu-red whitespace-nowrap hover:text-cu-red hover:text-cyan-600`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }
 

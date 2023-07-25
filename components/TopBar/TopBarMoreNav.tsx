@@ -7,7 +7,7 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Menu.Button
-        className={`${navItemStyles.navItemChildren} ${navItemStyles.navItemMoreNav} text-cu-red-600 text-sm font-medium whitespace-nowrap hover:text-cyan-600`}
+        className={`${navItemStyles.navItemChildren} ${navItemStyles.navItemMoreNav}`}
       >
         Browse
         <ChevronDownIcon
@@ -28,7 +28,6 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
         <Menu.Items
           className={`${navDropDownStyles.dropDownContainer} ${navDropDownStyles.moreDropDown}`}
         >
-          {/* <Menu.Items className="absolute w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"> */}
           {sideMenu.map((sideMenuItem: any) => (
             <>
               {!sideMenuItem.subMenu && (
