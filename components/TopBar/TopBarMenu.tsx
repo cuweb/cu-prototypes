@@ -18,13 +18,15 @@ export const TopBarMenu = ({ navLinks }: any) => {
     } else {
       setSideMenu((sideMenu: any) => [...sideMenu, menuItem])
     }
+    console.log(inView)
   }
 
   return (
     <>
       {navLinks && (
         <>
-          <ul className={navItemStyles.navWrapper}>
+          <ul className={`${navItemStyles.navWrapper}`}>
+            {/* <ul className={`${navItemStyles.navWrapper} max-w-3xl bg-cyan-300`}> */}
             {navLinks.map((navMenuItem: any) => (
               <InView
                 key={navMenuItem.id}
@@ -56,9 +58,9 @@ export const TopBarMenu = ({ navLinks }: any) => {
             ))}
           </ul>
 
-          <ul className="flex items-center">
-            {sideMenu.length > 0 && <TopBarMoreNav sideMenu={sideMenu} />}
-          </ul>
+          {/* <ul className="flex items-center"> */}
+          {sideMenu.length > 0 && <TopBarMoreNav sideMenu={sideMenu} />}
+          {/* </ul> */}
         </>
       )}
     </>

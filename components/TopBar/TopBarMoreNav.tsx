@@ -1,11 +1,11 @@
+import { Fragment, useState } from 'react'
 import { Menu, Disclosure, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 
 export const TopBarMoreNav = ({ sideMenu }: any) => {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="ul" className="relative inline-block text-left">
       <Menu.Button
         className={`${navItemStyles.navItemChildren} ${navItemStyles.navItemMoreNav}`}
       >
@@ -26,24 +26,23 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
+          as="nav"
           className={`${navDropDownStyles.dropDownContainer} ${navDropDownStyles.moreMenuContainer}`}
         >
           {sideMenu.map((sideMenuItem: any) => (
             <>
               {!sideMenuItem.subMenu && (
-                <a
-                  key={sideMenuItem.id}
-                  href={sideMenuItem.link}
-                  className={navDropDownStyles.dropDownItems}
-                >
-                  {sideMenuItem.label}
-                </a>
+                <li className={navDropDownStyles.dropDownItems}>
+                  <a key={sideMenuItem.id} href={sideMenuItem.link}>
+                    {sideMenuItem.label}
+                  </a>
+                </li>
               )}
               {sideMenuItem.subMenu && (
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className={navDropDownStyles.moreMenuDropDown}>
+                      <ul className={navDropDownStyles.moreMenuDropDown}>
                         <Disclosure.Button
                           className={`${open ? 'text-cu-red' : ''} ${
                             navDropDownStyles.moreMenuParentItem
@@ -56,19 +55,20 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                             }`}
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className="pb-2">
+                        <Disclosure.Panel as="ul" className="pb-2">
                           {sideMenuItem.subMenu.map((navSubMenuItem: any) => (
-                            <Disclosure.Button
-                              key={navSubMenuItem.id}
-                              as="a"
-                              href={navSubMenuItem.link}
-                              className={navDropDownStyles.moreMenuChildItem}
-                            >
-                              {navSubMenuItem.label}
-                            </Disclosure.Button>
+                            <li key={navSubMenuItem.id}>
+                              <Disclosure.Button
+                                as="a"
+                                href={navSubMenuItem.link}
+                                className={navDropDownStyles.moreMenuChildItem}
+                              >
+                                {navSubMenuItem.label}
+                              </Disclosure.Button>
+                            </li>
                           ))}
                         </Disclosure.Panel>
-                      </div>
+                      </ul>
                     </>
                   )}
                 </Disclosure>
