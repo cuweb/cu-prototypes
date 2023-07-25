@@ -16,12 +16,14 @@ export const navLogoTitle = {
 export const navItemStyles = {
   navItem: `text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red`,
   navItemChildren: `flex items-center -mb-px`,
+  navItemMoreNav: `text-sm font-medium text-cu-red whitespace-nowrap hover:text-cu-red`,
   navArrow: `flex-none w-5 h-5 pt-1 text-cu-black-400`,
 }
 
 export const navDropDownStyles = {
-  dropDownContainer: `absolute max-w-xs mt-2.5 -ml-3 overflow-hidden text-sm font-medium bg-white border rounded shadow-lg text-cu-black-600 border-cu-black-100`,
-  dropDownItems: `block px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50/75 last:border-b-0`,
+  dropDownContainer: `absolute max-w-xs w-64 mt-2.5 -ml-3 overflow-hidden bg-white border rounded shadow-lg border-cu-black-100`,
+  dropDownItems: `block text-sm font-medium text-cu-black-600 px-5 py-4 border-b hover:text-cu-black-900 hover:bg-cu-black-50/50 border-b-cu-black-50/75 last:border-b-0`,
+  moreDropDown: `origin-top-right focus:outline-none`,
 }
 
 export const navAsideStyles = {

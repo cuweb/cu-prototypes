@@ -25,18 +25,18 @@ export const TopBarMenu = ({ navLinks }: any) => {
     }
   }
 
-  console.log(navLinks)
-  console.log(sideMenu)
-  console.log(sideMenu.length)
+  // console.log(navLinks)
+  // console.log(sideMenu)
+  // console.log(sideMenu.length)
 
   return (
     <>
       {navLinks && (
         <>
-          <ul className="flex flex-1 gap-6 text-sm md:text-[15px] items-center overflow-hidden">
-            {navLinks.map((navMenuItem: any, index: any) => (
+          <ul className="flex gap-6 text-sm md:text-[15px] items-center overflow-x-hidden">
+            {navLinks.map((navMenuItem: any) => (
               <InView
-                key={index}
+                key={navMenuItem.id}
                 threshold={0.99}
                 onChange={(inView, entry) =>
                   updateMenu(inView, entry, navMenuItem)
