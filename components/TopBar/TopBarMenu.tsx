@@ -33,7 +33,7 @@ export const TopBarMenu = ({ navLinks }: any) => {
     <>
       {navLinks && (
         <>
-          <ul className="flex gap-6 text-sm md:text-[15px] items-center overflow-hidden">
+          <ul className="flex flex-1 gap-6 text-sm md:text-[15px] items-center overflow-hidden">
             {navLinks.map((navMenuItem: any, index: any) => (
               <InView
                 key={index}

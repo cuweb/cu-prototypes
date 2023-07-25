@@ -24,23 +24,29 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute z-10 max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg -left-10 top-full ring-1 ring-gray-900/5">
+        {/* <Popover.Panel className="absolute -right-2 max-w-lg mt-2.5 text-sm font-medium bg-white border rounded shadow-lg text-cu-black-600 border-cu-black-100"> */}
+        <Popover.Panel className="absolute z-10 max-w-md mt-3 overflow-hidden bg-white rounded-md shadow-lg min-w-fit -left-10 top-full ring-1 ring-gray-900/5">
           <div className="p-4">
             {sideMenu.map((sideMenuItem: any, index: any) => (
-              <div key={index}>
+              <>
+                {/* <div key={index}> */}
+
                 {!sideMenuItem.subMenu && (
-                  <Link
+                  <a
+                    key={index}
                     href={sideMenuItem.link}
-                    className="block p-2 hover:text-indigo-600"
+                    className="block p-2 bg-cu-red hover:text-indigo-600"
                   >
                     {sideMenuItem.label}
-                  </Link>
+                  </a>
                 )}
+
                 {sideMenuItem.subMenu && (
                   <Disclosure as="div" className="-mx-3" key={index}>
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                        {/* <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"> */}
+                        <Disclosure.Button className="bg-cyan-300 flex w-full items-center py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                           {sideMenuItem.label}
                           <ChevronDownIcon
                             className={classNames(
@@ -66,7 +72,8 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                     )}
                   </Disclosure>
                 )}
-              </div>
+                {/* </div> */}
+              </>
             ))}
           </div>
         </Popover.Panel>
