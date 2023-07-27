@@ -29,16 +29,17 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
           as="nav"
           className={`${navDropDownStyles.dropDownContainer} ${navDropDownStyles.moreMenuContainer}`}
         >
-          {sideMenu.map((sideMenuItem: any) => (
+          {sideMenu.map((sideMenuItem: any, index: number) => (
             <>
-              {!sideMenuItem.subMenu && (
-                <li className={navDropDownStyles.dropDownItems}>
-                  <a key={sideMenuItem.id} href={sideMenuItem.link}>
-                    {sideMenuItem.label}
-                  </a>
+              {!Array.isArray(sideMenuItem.props.children) && (
+                <li
+                  className={navDropDownStyles.dropDownItems}
+                  key={'main-' + index}
+                >
+                  {sideMenuItem}
                 </li>
               )}
-              {sideMenuItem.subMenu && (
+              {Array.isArray(sideMenuItem.props.children) && (
                 <Disclosure>
                   {({ open }) => (
                     <>
@@ -48,7 +49,7 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                             navDropDownStyles.moreMenuParentItem
                           }`}
                         >
-                          {sideMenuItem.label}
+                          {sideMenuItem.props.label}
                           <ChevronRightIcon
                             className={`${open ? 'rotate-90' : ''} ${
                               navDropDownStyles.moreMenuParentArrow
@@ -56,17 +57,15 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
                           />
                         </Disclosure.Button>
                         <Disclosure.Panel as="ul" className="pb-2">
-                          {sideMenuItem.subMenu.map((navSubMenuItem: any) => (
-                            <li key={navSubMenuItem.id}>
-                              <Disclosure.Button
-                                as="a"
-                                href={navSubMenuItem.link}
-                                className={navDropDownStyles.moreMenuChildItem}
-                              >
-                                {navSubMenuItem.label}
-                              </Disclosure.Button>
-                            </li>
-                          ))}
+                          {sideMenuItem.props.children.map(
+                            (navSubMenuItem: any, index: number) => (
+                              <li key={'sub-' + index}>
+                                <Disclosure.Button as={Fragment}>
+                                  {navSubMenuItem}
+                                </Disclosure.Button>
+                              </li>
+                            ),
+                          )}
                         </Disclosure.Panel>
                       </ul>
                     </>

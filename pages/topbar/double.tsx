@@ -54,7 +54,11 @@ const Home: NextPage = () => {
           <TopBar.Aside />
         </TopBar.Primary>
         <TopBar.Secondary>
-          <TopBar.Menu navLinks={navData} />
+        <TopBar.Menu>
+             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK1</Link>
+             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK2</Link>
+             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK3</Link>
+          </TopBar.Menu>
         </TopBar.Secondary>
       </TopBar>
 

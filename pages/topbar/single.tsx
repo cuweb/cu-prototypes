@@ -15,9 +15,12 @@ import Image from 'next/image'
 
 import { NewsData } from '../../data/NewsData'
 import { TopBarNavData as navData } from 'data/TopNavData'
-// import { cuthemeNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
+import {
+  navDropDownStyles,
+  navItemStyles,
+} from '@components/TopBar/TopBar.Styles'
 
 const DoublePara = () => {
   return (
@@ -51,7 +54,28 @@ const Home: NextPage = () => {
             title="Web Services"
             link="https://carleton.ca/webservices"
           />
-          <TopBar.Menu navLinks={navData} />
+          <TopBar.Menu>
+            <Link href="/" className={navItemStyles.navItem}>
+              LINK 1
+            </Link>
+            <Link href="/" className={navItemStyles.navItem}>
+              LINK 2
+            </Link>
+            <Link href="/" className={navItemStyles.navItem}>
+              LINK 3
+            </Link>
+            <TopBar.SubMenu label="LINK 4">
+              <Link href="/" className={navDropDownStyles.dropDownItems}>
+                LINK 4.1
+              </Link>
+              <Link href="/" className={navDropDownStyles.dropDownItems}>
+                LINK 4.2
+              </Link>
+              <Link href="/" className={navDropDownStyles.dropDownItems}>
+                LINK 4.3
+              </Link>
+            </TopBar.SubMenu>
+          </TopBar.Menu>
           <TopBar.Aside />
         </TopBar.Primary>
       </TopBar>

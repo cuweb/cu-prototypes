@@ -51,7 +51,11 @@ const Home: NextPage = () => {
             title="Web Services"
             link="https://carleton.ca/webservices"
           />
-          <TopBar.Menu navLinks={navData} />
+          <TopBar.Menu>
+            <Link href="/">LINK1</Link>
+            <Link href="/">LINK2</Link>
+            <Link href="/">LINK3</Link>
+          </TopBar.Menu>
           <TopBar.Aside />
         </TopBar.Primary>
       </TopBar>
@@ -64,7 +68,11 @@ const Home: NextPage = () => {
           <TopBar.Aside />
         </TopBar.Primary>
         <TopBar.Secondary>
-          <TopBar.Menu navLinks={navData} />
+        <TopBar.Menu>
+            <Link href="/">LINK1</Link>
+            <Link href="/">LINK2</Link>
+            <Link href="/">LINK3</Link>
+          </TopBar.Menu>
         </TopBar.Secondary>
       </TopBar>
 

@@ -5,6 +5,7 @@ import { TopBarAside } from './TopBarAside'
 import { TopBarPrimary } from './TopBarPrimary'
 import { TopBarSecondary } from './TopBarSecondary'
 import { navBaseStyles } from './TopBar.Styles'
+import { TopBarSubMenu } from './TopBarSubMenu'
 
 export interface TopBarProps {
   children: React.ReactNode
@@ -43,6 +44,7 @@ export const TopBarWrapper = ({ children }: TopBarProps) => {
 export const TopBar = Object.assign(TopBarWrapper, {
   Logo: TopBarLogo,
   Menu: TopBarMenu,
+  SubMenu: TopBarSubMenu,
   Aside: TopBarAside,
   Primary: TopBarPrimary,
   Secondary: TopBarSecondary,

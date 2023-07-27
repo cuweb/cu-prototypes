@@ -1,16 +1,17 @@
-import { Fragment } from 'react'
+import React, { Fragment, PropsWithChildren } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 
-export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
+export const TopBarSubMenu = ({ label, children }: PropsWithChildren<any>) => {
+  const navSubMenu = React.Children.toArray(children)
   return (
     <Popover>
       {/* Nav item with submenu */}
       <Popover.Button
         className={`${navItemStyles.navItem} ${navItemStyles.navItemChildren}`}
       >
-        {navItemLabel}
+        {label}
         <ChevronDownIcon
           className={navItemStyles.navArrow}
           aria-hidden="true"
@@ -28,17 +29,11 @@ export const TopBarDropDown = ({ navItemLabel, navSubMenu }: any) => {
       >
         {/* Submenu */}
         <Popover.Panel className={navDropDownStyles.dropDownContainer}>
-          {navSubMenu.map((navSubMenuItem: any) => (
-            <a
-              key={navSubMenuItem.id}
-              href={navSubMenuItem.link}
-              className={navDropDownStyles.dropDownItems}
-            >
-              {navSubMenuItem.label}
-            </a>
-          ))}
+          {navSubMenu.map((navSubMenuItem: any) => navSubMenuItem)}
         </Popover.Panel>
       </Transition>
     </Popover>
   )
 }
+
+TopBarSubMenu.displayName = 'TopBar.SubMenu'
