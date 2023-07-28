@@ -19,6 +19,8 @@ import { TopBarNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
 
+import { navLogoTitle } from '@components/TopBar/TopBar.Styles'
+
 const DoublePara = () => {
   return (
     <>
@@ -48,16 +50,51 @@ const Home: NextPage = () => {
       <TopBar>
         <TopBar.Primary>
           <TopBar.Logo
-            title="Information and Technology Services"
-            link="https://carleton.ca/its"
-          />
+            title="Web Services"
+            link="https://carleton.ca/webservices"
+          >
+            <Link
+              href="https://carleton.ca"
+              className={navLogoTitle.cuLogoLink}
+            >
+              <Image
+                className={navLogoTitle.cuLogo}
+                src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-logo-color-right-horiztonal.svg"
+                width="130"
+                height="35"
+                alt="Logo"
+              />
+              <Image
+                className={navLogoTitle.cuShield}
+                src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-shield-color.svg"
+                width="28"
+                height="35"
+                alt="Logo"
+              />
+            </Link>
+          </TopBar.Logo>
           <TopBar.Aside />
         </TopBar.Primary>
         <TopBar.Secondary>
-        <TopBar.Menu>
-             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK1</Link>
-             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK2</Link>
-             <Link href="/" className='text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red'>LINK3</Link>
+          <TopBar.Menu>
+            <Link
+              href="/"
+              className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
+            >
+              LINK1
+            </Link>
+            <Link
+              href="/"
+              className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
+            >
+              LINK2
+            </Link>
+            <Link
+              href="/"
+              className="text-sm font-medium text-cu-black-600 whitespace-nowrap hover:text-cu-red"
+            >
+              LINK3
+            </Link>
           </TopBar.Menu>
         </TopBar.Secondary>
       </TopBar>

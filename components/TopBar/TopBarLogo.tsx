@@ -15,22 +15,6 @@ export const TopBarLogo = ({ children, title, link }: TopBarLogoProps) => {
 
   return (
     <div className={navLogoTitle.logoWrapper}>
-      {/* <a href="https://carleton.ca" className={navLogoTitle.cuLogoLink}>
-        <img
-          className={navLogoTitle.cuLogo}
-          src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-logo-color-right-horiztonal.svg"
-          width="130"
-          height="35"
-          alt="Logo"
-        />
-        <img
-          className={navLogoTitle.cuShield}
-          src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-shield-color.svg"
-          width="28"
-          height="35"
-          alt="Logo"
-        />
-      </a> */}
       {children}
       {title && link && (
         <h1 className={`${navLogoTitle.siteTitle} ${titleLengthStyles}`}>
