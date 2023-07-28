@@ -38,7 +38,7 @@ export const TopBarMenu = (props: PropsWithChildren) => {
                 }
               >
                 {({ ref }) => (
-                  <li ref={ref} className="invisible">
+                  <li ref={ref} className="invisible cu-topbar--parent-link">
                     {navMenuItem}
                   </li>
                 )}

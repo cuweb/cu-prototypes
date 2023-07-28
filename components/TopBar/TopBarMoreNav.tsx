@@ -33,7 +33,7 @@ export const TopBarMoreNav = ({ sideMenu }: any) => {
             <>
               {!Array.isArray(sideMenuItem.props.children) && (
                 <li
-                  className={navDropDownStyles.dropDownItems}
+                  className={`${navDropDownStyles.dropDownItems} cu-topbar--more-nav`} // we can likely remove the dropDownItems class reference when this moves to RDS
                   key={'main-' + index}
                 >
                   {sideMenuItem}

@@ -28,7 +28,9 @@ export const TopBarSubMenu = ({ label, children }: PropsWithChildren<any>) => {
         leaveTo="opacity-0 translate-y-1"
       >
         {/* Submenu */}
-        <Popover.Panel className={navDropDownStyles.dropDownContainer}>
+        <Popover.Panel
+          className={`${navDropDownStyles.dropDownContainer} cu-topbar--dropdown`} // we can likely remove the dropDownContainer class reference when this moves to RDS
+        >
           {navSubMenu.map((navSubMenuItem: any) => navSubMenuItem)}
         </Popover.Panel>
       </Transition>

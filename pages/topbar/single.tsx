@@ -55,13 +55,13 @@ const Home: NextPage = () => {
             link="https://carleton.ca/webservices"
           />
           <TopBar.Menu>
-            <Link href="/" className={navItemStyles.navItem}>
+            <Link href="/poop" className={navItemStyles.navItem}>
               LINK 1
             </Link>
-            <Link href="/" className={navItemStyles.navItem}>
+            <Link href="/poop" className={navItemStyles.navItem}>
               LINK 2
             </Link>
-            <Link href="/" className={navItemStyles.navItem}>
+            <Link href="/poop" className={navItemStyles.navItem}>
               LINK 3
             </Link>
             <TopBar.SubMenu label="LINK 4">
