@@ -18,6 +18,7 @@ import { TopBarNavData as navData } from 'data/TopNavData'
 
 import { TopBar } from '@components/TopBar/TopBar'
 import {
+  navLogoTitle,
   navDropDownStyles,
   navItemStyles,
 } from '@components/TopBar/TopBar.Styles'
@@ -53,7 +54,27 @@ const Home: NextPage = () => {
           <TopBar.Logo
             title="Web Services"
             link="https://carleton.ca/webservices"
-          />
+          >
+            <Link
+              href="https://carleton.ca"
+              className={navLogoTitle.cuLogoLink}
+            >
+              <Image
+                className={navLogoTitle.cuLogo}
+                src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-logo-color-right-horiztonal.svg"
+                width="130"
+                height="35"
+                alt="Logo"
+              />
+              <Image
+                className={navLogoTitle.cuShield}
+                src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-shield-color.svg"
+                width="28"
+                height="35"
+                alt="Logo"
+              />
+            </Link>
+          </TopBar.Logo>
           <TopBar.Menu>
             <Link href="/poop" className={navItemStyles.navItem}>
               LINK 1

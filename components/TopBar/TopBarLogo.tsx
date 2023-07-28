@@ -3,18 +3,19 @@ import React from 'react'
 import { navLogoTitle } from './TopBar.Styles'
 
 export interface TopBarLogoProps {
+  children: React.ReactNode
   title?: string
   link?: string
 }
 
-export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
+export const TopBarLogo = ({ children, title, link }: TopBarLogoProps) => {
   const titleLength = title ? title.length : 0
   const titleLengthStyles =
     titleLength > 15 ? navLogoTitle.twoLineHeader : navLogoTitle.oneLineHeader
 
   return (
     <div className={navLogoTitle.logoWrapper}>
-      <a href="https://carleton.ca" className={navLogoTitle.cuLogoLink}>
+      {/* <a href="https://carleton.ca" className={navLogoTitle.cuLogoLink}>
         <img
           className={navLogoTitle.cuLogo}
           src="https://cu-production.s3.amazonaws.com/rds/assets/cu-logos/cu-logo-color-right-horiztonal.svg"
@@ -29,7 +30,8 @@ export const TopBarLogo = ({ title, link }: TopBarLogoProps) => {
           height="35"
           alt="Logo"
         />
-      </a>
+      </a> */}
+      {children}
       {title && link && (
         <h1 className={`${navLogoTitle.siteTitle} ${titleLengthStyles}`}>
           <a href={link}>{title}</a>
