@@ -1,11 +1,11 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { Menu, Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 import { navItemStyles, navDropDownStyles } from './TopBar.Styles'
 
 export const TopBarMoreNav = ({ sideMenu }: any) => {
   return (
-    <Menu as="ul" className="relative inline-block text-left">
+    <Menu as="ul" className={navDropDownStyles.moreMenuWrapper}>
       <Menu.Button
         className={`${navItemStyles.navItemChildren} ${navItemStyles.navItemMoreNav}`}
       >
