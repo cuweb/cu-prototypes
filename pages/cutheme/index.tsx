@@ -10,6 +10,7 @@ import {
 } from '@carletonuniversity/rds'
 
 import { TopBarOld } from '@components/TopBarOld/TopBarOld'
+import { Quote } from '@components/Quote/Quote'
 import { cuthemeNavData } from 'data/TopNavData'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -92,6 +93,12 @@ const Home: NextPage = () => {
 
           <h3>This is a header three</h3>
           <SinglePara />
+
+          <Quote redDoubleQuotes>
+            <Quote.Content attribution="William Shakespeare, Hamlet">
+              There is nothing either good or bad, but thinking makes it so.
+            </Quote.Content>
+          </Quote>
 
           <h3>This is a header three</h3>
           <SinglePara />
