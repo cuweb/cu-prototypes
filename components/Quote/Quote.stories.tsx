@@ -16,15 +16,13 @@ export default meta
 type Story = StoryObj<typeof Quote>
 
 export const Default: Story = {
-  render: () => <Quote>Multi-Day</Quote>,
-}
-
-export const SingleItemPanel: Story = {
   render: () => (
     <>
-      <Quote>Multi-Day</Quote>
-      <Quote>Orientation</Quote>
-      <Quote>Faculty</Quote>
+      <Quote redDoubleQuotes>
+        <Quote.Content attribution="William Shakespeare, Hamlet">
+          There is nothing either good or bad, but thinking makes it so.
+        </Quote.Content>
+      </Quote>
     </>
   ),
 }
