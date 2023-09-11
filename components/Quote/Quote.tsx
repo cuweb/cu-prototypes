@@ -1,14 +1,27 @@
 import React from 'react'
-import styles from './Quote.styles'
+import { QuoteContent } from './QuoteContent'
+import { QuoteSymbol } from './QuoteSymbol'
+import { styles } from './Quote.styles'
 
 export interface QuoteProps {
   children?: React.ReactNode
+  redDoubleQuotes?: boolean
 }
 
-const QuoteBase = ({ children }: QuoteProps) => {
-  return <p className={`cu-quote ${styles.quote}`}>{children}</p>
+const QuoteWrapper = ({ children, redDoubleQuotes }: QuoteProps) => {
+  return (
+    <>
+      <QuoteSymbol quotes={redDoubleQuotes} />
+      <p className={`cu-quote ${styles.quote}`}>{children}</p>
+      {redDoubleQuotes && (
+        <>
+          <QuoteSymbol quotes={redDoubleQuotes} />
+        </>
+      )}
+    </>
+  )
 }
 
-QuoteBase.displayName = 'LinkItem'
-
-export const Quote = Object.assign(QuoteBase, {})
+export const Quote = Object.assign(QuoteWrapper, {
+  Content: QuoteContent,
+})
