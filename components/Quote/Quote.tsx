@@ -11,13 +11,15 @@ export interface QuoteProps {
 const QuoteWrapper = ({ children, redDoubleQuotes }: QuoteProps) => {
   return (
     <>
-      <QuoteSymbol quotes={redDoubleQuotes} />
-      <p className={`cu-quote ${styles.quote}`}>{children}</p>
-      {redDoubleQuotes && (
-        <>
-          <QuoteSymbol quotes={redDoubleQuotes} />
-        </>
-      )}
+      <div className={`cu-quote ${styles.container}`}>
+        <QuoteSymbol quotes={redDoubleQuotes} />
+        <div className={``}>{children}</div>
+        {redDoubleQuotes && (
+          <>
+            <QuoteSymbol quotes={redDoubleQuotes} bottomQuote />
+          </>
+        )}
+      </div>
     </>
   )
 }

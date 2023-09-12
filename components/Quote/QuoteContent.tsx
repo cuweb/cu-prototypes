@@ -1,4 +1,5 @@
 import React from 'react'
+import { styles } from './Quote.styles'
 
 export interface QuoteContentProps {
   children: React.ReactNode
@@ -8,11 +9,11 @@ export interface QuoteContentProps {
 export const QuoteContent = ({ children, attribution }: QuoteContentProps) => {
   return (
     <>
-      <span>{children}</span>
+      <span className={`${styles.quote}`}>{children}</span>
       {attribution && (
         <>
           <br />
-          <span>{attribution}</span>
+          <span className={`${styles.attribution}`}>{attribution}</span>
         </>
       )}
     </>
