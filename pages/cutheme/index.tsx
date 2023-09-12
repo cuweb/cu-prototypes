@@ -96,7 +96,8 @@ const Home: NextPage = () => {
 
           <Quote redDoubleQuotes>
             <Quote.Content attribution="William Shakespeare, Hamlet">
-              There is nothing either good or bad, but thinking makes it so.
+              Nobis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
             </Quote.Content>
           </Quote>
 
