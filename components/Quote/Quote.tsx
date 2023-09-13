@@ -1,24 +1,21 @@
 import React from 'react'
 import { QuoteContent } from './QuoteContent'
 import { QuoteSymbol } from './QuoteSymbol'
+import { QuoteAttribution } from './QuoteAttribution'
 import { styles } from './Quote.styles'
 
 export interface QuoteProps {
   children?: React.ReactNode
-  redDoubleQuotes?: boolean
+  setBlack?: boolean
+  useQuote?: boolean
 }
 
-const QuoteWrapper = ({ children, redDoubleQuotes }: QuoteProps) => {
+const QuoteWrapper = ({ children, setBlack, useQuote }: QuoteProps) => {
   return (
     <>
       <div className={`cu-quote ${styles.container}`}>
-        <QuoteSymbol quotes={redDoubleQuotes} />
-        <div className={``}>{children}</div>
-        {redDoubleQuotes && (
-          <>
-            <QuoteSymbol quotes={redDoubleQuotes} bottomQuote />
-          </>
-        )}
+        <QuoteSymbol colour={setBlack} shape={useQuote} />
+        <div>{children}</div>
       </div>
     </>
   )
@@ -26,4 +23,5 @@ const QuoteWrapper = ({ children, redDoubleQuotes }: QuoteProps) => {
 
 export const Quote = Object.assign(QuoteWrapper, {
   Content: QuoteContent,
+  Attribution: QuoteAttribution,
 })
