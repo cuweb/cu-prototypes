@@ -8,6 +8,9 @@ module.exports = {
   presets: [require('rds-tailwind-theme')],
   theme: {
     extend: {
+      backgroundImage: {
+        'quote-icon': 'url("/assets/quotation.svg")',
+      },
       gridTemplateColumns: {
         'hero-text-image-40': 'auto 40%',
         'hero-text-image-20': 'auto 20%',
