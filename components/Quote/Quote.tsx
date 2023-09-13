@@ -6,17 +6,22 @@ import { styles } from './Quote.styles'
 
 export interface QuoteProps {
   children?: React.ReactNode
-  setBlack?: boolean
-  useQuote?: boolean
+  cite?: string
+  symbol?: 'default' | 'quote'
 }
 
-const QuoteWrapper = ({ children, setBlack, useQuote }: QuoteProps) => {
+const QuoteWrapper = ({ children, cite, symbol = 'default' }: QuoteProps) => {
   return (
     <>
-      <div className={`cu-quote ${styles.container}`}>
-        <QuoteSymbol colour={setBlack} shape={useQuote} />
+      <blockquote className={`${styles.container} quote-${symbol}`}>
+        {children}
+        {cite && <cite>{cite}</cite>}
+      </blockquote>
+
+      {/* <blockquote className="relative flex w-1/2 my-10 cu-quote">
+        <QuoteSymbol shape={useQuote} />
         <div>{children}</div>
-      </div>
+      </blockquote> */}
     </>
   )
 }

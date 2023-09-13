@@ -16,6 +16,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from 'data/NewsData'
+import { styles } from 'blocks/intranet/Intranet.Styles'
 
 const SinglePara = () => {
   return (
@@ -53,6 +54,10 @@ const DoublePara = () => {
   )
 }
 
+const proseStyles = {
+  newProse: `prose prose-lg prose-rds md:prose-xl prose-img:w-full prose-img:rounded-lg prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:border-none prose-blockquote:text-cu-black-700`,
+}
+
 const Home: NextPage = () => {
   return (
     <>
@@ -64,35 +69,8 @@ const Home: NextPage = () => {
       ></TopBarOld>
 
       <Main>
-        <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
-
+        <div className={`${proseStyles.newProse} max-w-7xl mx-auto`}>
           <DoublePara />
-
-          <Heading text="Three col cards @ 1024" />
-          <Column cols="3">
-            {NewsData.slice(0, 3).map(
-              ({ id, title, link, date, image, alt }) => (
-                <Card key={id}>
-                  <Link href={link}>
-                    <Card.Figure>
-                      <Image src={image} alt={alt} width="400" height="266" />
-                    </Card.Figure>
-                    <Card.Content>
-                      <Card.PostMeta date={date} />
-                      <Card.Header text={title} />
-                      {/* <Card.Excerpt text={excerpt} /> */}
-                    </Card.Content>
-                  </Link>
-                </Card>
-              ),
-            )}
-          </Column>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
 
           <Quote cite="Poo poo face">
             <p>
@@ -101,34 +79,8 @@ const Home: NextPage = () => {
             </p>
           </Quote>
 
-          {/* <Quote>
-            <Quote.Content attribution="William Shakespeare, Hamlet">
-              Nobis voluptatem dolorum et eum doloremque cupiditate velit.
-              Praesentium architecto a distinctio aut reprehenderit ducimus.
-            </Quote.Content>
-          </Quote> */}
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
-
-          <h3>This is a header three</h3>
-          <SinglePara />
-
-          <Column cols="2">
-            <Column.Content>
-              <SinglePara />
-            </Column.Content>
-            <Column.Content>
-              <SinglePara />
-            </Column.Content>
-          </Column>
-
           <DoublePara />
-        </Section>
+        </div>
       </Main>
 
       <FooterBasic />
