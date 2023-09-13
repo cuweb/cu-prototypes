@@ -6,10 +6,18 @@ export interface QuoteContentProps {
   attribution?: string
 }
 
-export const QuoteContent = ({ children }: QuoteContentProps) => {
+export const QuoteContent = ({ children, attribution }: QuoteContentProps) => {
   return (
     <>
       <span className={`${styles.quote}`}>{children}</span>
+      {attribution && (
+        <>
+          <br />
+          <div className="mt-6">
+            <span className={`${styles.attribution}`}>{attribution}</span>
+          </div>
+        </>
+      )}
     </>
   )
 }

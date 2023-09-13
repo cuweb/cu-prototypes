@@ -94,12 +94,11 @@ const Home: NextPage = () => {
           <h3>This is a header three</h3>
           <SinglePara />
 
-          <Quote setBlack useQuote>
-            <Quote.Content>
+          <Quote>
+            <Quote.Content attribution="William Shakespeare, Hamlet">
               Nobis voluptatem dolorum et eum doloremque cupiditate velit.
               Praesentium architecto a distinctio aut reprehenderit ducimus.
             </Quote.Content>
-            <Quote.Attribution>William Shakespeare, Hamlet</Quote.Attribution>
           </Quote>
 
           <h3>This is a header three</h3>
