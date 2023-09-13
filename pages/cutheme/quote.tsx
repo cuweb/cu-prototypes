@@ -55,7 +55,7 @@ const DoublePara = () => {
 }
 
 const proseStyles = {
-  newProse: `prose prose-lg prose-rds md:prose-xl prose-img:w-full prose-img:rounded-lg prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:border-none prose-blockquote:text-cu-black-700`,
+  newProse: `prose prose-lg prose-rds md:prose-xl prose-img:w-full prose-img:rounded-lg prose-blockquote:font-normal prose-blockquote:not-italic  prose-blockquote:text-cu-black-700`,
 }
 
 const Home: NextPage = () => {
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
         <div className={`${proseStyles.newProse} max-w-7xl mx-auto`}>
           <DoublePara />
 
-          <Quote cite="Poo poo face">
+          <Quote cite="Poo poo face" symbol="default">
             <p>
               obis voluptatem dolorum et eum doloremque cupiditate velit.
               Praesentium architecto a distinctio aut reprehenderit ducimus.
