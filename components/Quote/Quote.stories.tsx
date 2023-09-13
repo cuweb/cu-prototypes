@@ -18,10 +18,26 @@ type Story = StoryObj<typeof Quote>
 export const Default: Story = {
   render: () => (
     <>
-      <Quote redDoubleQuotes>
-        <Quote.Content attribution="William Shakespeare, Hamlet">
-          There is nothing either good or bad, but thinking makes it so.
+      <Quote>
+        <Quote.Content>
+          Nobis voluptatem dolorum et eum doloremque cupiditate velit.
+          Praesentium architecto a distinctio aut reprehenderit ducimus.
         </Quote.Content>
+        <Quote.Attribution>William Shakespeare, Hamlet</Quote.Attribution>
+      </Quote>
+    </>
+  ),
+}
+
+export const Alternate: Story = {
+  render: () => (
+    <>
+      <Quote setBlack useQuote>
+        <Quote.Content>
+          Nobis voluptatem dolorum et eum doloremque cupiditate velit.
+          Praesentium architecto a distinctio aut reprehenderit ducimus.
+        </Quote.Content>
+        <Quote.Attribution>William Shakespeare, Hamlet</Quote.Attribution>
       </Quote>
     </>
   ),
