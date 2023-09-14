@@ -6,14 +6,14 @@ export interface QuoteProps {
   children?: React.ReactNode
   cite?: string
   symbol?: 'default' | 'quote'
-  align?: 'default' | 'middle' | 'right'
+  align?: 'left' | 'middle' | 'right'
 }
 
 const QuoteWrapper = ({
   children,
   cite,
   symbol = 'default',
-  align = 'default',
+  align = 'left',
 }: QuoteProps) => {
   return (
     <>
