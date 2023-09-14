@@ -17,12 +17,14 @@ const QuoteWrapper = ({
 }: QuoteProps) => {
   return (
     <>
-      <blockquote
-        className={`${styles.container} ${styles.symbol[symbol]} ${styles.align[align]}`}
-      >
-        {children}
-        {cite && <cite className={`${styles.cite[symbol]}`}>{cite}</cite>}
-      </blockquote>
+      <div className="not-prose">
+        <blockquote
+          className={`${styles.container} ${styles.symbol[symbol]} ${styles.align[align]}`}
+        >
+          {children}
+          {cite && <cite className={`${styles.cite[symbol]}`}>{cite}</cite>}
+        </blockquote>
+      </div>
     </>
   )
 }
