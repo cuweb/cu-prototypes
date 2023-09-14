@@ -17,28 +17,33 @@ type Story = StoryObj<typeof Quote>
 
 export const Default: Story = {
   render: () => (
-    <>
-      <Quote>
-        <Quote.Content>
-          Nobis voluptatem dolorum et eum doloremque cupiditate velit.
-          Praesentium architecto a distinctio aut reprehenderit ducimus.
-        </Quote.Content>
-        <Quote.Attribution>William Shakespeare, Hamlet</Quote.Attribution>
-      </Quote>
-    </>
+    <Quote cite="John Doe">
+      <p>
+        Obis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+        architecto a distinctio aut reprehenderit ducimus.
+      </p>
+    </Quote>
   ),
 }
 
-export const Alternate: Story = {
+export const Second Option: Story = {
   render: () => (
-    <>
-      <Quote setBlack useQuote>
-        <Quote.Content>
-          Nobis voluptatem dolorum et eum doloremque cupiditate velit.
-          Praesentium architecto a distinctio aut reprehenderit ducimus.
-        </Quote.Content>
-        <Quote.Attribution>William Shakespeare, Hamlet</Quote.Attribution>
-      </Quote>
-    </>
+    <Quote cite="John Doe" symbol="quote">
+      <p>
+        Obis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+        architecto a distinctio aut reprehenderit ducimus.
+      </p>
+    </Quote>
+  ),
+}
+
+export const Third Option: Story = {
+  render: () => (
+    <Quote cite="John Doe" symbol="quote" align="middle">
+      <p>
+        Obis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
+        architecto a distinctio aut reprehenderit ducimus.
+      </p>
+    </Quote>
   ),
 }
