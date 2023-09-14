@@ -72,9 +72,9 @@ const Home: NextPage = () => {
         <div className={`${proseStyles.newProse} max-w-7xl mx-auto`}>
           <DoublePara />
 
-          <Quote cite="Poo poo face" symbol="default">
+          <Quote cite="John Doe" align="right">
             <p>
-              obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
               Praesentium architecto a distinctio aut reprehenderit ducimus.
             </p>
           </Quote>
