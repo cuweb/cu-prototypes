@@ -90,15 +90,6 @@ const Home: NextPage = () => {
 
           <DoublePara />
 
-          <Quote cite="John Doe" align="right">
-            <p>
-              Obis voluptatem dolorum et eum doloremque cupiditate velit.
-              Praesentium architecto a distinctio aut reprehenderit ducimus.
-            </p>
-          </Quote>
-
-          <DoublePara />
-
           <Quote cite="John Doe" symbol="quote">
             <p>
               Obis voluptatem dolorum et eum doloremque cupiditate velit.
@@ -109,15 +100,6 @@ const Home: NextPage = () => {
           <DoublePara />
 
           <Quote cite="John Doe" align="middle" symbol="quote">
-            <p>
-              Obis voluptatem dolorum et eum doloremque cupiditate velit.
-              Praesentium architecto a distinctio aut reprehenderit ducimus.
-            </p>
-          </Quote>
-
-          <DoublePara />
-
-          <Quote cite="John Doe" align="right" symbol="quote">
             <p>
               Obis voluptatem dolorum et eum doloremque cupiditate velit.
               Praesentium architecto a distinctio aut reprehenderit ducimus.

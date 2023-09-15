@@ -5,14 +5,14 @@ export interface QuoteProps {
   children?: React.ReactNode
   cite?: string
   symbol?: 'default' | 'quote'
-  align?: 'left' | 'middle' | 'right'
+  align?: 'default' | 'middle'
 }
 
 export const Quote = ({
   children,
   cite,
   symbol = 'default',
-  align = 'left',
+  align = 'default',
 }: QuoteProps) => {
   return (
     <>
