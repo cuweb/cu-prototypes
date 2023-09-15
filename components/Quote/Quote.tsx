@@ -1,5 +1,4 @@
 import React from 'react'
-import { QuoteContent } from './QuoteContent'
 import { styles } from './Quote.styles'
 
 export interface QuoteProps {
@@ -9,7 +8,7 @@ export interface QuoteProps {
   align?: 'left' | 'middle' | 'right'
 }
 
-const QuoteWrapper = ({
+export const Quote = ({
   children,
   cite,
   symbol = 'default',
@@ -28,7 +27,3 @@ const QuoteWrapper = ({
     </>
   )
 }
-
-export const Quote = Object.assign(QuoteWrapper, {
-  Content: QuoteContent,
-})
