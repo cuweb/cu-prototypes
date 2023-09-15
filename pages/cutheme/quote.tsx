@@ -69,7 +69,25 @@ const Home: NextPage = () => {
       ></TopBarOld>
 
       <Main>
-        <div className={`${proseStyles.newProse} max-w-7xl mx-auto`}>
+        <Section hasProse>
+          <DoublePara />
+
+          <Quote cite="John Doe">
+            <p>
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
+            </p>
+          </Quote>
+
+          <DoublePara />
+
+          <Quote cite="John Doe" align="middle">
+            <p>
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
+            </p>
+          </Quote>
+
           <DoublePara />
 
           <Quote cite="John Doe" align="right">
@@ -80,7 +98,34 @@ const Home: NextPage = () => {
           </Quote>
 
           <DoublePara />
-        </div>
+
+          <Quote cite="John Doe" symbol="quote">
+            <p>
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
+            </p>
+          </Quote>
+
+          <DoublePara />
+
+          <Quote cite="John Doe" align="middle" symbol="quote">
+            <p>
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
+            </p>
+          </Quote>
+
+          <DoublePara />
+
+          <Quote cite="John Doe" align="right" symbol="quote">
+            <p>
+              Obis voluptatem dolorum et eum doloremque cupiditate velit.
+              Praesentium architecto a distinctio aut reprehenderit ducimus.
+            </p>
+          </Quote>
+
+          <DoublePara />
+        </Section>
       </Main>
 
       <FooterBasic />
