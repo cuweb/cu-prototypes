@@ -1,0 +1,15 @@
+/* To be added with other selector groupings */
+/* Update class to cu-columns and use cu-column as child */
+.cu-column > .cu-heading:first-child,
+.cu-column div > .cu-heading:first-child {
+  @apply pt-0 mt-0;
+}
+
+/*  */
+.cu-column + .cu-column {
+  @apply mt-6 md:mt-10;
+}
+
+.cu-card {
+  @apply md:max-w-5xl;
+}

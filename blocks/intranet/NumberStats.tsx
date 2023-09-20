@@ -8,7 +8,7 @@ export const NumberStats = () => {
       <Heading text="By the Numbers" maxWidth="7xl" />
       <Column cols="3" maxWidth="7xl">
         {StatsData.slice(0, 6).map(({ id, stat, desc }) => (
-          <Card key={id} border="red" noLink>
+          <Card key={id} noLink>
             <Card.Content>
               <Card.Stats desc={desc} stat={stat} />
             </Card.Content>
@@ -19,7 +19,7 @@ export const NumberStats = () => {
       {/* <Heading text="Funding" maxWidth="7xl" />
       <Column cols="3" maxWidth="7xl">
         {StatsData.slice(8, 11).map(({ id, stat, desc }) => (
-          <Card key={id} border="red" noLink>
+          <Card key={id} noLink>
             <Card.Content>
               <Card.Stats desc={desc} stat={stat} />
             </Card.Content>
