@@ -89,7 +89,7 @@ const Home: NextPage = () => {
                   <Card key={id}>
                     <Link href={link}>
                       <Card.Figure>
-                        <Image src={image} alt={alt} width="400" height="266" />
+                        <Image alt={alt} height="266" src={image} width="400" />
                       </Card.Figure>
                       <Card.Content>
                         <Card.PostMeta date={date} />
@@ -135,8 +135,29 @@ const Home: NextPage = () => {
                 <Button title="More upcoming events →" isSmall />
               </Column.Content>
               <Column.Content>
-                <Heading text="Academic Feature" />
-                <div className="rounded-lg h-5/6 bg-cu-black-50"></div>
+                <Heading text="Academic Features" />
+                <StackedList hasShadow>
+                  {NewsData.slice(0, 3).map(
+                    ({ id, title, link, date, image, alt }) => (
+                      <Listing key={id}>
+                        <a href={link}>
+                          <Listing.Figure>
+                            <Image
+                              alt={alt}
+                              height="266"
+                              src={image}
+                              width="400"
+                            />
+                          </Listing.Figure>
+                          <Listing.Content>
+                            <Listing.PostMeta date={date} />
+                            <Listing.Header text={title} />
+                          </Listing.Content>
+                        </a>
+                      </Listing>
+                    ),
+                  )}
+                </StackedList>
               </Column.Content>
             </Column>
           </Container>
@@ -176,29 +197,45 @@ const Home: NextPage = () => {
                 <Column>
                   <Card hasBorder noLink>
                     <Card.Content>
-                      <Card.Stats desc="Number of Employees" stat="3,000+" />
+                      <Card.Stats
+                        desc="26,163 undergraduate and 4,515 graduate students"
+                        stat="Admissions for 2022-23"
+                        reverse
+                      />
                     </Card.Content>
                   </Card>
                 </Column>
                 <Column cols="2">
-                  <Card hasBorder noLink>
+                  <Card hasBorder>
                     <Card.Content>
-                      <Card.Stats desc="Number of Employees" stat="3,000+" />
+                      <Card.Stats
+                        desc="Browse programs for"
+                        stat="Undergrad students"
+                      />
                     </Card.Content>
                   </Card>
-                  <Card hasBorder noLink>
+                  <Card hasBorder>
                     <Card.Content>
-                      <Card.Stats desc="Number of Employees" stat="3,000+" />
+                      <Card.Stats
+                        desc="Browse programs for"
+                        stat="Graduate students"
+                      />
                     </Card.Content>
                   </Card>
-                  <Card hasBorder noLink>
+                  <Card hasBorder>
                     <Card.Content>
-                      <Card.Stats desc="Number of Employees" stat="3,000+" />
+                      <Card.Stats
+                        desc="Professional development"
+                        stat="Executive education"
+                      />
                     </Card.Content>
                   </Card>
-                  <Card hasBorder noLink>
+                  <Card hasBorder>
                     <Card.Content>
-                      <Card.Stats desc="Number of Employees" stat="3,000+" />
+                      <Card.Stats
+                        desc="Programs for all"
+                        stat="Continuing studies"
+                      />
                     </Card.Content>
                   </Card>
                 </Column>
@@ -210,38 +247,26 @@ const Home: NextPage = () => {
             <Heading text="Image Gallery" maxWidth="7xl" />
             <Column cols="2/3" maxWidth="7xl">
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
             </Column>
             <Column cols="1/3" maxWidth="7xl">
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
             </Column>
             <Column cols="2" maxWidth="7xl">
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
               <Column.Content>
-                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50">
-                  Content
-                </div>
+                <div className="px-8 pt-6 pb-48 rounded-lg bg-cu-black-50"></div>
               </Column.Content>
             </Column>
           </Container>
