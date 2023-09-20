@@ -78,7 +78,7 @@ const Home: NextPage = () => {
       <Main>
         <Section hasProse>
           <Container isGrey>
-            <div className="h-[480px]"></div>
+            <div className="h-40 md:h-80 lg:h-[480px]"></div>
           </Container>
 
           <Container>
