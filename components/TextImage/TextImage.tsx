@@ -1,6 +1,5 @@
 import React from 'react'
 import { TextImageContent } from './TextImageContent'
-import { TextImageMedia } from './TextImageMedia'
 import { styles } from './TextImage.Styles'
 
 export interface TextImageProps {
@@ -32,5 +31,4 @@ export const TextImageWrapper = ({
 
 export const TextImage = Object.assign(TextImageWrapper, {
   Content: TextImageContent,
-  Media: TextImageMedia,
 })

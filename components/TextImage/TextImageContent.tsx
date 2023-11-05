@@ -10,6 +10,8 @@ export interface TextImageContentProps {
 
 export interface TextImageMediaProps {
   imageUrl?: string
+  contentWidth?: number
+  imageZoom?: number
   angle?: 'left' | 'dual' | 'none'
   focalPointX?: string
   focalPointY?: string
@@ -22,6 +24,8 @@ export const TextImageContent = ({
   headerType = 'h2',
   isCenter,
   imageUrl,
+  contentWidth = 20,
+  imageZoom = 0,
   angle,
   focalPointX = '50',
   focalPointY = '50',
@@ -32,14 +36,27 @@ export const TextImageContent = ({
   const verticallyCenter = isCenter ? 'justify-center' : ''
 
   // Image options
-  const hasImage = imageUrl ? mediaStyles.mediaBgImage : ''
-  const noImageOnMobile = hasMobileImage ? '' : 'hidden md:block'
-  const inlineStyle = hasImage
-    ? {
+  let hasImage
+  let noImageOnMobile
+  let inlineContentStyles
+  let inlineImageStyles
+
+  if (imageUrl) {
+    hasImage = mediaStyles.mediaBgImage || ''
+    noImageOnMobile = hasMobileImage ? '' : 'hidden md:block'
+
+    if (hasImage) {
+      inlineContentStyles = {
+        flex: `0 0 ${contentWidth}%`,
+      }
+
+      inlineImageStyles = {
         backgroundImage: `url(${imageUrl})`,
         backgroundPosition: `${focalPointX}% ${focalPointY}%`,
+        transform: `scale(1.${imageZoom})`,
       }
-    : {}
+    }
+  }
 
   // Image angle
   let leftSvg = null
@@ -103,6 +120,7 @@ export const TextImageContent = ({
             ? 'text-[26px] sm:leading-10 font-light text-cu-black-700'
             : ''
         }`}
+        style={inlineContentStyles}
       >
         {title && headerType === 'h1' && (
           <h1 className={`${styles.headerOne} ${styles.underline}`}>{title}</h1>
@@ -115,11 +133,16 @@ export const TextImageContent = ({
 
       {imageUrl && (
         <div
-          className={`${mediaStyles.mediaWrapper} ${hasImage} ${noImageOnMobile}`}
-          style={inlineStyle}
+          className={`relative flex-1 overflow-hidden rounded ${noImageOnMobile}`}
         >
-          {leftSvg}
-          {rightSvg}
+          <div
+            // className={`${mediaStyles.mediaWrapper} ${hasImage} ${noImageOnMobile}`}
+            className="flex-1 w-full h-full bg-no-repeat bg-cover rounded"
+            style={inlineImageStyles}
+          >
+            {leftSvg}
+            {rightSvg}
+          </div>
         </div>
       )}
     </>

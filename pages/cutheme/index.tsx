@@ -70,6 +70,26 @@ const Home: NextPage = () => {
               title="Information and Technology Services"
               headerType="h1"
               imageUrl="https://picsum.photos/400/266"
+              contentWidth={60}
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <TextImage maxWidth="7xl" hasBorder>
+            <TextImage.Content
+              title="Information and Technology Services"
+              imageUrl="https://picsum.photos/400/266"
+              contentWidth={60}
+              imageZoom={9}
             >
               <p>
                 Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
@@ -86,7 +106,7 @@ const Home: NextPage = () => {
           <TextImage maxWidth="7xl" hasBorder reverse>
             <TextImage.Content
               title="Information and Technology Services"
-              // headerType="h1"
+              contentWidth={40}
               imageUrl="https://picsum.photos/400/266"
             >
               <p>
@@ -109,7 +129,6 @@ const Home: NextPage = () => {
           <TextImage maxWidth="7xl">
             <TextImage.Content
               title="Information and Technology Services"
-              // headerType="h1"
               imageUrl="https://picsum.photos/400/266"
             >
               <p>
