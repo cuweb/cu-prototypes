@@ -15,6 +15,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { NewsData } from 'data/NewsData'
+import { TextImage } from '@components/TextImage/TextImage'
 
 const SinglePara = () => {
   return (
@@ -64,9 +65,112 @@ const Home: NextPage = () => {
 
       <Main>
         <Section hasProse>
-          <HeroTextImage maxWidth="5xl">
-            <HeroTextImage.Content title="Hero banner @ 1536" />
-          </HeroTextImage>
+          <TextImage maxWidth="7xl" hasBorder>
+            <TextImage.Content
+              title="Information and Technology Services"
+              headerType="h1"
+              imageUrl="https://picsum.photos/400/266"
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <TextImage maxWidth="7xl" hasBorder reverse>
+            <TextImage.Content
+              title="Information and Technology Services"
+              // headerType="h1"
+              imageUrl="https://picsum.photos/400/266"
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+              <p>
+                Suspendisse condimentum magna vel orci vulputate, eget vulputate
+                neque porttitor. Suspendisse euismod, urna et gravida volutpat,
+                tortor risus vehicula nisl.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <TextImage maxWidth="7xl">
+            <TextImage.Content
+              title="Information and Technology Services"
+              // headerType="h1"
+              imageUrl="https://picsum.photos/400/266"
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <TextImage>
+            <TextImage.Content title="Information and Technology Services">
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <TextImage>
+            <TextImage.Content
+              title="Information and Technology Services"
+              imageUrl="https://picsum.photos/400/266"
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
+
+          <SinglePara />
+
+          <SinglePara />
+
+          <TextImage reverse>
+            <TextImage.Content
+              title="Information and Technology Services"
+              imageUrl="https://picsum.photos/400/266"
+            >
+              <p>
+                Vivamus imperdiet turpis nec elit ultricies, sed tempus diam
+                dignissim. Suspendisse condimentum magna vel orci vulputate,
+                eget vulputate neque porttitor. Suspendisse euismod, urna et
+                gravida volutpat, tortor risus vehicula nisl, in vulputate
+                lectus dolor viverra est.
+              </p>
+            </TextImage.Content>
+          </TextImage>
 
           <DoublePara />
 

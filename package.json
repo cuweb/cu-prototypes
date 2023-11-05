@@ -17,7 +17,7 @@
     "react-intersection-observer": "9.5.2"
   },
   "devDependencies": {
-    "@carletonuniversity/rds": "0.3.3",
+    "@carletonuniversity/rds": "0.3.8",
     "@commitlint/cli": "18.2.0",
     "@commitlint/config-conventional": "18.1.0",
     "@headlessui/react": "1.7.17",
@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "6.9.1",
     "autoprefixer": "10.4.16",
     "concurrently": "8.2.2",
-    "eslint": "8.52.0",
+    "eslint": "8.53.0",
     "eslint-config-next": "14.0.1",
     "eslint-config-prettier": "9.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
