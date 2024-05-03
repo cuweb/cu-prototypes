@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Main, LinkProvider, Nav, Section, PageHeaders } from '@carletonuniversity/rds'
+import { Main, LinkProvider, Nav, Section, PageHeaders, WideImage, ButtonGroup } from '@carletonuniversity/rds'
 
 export default function Home() {
   return (
@@ -12,7 +12,12 @@ export default function Home() {
       </LinkProvider>
       <Main>
         <Section hasProse>
-          <PageHeaders header="Layouts and Testing" />
+          <WideImage headerType="h1" image="https://picsum.photos/1600/700" isType="image" title="RDS Layouts and Testing">
+            <p>
+              Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium architecto a distinctio aut
+              reprehenderit ducimus.
+            </p>
+          </WideImage>
           <p>
             {' '}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales at eros ac condimentum. Cras
@@ -21,11 +26,6 @@ export default function Home() {
             tempus. Proin feugiat turpis sit amet interdum dignissim. Aliquam ut enim quis sapien lacinia auctor sit
             amet sit amet felis.{' '}
           </p>
-          <ul>
-            <li>
-              <Link href="/events">Event Calendar Prototypes</Link>
-            </li>
-          </ul>
           <p>
             Fusce nibh enim, scelerisque at purus nec, aliquet viverra erat. Nulla aliquam augue vel ex ultrices
             finibus. Duis ullamcorper sollicitudin fermentum. Aenean eu mattis sapien, at malesuada arcu. In dictum
