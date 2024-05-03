@@ -8,7 +8,10 @@ export default function Navigation() {
     <>
       <LinkProvider type={Link}>
         <Nav navType="primary">
-          <Nav.Logo title="Project Prototypes" link="https://carleton.ca/webservices" />
+          <Nav.Logo
+            title="Project Prototypes"
+            link="https://carleton.ca/webservices"
+          />
         </Nav>
       </LinkProvider>
     </>
