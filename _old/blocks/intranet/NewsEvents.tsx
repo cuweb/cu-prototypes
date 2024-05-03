@@ -1,8 +1,8 @@
 import React from 'react'
 import { StackedList, Listing, Column, Heading } from '@carletonuniversity/rds'
 import Link from 'next/link'
-import { NewsData as newsData } from '../../data/NewsData'
-import { EventData as eventData } from '../../data/EventData'
+import { NewsData as newsData } from '../../../src/data/NewsData'
+import { EventData as eventData } from '../../../src/data/EventData'
 import Image from 'next/image'
 
 export const NewsEvents = () => {

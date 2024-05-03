@@ -1,7 +1,7 @@
 import React from 'react'
 import { StackedList, Listing, Column } from '@carletonuniversity/rds'
 import Link from 'next/link'
-import { ResourceData } from '../../data/ResourceData'
+import { ResourceData } from '../../../src/data/ResourceData'
 
 export const Resources = () => {
   return (

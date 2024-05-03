@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Column, Heading } from '@carletonuniversity/rds'
 import Link from 'next/link'
-import { NewsData } from '../../data/NewsData'
+import { NewsData } from '../../../src/data/NewsData'
 import Image from 'next/image'
 
 export const CommunityNews = () => {

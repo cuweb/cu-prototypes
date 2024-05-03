@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Column, Heading } from '@carletonuniversity/rds'
-import { StatsData } from '../../data/StatsData'
+import { StatsData } from '../../../src/data/StatsData'
 
 export const NumberStats = () => {
   return (

@@ -13,7 +13,7 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { NewsData } from '../../data/NewsData'
+import { NewsData } from '../../../src/data/NewsData'
 import { TopBarNavData as navData } from 'data/TopNavData'
 // import { cuthemeNavData as navData } from 'data/TopNavData'
 

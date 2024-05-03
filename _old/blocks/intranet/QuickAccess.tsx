@@ -1,8 +1,8 @@
 import React from 'react'
 import { Listing, StackedList } from '@carletonuniversity/rds'
 import Link from 'next/link'
-import { FileData } from '../../data/FileData'
-import { ResourceData } from '../../data/ResourceData'
+import { FileData } from '../../../src/data/FileData'
+import { ResourceData } from '../../../src/data/ResourceData'
 
 export const QuickAccess = () => {
   return (

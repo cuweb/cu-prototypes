@@ -13,7 +13,7 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { NewsData } from '../../data/NewsData'
+import { NewsData } from '../../../src/data/NewsData'
 import { TopBarNavData } from 'data/TopNavData'
 
 import { PlusBar } from '@components/PlusBar/PlusBar'

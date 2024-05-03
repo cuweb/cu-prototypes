@@ -1,10 +1,10 @@
 "use client";
-import { FooterBasic, FooterCookie } from "@carletonuniversity/rds";
+import { FooterCookie, FooterStandard } from "@carletonuniversity/rds";
 
 export default function MainWrapper() {
   return (
     <>
-      <FooterBasic />
+      <FooterStandard />
       <FooterCookie />
     </>
   );
