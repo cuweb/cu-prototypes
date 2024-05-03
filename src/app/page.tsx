@@ -21,7 +21,7 @@ export default function Home() {
       </LinkProvider>
       <Main>
         <Section hasProse>
-          <PageHeaders header="Project Prototypes" />
+          <PageHeaders header="Layouts and testing" />
           <p>
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
