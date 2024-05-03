@@ -21,7 +21,7 @@ export default function Home() {
       </LinkProvider>
       <Main>
         <Section hasProse>
-          <PageHeaders header="Layouts and testing" />
+          <PageHeaders header="Layouts and Testing" />
           <p>
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -32,6 +32,9 @@ export default function Home() {
             turpis sit amet interdum dignissim. Aliquam ut enim quis sapien
             lacinia auctor sit amet sit amet felis.{" "}
           </p>
+          <ul>
+            <li><Link href="/events">Event Calendar Prototypes</Link></li>
+          </ul>
           <p>
             Fusce nibh enim, scelerisque at purus nec, aliquet viverra erat.
             Nulla aliquam augue vel ex ultrices finibus. Duis ullamcorper
