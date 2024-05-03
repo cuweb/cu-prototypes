@@ -1,7 +1,7 @@
 /* Tailwind Defaults */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* RDS — Tailwind compiled css */
-@import "@carletonuniversity/rds/dist/style.css";
+@import '@carletonuniversity/rds/dist/style.css';
