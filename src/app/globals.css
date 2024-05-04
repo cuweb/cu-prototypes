@@ -5,3 +5,6 @@
 
 /* RDS — Tailwind compiled css */
 @import '@carletonuniversity/rds/dist/style.css';
+
+/* UPDATES FOR RDS */
+@import '../styles/rds-updates.css';
