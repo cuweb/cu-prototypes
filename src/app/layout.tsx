@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: 'A NextJS project for rapid layout prototyping',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <BodyWrapper>

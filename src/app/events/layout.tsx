@@ -1,7 +1,14 @@
 'use client'
 import Link from 'next/link'
 import { useCallback, useState } from 'react'
-import { Main, LinkProvider, Nav, Section, PageHeaders, Search } from '@carletonuniversity/rds'
+import {
+  Main,
+  LinkProvider,
+  Nav,
+  Section,
+  PageHeaders,
+  Search,
+} from '@carletonuniversity/rds'
 import { SearchData } from '../../data/SearchData'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
