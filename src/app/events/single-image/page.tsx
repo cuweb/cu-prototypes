@@ -87,7 +87,7 @@ export default function Page() {
       </Container>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Related Events" as="h1" size="md" />
+        <PageHeaders header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
             ({
@@ -128,6 +128,9 @@ export default function Page() {
             ),
           )}
         </Column>
+        <ButtonGroup>
+          <Button title="View More Events" color="dark-grey" isCenter />
+        </ButtonGroup>
       </Container>
     </>
   )

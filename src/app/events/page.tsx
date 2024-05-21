@@ -1,9 +1,5 @@
 'use client'
-import { useState, useCallback } from 'react'
 import {
-  WideImage,
-  ButtonGroup,
-  Button,
   Container,
   PageHeaders,
   Column,
@@ -12,66 +8,44 @@ import {
   Pagination,
   Filter,
   Calendar,
-  Card,
+  // Card,
+  Aside,
+  // WideImage,
+  // ButtonGroup,
+  // Button,
 } from '@carletonuniversity/rds'
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
-import Image from 'next/image'
+// import Image from 'next/image'
+import FeaturedCardsBase from '@/components/FeaturedCards/FeaturedCardsBase'
 
 export default function Page() {
   return (
     <>
+      {/* <Container maxWidth="7xl">
+        <WideImage
+          image="https://picsum.photos/1600/700"
+          isType="image"
+          title="Wide image with bg image"
+        >
+          <p>
+            Nobis voluptatem dolorum et eum doloremque cupiditate velit.
+            Praesentium architecto a distinctio aut reprehenderit ducimus.
+          </p>
+          <ButtonGroup>
+            <Button title="Apply Now" />
+            <Button color="grey" title="Request Information" />
+          </ButtonGroup>
+        </WideImage>
+      </Container> */}
+
       <Container maxWidth="7xl">
-        <PageHeaders header="Feature Events" as="h1" size="md" />
-        <Column cols="4" maxWidth="7xl">
-          {EventData.slice(0, 4).map(
-            ({
-              id,
-              title,
-              link,
-              image,
-              alt,
-              startDate,
-              endDate,
-              on_campus,
-              on_campus_building,
-              on_campus_room_number,
-              event_address,
-            }) => (
-              <Card key={id}>
-                <Card.Figure>
-                  <Image src={image} alt={alt} width={400} height={175} />
-                </Card.Figure>
-                <Card.DateThumb startDate={startDate} endDate={endDate} />
-                <Card.Header title={title} />
-                <Card.Body>
-                  <Card.EventMeta
-                    startDateTime={startDate}
-                    endDateTime={endDate}
-                    onCampus={on_campus}
-                    onCampusBuilding={on_campus_building}
-                    onCampusRoomNumber={on_campus_room_number}
-                    eventAddress={event_address}
-                  />
-                </Card.Body>
-                <Card.Footer>
-                  <a href={link} className="cu-button cu-button--red">
-                    More info
-                  </a>
-                </Card.Footer>
-              </Card>
-            ),
-          )}
-        </Column>
+        <FeaturedCardsBase />
       </Container>
 
       <Container maxWidth="7xl" isGrey>
         <PageHeaders header="Upcoming Events" as="h2" size="md" />
-
-        <Column maxWidth="7xl">
-          <Filter filters={FilterData.filters} callback={() => undefined} />
-        </Column>
-
+        <Filter filters={FilterData.filters} callback={() => undefined} />
         <Column cols="2/3" maxWidth="7xl">
           <Column.Content>
             <StackedList>
@@ -120,11 +94,9 @@ export default function Page() {
             />
           </Column.Content>
 
-          <Column.Content>
-            <div className="sticky top-24">
-              <Calendar events={CalendarData} callback={() => undefined} />
-            </div>
-          </Column.Content>
+          <Aside isSticky topSpace={110}>
+            <Calendar events={CalendarData} callback={() => undefined} />
+          </Aside>
         </Column>
       </Container>
     </>

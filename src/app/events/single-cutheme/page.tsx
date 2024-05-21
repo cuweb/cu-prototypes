@@ -6,6 +6,8 @@ import {
   Figure,
   Card,
   Column,
+  ButtonGroup,
+  Button,
 } from '@carletonuniversity/rds'
 import { EventData } from '@/data/EventData'
 import Image from 'next/image'
@@ -38,37 +40,41 @@ export default function Page() {
         />
       </PageHeaders>
 
-      <Container>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna
-          et sapien cursus dapibus. Nulla feugiat enim erat, quis sollicitudin
-          libero viverra et. Proin consequat, nibh nec consectetur commodo, est
-          ipsum ullamcorper elit, elementum vulputate ex est sed mauris. Duis id
-          justo eu lectus eleifend condimentum sit amet nec dolor. Sed dui
-          augue, pellentesque ut diam quis, congue tempor massa. Quisque mauris
-          enim, ultricies vitae sapien at, faucibus tristique urna. Praesent
-          consequat ante non neque ultrices faucibus. Curabitur ante augue,
-          dictum vel volutpat vel, lacinia quis ante. Nulla dolor sem, commodo
-          vel gravida sit amet, porttitor quis nulla.
-        </p>
-        <p>
-          Nulla tempor vitae ante et gravida. Nunc aliquet gravida nisi, sit
-          amet imperdiet justo. Proin eu ex lectus. Fusce et porttitor nisl, eu
-          faucibus erat. Vivamus tincidunt dapibus turpis non lobortis. Maecenas
-          leo ex, dignissim eget tellus in, dapibus convallis libero. Duis
-          fermentum nulla at lobortis facilisis. Nam leo sem, luctus eget
-          rhoncus quis, imperdiet vitae sem.
-        </p>
-        <p>
-          Quisque non urna vitae dolor auctor faucibus vel id tortor. Nam
-          euismod tempor sapien id venenatis. Duis vel massa mollis, suscipit
-          lectus vitae, pulvinar dui. Donec eu turpis tortor. Donec orci ante,
-          volutpat eget ante vitae, malesuada semper nulla.
-        </p>
-      </Container>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna et
+        sapien cursus dapibus. Nulla feugiat enim erat, quis sollicitudin libero
+        viverra et. Proin consequat, nibh nec consectetur commodo, est ipsum
+        ullamcorper elit, elementum vulputate ex est sed mauris. Duis id justo
+        eu lectus eleifend condimentum sit amet nec dolor. Sed dui augue,
+        pellentesque ut diam quis, congue tempor massa. Quisque mauris enim,
+        ultricies vitae sapien at, faucibus tristique urna. Praesent consequat
+        ante non neque ultrices faucibus. Curabitur ante augue, dictum vel
+        volutpat vel, lacinia quis ante. Nulla dolor sem, commodo vel gravida
+        sit amet, porttitor quis nulla.
+      </p>
+      <p>
+        Quisque non urna vitae dolor auctor faucibus vel id tortor. Nam euismod
+        tempor sapien id venenatis. Duis vel massa mollis, suscipit lectus
+        vitae, pulvinar dui. Donec eu turpis tortor. Donec orci ante, volutpat
+        eget ante vitae, malesuada semper nulla.
+      </p>
+      <p>
+        Nulla tempor vitae ante et gravida. Nunc aliquet gravida nisi, sit amet
+        imperdiet justo. Proin eu ex lectus. Fusce et porttitor nisl, eu
+        faucibus erat. Vivamus tincidunt dapibus turpis non lobortis. Maecenas
+        leo ex, dignissim eget tellus in, dapibus convallis libero. Duis
+        fermentum nulla at lobortis facilisis. Nam leo sem, luctus eget rhoncus
+        quis, imperdiet vitae sem.
+      </p>
+      <p>
+        Quisque non urna vitae dolor auctor faucibus vel id tortor. Nam euismod
+        tempor sapien id venenatis. Duis vel massa mollis, suscipit lectus
+        vitae, pulvinar dui. Donec eu turpis tortor. Donec orci ante, volutpat
+        eget ante vitae, malesuada semper nulla.
+      </p>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Related Events" as="h1" size="md" />
+        <PageHeaders header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
             ({
@@ -109,6 +115,9 @@ export default function Page() {
             ),
           )}
         </Column>
+        <ButtonGroup>
+          <Button title="View More Events" color="dark-grey" isCenter />
+        </ButtonGroup>
       </Container>
     </>
   )
