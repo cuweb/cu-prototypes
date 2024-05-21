@@ -21,20 +21,20 @@ export default function Page() {
               </a>
             </Card.Footer>
           </Card>
-          <Card>
+          {/* <Card>
             <Card.Header title="Homepage option two" />
             <Card.Body>
-              <Card.Excerpt text="This is a work in progress." />
+              <Card.Excerpt text="This is a work in progress and may not be required should option one be approved." />
             </Card.Body>
-            {/* <Card.Footer>
+            <Card.Footer>
               <a
                 className="cu-button cu-button--red cu-button--small"
                 href="/events/homepage-two"
               >
                 View Prototype
               </a>
-            </Card.Footer> */}
-          </Card>
+            </Card.Footer>
+          </Card> */}
         </Column>
       </Container>
 

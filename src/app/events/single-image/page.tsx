@@ -29,7 +29,7 @@ export default function Page() {
         </ButtonGroup>
       </WideImage>
 
-      <Column cols="2/3" maxWidth="7xl">
+      <Column cols="2/3" maxWidth="7xl" reverse>
         <Column.Content>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna
