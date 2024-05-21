@@ -8,16 +8,11 @@ import {
   Pagination,
   Filter,
   Calendar,
-  // Card,
   Aside,
-  // WideImage,
-  // ButtonGroup,
-  // Button,
 } from '@carletonuniversity/rds'
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
-// import Image from 'next/image'
-import FeaturedCardsBase from '@/components/FeaturedCards/FeaturedCardsBase'
+import FeaturedCards from '@/components/FeaturedCards/FeaturedCards'
 
 export default function Page() {
   return (
@@ -40,7 +35,7 @@ export default function Page() {
       </Container> */}
 
       <Container maxWidth="7xl">
-        <FeaturedCardsBase />
+        <FeaturedCards />
       </Container>
 
       <Container maxWidth="7xl" isGrey>
