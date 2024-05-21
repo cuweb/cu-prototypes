@@ -10,7 +10,7 @@ export default function Page() {
           <Card>
             <Card.Header title="Homepage option one" />
             <Card.Body>
-              <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis." />
+              <Card.Excerpt text="Features a wide image banner to showcase an important event, followed by 3-4 additional featured events along with a paginated list of filterable events." />
             </Card.Body>
             <Card.Footer>
               <a
@@ -24,16 +24,16 @@ export default function Page() {
           <Card>
             <Card.Header title="Homepage option two" />
             <Card.Body>
-              <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis." />
+              <Card.Excerpt text="This is a work in progress." />
             </Card.Body>
-            <Card.Footer>
+            {/* <Card.Footer>
               <a
                 className="cu-button cu-button--red cu-button--small"
                 href="/events/homepage-two"
               >
                 View Prototype
               </a>
-            </Card.Footer>
+            </Card.Footer> */}
           </Card>
         </Column>
       </Container>
