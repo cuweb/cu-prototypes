@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <LinkProvider type={Link}>
         <Nav navType="primary">
-          <Nav.Logo title="Events Calendar" link="https://events.carleton.ca" />
+          <Nav.Logo title="Events Calendar" link="/events" />
           <Nav.Primary>
             <Nav.Aside LoggedOutUser={true}>
               <Search sourceData={SearchData} callback={callback} />

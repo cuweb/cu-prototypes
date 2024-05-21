@@ -1,102 +1,88 @@
 'use client'
-import {
-  Container,
-  PageHeaders,
-  Column,
-  StackedList,
-  Listing,
-  Pagination,
-  Filter,
-  Calendar,
-  // Card,
-  Aside,
-  // WideImage,
-  // ButtonGroup,
-  // Button,
-} from '@carletonuniversity/rds'
-import { CalendarData, EventData } from '@/data/EventData'
-import { FilterData } from '@/data/FilterData'
-// import Image from 'next/image'
-import FeaturedCardsBase from '@/components/FeaturedCards/FeaturedCardsBase'
+import { Container, Column, PageHeaders, Card } from '@carletonuniversity/rds'
 
 export default function Page() {
   return (
     <>
-      {/* <Container maxWidth="7xl">
-        <WideImage
-          image="https://picsum.photos/1600/700"
-          isType="image"
-          title="Wide image with bg image"
-        >
-          <p>
-            Nobis voluptatem dolorum et eum doloremque cupiditate velit.
-            Praesentium architecto a distinctio aut reprehenderit ducimus.
-          </p>
-          <ButtonGroup>
-            <Button title="Apply Now" />
-            <Button color="grey" title="Request Information" />
-          </ButtonGroup>
-        </WideImage>
-      </Container> */}
-
       <Container maxWidth="7xl">
-        <FeaturedCardsBase />
+        <PageHeaders as="h1" header="Event Homepage Prototypes" size="lg" />
+        <Column maxWidth="7xl" cols="3">
+          <Card>
+            <Card.Header title="Homepage option one" />
+            <Card.Body>
+              <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis." />
+            </Card.Body>
+            <Card.Footer>
+              <a
+                className="cu-button cu-button--red cu-button--small"
+                href="/events/homepage-one"
+              >
+                View Prototype
+              </a>
+            </Card.Footer>
+          </Card>
+          <Card>
+            <Card.Header title="Homepage option two" />
+            <Card.Body>
+              <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis." />
+            </Card.Body>
+            <Card.Footer>
+              <a
+                className="cu-button cu-button--red cu-button--small"
+                href="/events/homepage-two"
+              >
+                View Prototype
+              </a>
+            </Card.Footer>
+          </Card>
+        </Column>
       </Container>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h2" size="md" />
-        <Filter filters={FilterData.filters} callback={() => undefined} />
-        <Column cols="2/3" maxWidth="7xl">
-          <Column.Content>
-            <StackedList>
-              {EventData.slice(0, 8).map(
-                ({
-                  id,
-                  title,
-                  link,
-                  startDate,
-                  endDate,
-                  on_campus,
-                  on_campus_building,
-                  on_campus_room_number,
-                  event_address,
-                }) => (
-                  <Listing key={id}>
-                    <Listing.DateThumb
-                      startDate={startDate}
-                      endDate={endDate}
-                    />
-                    <Listing.Body>
-                      <Listing.Header title={title} />
-                      <Listing.EventMeta
-                        startDateTime={startDate}
-                        endDateTime={endDate}
-                        onCampus={on_campus}
-                        onCampusBuilding={on_campus_building}
-                        onCampusRoomNumber={on_campus_room_number}
-                        eventAddress={event_address}
-                      />
-                      <Listing.Footer>
-                        <a href={link} className="cu-button cu-button--red">
-                          Event details
-                        </a>
-                      </Listing.Footer>
-                    </Listing.Body>
-                  </Listing>
-                ),
-              )}
-            </StackedList>
-            <Pagination
-              totalCount={48}
-              siblingCount={1}
-              pageSize={5}
-              callback={() => undefined}
-            />
-          </Column.Content>
-
-          <Aside isSticky topSpace={110}>
-            <Calendar events={CalendarData} callback={() => undefined} />
-          </Aside>
+        <PageHeaders as="h2" header="Single Event Page Prototypes" size="md" />
+        <Column maxWidth="7xl" cols="3">
+          <Card>
+            <Card.Header title="cutheme style" />
+            <Card.Body>
+              <Card.Excerpt text="This prototype reflects a single event view in cutheme." />
+            </Card.Body>
+            <Card.Footer>
+              <a
+                className="cu-button cu-button--red cu-button--small"
+                href="/events/single-cutheme"
+              >
+                View Prototype
+              </a>
+            </Card.Footer>
+          </Card>
+          <Card>
+            <Card.Header title="Banner with image" />
+            <Card.Body>
+              <Card.Excerpt text="This example uses the wide image component with an optional background image." />
+            </Card.Body>
+            <Card.Footer>
+              <a
+                className="cu-button cu-button--red cu-button--small"
+                href="/events/single-image"
+              >
+                View Prototype
+              </a>
+            </Card.Footer>
+          </Card>
+          <Card>
+            <Card.Header title="Banner without an image" />
+            <Card.Body>
+              <Card.Excerpt text="When no banner image is set the components default light grey background is used." />
+            </Card.Body>
+            <Card.Footer>
+              <a
+                className="cu-button cu-button--red cu-button--small"
+                href="/events/single-light"
+              >
+                View Prototype
+              </a>
+            </Card.Footer>
+          </Card>
         </Column>
       </Container>
     </>

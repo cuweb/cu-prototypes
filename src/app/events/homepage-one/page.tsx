@@ -8,7 +8,6 @@ import {
   Pagination,
   Filter,
   Calendar,
-  Card,
   Aside,
   WideImage,
   ButtonGroup,
@@ -16,7 +15,6 @@ import {
 } from '@carletonuniversity/rds'
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
-// import Image from 'next/image'
 import FeaturedCardsBase from '@/components/FeaturedCards/FeaturedCardsBase'
 
 export default function Page() {
