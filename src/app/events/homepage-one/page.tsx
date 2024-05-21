@@ -15,7 +15,7 @@ import {
 } from '@carletonuniversity/rds'
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
-import FeaturedCardsBase from '@/components/FeaturedCards/FeaturedCardsBase'
+import FeaturedCards from '@/components/FeaturedCards/FeaturedCards'
 
 export default function Page() {
   return (
@@ -38,11 +38,11 @@ export default function Page() {
           </ButtonGroup>
         </WideImage>
 
-        <FeaturedCardsBase />
+        <FeaturedCards />
       </Container>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Filter Upcoming Events" as="h2" size="md" />
+        <PageHeaders header="Upcoming Events" as="h2" size="md" />
         <Filter filters={FilterData.filters} callback={() => undefined} />
         <Column cols="2/3" maxWidth="7xl">
           <Column.Content>
@@ -75,7 +75,10 @@ export default function Page() {
                         eventAddress={event_address}
                       />
                       <Listing.Footer>
-                        <a href={link} className="cu-button cu-button--red">
+                        <a
+                          href={link}
+                          className="cu-button cu-button--red cu-button--small"
+                        >
                           Event details
                         </a>
                       </Listing.Footer>
@@ -92,7 +95,7 @@ export default function Page() {
             />
           </Column.Content>
 
-          <Aside isSticky topSpace={110}>
+          <Aside isSticky topSpace={105}>
             <Calendar events={CalendarData} callback={() => undefined} />
           </Aside>
         </Column>

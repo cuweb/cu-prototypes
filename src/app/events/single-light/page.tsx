@@ -63,7 +63,7 @@ export default function Page() {
             volutpat eget ante vitae, malesuada semper nulla.
           </p>
         </Column.Content>
-        <Aside topSpace={40} isSticky>
+        <Aside topSpace={105} isSticky>
           <StackedList header="Event Details" as="ul" cols="1">
             <li className="px-6 py-4">
               <strong className="block">Hybrid Event</strong>
