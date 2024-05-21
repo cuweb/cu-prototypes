@@ -16,7 +16,8 @@ export const SearchData = [
   {
     id: 3,
     title: 'Tommie',
-    description: 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
+    description:
+      'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
     url: 'http://phpbb.com/quam.jsp?blandit=rutrum&non=rutrum&interdum=neque&in=aenean&ante=auctor&vestibulum=gravida&ante=sem&ipsum=praesent&primis=id&in=massa&faucibus=id&orci=nisl&luctus=venenatis&et=lacinia&ultrices=aenean&posuere=sit&cubilia=amet&curae=justo&duis=morbi&faucibus=ut&accumsan=odio&odio=cras&curabitur=mi&convallis=pede&duis=malesuada&consequat=in&dui=imperdiet',
   },
   {
@@ -132,7 +133,8 @@ export const SearchData = [
   {
     id: 20,
     title: 'Jeannie',
-    description: 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+    description:
+      'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
     url: 'https://wikimedia.org/velit/vivamus/vel/nulla/eget/eros.jpg?eget=rhoncus&semper=dui&rutrum=vel&nulla=sem&nunc=sed&purus=sagittis&phasellus=nam&in=congue&felis=risus&donec=semper&semper=porta&sapien=volutpat&a=quam&libero=pede&nam=lobortis&dui=ligula&proin=sit&leo=amet&odio=eleifend&porttitor=pede&id=libero&consequat=quis&in=orci&consequat=nullam&ut=molestie&nulla=nibh&sed=in',
   },
   {
@@ -291,7 +293,8 @@ export const SearchData = [
   {
     id: 43,
     title: 'Freddie',
-    description: 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+    description:
+      'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
     url: 'http://ca.gov/non.json?pede=magna&venenatis=bibendum&non=imperdiet&sodales=nullam&sed=orci&tincidunt=pede&eu=venenatis&felis=non&fusce=sodales&posuere=sed&felis=tincidunt&sed=eu&lacus=felis&morbi=fusce&sem=posuere&mauris=felis&laoreet=sed&ut=lacus&rhoncus=morbi&aliquet=sem&pulvinar=mauris&sed=laoreet&nisl=ut&nunc=rhoncus&rhoncus=aliquet&dui=pulvinar&vel=sed&sem=nisl&sed=nunc&sagittis=rhoncus&nam=dui&congue=vel&risus=sem&semper=sed&porta=sagittis&volutpat=nam&quam=congue&pede=risus&lobortis=semper&ligula=porta&sit=volutpat&amet=quam&eleifend=pede&pede=lobortis&libero=ligula&quis=sit&orci=amet&nullam=eleifend&molestie=pede&nibh=libero&in=quis&lectus=orci&pellentesque=nullam',
   },
   {

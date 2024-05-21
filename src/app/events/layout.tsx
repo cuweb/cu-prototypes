@@ -1,7 +1,14 @@
 'use client'
 import Link from 'next/link'
 import { useCallback, useState } from 'react'
-import { Main, LinkProvider, Nav, Section, PageHeaders, Search } from '@carletonuniversity/rds'
+import {
+  Main,
+  LinkProvider,
+  Nav,
+  Section,
+  PageHeaders,
+  Search,
+} from '@carletonuniversity/rds'
 import { SearchData } from '../../data/SearchData'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -18,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <LinkProvider type={Link}>
         <Nav navType="primary">
-          <Nav.Logo title="Events Calendar" link="https://events.carleton.ca" />
+          <Nav.Logo title="Events Calendar" link="/events" />
           <Nav.Primary>
             <Nav.Aside LoggedOutUser={true}>
               <Search sourceData={SearchData} callback={callback} />

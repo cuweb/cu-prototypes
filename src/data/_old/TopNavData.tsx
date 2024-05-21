@@ -114,7 +114,9 @@ export const TopBarNavData = [
     id: 8,
     label: 'Get Support',
     link: 'https://carleton.ca',
-    subMenu: [{ id: 8.1, label: 'CMS Help Centre', link: 'https://carleton.ca' }],
+    subMenu: [
+      { id: 8.1, label: 'CMS Help Centre', link: 'https://carleton.ca' },
+    ],
   },
 ]
 
