@@ -1,6 +1,6 @@
 'use client'
 import {
-  Container,
+  Section,
   PageHeaders,
   Column,
   StackedList,
@@ -16,11 +16,12 @@ import {
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
 import FeaturedCards from '@/components/FeaturedCards/FeaturedCards'
+import Link from 'next/link'
 
 export default function Page() {
   return (
     <>
-      <Container maxWidth="7xl">
+      <Section maxWidth="7xl">
         <WideImage
           image="https://picsum.photos/1600/700"
           isType="image"
@@ -39,9 +40,9 @@ export default function Page() {
         </WideImage>
 
         <FeaturedCards />
-      </Container>
+      </Section>
 
-      <Container maxWidth="7xl" isGrey>
+      <Section maxWidth="7xl" isGrey>
         <PageHeaders header="Upcoming Events" as="h2" size="md" />
         <Filter filters={FilterData.filters} callback={() => undefined} />
         <Column cols="2/3" maxWidth="7xl">
@@ -75,12 +76,12 @@ export default function Page() {
                         eventAddress={event_address}
                       />
                       <Listing.Footer>
-                        <a
+                        <Link
                           href={link}
                           className="cu-button cu-button--red cu-button--small"
                         >
                           Event details
-                        </a>
+                        </Link>
                       </Listing.Footer>
                     </Listing.Body>
                   </Listing>
@@ -99,7 +100,7 @@ export default function Page() {
             <Calendar events={CalendarData} callback={() => undefined} />
           </Aside>
         </Column>
-      </Container>
+      </Section>
     </>
   )
 }

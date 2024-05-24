@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { EventData } from '@/data/EventData'
 import { PageHeaders, Column, Card } from '@carletonuniversity/rds'
+import Link from 'next/link'
 
 export default function FeaturedCardsBase() {
   return (
@@ -39,12 +40,12 @@ export default function FeaturedCardsBase() {
                 />
               </Card.Body>
               <Card.Footer>
-                <a
+                <Link
                   href={link}
                   className="cu-button cu-button--red cu-button--small"
                 >
-                  More info
-                </a>
+                  Event details
+                </Link>
               </Card.Footer>
             </Card>
           ),

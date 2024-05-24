@@ -33,9 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Nav.Primary>
         </Nav>
       </LinkProvider>
-      <Main>
-        <Section hasProse>{children}</Section>
-      </Main>
+      <Main>{children}</Main>
     </>
   )
 }

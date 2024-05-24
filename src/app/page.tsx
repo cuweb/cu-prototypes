@@ -22,7 +22,7 @@ export default function Home() {
         </Nav>
       </LinkProvider>
       <Main>
-        <Section hasProse>
+        <Section>
           <WideImage
             headerType="h1"
             image="https://picsum.photos/1600/700"

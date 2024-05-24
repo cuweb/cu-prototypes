@@ -1,7 +1,7 @@
 'use client'
 // import { useState, useCallback } from 'react'
 import {
-  Container,
+  Section,
   PageHeaders,
   Figure,
   Card,
@@ -11,6 +11,7 @@ import {
 } from '@carletonuniversity/rds'
 import { EventData } from '@/data/EventData'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -73,7 +74,7 @@ export default function Page() {
         eget ante vitae, malesuada semper nulla.
       </p>
 
-      <Container maxWidth="7xl" isGrey>
+      <Section maxWidth="7xl" isGrey>
         <PageHeaders header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
@@ -107,9 +108,12 @@ export default function Page() {
                   />
                 </Card.Body>
                 <Card.Footer>
-                  <a href={link} className="cu-button cu-button--red">
-                    More info
-                  </a>
+                  <Link
+                    href={link}
+                    className="cu-button cu-button--red cu-button--small"
+                  >
+                    Event details
+                  </Link>
                 </Card.Footer>
               </Card>
             ),
@@ -118,7 +122,7 @@ export default function Page() {
         <ButtonGroup>
           <Button title="View More Events" color="dark-grey" isCenter />
         </ButtonGroup>
-      </Container>
+      </Section>
     </>
   )
 }

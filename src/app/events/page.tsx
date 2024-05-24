@@ -1,10 +1,10 @@
 'use client'
-import { Container, Column, PageHeaders, Card } from '@carletonuniversity/rds'
+import { Section, Column, PageHeaders, Card } from '@carletonuniversity/rds'
 
 export default function Page() {
   return (
     <>
-      <Container maxWidth="7xl">
+      <Section maxWidth="7xl">
         <PageHeaders as="h1" header="Event Homepage Prototypes" size="lg" />
         <Column maxWidth="7xl" cols="3">
           <Card>
@@ -36,9 +36,9 @@ export default function Page() {
             </Card.Footer>
           </Card> */}
         </Column>
-      </Container>
+      </Section>
 
-      <Container maxWidth="7xl" isGrey>
+      <Section maxWidth="7xl" isGrey>
         <PageHeaders as="h2" header="Single Event Page Prototypes" size="md" />
         <Column maxWidth="7xl" cols="3">
           <Card>
@@ -84,7 +84,7 @@ export default function Page() {
             </Card.Footer>
           </Card>
         </Column>
-      </Container>
+      </Section>
     </>
   )
 }
