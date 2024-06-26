@@ -1,18 +1,12 @@
 'use client'
 import Link from 'next/link'
-import { useCallback, useState } from 'react'
-import { Main, LinkProvider, Nav, Search } from '@carletonuniversity/rds'
+import { useCallback, useState, useEffect } from 'react'
+import { Main, LinkProvider, Nav, SearchInput } from '@carletonuniversity/rds'
+import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon'
 import { SearchData } from '../../data/SearchData'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [, setOpen] = useState(false)
-
-  const callback = useCallback(
-    (itemOpen: boolean) => {
-      setOpen(itemOpen)
-    },
-    [setOpen],
-  )
+  const [modalOpen, setModalOpen] = useState(false)
 
   return (
     <>
@@ -21,7 +15,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Nav.Logo title="Events Calendar" link="/events" />
           <Nav.Primary>
             <Nav.Aside LoggedOutUser={true}>
-              <Search sourceData={SearchData} callback={callback} />
+              <button
+                onClick={() => setModalOpen(true)}
+                aria-label="search"
+                className="not-prose"
+              >
+                <MagnifyingGlassIcon
+                  className="w-5 h-5 cursor-pointer text-cu-black-300 left-4"
+                  aria-hidden="true"
+                />
+              </button>
             </Nav.Aside>
           </Nav.Primary>
         </Nav>
