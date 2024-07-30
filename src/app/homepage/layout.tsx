@@ -11,7 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Nav navType="primary">
           <Nav.Logo link="/homepage" />
           <Nav.Primary>
-            <Nav.Menu menu={HomeNav} />
+            <span className="hidden md:block">
+              <Nav.Menu menu={HomeNav} />
+            </span>
             <Nav.Aside>
               <button aria-label="search" className="not-prose">
                 <MagnifyingGlassIcon
