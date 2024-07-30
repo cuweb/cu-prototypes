@@ -1,19 +1,15 @@
 import React from 'react'
-import { WideImage, ButtonGroup, Button } from '@carletonuniversity/rds'
+import { rdsBgOpacity } from '@/utils/optionClasses'
 
-const opacityValues = Array.from({ length: 21 }, (_, index) => 60 + index)
+type bgOpacityKeys = keyof typeof rdsBgOpacity
 
 export interface FullBannerProps {
   children?: React.ReactNode
   as?: 'section' | 'div'
   title: string
-  opacity?: (typeof opacityValues)[number]
+  align?: 'left' | 'center' | 'right'
+  opacity?: bgOpacityKeys
 }
-
-// Exists in WideImage, create helper function
-const getOpacityStyle = (opacity: number) => ({
-  opacity: `0.${opacity}`,
-})
 
 export default function FullBanner({
   children,
@@ -22,13 +18,10 @@ export default function FullBanner({
   opacity = 70,
 }: FullBannerProps) {
   const FullBannerComponent = as
-  const opacityStyle = getOpacityStyle(opacity)
-
-  console.log(opacityStyle)
 
   return (
     <FullBannerComponent
-      className="overflow-hidden not-contained not-prose bg-cu-black-200 bg-cover mb-6 -mt-10 -mx-8 md:-mx-10 pt-32 pb-24 md:pt-44 md:pb-28 lg:pt-60 lg:pb-36 xl:pt-72 xl:pb-48 px-8 md:px-10"
+      className="overflow-hidden not-contained not-prose bg-cu-black-200 bg-cover mb-6 -mt-10 -mx-8 md:-mx-10 pt-80 pb-0 md:pt-48 md:pb-12 lg:pt-64 lg:pb-20 xl:pt-72 xl:pb-44 px-0 md:px-10"
       style={{
         backgroundImage: 'url("https://picsum.photos/1600/700")',
         backgroundPosition: '50% 50%',
@@ -36,7 +29,9 @@ export default function FullBanner({
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex">
-          <div className="space-y-6 max-w-2xl rounded-lg px-8 pt-6 pb-7 bg-black bg-opacity-70">
+          <div
+            className={`space-y-3 md:space-y-6 w-full md:max-w-2xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-7 bg-black ${rdsBgOpacity[opacity]}`}
+          >
             <h1 className="text-white font-medium text-lg md:text-2xl lg:text-4xl">
               {title}
             </h1>
