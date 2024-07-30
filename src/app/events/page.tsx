@@ -1,10 +1,11 @@
 'use client'
-import { Container, Column, PageHeaders, Card } from '@carletonuniversity/rds'
+import { Section, Column, PageHeaders, Card } from '@carletonuniversity/rds'
 
 export default function Page() {
   return (
     <>
-      <Container maxWidth="7xl">
+      <p>foo</p>
+      {/* <Section maxWidth="7xl">
         <PageHeaders as="h1" header="Event Homepage Prototypes" size="lg" />
         <Column maxWidth="7xl" cols="3">
           <Card>
@@ -21,24 +22,10 @@ export default function Page() {
               </a>
             </Card.Footer>
           </Card>
-          {/* <Card>
-            <Card.Header title="Homepage option two" />
-            <Card.Body>
-              <Card.Excerpt text="This is a work in progress and may not be required should option one be approved." />
-            </Card.Body>
-            <Card.Footer>
-              <a
-                className="cu-button cu-button--red cu-button--small"
-                href="/events/homepage-two"
-              >
-                View Prototype
-              </a>
-            </Card.Footer>
-          </Card> */}
         </Column>
-      </Container>
+      </Section>
 
-      <Container maxWidth="7xl" isGrey>
+      <Section maxWidth="7xl" isGrey>
         <PageHeaders as="h2" header="Single Event Page Prototypes" size="md" />
         <Column maxWidth="7xl" cols="3">
           <Card>
@@ -84,7 +71,7 @@ export default function Page() {
             </Card.Footer>
           </Card>
         </Column>
-      </Container>
+      </Section> */}
     </>
   )
 }
