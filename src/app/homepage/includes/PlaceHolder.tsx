@@ -1,4 +1,3 @@
-import { Section } from '@carletonuniversity/rds'
 import React from 'react'
 
 export interface PlaceHolderProps {
@@ -27,12 +26,10 @@ export default function PlaceHolder({
   }
 
   return (
-    <Section maxWidth={maxWidth}>
-      <div
-        className={`${setMaxWidth} m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
-      >
-        {name}
-      </div>
-    </Section>
+    <div
+      className={`${setMaxWidth} m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
+    >
+      {name}
+    </div>
   )
 }

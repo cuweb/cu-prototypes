@@ -1,6 +1,6 @@
 'use client'
 // Import from RDS
-import { ButtonGroup, Button } from '@carletonuniversity/rds'
+import { ButtonGroup, Button, Section } from '@carletonuniversity/rds'
 
 // Internal Components
 import PlaceHolder from '@/app/homepage/includes/PlaceHolder'
@@ -9,6 +9,7 @@ import HomeNews from '@/app/homepage/includes/HomeNews'
 
 // New Components for RDS
 import FullBanner from '@/app/homepage/components/FullBanner'
+import Announcement from '@/app/homepage/components/Announcement'
 
 export default function Page() {
   return (
@@ -20,12 +21,16 @@ export default function Page() {
         </ButtonGroup>
       </FullBanner>
 
-      <PlaceHolder name="Announcement / Boxed Ad" />
+      <Section>
+        <Announcement title="Fall Open House" />
+      </Section>
 
       <HomeStats />
       <HomeNews />
 
-      <PlaceHolder name="Red Wave" maxWidth="full" />
+      <Section>
+        <PlaceHolder name="Red Wave" maxWidth="full" />
+      </Section>
     </>
   )
 }

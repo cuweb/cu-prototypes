@@ -36,7 +36,7 @@ export default function FullBanner({
           <div
             className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacity[opacity]} ${contentAlign}`}
           >
-            <h1 className="text-white font-medium text-lg md:text-2xl lg:text-3xl xl:text-4xl leading-tight lg:leading-snug">
+            <h1 className="font-semibold text-lg md:text-3xl lg:text-4xl lg:leading-[3rem] text-white">
               {title}
             </h1>
             {children}
