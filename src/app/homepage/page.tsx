@@ -8,13 +8,13 @@ import HomeStats from '@/app/homepage/includes/HomeStats'
 import HomeNews from '@/app/homepage/includes/HomeNews'
 
 // New Components for RDS
-import FullBanner from '@/app/homepage/components/FullBanner'
-import Announcement from '@/app/homepage/components/Announcement'
+import FullBanner from '@/components-homepage/FullBanner/FullBanner'
+import Announcement from '@/components-homepage//Announcement/Announcement'
 
 export default function Page() {
   return (
     <>
-      <FullBanner title="You've found the prototype for the new Carleton University homepage!">
+      <FullBanner title="Welcome to Carleton. Disclaimer: this photo is not Carleton, nor is it Ottawa.">
         <ButtonGroup>
           <Button title="Apply Now" />
           <Button color="grey" title="Request Information" />
@@ -22,7 +22,17 @@ export default function Page() {
       </FullBanner>
 
       <Section>
-        <Announcement title="Fall Open House" />
+        <Announcement title="Fall Open House">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+            porta magna. Fusce id viverra mi. Etiam mollis feugiat nisl, sit
+            amet tempor ante scelerisque vitae. Proin non bibendum dolor.
+          </p>
+          <ButtonGroup>
+            <Button title="Apply Now" />
+            <Button color="grey" title="Request Information" />
+          </ButtonGroup>
+        </Announcement>
       </Section>
 
       <HomeStats />
