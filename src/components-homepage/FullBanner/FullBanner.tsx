@@ -17,7 +17,7 @@ export default function FullBanner({
   children,
   as = 'section',
   title,
-  opacity = 70,
+  opacity = 80,
   justify = 'start',
 }: FullBannerProps) {
   const FullBannerComponent = as
@@ -37,10 +37,7 @@ export default function FullBanner({
           <div
             className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacityClasses[opacity]} ${contentAlign}`}
           >
-            {/* <h1 className="font-semibold text-lg md:text-3xl lg:text-4xl lg:leading-[3rem] text-white">
-              {title}
-            </h1> */}
-            <PageHeaders header={title} as="h1" size="md" noUnderline />
+            <PageHeaders header={title} as="h1" size="md" noUnderline isWhite />
             {children}
           </div>
         </div>

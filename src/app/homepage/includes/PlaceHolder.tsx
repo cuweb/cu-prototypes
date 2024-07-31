@@ -1,33 +1,20 @@
 import React from 'react'
+import { maxWidthClasses } from '@/utils/optionClasses'
+
+type maxWidthKeys = keyof typeof maxWidthClasses
 
 export interface PlaceHolderProps {
   name?: string
-  maxWidth?: '5xl' | '7xl' | 'full'
+  maxWidth?: maxWidthKeys
 }
 
 export default function PlaceHolder({
   name = 'TBD',
   maxWidth = '5xl',
 }: PlaceHolderProps) {
-  let setMaxWidth
-  switch (maxWidth) {
-    case '5xl':
-      setMaxWidth = 'max-w-5xl'
-      break
-    case '7xl':
-      setMaxWidth = 'max-w-7xl'
-      break
-    case 'full':
-      setMaxWidth = 'max-w-full'
-      break
-    default:
-      setMaxWidth = 'max-w-5xl'
-      break
-  }
-
   return (
     <div
-      className={`${setMaxWidth} m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
+      className={`${maxWidthClasses[maxWidth]} m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
     >
       {name}
     </div>

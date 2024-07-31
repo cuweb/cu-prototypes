@@ -38,7 +38,7 @@ export default function Page() {
       <HomeStats />
       <HomeNews />
 
-      <Section>
+      <Section maxWidth="none">
         <PlaceHolder name="Red Wave" maxWidth="full" />
       </Section>
     </>

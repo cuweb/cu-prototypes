@@ -8,6 +8,7 @@ const config: Config = {
     './src/components-homepage/**/*.{js,ts,jsx,tsx,mdx}',
     './src/utils/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 }
 export default config
