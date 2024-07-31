@@ -1,8 +1,9 @@
 import React from 'react'
-import { bgOpacity, justifyContent } from '@/utils/optionClasses'
+import { bgOpacityClasses, justifyContentClasses } from '@/utils/optionClasses'
+import { PageHeaders } from '@carletonuniversity/rds'
 
-type bgOpacityKeys = keyof typeof bgOpacity
-type justifyContentKeys = keyof typeof justifyContent
+type bgOpacityKeys = keyof typeof bgOpacityClasses
+type justifyContentKeys = keyof typeof justifyContentClasses
 
 export interface FullBannerProps {
   children?: React.ReactNode
@@ -17,7 +18,7 @@ export default function FullBanner({
   as = 'section',
   title,
   opacity = 70,
-  justify = 'normal',
+  justify = 'start',
 }: FullBannerProps) {
   const FullBannerComponent = as
   const contentAlign =
@@ -32,13 +33,14 @@ export default function FullBanner({
       }}
     >
       <div className="mx-auto max-w-screen-2xl">
-        <div className={`flex ${justifyContent[justify]}`}>
+        <div className={`flex ${justifyContentClasses[justify]}`}>
           <div
-            className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacity[opacity]} ${contentAlign}`}
+            className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacityClasses[opacity]} ${contentAlign}`}
           >
-            <h1 className="font-semibold text-lg md:text-3xl lg:text-4xl lg:leading-[3rem] text-white">
+            {/* <h1 className="font-semibold text-lg md:text-3xl lg:text-4xl lg:leading-[3rem] text-white">
               {title}
-            </h1>
+            </h1> */}
+            <PageHeaders header={title} as="h1" size="md" noUnderline />
             {children}
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageHeaders } from '@carletonuniversity/rds'
-import { maxWidthClasses, justifyContent } from '@/utils/optionClasses'
+import { maxWidthClasses } from '@/utils/optionClasses'
 
 export interface AnnouncementProps {
   children?: React.ReactNode

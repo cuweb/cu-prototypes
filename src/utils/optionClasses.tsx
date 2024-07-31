@@ -13,7 +13,7 @@ export const maxWidthClasses = {
 
 // Add to RDS global options
 
-export const bgOpacity = {
+export const bgOpacityClasses = {
   70: 'bg-opacity-[.70]',
   75: 'bg-opacity-[.75]',
   80: 'bg-opacity-[.80]',
@@ -23,8 +23,7 @@ export const bgOpacity = {
   100: 'bg-opacity-[1]',
 }
 
-export const justifyContent = {
-  normal: 'justify-normal',
+export const justifyContentClasses = {
   start: 'justify-start',
   end: 'justify-end',
   center: 'justify-center',
