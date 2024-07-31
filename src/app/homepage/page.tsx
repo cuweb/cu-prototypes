@@ -9,7 +9,7 @@ import HomeNews from '@/app/homepage/includes/HomeNews'
 
 // New Components for RDS
 import FullBanner from '@/components-homepage/FullBanner/FullBanner'
-import Announcement from '@/components-homepage//Announcement/Announcement'
+import CallOut from '@/components-homepage/CallOut/CallOut'
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
       </FullBanner>
 
       <Section>
-        <Announcement title="Fall Open House">
+        <CallOut title="Fall Open House">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
             porta magna. Fusce id viverra mi. Etiam mollis feugiat nisl, sit
@@ -32,7 +32,7 @@ export default function Page() {
             <Button title="Apply Now" />
             <Button color="grey" title="Request Information" />
           </ButtonGroup>
-        </Announcement>
+        </CallOut>
       </Section>
 
       <HomeStats />
