@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function HomeNews() {
   return (
-    <Section maxWidth="7xl">
+    <Section as="div" maxWidth="7xl">
       <Column cols="4" maxWidth="7xl">
         {NewsData.slice(0, 4).map(({ id, link, title, image, alt }) => (
           <Card key={id}>

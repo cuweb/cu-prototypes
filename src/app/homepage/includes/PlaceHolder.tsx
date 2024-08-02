@@ -14,7 +14,7 @@ export default function PlaceHolder({
 }: PlaceHolderProps) {
   return (
     <div
-      className={`${maxWidthClasses[maxWidth]} m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
+      className={`${maxWidthClasses[maxWidth]} cu-component-spacing m-auto h-28 md:h-48 lg:h-60 grid border-dashed border-2 border-cu-black-200 rounded-lg items-center justify-center`}
     >
       {name}
     </div>
