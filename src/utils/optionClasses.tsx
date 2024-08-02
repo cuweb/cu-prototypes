@@ -1,5 +1,16 @@
 // Add to RDS propClasses
 
+export const maxWidthClasses = {
+  '2xl': 'max-w-2xl',
+  '3xl': 'max-w-3xl',
+  '4xl': 'max-w-4xl',
+  '5xl': 'max-w-5xl',
+  '6xl': 'max-w-6xl',
+  '7xl': 'max-w-7xl',
+  max: 'max-w-screen-2xl',
+  full: 'max-w-full',
+}
+
 export const bgOpacityClasses = {
   70: 'bg-opacity-[.70]',
   75: 'bg-opacity-[.75]',
