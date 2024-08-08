@@ -4,8 +4,9 @@ import { PageHeader, utils } from '@carletonuniversity/rds'
 // Deconstruct propClass utils
 const { bgOpacityClasses, justifyContentClasses } = utils
 
-type bgOpacityKeys = keyof typeof bgOpacityClasses
 type justifyContentKeys = keyof typeof justifyContentClasses
+
+const opacityValues = Array.from({ length: 21 }, (_, index) => 60 + index)
 
 export interface FullBannerProps {
   children?: React.ReactNode
@@ -15,7 +16,7 @@ export interface FullBannerProps {
   focalPointX?: string
   focalPointY?: string
   justify?: justifyContentKeys
-  opacity?: bgOpacityKeys
+  opacity?: (typeof opacityValues)[number]
 }
 
 // Used in WideImage, make a helper function when moving this component into RDS
@@ -26,6 +27,10 @@ const getBackgroundImageStyles = (
 ) => ({
   backgroundImage: `url(${image})`,
   backgroundPosition: `${focalPointX}% ${focalPointY}%`,
+})
+
+const getOpacityStyle = (opacity: number) => ({
+  opacity: `0.${opacity}`,
 })
 
 export default function FullBanner({
@@ -40,6 +45,7 @@ export default function FullBanner({
 }: FullBannerProps) {
   const FullBannerComponent = as
   const inlineStyle = getBackgroundImageStyles(image, focalPointX, focalPointY)
+  const opacityStyle = getOpacityStyle(opacity)
   const contentAlign =
     justify === 'center' ? 'text-center [&>*]:justify-center' : ''
 
@@ -51,7 +57,8 @@ export default function FullBanner({
       <div className="mx-auto max-w-screen-2xl">
         <div className={`flex ${justifyContentClasses[justify]}`}>
           <div
-            className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacityClasses[opacity]} ${contentAlign}`}
+            className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${contentAlign}`}
+            style={opacityStyle}
           >
             <PageHeader header={title} as="h1" size="md" noUnderline isWhite />
             {children}

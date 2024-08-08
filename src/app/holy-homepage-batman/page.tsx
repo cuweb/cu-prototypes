@@ -19,6 +19,7 @@ export default function Page() {
       <FullBanner
         title="The nostalgia is real, remember how amazing those first iPods were?"
         image="https://picsum.photos/id/20/1600/700"
+        opacity={80}
       >
         <ButtonGroup>
           <Button title="Apply Now" />
