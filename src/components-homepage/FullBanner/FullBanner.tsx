@@ -1,11 +1,8 @@
 import React from 'react'
 import { PageHeader, utils } from '@carletonuniversity/rds'
 
-// Deconstruct propClass utils
-const { bgOpacityClasses, justifyContentClasses } = utils
-
+const { justifyContentClasses } = utils
 type justifyContentKeys = keyof typeof justifyContentClasses
-
 const opacityValues = Array.from({ length: 21 }, (_, index) => 60 + index)
 
 export interface FullBannerProps {

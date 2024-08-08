@@ -1,7 +1,6 @@
 import React from 'react'
 import { PageHeader, utils } from '@carletonuniversity/rds'
 
-// Deconstruct propClass utils
 const { maxWidthClasses } = utils
 
 export interface CallOutProps {
@@ -24,7 +23,6 @@ export default function CallOut({
       <PageHeader
         as="h2"
         header={title}
-        // noUnderline
         size="md"
         isCenter={justify === 'center' ? true : false}
       />
