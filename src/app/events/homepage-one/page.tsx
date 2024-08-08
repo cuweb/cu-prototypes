@@ -1,7 +1,7 @@
 'use client'
 import {
   Container,
-  PageHeaders,
+  PageHeader,
   Column,
   StackedList,
   Listing,
@@ -42,7 +42,7 @@ export default function Page() {
       </Container>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h2" size="md" />
+        <PageHeader header="Upcoming Events" as="h2" size="md" />
         <Filter filters={FilterData.filters} callback={() => undefined} />
         <Column cols="2/3" maxWidth="7xl">
           <Column.Content>

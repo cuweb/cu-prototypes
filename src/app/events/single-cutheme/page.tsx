@@ -2,7 +2,7 @@
 // import { useState, useCallback } from 'react'
 import {
   Container,
-  PageHeaders,
+  PageHeader,
   Figure,
   Card,
   Column,
@@ -15,7 +15,7 @@ import Image from 'next/image'
 export default function Page() {
   return (
     <>
-      <PageHeaders header="Brain Health Research Day 2024">
+      <PageHeader header="Brain Health Research Day 2024">
         <Figure align="right" noMobile size="sm">
           <Image
             src="https://picsum.photos/1200/1200"
@@ -24,7 +24,7 @@ export default function Page() {
             width="400"
           />
         </Figure>
-        <PageHeaders.Event
+        <PageHeader.Event
           contactEmail="johndoe@test.com"
           contactName="John Doe"
           contactPhone="613-520-2600 x1234"
@@ -38,7 +38,7 @@ export default function Page() {
           virtualType="Teams"
           virtualUrl="https://events.carleton.ca"
         />
-      </PageHeaders>
+      </PageHeader>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna et
@@ -74,7 +74,7 @@ export default function Page() {
       </p>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h1" size="md" />
+        <PageHeader header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
             ({

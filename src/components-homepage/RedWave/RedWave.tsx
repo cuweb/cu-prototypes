@@ -1,6 +1,8 @@
 import React from 'react'
-import { PageHeaders } from '@carletonuniversity/rds'
-import { maxWidthClasses } from '@/utils/optionClasses'
+import { PageHeader, utils } from '@carletonuniversity/rds'
+
+// Deconstruct propClass utils
+const { maxWidthClasses } = utils
 
 export interface RedWaveProps {
   children?: React.ReactNode
@@ -17,7 +19,7 @@ export default function RedWave({
     <div
       className={`not-contained cu-component-spacing ${maxWidthClasses[maxWidth]} mx-auto`}
     >
-      <PageHeaders as="h2" header="Red Wave Testing" noUnderline size="md" />
+      <PageHeader as="h2" header="Red Wave Testing" noUnderline size="md" />
       {children}
     </div>
   )

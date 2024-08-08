@@ -11,25 +11,25 @@
     "clean": "rm -rf node_modules ; rm package-lock.json ; npm install"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.5",
+    "@heroicons/react": "2.1.5",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@carletonuniversity/rds": "0.14.0",
-    "@commitlint/cli": "19.3.0",
+    "@carletonuniversity/rds": "0.15.0",
+    "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
-    "postcss": "8.4.40",
+    "postcss": "8.4.41",
     "postcss-import": "16.1.0",
     "prettier": "3.3.3",
     "rds-tailwind-theme": "0.6.8",
-    "tailwindcss": "3.4.7",
+    "tailwindcss": "3.4.8",
     "typescript": "5.5.4"
   }
 }

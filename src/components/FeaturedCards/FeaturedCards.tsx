@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { EventData } from '@/data/EventData'
-import { PageHeaders, Column, Card } from '@carletonuniversity/rds'
+import { PageHeader, Column, Card } from '@carletonuniversity/rds'
 
 export default function FeaturedCardsBase() {
   return (
     <>
-      <PageHeaders header="Feature Events" as="h2" size="md" />
+      <PageHeader header="Feature Events" as="h2" size="md" />
       <Column cols="4" maxWidth="7xl">
         {EventData.slice(0, 4).map(
           ({

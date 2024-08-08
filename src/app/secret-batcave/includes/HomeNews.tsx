@@ -1,5 +1,5 @@
 import React from 'react'
-import { Column, Card, Section, PageHeaders } from '@carletonuniversity/rds'
+import { Column, Card, Section, PageHeader } from '@carletonuniversity/rds'
 import { NewsData } from '@/data/NewsData'
 import Image from 'next/image'
 

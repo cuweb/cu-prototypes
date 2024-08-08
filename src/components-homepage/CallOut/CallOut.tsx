@@ -1,6 +1,8 @@
 import React from 'react'
-import { PageHeaders } from '@carletonuniversity/rds'
-import { maxWidthClasses } from '@/utils/optionClasses'
+import { PageHeader, utils } from '@carletonuniversity/rds'
+
+// Deconstruct propClass utils
+const { maxWidthClasses } = utils
 
 export interface CallOutProps {
   children?: React.ReactNode
@@ -19,7 +21,7 @@ export default function CallOut({
     <div
       className={`not-contained cu-component-spacing cu-callout cu-callout--${justify} ${maxWidthClasses[maxWidth]} mx-auto border-8 md:border-[12px] border-solid border-cu-black-50 px-8 pt-5 pb-6 md:px-16 md:pt-8 md:py-10 rounded-lg bg-white`}
     >
-      <PageHeaders
+      <PageHeader
         as="h2"
         header={title}
         // noUnderline

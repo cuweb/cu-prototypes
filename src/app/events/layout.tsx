@@ -6,7 +6,7 @@ import {
   LinkProvider,
   Nav,
   Section,
-  PageHeaders,
+  PageHeader,
   SearchInput,
 } from '@carletonuniversity/rds'
 import { SearchData } from '../../data/SearchData'

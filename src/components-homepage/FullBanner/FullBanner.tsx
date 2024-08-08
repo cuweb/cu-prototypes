@@ -1,6 +1,8 @@
 import React from 'react'
-import { bgOpacityClasses, justifyContentClasses } from '@/utils/optionClasses'
-import { PageHeaders } from '@carletonuniversity/rds'
+import { PageHeader, utils } from '@carletonuniversity/rds'
+
+// Deconstruct propClass utils
+const { bgOpacityClasses, justifyContentClasses } = utils
 
 type bgOpacityKeys = keyof typeof bgOpacityClasses
 type justifyContentKeys = keyof typeof justifyContentClasses
@@ -37,7 +39,7 @@ export default function FullBanner({
           <div
             className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${bgOpacityClasses[opacity]} ${contentAlign}`}
           >
-            <PageHeaders header={title} as="h1" size="md" noUnderline isWhite />
+            <PageHeader header={title} as="h1" size="md" noUnderline isWhite />
             {children}
           </div>
         </div>

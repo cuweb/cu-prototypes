@@ -4,7 +4,7 @@ import {
   ButtonGroup,
   Button,
   Container,
-  PageHeaders,
+  PageHeader,
   Column,
   Aside,
   StackedList,
@@ -91,7 +91,7 @@ export default function Page() {
       </Column>
 
       <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h1" size="md" />
+        <PageHeader header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
             ({
