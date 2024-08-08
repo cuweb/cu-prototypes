@@ -11,28 +11,42 @@ export interface FullBannerProps {
   children?: React.ReactNode
   as?: 'section' | 'div'
   title: string
+  image?: string
+  focalPointX?: string
+  focalPointY?: string
   justify?: justifyContentKeys
   opacity?: bgOpacityKeys
 }
+
+// Used in WideImage, make a helper function when moving this component into RDS
+const getBackgroundImageStyles = (
+  image: string = '',
+  focalPointX: string,
+  focalPointY: string,
+) => ({
+  backgroundImage: `url(${image})`,
+  backgroundPosition: `${focalPointX}% ${focalPointY}%`,
+})
 
 export default function FullBanner({
   children,
   as = 'section',
   title,
+  image,
+  focalPointX = '50',
+  focalPointY = '50',
   opacity = 80,
   justify = 'start',
 }: FullBannerProps) {
   const FullBannerComponent = as
+  const inlineStyle = getBackgroundImageStyles(image, focalPointX, focalPointY)
   const contentAlign =
     justify === 'center' ? 'text-center [&>*]:justify-center' : ''
 
   return (
     <FullBannerComponent
       className="overflow-hidden not-contained not-prose bg-cu-black-200 bg-cover mb-6 -mt-10 -mx-8 md:-mx-10 pt-80 pb-0 md:pt-48 md:pb-12 lg:pt-64 lg:pb-24 xl:pt-96 xl:pb-36 px-0 md:px-10"
-      style={{
-        backgroundImage: 'url("https://picsum.photos/1600/700")',
-        backgroundPosition: '50% 50%',
-      }}
+      style={inlineStyle}
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className={`flex ${justifyContentClasses[justify]}`}>

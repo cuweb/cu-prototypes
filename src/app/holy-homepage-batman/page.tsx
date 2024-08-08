@@ -3,9 +3,9 @@
 import { ButtonGroup, Button, Section } from '@carletonuniversity/rds'
 
 // Internal Components
-import PlaceHolder from '@/app/secret-batcave/includes/PlaceHolder'
-import HomeStats from '@/app/secret-batcave/includes/HomeStats'
-import HomeNews from '@/app/secret-batcave/includes/HomeNews'
+import PlaceHolder from '@/app/holy-homepage-batman/includes/PlaceHolder'
+import HomeStats from '@/app/holy-homepage-batman/includes/HomeStats'
+import HomeNews from '@/app/holy-homepage-batman/includes/HomeNews'
 
 // New Components for RDS
 import FullBanner from '@/components-homepage/FullBanner/FullBanner'
@@ -16,7 +16,10 @@ import RedWave from '@/components-homepage/RedWave/RedWave'
 export default function Page() {
   return (
     <>
-      <FullBanner title="Welcome to Carleton. Disclaimer: this photo is not Carleton, nor is it Ottawa.">
+      <FullBanner
+        title="The nostalgia is real, remember how amazing those first iPods were?"
+        image="https://picsum.photos/id/20/1600/700"
+      >
         <ButtonGroup>
           <Button title="Apply Now" />
           <Button color="grey" title="Request Information" />
