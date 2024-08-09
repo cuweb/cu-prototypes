@@ -1,13 +1,15 @@
 import React from 'react'
-import { PageHeader, utils } from '@carletonuniversity/rds'
 
-const { maxWidthClasses } = utils
+import { PageHeader, utils } from '@carletonuniversity/rds'
+const { maxWidthClasses, justifyContentClasses } = utils
+type maxWidthKeys = keyof typeof maxWidthClasses
+type justifyContentKeys = keyof typeof justifyContentClasses
 
 export interface CallOutProps {
   children?: React.ReactNode
   title: string
-  justify?: 'start' | 'center'
-  maxWidth?: '2xl' | '3xl' | '4xl'
+  justify?: justifyContentKeys
+  maxWidth?: maxWidthKeys
 }
 
 export default function CallOut({

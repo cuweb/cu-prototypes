@@ -3,14 +3,14 @@
 import { ButtonGroup, Button, Section } from '@carletonuniversity/rds'
 
 // Internal Components
-import PlaceHolder from '@/app/holy-homepage-batman/includes/PlaceHolder'
-import HomeStats from '@/app/holy-homepage-batman/includes/HomeStats'
-import HomeNews from '@/app/holy-homepage-batman/includes/HomeNews'
+import PlaceHolder from '@/components-homepage/_existing/PlaceHolder'
+import HomeStats from '@/components-homepage/_existing/HomeStats'
+import HomeNews from '@/components-homepage/_existing/HomeNews'
 
 // New Components for RDS
 import FullBanner from '@/components-homepage/FullBanner/FullBanner'
 import CallOut from '@/components-homepage/CallOut/CallOut'
-import UpcomingEvents from './includes/UpcomingEvents'
+import UpcomingEvents from '@/components-homepage/_existing/UpcomingEvents'
 import RedWave from '@/components-homepage/RedWave/RedWave'
 
 export default function Page() {
