@@ -16,6 +16,30 @@ export interface BadgeGroupProps {
   left?: number
 }
 
+const getPositionStyles = (
+  top?: number,
+  right?: number,
+  bottom?: number,
+  left?: number,
+) => {
+  const styles: React.CSSProperties = {}
+
+  if (top !== undefined) {
+    styles.top = `${top}px`
+  }
+  if (right !== undefined) {
+    styles.right = `${right}px`
+  }
+  if (bottom !== undefined) {
+    styles.bottom = `${bottom}px`
+  }
+  if (left !== undefined) {
+    styles.left = `${left}px`
+  }
+
+  return styles
+}
+
 export const BadgeGroup = ({
   children,
   gap = '2',
@@ -25,12 +49,15 @@ export const BadgeGroup = ({
   bottom,
   left = 0,
 }: BadgeGroupProps) => {
-  const position = isAbsolute
-    ? `absolute ${top !== undefined ? `top-${top}` : ''} ${right !== undefined ? `right-${right}` : ''} ${bottom !== undefined ? `bottom-${bottom}` : ''} ${left !== undefined ? `left-${left}` : ''}`
-    : ''
+  const position = isAbsolute ? 'absolute' : ''
+  const positionStyles = isAbsolute
+    ? getPositionStyles(top, right, bottom, left)
+    : {}
+
   return (
     <div
       className={`cu-badgegroup cu-component flex flex-wrap md:flex-1 ${position} ${gridGapClasses[gap]}`}
+      style={positionStyles}
     >
       {children}
     </div>

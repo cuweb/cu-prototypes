@@ -14,10 +14,10 @@ export default function HomeNews() {
         {NewsData.slice(0, 4).map(({ id, link, title, image, alt, badge }) => (
           <Card key={id}>
             <Card.Figure>
-              <Image src={image} alt={alt} width="300" height="200" />
-              <BadgeGroup gap="2" isAbsolute top={2} left={2}>
+              <BadgeGroup gap="2" isAbsolute top={10} left={10}>
                 <Badge color="grey" text={badge} rounded="md" />
               </BadgeGroup>
+              <Image src={image} alt={alt} width="300" height="200" />
             </Card.Figure>
             <Card.Header title={title} />
             <Card.Body>

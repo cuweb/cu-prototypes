@@ -10,6 +10,5 @@
 @import '../styles/rds-updates.css';
 @import '../styles/homepage-mods.css';
 
-/* Project Specific */
-/* Component Styles */
+/* Homepage */
 @import '../components-homepage/CallOut/styles.css';
