@@ -10,5 +10,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'cu-waves-red-full':
+          // "url('https://cdn.carleton.ca/rds/assets/graphics/cu-waves-red-full.svg')",
+          "url('https://cu-production.s3.amazonaws.com/rds/assets/graphics/cu-waves-red-full.svg')",
+      },
+    },
+  },
 }
 export default config

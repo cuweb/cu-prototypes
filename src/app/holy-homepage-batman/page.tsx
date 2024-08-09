@@ -44,9 +44,8 @@ export default function Page() {
       <HomeStats />
       <HomeNews />
 
-      <Section maxWidth="full">
-        <RedWave />
-      </Section>
+      <RedWave />
+      {/* <Section maxWidth="full"></Section> */}
 
       <Section maxWidth="7xl">
         <PlaceHolder name="Attend Carleton" />
