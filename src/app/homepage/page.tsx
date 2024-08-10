@@ -1,6 +1,11 @@
 'use client'
 // Import from RDS
-import { ButtonGroup, Button, Section } from '@carletonuniversity/rds'
+import {
+  ButtonGroup,
+  Button,
+  Section,
+  PageHeader,
+} from '@carletonuniversity/rds'
 
 // Internal Components
 import PlaceHolder from '@/components-homepage/_existing/PlaceHolder'
@@ -76,10 +81,21 @@ export default function Page() {
       </Section>
 
       <Section maxWidth="7xl">
-        <PlaceHolder name="Campus Life" maxWidth="full" />
+        {/* <PlaceHolder name="Campus Life" maxWidth="full" /> */}
+        <PageHeader
+          as="h1"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius feugiat euismod. Ut ut diam dapibus nisi ullamcorper sollicitudin id vitae turpis."
+          header="Page Header"
+          size="lg"
+        />
       </Section>
 
-      <WideWave title="Wave Component in Black" wave="black">
+      <WideWave
+        title="Wave Component in Black"
+        wave="black"
+        contentWidth={40}
+        reverse
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
           ligula felis. Maecenas gravida venenatis condimentum. Nulla ex massa,
