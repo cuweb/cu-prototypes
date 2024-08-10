@@ -1,21 +1,14 @@
 import React from 'react'
-import { ButtonGroup, PageHeader } from '@carletonuniversity/rds'
-import WideWave from '@/layouts/WideWave/WideWave'
 import Link from 'next/link'
+import { ButtonGroup } from '@carletonuniversity/rds'
 import { TextMedia } from '@/components/TextMedia/TextMedia'
+import WideWave from '@/layouts/WideWave/WideWave'
 
 export default function RedWave() {
   return (
     <WideWave>
       <TextMedia maxWidth="7xl">
-        <TextMedia.Content contentWidth={60}>
-          <PageHeader
-            as="h2"
-            header="Wave Component in Red"
-            size="md"
-            noUnderline
-            isWhite
-          />
+        <TextMedia.Content title="Wave Component in Red" width={60}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
             ligula felis. Maecenas gravida venenatis condimentum. Nulla ex

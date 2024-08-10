@@ -1,22 +1,41 @@
 import React from 'react'
 
+import { PageHeader, utils } from '@carletonuniversity/rds'
+const { justifyContentClasses } = utils
+
+type justifyContentKeys = keyof typeof justifyContentClasses
+
 export interface TextMediaContentProps {
   children: React.ReactNode
-  contentWidth?: number
+  title: string
+  headerType?: 'h1' | 'h2'
+  width?: number
+  align?: justifyContentKeys
 }
 
 export const TextMediaContent = ({
   children,
-  contentWidth = 60,
+  title,
+  headerType = 'h2',
+  width = 60,
+  align = 'start',
 }: TextMediaContentProps) => {
   const inlineContentStyles = {
-    flex: `0 0 ${contentWidth}%`,
+    flex: `0 0 ${width}%`,
   }
+
   return (
     <div
-      className="flex-[0_0_100%] md:flex-1 cu-textmedia-content"
+      className={`flex-[0_0_100%] md:flex-1 cu-textmedia-content ${justifyContentClasses[align]}`}
       style={inlineContentStyles}
     >
+      <PageHeader
+        as={headerType}
+        header={title}
+        size="md"
+        noUnderline
+        isWhite
+      />
       {children}
     </div>
   )

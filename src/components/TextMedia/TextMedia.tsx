@@ -15,7 +15,6 @@ export interface TextMediaProps {
   gridGap?: gridGapKeys
   flexRow?: flexRowKeys
   reverse?: boolean
-  flipYsm?: boolean
 }
 
 export const TextMediaWrapper = ({
@@ -24,15 +23,13 @@ export const TextMediaWrapper = ({
   gridGap = '10',
   flexRow = 'lg',
   reverse,
-  flipYsm,
 }: TextMediaProps) => {
   const reverseLayout = reverse ? 'lg:flex-row-reverse' : ''
-  const flipYsmLayout = flipYsm ? 'flex-col-reverse sm:flex-row' : ''
 
   return (
     <>
       <div
-        className={`cu-textmedia cu-component flex flex-col not-contained mx-auto ${gridGapClasses[gridGap]} ${maxWidthClasses[maxWidth]} ${flexRowClasses[flexRow]} ${reverseLayout} ${flipYsmLayout}`}
+        className={`cu-textmedia cu-component flex flex-col not-contained mx-auto ${gridGapClasses[gridGap]} ${maxWidthClasses[maxWidth]} ${flexRowClasses[flexRow]} ${reverseLayout}`}
       >
         {children}
       </div>
