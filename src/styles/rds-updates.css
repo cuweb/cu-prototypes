@@ -1,39 +1,32 @@
-/* This will be added with new nav component, no need to add to RDS now */
-.cu-nav {
-  @apply mx-auto max-w-screen-2xl;
-}
-
 /* Add to RDS to be used to make a component hit the edge of the browser window */
 
 .cu-browsers-edge {
   @apply -mx-6 md:-mx-8 lg:-mx-10;
 }
 
+/* Add to spacing, slight increase over the default */
+
+.cu-section + .cu-widewaves,
+.cu-widewaves + .cu-widewaves {
+  @apply mt-8 md:mt-10 lg:mt-20;
+}
+
 /* Update this in Main component in RDS */
 
-.cu-main {
+/* .cu-main {
   @apply py-4 md:py-6 lg:py-12 !important;
 }
 
 .cu-main {
   @apply px-6 md:px-8 lg:px-10 !important;
-}
+} */
 
 /* Replace this for global consistency */
 
-.cu-section + .cu-section,
+/* .cu-section + .cu-section,
 .cu-section + .cu-column,
 .cu-component + .cu-component,
 :not(.cu-section) + .cu-section,
 .cu-section + :not(.cu-section) {
   @apply mt-4 md:mt-6 lg:mt-12;
-  /* @apply mt-6 md:mt-12; */
-}
-
-/* Add to spacing, slight increase over the default */
-
-.cu-section + .cu-widewaves,
-.cu-widewaves + .cu-widewaves {
-  @apply mt-4 md:mt-6 lg:mt-20;
-  /* @apply mt-6 md:mt-20; */
-}
+} */
