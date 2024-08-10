@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageHeader, utils } from '@carletonuniversity/rds'
-import { TextMedia } from '@/components-homepage/components/TextMedia/TextMedia'
+import { TextMedia } from '@/components/TextMedia/TextMedia'
 
 // Deconstruct propClass utils
 const { maxWidthClasses } = utils

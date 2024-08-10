@@ -4,8 +4,8 @@ import { Column, Card, Section } from '@carletonuniversity/rds'
 import { NewsData } from '@/data/NewsData'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BadgeGroup } from '@/components-rds-updates/BadgeGroup/BadgeGroup'
-import { Badge } from '@/components-rds-updates/Badge/Badge'
+import { BadgeGroup } from '@/components-rds/BadgeGroup/BadgeGroup'
+import { Badge } from '@/components-rds/Badge/Badge'
 
 export default function HomeNews() {
   return (

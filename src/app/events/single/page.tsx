@@ -1,7 +1,6 @@
 'use client'
-// import { useState, useCallback } from 'react'
 import {
-  Container,
+  Section,
   PageHeader,
   Figure,
   Card,
@@ -31,11 +30,8 @@ export default function Page() {
           cost="$20 per adult, $15 for youth/senior"
           eventType="Hybrid"
           location="Field House, 1125 Colonel By Drive"
-          primaryButtonUrl="https://carleton.ca"
-          secondaryButtonText="Secondary"
-          secondaryButtonUrl="https://carleton.ca/webservices"
           startDate="Wednesday, March 21st, 2023 at 6:00pm"
-          virtualType="Teams"
+          virtualType="Zoom"
           virtualUrl="https://events.carleton.ca"
         />
       </PageHeader>
@@ -73,7 +69,7 @@ export default function Page() {
         eget ante vitae, malesuada semper nulla.
       </p>
 
-      <Container maxWidth="7xl" isGrey>
+      <Section maxWidth="7xl" isGrey>
         <PageHeader header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
@@ -118,7 +114,7 @@ export default function Page() {
         <ButtonGroup>
           <Button title="View More Events" color="dark-grey" isCenter />
         </ButtonGroup>
-      </Container>
+      </Section>
     </>
   )
 }
