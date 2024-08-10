@@ -48,7 +48,7 @@ export default function FullBanner({
 
   return (
     <FullBannerComponent
-      className="cu-browsers-edge overflow-hidden not-contained not-prose bg-cu-black-200 bg-cover mb-6 -mt-10 pt-80 pb-0 md:pt-48 md:pb-12 lg:pt-64 lg:pb-24 xl:pt-96 xl:pb-36 px-0 md:px-10"
+      className="cu-browsers-edge overflow-hidden not-contained not-prose bg-cu-black-200 bg-cover mb-6 -mt-4 md:-mt-6 lg:-mt-12 pt-80 pb-0 md:pt-48 md:pb-12 lg:pt-64 lg:pb-24 xl:pt-96 xl:pb-36 px-0 md:px-10"
       style={inlineStyle}
     >
       <div className="mx-auto max-w-screen-2xl">

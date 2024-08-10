@@ -43,7 +43,7 @@ export default function WideWave({
     >
       <TextMedia maxWidth={maxWidth} reverse={reverse ? true : false}>
         <TextMedia.Content>
-          <PageHeader as="h2" header={title} size="lg" noUnderline isWhite />
+          <PageHeader as="h2" header={title} size="md" noUnderline isWhite />
           {children}
         </TextMedia.Content>
         <TextMedia.Aside>Img</TextMedia.Aside>

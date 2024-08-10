@@ -3,7 +3,7 @@ import { Column, Card, Section } from '@carletonuniversity/rds'
 
 export default function HomeStats() {
   return (
-    <Section as="div">
+    <Section as="div" isGrey>
       <Column cols="4" maxWidth="7xl">
         <Card leftBorder noHover>
           <Card.Stats
