@@ -17,7 +17,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@carletonuniversity/rds": "0.15.0",
+    "@carletonuniversity/rds": "file:../rds",
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
     "@types/node": "22.1.0",
