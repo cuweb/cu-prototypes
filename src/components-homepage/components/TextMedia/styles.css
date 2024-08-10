@@ -1,0 +1,45 @@
+.cu-textmedia-aside img {
+  @apply w-full h-auto;
+}
+
+.cu-section > .cu-textmedia:first-child {
+  @apply mb-6 md:mb-12;
+}
+
+.cu-section > .cu-textmedia:last-child {
+  @apply mb-0 md:mb-0;
+}
+
+.cu-textmedia-content,
+.cu-textmedia-aside {
+  @apply mb-0;
+}
+
+.cu-textmedia-content > *:first-child,
+.cu-textmedia-aside > *:first-child {
+  @apply mt-0;
+}
+
+.cu-textmedia-content > *:last-child,
+.cu-textmedia-aside > *:last-child {
+  @apply mb-0;
+}
+
+/* 
+* Section and non-section spacing
+*/
+/* :not(.cu-section) + .cu-textmedia {
+  @apply mt-6 md:mt-10;
+} */
+
+/* .cu-column--reverse > *:last-child {
+  @apply order-first md:order-none;
+}
+
+.cu-column-content > *:first-child {
+  @apply mt-0;
+}
+
+.cu-column-content > *:last-child {
+  @apply mb-0;
+} */

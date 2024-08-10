@@ -8,3 +8,10 @@
 .cu-browsers-edge {
   @apply -mx-8 md:-mx-10;
 }
+
+/*  */
+
+.cu-section + .cu-widewaves,
+.cu-widewaves + .cu-widewaves {
+  @apply mt-6 md:mt-20;
+}

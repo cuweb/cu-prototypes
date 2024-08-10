@@ -11,4 +11,5 @@
 @import '../styles/homepage-mods.css';
 
 /* Homepage */
-@import '../components-homepage/CallOut/styles.css';
+@import '../components-homepage/components/CallOut/styles.css';
+@import '../components-homepage/components/TextMedia/styles.css';
