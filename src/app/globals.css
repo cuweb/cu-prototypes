@@ -13,3 +13,5 @@
 /* Homepage */
 @import '../components/CallOut/styles.css';
 @import '../components/TextMedia/styles.css';
+
+@import '../layouts/ImageCover/styles.css';

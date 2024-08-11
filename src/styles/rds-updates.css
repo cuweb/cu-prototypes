@@ -6,3 +6,7 @@
 .cu-widewaves + .cu-widewaves {
   @apply mt-8 md:mt-10 lg:mt-20;
 }
+
+.cu-browsers-edge {
+  @apply -mx-6 md:-mx-10;
+}
