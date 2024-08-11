@@ -8,3 +8,10 @@
 
 /* UPDATES FOR RDS */
 @import '../styles/rds-updates.css';
+@import '../styles/homepage-mods.css';
+
+/* Homepage */
+@import '../components/CallOut/styles.css';
+@import '../components/TextMedia/styles.css';
+
+@import '../layouts/ImageCover/styles.css';

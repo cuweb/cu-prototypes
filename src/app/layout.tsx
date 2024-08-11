@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import BodyWrapper from '@/components/Global/BodyWrapper'
-import Footer from '@/components/Global/Footer'
+import BodyWrapper from '@/blocks/Global/BodyWrapper'
+import Footer from '@/blocks/Global/Footer'
 
 export const metadata: Metadata = {
   title: 'Project Prototypes',

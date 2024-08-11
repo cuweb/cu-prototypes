@@ -6,8 +6,8 @@ import {
   LinkProvider,
   Nav,
   Section,
-  PageHeaders,
-  Search,
+  PageHeader,
+  SearchInput,
 } from '@carletonuniversity/rds'
 import { SearchData } from '../../data/SearchData'
 
@@ -28,13 +28,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Nav.Logo title="Events Calendar" link="/events" />
           <Nav.Primary>
             <Nav.Aside LoggedOutUser={true}>
-              <Search sourceData={SearchData} callback={callback} />
+              <SearchInput
+                callback={() => {}}
+                placeholder="Enter a search string"
+              />
             </Nav.Aside>
           </Nav.Primary>
         </Nav>
       </LinkProvider>
       <Main>
-        <Section hasProse>{children}</Section>
+        <Section>{children}</Section>
       </Main>
     </>
   )

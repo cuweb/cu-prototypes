@@ -1,8 +1,7 @@
 'use client'
-// import { useState, useCallback } from 'react'
 import {
-  Container,
-  PageHeaders,
+  Section,
+  PageHeader,
   Figure,
   Card,
   Column,
@@ -15,7 +14,7 @@ import Image from 'next/image'
 export default function Page() {
   return (
     <>
-      <PageHeaders header="Brain Health Research Day 2024">
+      <PageHeader header="Brain Health Research Day 2024">
         <Figure align="right" noMobile size="sm">
           <Image
             src="https://picsum.photos/1200/1200"
@@ -24,21 +23,18 @@ export default function Page() {
             width="400"
           />
         </Figure>
-        <PageHeaders.Event
+        <PageHeader.Event
           contactEmail="johndoe@test.com"
           contactName="John Doe"
           contactPhone="613-520-2600 x1234"
           cost="$20 per adult, $15 for youth/senior"
           eventType="Hybrid"
           location="Field House, 1125 Colonel By Drive"
-          primaryButtonUrl="https://carleton.ca"
-          secondaryButtonText="Secondary"
-          secondaryButtonUrl="https://carleton.ca/webservices"
           startDate="Wednesday, March 21st, 2023 at 6:00pm"
-          virtualType="Teams"
+          virtualType="Zoom"
           virtualUrl="https://events.carleton.ca"
         />
-      </PageHeaders>
+      </PageHeader>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna et
@@ -73,8 +69,8 @@ export default function Page() {
         eget ante vitae, malesuada semper nulla.
       </p>
 
-      <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h1" size="md" />
+      <Section maxWidth="7xl" isGrey>
+        <PageHeader header="Upcoming Events" as="h1" size="md" />
         <Column cols="4" maxWidth="7xl">
           {EventData.slice(0, 4).map(
             ({
@@ -115,10 +111,10 @@ export default function Page() {
             ),
           )}
         </Column>
-        <ButtonGroup>
-          <Button title="View More Events" color="dark-grey" isCenter />
+        <ButtonGroup align="center">
+          <Button title="View More Events" color="dark-grey" />
         </ButtonGroup>
-      </Container>
+      </Section>
     </>
   )
 }

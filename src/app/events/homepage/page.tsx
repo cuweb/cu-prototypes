@@ -1,7 +1,7 @@
 'use client'
 import {
-  Container,
-  PageHeaders,
+  Section,
+  PageHeader,
   Column,
   StackedList,
   Listing,
@@ -9,37 +9,40 @@ import {
   Filter,
   Calendar,
   Aside,
+  WideImage,
+  ButtonGroup,
+  Button,
 } from '@carletonuniversity/rds'
 import { CalendarData, EventData } from '@/data/EventData'
 import { FilterData } from '@/data/FilterData'
-import FeaturedCards from '@/components/FeaturedCards/FeaturedCards'
+import FeaturedCards from '@/blocks/Events/FeaturedCards'
 
 export default function Page() {
   return (
     <>
-      {/* <Container maxWidth="7xl">
+      <Section maxWidth="7xl">
         <WideImage
           image="https://picsum.photos/1600/700"
           isType="image"
-          title="Wide image with bg image"
+          title="True Leaders Challenge What's Possible"
+          headerType="h1"
         >
           <p>
-            Nobis voluptatem dolorum et eum doloremque cupiditate velit.
-            Praesentium architecto a distinctio aut reprehenderit ducimus.
+            True leaders don&apos;t just accept challenges. They challenge the
+            status quo. Join us on May 8th for Carleton&apos;s Challenge
+            Conference.
           </p>
           <ButtonGroup>
             <Button title="Apply Now" />
             <Button color="grey" title="Request Information" />
           </ButtonGroup>
         </WideImage>
-      </Container> */}
 
-      <Container maxWidth="7xl">
         <FeaturedCards />
-      </Container>
+      </Section>
 
-      <Container maxWidth="7xl" isGrey>
-        <PageHeaders header="Upcoming Events" as="h2" size="md" />
+      <Section maxWidth="7xl" isGrey>
+        <PageHeader header="Upcoming Events" as="h2" size="md" />
         <Filter filters={FilterData.filters} callback={() => undefined} />
         <Column cols="2/3" maxWidth="7xl">
           <Column.Content>
@@ -72,7 +75,10 @@ export default function Page() {
                         eventAddress={event_address}
                       />
                       <Listing.Footer>
-                        <a href={link} className="cu-button cu-button--red">
+                        <a
+                          href={link}
+                          className="cu-button cu-button--red cu-button--small"
+                        >
                           Event details
                         </a>
                       </Listing.Footer>
@@ -86,14 +92,15 @@ export default function Page() {
               siblingCount={1}
               pageSize={5}
               callback={() => undefined}
+              callbackPage={() => undefined}
             />
           </Column.Content>
 
-          <Aside isSticky topSpace={110}>
+          <Aside isSticky topSpace={105}>
             <Calendar events={CalendarData} callback={() => undefined} />
           </Aside>
         </Column>
-      </Container>
+      </Section>
     </>
   )
 }
