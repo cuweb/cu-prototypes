@@ -37,12 +37,14 @@ export default function FullBanner({
   image,
   focalPointX = '50',
   focalPointY = '50',
-  opacity = 80,
+  opacity = 70,
   justify = 'start',
 }: FullBannerProps) {
   const FullBannerComponent = as
   const inlineStyle = getBackgroundImageStyles(image, focalPointX, focalPointY)
-  const opacityStyle = getOpacityStyle(opacity)
+  const opacityStyle = {
+    opacity: `0.${opacity}`,
+  }
   const contentAlign =
     justify === 'center' ? 'text-center [&>*]:justify-center' : ''
 
@@ -54,12 +56,32 @@ export default function FullBanner({
       <div className="mx-auto max-w-screen-2xl">
         <div className={`flex ${justifyContentClasses[justify]}`}>
           <div
+            className={`relative overflow-hidden w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg ${contentAlign}`}
+          >
+            <div className="relative px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8">
+              <PageHeader
+                header={title}
+                as="h1"
+                size="md"
+                noUnderline
+                isWhite
+              />
+              {children}
+            </div>
+
+            <div
+              className="absolute top-0 left-0 w-full h-full bg-black"
+              style={opacityStyle}
+            ></div>
+          </div>
+
+          {/* <div
             className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${contentAlign}`}
             style={opacityStyle}
           >
             <PageHeader header={title} as="h1" size="md" noUnderline isWhite />
             {children}
-          </div>
+          </div> */}
         </div>
       </div>
     </FullBannerComponent>
