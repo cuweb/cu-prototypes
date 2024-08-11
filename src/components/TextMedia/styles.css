@@ -1,7 +1,3 @@
-.cu-textmedia-aside img {
-  @apply w-full h-auto;
-}
-
 .cu-section > .cu-textmedia:first-child {
   @apply mb-6 md:mb-12;
 }
@@ -24,6 +20,40 @@
 .cu-textmedia-aside > *:last-child {
   @apply mb-0;
 }
+
+/* Aside with Images */
+
+.cu-textmedia-aside img {
+  @apply rounded-lg;
+}
+
+.cu-textmedia-img-border-white img {
+  @apply border-white rounded-md;
+}
+
+.cu-textmedia-img-border-grey img {
+  @apply border-cu-black-50;
+}
+
+.cu-textmedia-img-border-sm img {
+  @apply border-2;
+}
+
+.cu-textmedia-img-border-md img {
+  @apply border-4;
+}
+
+.cu-textmedia-img-border-lg img {
+  @apply border-[6px];
+}
+
+.cu-textmedia-img-border-xl img {
+  @apply border-8;
+}
+
+/* .cu-textmedia-aside img {
+  @apply w-full h-auto;
+} */
 
 /* 
 * Section and non-section spacing

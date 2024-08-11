@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ButtonGroup } from '@carletonuniversity/rds'
 import { TextMedia } from '@/components/TextMedia/TextMedia'
 import WideWave from '@/layouts/WideWave/WideWave'
+import Image from 'next/image'
 
 export default function RedWave() {
   return (
@@ -32,10 +33,14 @@ export default function RedWave() {
             </Link>
           </ButtonGroup>
         </TextMedia.Content>
-        <TextMedia.BgImage
-          imageUrl="https://picsum.photos/id/431/600/400"
-          border="lg"
-        />
+        <TextMedia.Aside align="center" border="lg" borderColor="white">
+          <Image
+            src="https://picsum.photos/id/431/300/200"
+            alt="Presentation only"
+            width="300"
+            height="200"
+          />
+        </TextMedia.Aside>
       </TextMedia>
     </WideWave>
   )

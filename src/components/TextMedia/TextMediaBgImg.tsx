@@ -3,22 +3,21 @@ import { borderWidthClasses } from '@/utils/optionClasses'
 
 type borderWidthKeys = keyof typeof borderWidthClasses
 
-export interface TextMediaBgImageProps {
+export interface TextMediaBgImgProps {
   imageUrl: string
-  contentWidth?: number
   imageZoom?: number
   focalPointX?: string
   focalPointY?: string
   border?: borderWidthKeys
 }
 
-export const TextMediaBgImage = ({
+export const TextMediaBgImg = ({
   imageUrl,
   imageZoom = 0,
   focalPointX = '50',
   focalPointY = '50',
   border = 'none',
-}: TextMediaBgImageProps) => {
+}: TextMediaBgImgProps) => {
   const inlineImageStyles = {
     backgroundImage: `url(${imageUrl})`,
     backgroundPosition: `${focalPointX}% ${focalPointY}%`,
@@ -27,10 +26,10 @@ export const TextMediaBgImage = ({
 
   return (
     <div
-      className={`cu-textmedia-aside flex-1 rounded-lg bg-no-repeat bg-cover border-solid border-white ${borderWidthClasses[border]}`}
+      className={`cu-textmedia-bgimg not-prose flex-1 rounded-lg bg-no-repeat bg-cover border-solid border-white ${borderWidthClasses[border]}`}
       style={inlineImageStyles}
     />
   )
 }
 
-TextMediaBgImage.displayName = 'TextMedia.BgImage'
+TextMediaBgImg.displayName = 'TextMedia.BgImage'

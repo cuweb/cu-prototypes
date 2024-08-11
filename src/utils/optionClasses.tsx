@@ -16,6 +16,24 @@ export const borderWidthClasses = {
   xl: 'border-8',
 }
 
+export const borderColorClasses = {
+  white: 'border-white',
+  grey: 'border-cu-black-50',
+}
+
+export const alignItemsClasses = {
+  start: 'items-start',
+  end: 'items-end',
+  center: 'items-center',
+  stretch: 'items-stretch',
+}
+
+export const marginAutoClasses = {
+  top: 'mb-auto',
+  bottom: 'mt-auto',
+  center: 'my-auto',
+}
+
 export const flexColClasses = {
   sm: 'sm:flex-col',
   md: 'md:flex-col',

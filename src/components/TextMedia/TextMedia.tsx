@@ -1,6 +1,7 @@
 import React from 'react'
 import { TextMediaContent } from './TextMediaContent'
-import { TextMediaBgImage } from './TextMediaBgImage'
+import { TextMediaBgImg } from './TextMediaBgImg'
+import { TextMediaAside } from './TextMediaAside'
 
 import { utils } from '@carletonuniversity/rds'
 const { gridGapClasses, maxWidthClasses, flexRowClasses } = utils
@@ -36,7 +37,8 @@ export const TextMediaWrapper = ({
 
 export const TextMedia = Object.assign(TextMediaWrapper, {
   Content: TextMediaContent,
-  BgImage: TextMediaBgImage,
+  BgImage: TextMediaBgImg,
+  Aside: TextMediaAside,
 })
 
 TextMediaWrapper.displayName = 'TextMedia'
