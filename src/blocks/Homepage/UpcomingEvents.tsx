@@ -5,7 +5,7 @@ import { PageHeader, Column, Card, Section } from '@carletonuniversity/rds'
 
 export default function UpcomingEvents() {
   return (
-    <Section maxWidth="7xl" isGrey>
+    <Section maxWidth="7xl">
       <PageHeader header="Feature Events" as="h2" size="md" />
       <Column cols="4" maxWidth="7xl">
         {EventData.slice(0, 4).map(

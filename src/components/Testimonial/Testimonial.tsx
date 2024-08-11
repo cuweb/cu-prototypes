@@ -18,7 +18,7 @@ export default function Testimonial({
   imageZoom = 0,
   focalPointX = '50',
   focalPointY = '50',
-  quoteType = 'border',
+  quoteType = 'quote',
 }: TestimonialProps) {
   const inlineImageStyles = {
     backgroundImage: `url(${imageUrl})`,
@@ -28,13 +28,13 @@ export default function Testimonial({
 
   return (
     <div className="md:py-8">
-      <div className="md:bg-cu-black-50 rounded-xl">
-        <div className="mx-auto flex max-w-7xl flex-col-reverse gap-5 md:gap-14 lg:gap-20 items-center md:px-8 md:flex-row md:items-stretch">
+      <div className="bg-cu-black-50 rounded-xl">
+        <div className="mx-auto flex max-w-7xl flex-col-reverse gap-5 md:gap-14 lg:gap-20 items-center md:pl-8 md:pr-12 md:flex-row md:items-stretch">
           <div
             className="w-full md:-my-8 hidden md:block md:flex-[0_0_30%] bg-cu-red rounded-lg"
             style={inlineImageStyles}
           />
-          <div className="w-full md:max-w-none md:flex-auto md:py-16 lg:py-20">
+          <div className="w-full md:max-w-none md:flex-auto py-6 px-6 md:px-0 md:py-16 lg:py-20">
             <Quote cite={name} graphic={quoteType}>
               {children}
             </Quote>
