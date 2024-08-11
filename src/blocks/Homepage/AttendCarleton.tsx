@@ -7,7 +7,7 @@ import {
   Section,
 } from '@carletonuniversity/rds'
 import ImageCover from '@/layouts/ImageCover/ImageCover'
-import { NewsData } from '@/data/NewsData'
+import { PromoData } from '@/data/PromoData'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,15 +17,15 @@ export default function AttendCarleton() {
       <Section as="div" maxWidth="7xl">
         <PageHeader as="h2" header="Attend Carleton" size="md" />
         <Column cols="4" maxWidth="7xl">
-          {NewsData.slice(0, 4).map(
-            ({ id, link, title, date, image, alt, badge }) => (
+          {PromoData.slice(0, 4).map(
+            ({ id, link, title, excerpt, image, alt }) => (
               <Card key={id} noHover>
-                <Card.ImageThumb>
+                <Card.Figure>
                   <Image src={image} alt={alt} width="200" height="133" />
-                </Card.ImageThumb>
-                <Card.Header title={title} date={date} />
+                </Card.Figure>
+                <Card.Header title={title} />
                 <Card.Body>
-                  <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst." />
+                  <Card.Excerpt text={excerpt} />
                 </Card.Body>
                 <Card.Footer>
                   <Link
