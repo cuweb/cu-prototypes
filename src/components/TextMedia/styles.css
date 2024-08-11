@@ -6,18 +6,22 @@
   @apply mb-0 md:mb-0;
 }
 
-.cu-textmedia-content,
-.cu-textmedia-aside {
+.cu-textmedia-content {
   @apply mb-0;
 }
 
+/* .cu-textmedia-content,
+.cu-textmedia-aside:not([class$='-auto']) {
+  @apply mb-0;
+} */
+
 .cu-textmedia-content > *:first-child,
-.cu-textmedia-aside > *:first-child {
+.cu-textmedia-aside:not([class$='-auto']) > *:first-child {
   @apply mt-0;
 }
 
 .cu-textmedia-content > *:last-child,
-.cu-textmedia-aside > *:last-child {
+.cu-textmedia-aside:not([class$='-auto']) > *:last-child {
   @apply mb-0;
 }
 

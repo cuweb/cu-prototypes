@@ -13,8 +13,6 @@ import RedWave from '@/blocks/Homepage/RedWave'
 import BlackWave from '@/blocks/Homepage/BlackWave'
 import AttendCarleton from '@/blocks/Homepage/AttendCarleton'
 import Testimonials from '@/blocks/Homepage/Testimonials'
-import { TextMedia } from '@/components/TextMedia/TextMedia'
-import { PageHeader } from '@carletonuniversity/rds'
 
 export default function Page() {
   return (

@@ -1,3 +1,8 @@
 .cu-widewaves .cu-textmedia .cu-textmedia-content h2 {
   @apply after:bg-white;
 }
+
+.cu-section + .cu-widewaves,
+.cu-widewaves + .cu-widewaves {
+  @apply mt-8 md:mt-10 lg:mt-20;
+}
