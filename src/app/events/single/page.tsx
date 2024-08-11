@@ -111,8 +111,8 @@ export default function Page() {
             ),
           )}
         </Column>
-        <ButtonGroup>
-          <Button title="View More Events" color="dark-grey" isCenter />
+        <ButtonGroup align="center">
+          <Button title="View More Events" color="dark-grey" />
         </ButtonGroup>
       </Section>
     </>

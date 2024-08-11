@@ -3,7 +3,6 @@ import {
   Card,
   Column,
   Embed,
-  Main,
   PageHeader,
   Section,
 } from '@carletonuniversity/rds'
@@ -20,7 +19,7 @@ export default function AttendCarleton() {
         <Column cols="4" maxWidth="7xl">
           {NewsData.slice(0, 4).map(
             ({ id, link, title, date, image, alt, badge }) => (
-              <Card noHover>
+              <Card key={id} noHover>
                 <Card.ImageThumb>
                   <Image src={image} alt={alt} width="200" height="133" />
                 </Card.ImageThumb>
