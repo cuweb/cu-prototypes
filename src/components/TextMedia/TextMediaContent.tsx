@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { PageHeader, utils } from '@carletonuniversity/rds'
 const { justifyContentClasses } = utils
 
@@ -11,6 +10,7 @@ export interface TextMediaContentProps {
   headerType?: 'h1' | 'h2'
   width?: number
   align?: justifyContentKeys
+  hasUnderline?: boolean
 }
 
 export const TextMediaContent = ({
@@ -19,6 +19,7 @@ export const TextMediaContent = ({
   headerType = 'h2',
   width = 60,
   align = 'start',
+  hasUnderline,
 }: TextMediaContentProps) => {
   const inlineContentStyles = {
     flex: `0 0 ${width}%`,
@@ -33,7 +34,7 @@ export const TextMediaContent = ({
         as={headerType}
         header={title}
         size="md"
-        noUnderline
+        noUnderline={hasUnderline ? false : true}
         isWhite
       />
       {children}

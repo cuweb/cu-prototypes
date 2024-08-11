@@ -1,7 +1,5 @@
 import React from 'react'
 import { utils } from '@carletonuniversity/rds'
-
-// Deconstruct propClass utils
 const { maxWidthClasses } = utils
 
 type maxWidthKeys = keyof typeof maxWidthClasses

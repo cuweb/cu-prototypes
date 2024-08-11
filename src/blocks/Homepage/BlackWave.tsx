@@ -8,20 +8,23 @@ export default function BlackWave() {
   return (
     <WideWave wave="black">
       <TextMedia maxWidth="7xl" reverse>
-        <TextMedia.Content title="Wave Component in Black" width={40}>
+        <TextMedia.Content
+          title="Black Wave with Text & Media"
+          width={40}
+          hasUnderline
+        >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-            ligula felis. Maecenas gravida venenatis condimentum. Nulla ex
-            massa, ultrices iaculis ante sit amet, faucibus commodo justo. Donec
-            lobortis, ex vel elementum facilisis, justo lorem molestie erat,
-            mollis imperdiet neque arcu sit amet lacus. Cras non lorem
-            pellentesque, facilisis risus nec, dictum augue. Duis tortor velit,
-            egestas quis erat at, iaculis aliquam ipsum.
+            The Wide Wave block has been created as a layout component and has
+            the ability to switch between red and black, as well as the
+            flexibility to use a variety of new or existing blocks inside of it,
+            such as a refactored Text & Media block from RDS, formerly known as
+            the Text & Image component.
           </p>
           <p>
-            Curabitur id nisi dapibus, dignissim metus id, vehicula erat. Donec
-            accumsan finibus nisl, sed maximus justo imperdiet non. Aenean sed
-            tellus feugiat, pharetra est vel, venenatis sapien.
+            This black wave example uses the previous background image media
+            column where the background image and uses a customized border. The
+            image will automatically fill the space proportionally based on the
+            height of the content column.
           </p>
           <ButtonGroup>
             <Link href="#" className="cu-button cu-button--red">

@@ -4,7 +4,7 @@ import { TextMediaBgImg } from './TextMediaBgImg'
 import { TextMediaAside } from './TextMediaAside'
 
 import { utils } from '@carletonuniversity/rds'
-const { gridGapClasses, maxWidthClasses, flexRowClasses } = utils
+const { gridGapClasses, maxWidthClasses } = utils
 
 type maxWidthKeys = keyof typeof maxWidthClasses
 type gridGapKeys = keyof typeof gridGapClasses

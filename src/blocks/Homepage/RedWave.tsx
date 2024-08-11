@@ -9,20 +9,31 @@ export default function RedWave() {
   return (
     <WideWave>
       <TextMedia maxWidth="7xl">
-        <TextMedia.Content title="Wave Component in Red" width={60}>
+        <TextMedia.Content
+          title="Red Wave with Text & Media"
+          width={60}
+          hasUnderline
+        >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-            ligula felis. Maecenas gravida venenatis condimentum. Nulla ex
-            massa, ultrices iaculis ante sit amet, faucibus commodo justo. Donec
-            lobortis, ex vel elementum facilisis, justo lorem molestie erat,
-            mollis imperdiet neque arcu sit amet lacus. Cras non lorem
-            pellentesque, facilisis risus nec, dictum augue. Duis tortor velit,
-            egestas quis erat at, iaculis aliquam ipsum.
+            The Wide Wave block has been created as a layout component and has
+            the ability to switch between red and black, as well as the
+            flexibility to use a variety of new or existing blocks inside of it,
+            such as a refactored Text & Media block from RDS, formerly known as
+            the Text & Image component.
           </p>
           <p>
-            Curabitur id nisi dapibus, dignissim metus id, vehicula erat. Donec
-            accumsan finibus nisl, sed maximus justo imperdiet non. Aenean sed
-            tellus feugiat, pharetra est vel, venenatis sapien.
+            The new Text & Media component used inside Wide Wave carries over
+            all the features of the original component, such as a customizable
+            content width while adding more flexibility in the accompanying
+            media column. There are currently two media column options, one is a
+            previously existing option, a background image that matches the
+            height of the content. A new option allows for embedding other forms
+            of media such as set width images or videos, with vertical aligment
+            options.
+          </p>
+          <p>
+            This red wave example uses the new embedded option with an image
+            that is vertically centered and uses a customized border.
           </p>
           <ButtonGroup>
             <Link href="#" className="cu-button cu-button--white">
@@ -35,10 +46,10 @@ export default function RedWave() {
         </TextMedia.Content>
         <TextMedia.Aside align="center" border="lg" borderColor="white">
           <Image
-            src="https://picsum.photos/id/431/300/200"
+            src="https://picsum.photos/id/431/600/460"
             alt="Presentation only"
-            width="300"
-            height="200"
+            width="600"
+            height="460"
           />
         </TextMedia.Aside>
       </TextMedia>

@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { PageHeader, utils } from '@carletonuniversity/rds'
 const { maxWidthClasses, justifyContentClasses } = utils
+
 type maxWidthKeys = keyof typeof maxWidthClasses
 type justifyContentKeys = keyof typeof justifyContentClasses
 

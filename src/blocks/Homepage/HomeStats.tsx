@@ -6,25 +6,16 @@ export default function HomeStats() {
     <Section as="div" isGrey>
       <Column cols="4" maxWidth="7xl">
         <Card leftBorder noHover>
-          <Card.Stats
-            desc="Scholarships and bursaries"
-            stat="$31.9 million +"
-          />
+          <Card.Stats desc="Scholarships & bursaries" stat="$85.4 million +" />
         </Card>
         <Card leftBorder noHover>
-          <Card.Stats
-            desc="Comprehensive universities"
-            stat="Top 5 in Canada"
-          />
+          <Card.Stats desc="Research Funding" stat="$116 million +" />
         </Card>
         <Card leftBorder noHover>
-          <Card.Stats desc="Programs offered" stat="Over 1,000" />
+          <Card.Stats desc="Undergraduate Students" stat="Over 25,000" />
         </Card>
         <Card leftBorder noHover>
-          <Card.Stats
-            desc="Scholarships and bursaries"
-            stat="$31.9 million +"
-          />
+          <Card.Stats desc="Graduate Students" stat="Over 5,000" />
         </Card>
       </Column>
     </Section>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { PageHeader, utils } from '@carletonuniversity/rds'
-
 const { justifyContentClasses } = utils
+
 type justifyContentKeys = keyof typeof justifyContentClasses
+
 const opacityValues = Array.from({ length: 21 }, (_, index) => 60 + index)
 
 export interface FullBannerProps {
@@ -24,10 +25,6 @@ const getBackgroundImageStyles = (
 ) => ({
   backgroundImage: `url(${image})`,
   backgroundPosition: `${focalPointX}% ${focalPointY}%`,
-})
-
-const getOpacityStyle = (opacity: number) => ({
-  opacity: `0.${opacity}`,
 })
 
 export default function FullBanner({
@@ -58,7 +55,7 @@ export default function FullBanner({
           <div
             className={`relative overflow-hidden w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg ${contentAlign}`}
           >
-            <div className="relative px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8">
+            <div className="relative z-10 px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8">
               <PageHeader
                 header={title}
                 as="h1"
@@ -74,14 +71,6 @@ export default function FullBanner({
               style={opacityStyle}
             ></div>
           </div>
-
-          {/* <div
-            className={`space-y-3 md:space-y-6 w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl md:rounded-lg px-4 md:px-8 pt-3 pb-5 md:pt-6 md:pb-8 bg-black ${contentAlign}`}
-            style={opacityStyle}
-          >
-            <PageHeader header={title} as="h1" size="md" noUnderline isWhite />
-            {children}
-          </div> */}
         </div>
       </div>
     </FullBannerComponent>

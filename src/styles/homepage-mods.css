@@ -1,3 +1,7 @@
+.cu-header {
+  @apply z-50;
+}
+
 .cu-nav__aside ul {
   @apply hidden;
 }

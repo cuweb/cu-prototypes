@@ -1,5 +1,6 @@
 import React from 'react'
-import { borderWidthClasses } from '@/utils/optionClasses'
+import { utils } from '@carletonuniversity/rds'
+const { borderWidthClasses } = utils
 
 type borderWidthKeys = keyof typeof borderWidthClasses
 

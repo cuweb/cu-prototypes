@@ -1,9 +1,6 @@
 import React from 'react'
-import {
-  marginAutoClasses,
-  borderWidthClasses,
-  borderColorClasses,
-} from '@/utils/optionClasses'
+import { utils } from '@carletonuniversity/rds'
+const { marginAutoClasses, borderWidthClasses, borderColorClasses } = utils
 
 type marginAutoKeys = keyof typeof marginAutoClasses
 type borderWidthKeys = keyof typeof borderWidthClasses
