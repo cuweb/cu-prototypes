@@ -32,7 +32,10 @@ export default function BlackWave() {
             </Link>
           </ButtonGroup>
         </TextMedia.Content>
-        <TextMedia.Aside>Img</TextMedia.Aside>
+        <TextMedia.BgImage
+          imageUrl="https://picsum.photos/id/516/600/400"
+          border="lg"
+        />
       </TextMedia>
     </WideWave>
   )

@@ -32,7 +32,10 @@ export default function RedWave() {
             </Link>
           </ButtonGroup>
         </TextMedia.Content>
-        <TextMedia.Aside>Img</TextMedia.Aside>
+        <TextMedia.BgImage
+          imageUrl="https://picsum.photos/id/431/600/400"
+          border="lg"
+        />
       </TextMedia>
     </WideWave>
   )

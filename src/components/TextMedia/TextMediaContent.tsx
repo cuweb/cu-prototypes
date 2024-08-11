@@ -26,7 +26,7 @@ export const TextMediaContent = ({
 
   return (
     <div
-      className={`flex-[0_0_100%] md:flex-1 cu-textmedia-content ${justifyContentClasses[align]}`}
+      className={`cu-textmedia-content ${justifyContentClasses[align]}`}
       style={inlineContentStyles}
     >
       <PageHeader
