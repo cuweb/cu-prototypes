@@ -31,10 +31,10 @@ export default function Testimonial({
       <div className="md:bg-cu-black-50 rounded-xl">
         <div className="mx-auto flex max-w-7xl flex-col-reverse gap-5 md:gap-14 lg:gap-20 items-center md:px-8 md:flex-row md:items-stretch">
           <div
-            className="w-full md:-my-8 hidden md:block md:flex-[0_0_30%] lg:flex-[0_0_35%] bg-cu-red rounded-lg"
+            className="w-full md:-my-8 hidden md:block md:flex-[0_0_30%] bg-cu-red rounded-lg"
             style={inlineImageStyles}
           />
-          <div className="w-full md:max-w-none md:flex-auto md:py-24">
+          <div className="w-full md:max-w-none md:flex-auto md:py-16 lg:py-20">
             <Quote cite={name} graphic={quoteType}>
               {children}
             </Quote>
