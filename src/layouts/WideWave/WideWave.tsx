@@ -3,11 +3,16 @@ import React from 'react'
 export interface WideWaveProps {
   children?: React.ReactNode
   wave?: 'red' | 'black'
+  hasRaven?: boolean
 }
 
-export default function WideWave({ children, wave = 'red' }: WideWaveProps) {
+export default function WideWave({
+  children,
+  wave = 'red',
+  hasRaven = false,
+}: WideWaveProps) {
   const waveClass =
-    wave === 'red' ? 'bg-cu-waves-red-hard-edge' : 'bg-cu-waves-black-hard-edge'
+    wave === 'red' ? 'bg-cu-waves-hard-edge-red' : 'bg-cu-waves-hard-edge-black'
   const waveBgPosition = {
     backgroundPosition: '-1px -1px',
   }
@@ -18,10 +23,17 @@ export default function WideWave({ children, wave = 'red' }: WideWaveProps) {
 
   return (
     <section
-      className={`cu-widewaves ${waveClass} ${waveBgColor} ${innerPadding} bg-[length:100.5%] bg-no-repeat cu-browsers-edge not-contained text-white pt-16 sm:pt-24 md:pt-28 lg:pt-40 xl:pt-44 2xl:pt-60 pb-8 md:pb-20`}
+      className={`relative cu-widewaves ${waveClass} ${waveBgColor} ${innerPadding} bg-[length:100.5%] bg-no-repeat cu-browsers-edge not-contained text-white pt-16 sm:pt-24 md:pt-28 lg:pt-40 xl:pt-44 2xl:pt-60 pb-8 md:pb-20`}
       style={waveBgPosition}
     >
-      {children}
+      {hasRaven && wave === 'black' ? (
+        <>
+          <div className="relative z-20">{children}</div>
+          <div className="bg-cu-ravens-logo-white opacity-10 bg-[length:400px] z-10 bg-[bottom_right] bg-no-repeat bottom-20 -right-44 w-full h-full absolute" />
+        </>
+      ) : (
+        <>{children}</>
+      )}
     </section>
   )
 }
