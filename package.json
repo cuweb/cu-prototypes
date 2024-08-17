@@ -20,7 +20,7 @@
     "@carletonuniversity/rds": "0.15.2",
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/node": "22.2.0",
+    "@types/node": "22.4.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "eslint": "8.57.0",
@@ -28,8 +28,8 @@
     "postcss": "8.4.41",
     "postcss-import": "16.1.0",
     "prettier": "3.3.3",
-    "rds-tailwind-theme": "0.6.9",
-    "tailwindcss": "3.4.9",
+    "rds-tailwind-theme": "0.7.3",
+    "tailwindcss": "3.4.10",
     "typescript": "5.5.4"
   }
 }

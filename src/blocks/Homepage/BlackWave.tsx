@@ -6,7 +6,7 @@ import { TextMedia } from '@/components/TextMedia/TextMedia'
 
 export default function BlackWave() {
   return (
-    <WideWave wave="black">
+    <WideWave wave="black" hasRaven>
       <TextMedia maxWidth="7xl" reverse>
         <TextMedia.Content
           title="Black Wave with Text & Media"

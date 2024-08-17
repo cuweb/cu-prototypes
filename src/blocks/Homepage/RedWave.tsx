@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function RedWave() {
   return (
-    <WideWave>
+    <WideWave hasRaven>
       <TextMedia maxWidth="7xl">
         <TextMedia.Content
           title="Red Wave with Text & Media"

@@ -27,7 +27,7 @@ export default function Testimonial({
   }
 
   return (
-    <div className="md:py-8">
+    <div className="cu-testimonial md:py-8">
       <div className="bg-cu-black-50 rounded-xl">
         <div className="mx-auto flex max-w-7xl flex-col-reverse gap-5 md:gap-14 lg:gap-20 items-center md:pl-8 md:pr-12 md:flex-row md:items-stretch">
           <div
