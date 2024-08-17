@@ -11,22 +11,16 @@ export interface ImageCoverProps {
   imageZoom?: number
   focalPointX?: string
   focalPointY?: string
-  wave?: 'red' | 'black'
 }
 
 export default function ImageCover({
   children,
   maxWidth = '7xl',
-  wave = 'red',
   imageUrl,
   imageZoom = 0,
   focalPointX = '50',
   focalPointY = '50',
 }: ImageCoverProps) {
-  const bottomWave =
-    wave === 'red'
-      ? 'border-b-[120px] border-b-cu-red'
-      : 'border-b-[120px] border-b-cu-black-900'
   const inlineImageStyles = {
     backgroundImage: `url(${imageUrl})`,
     backgroundPosition: `${focalPointX}% ${focalPointY}%`,
@@ -34,17 +28,19 @@ export default function ImageCover({
   }
 
   // Needs to be a class for consistency in RDS
-  const innerPadding = 'py-4 md:py-6 lg:py-12 px-6 md:px-8 lg:px-10'
+  const innerPadding =
+    'pt-4 md:pt-6 lg:pt-12 xl:pt-16 pb-24 md:pb-44 lg:pb-56 px-6 md:px-8 lg:px-10'
 
   return (
     <section
-      className={`cu-imagecover relative ${innerPadding} bg-cover bg-no-repeat cu-browsers-edge not-contained ${bottomWave}`}
+      className={`cu-imagecover relative ${innerPadding} bg-cover bg-no-repeat cu-browsers-edge not-contained`}
       style={inlineImageStyles}
     >
       <div className={`relative ${maxWidthClasses[maxWidth]} mx-auto z-30`}>
         {children}
       </div>
-      <div className="absolute top-0 left-0 w-full h-full bg-white/85 z-10"></div>
+
+      <div className="absolute z-10 top-0 left-0 w-full h-full bg-white/85 bg-cu-waves-repeating-bottom-red bg-[length:195px] md:bg-[length:319px] lg:bg-[length:402px] bg-repeat-x bg-bottom" />
     </section>
   )
 }
