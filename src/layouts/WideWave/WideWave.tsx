@@ -11,19 +11,26 @@ export default function WideWave({
   wave = 'red',
   hasRaven = false,
 }: WideWaveProps) {
-  const waveClass =
+  const waveBgClass =
     wave === 'red' ? 'bg-cu-waves-hard-edge-red' : 'bg-cu-waves-hard-edge-black'
+
   const waveBgPosition = {
     backgroundPosition: '-1px -1px',
   }
+
   const waveBgColor = wave === 'red' ? 'bg-cu-red' : 'bg-cu-black-900'
 
+  const topPadding =
+    wave === 'red'
+      ? 'pt-16 sm:pt-24 md:pt-28 lg:pt-36 xl:pt-40 2xl:pt-44'
+      : 'pt-20 sm:pt-24 md:pt-32 lg:pt-44 xl:pt-56 2xl:pt-60'
+
   // Needs to be a class for consistency in RDS
-  const innerPadding = 'px-8 md:px-10'
+  const edgePadding = 'px-8 md:px-10'
 
   return (
     <section
-      className={`relative cu-widewaves ${waveClass} ${waveBgColor} ${innerPadding} bg-[length:100.5%] bg-no-repeat cu-browsers-edge not-contained text-white pt-16 sm:pt-24 md:pt-28 lg:pt-40 xl:pt-44 2xl:pt-60 pb-8 md:pb-20`}
+      className={`relative cu-widewaves ${waveBgClass} ${waveBgColor} ${edgePadding} ${topPadding} pb-8 md:pb-20 bg-[length:100.5%] bg-no-repeat cu-browsers-edge not-contained text-white`}
       style={waveBgPosition}
     >
       {hasRaven && wave === 'black' ? (
