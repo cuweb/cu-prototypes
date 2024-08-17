@@ -1,0 +1,3 @@
+.cu-fullbanner .cu-pageheader h1 {
+  @apply text-lg sm:text-xl md:text-3xl lg:text-4xl;
+}
