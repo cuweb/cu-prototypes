@@ -9,34 +9,29 @@ export default function BlackWave() {
     <WideWave wave="black" hasRaven>
       <TextMedia maxWidth="7xl" reverse>
         <TextMedia.Content
-          title="Black Wave with Text & Media"
+          title="Ravens Basketball to Open at Home October 25"
           width={40}
           hasUnderline
         >
           <p>
-            The Wide Wave block has been created as a layout component and has
-            the ability to switch between red and black, as well as the
-            flexibility to use a variety of new or existing blocks inside of it,
-            such as a refactored Text & Media block from RDS, formerly known as
-            the Text & Image component.
-          </p>
-          <p>
-            This black wave example uses the previous background image media
-            column where the background image and uses a customized border. The
-            image will automatically fill the space proportionally based on the
-            height of the content column.
+            The Carleton Ravens basketball program will open the 2024 schedule
+            at home with a doubleheader against the Western Mustangs. The Ravens
+            will play 7 of their 11 home games before the holiday break, closing
+            out 2024 with a visit from the Gee-Gees on December 4. The 2024-25
+            schedule features a few notable dates including a Sunday evening
+            contest against York on November 10.
           </p>
           <ButtonGroup>
-            <Link href="#" className="cu-button cu-button--red">
-              Apply Now
-            </Link>
-            <Link href="#" className="cu-button cu-button--white">
-              More Information
+            <Link
+              href="https://goravens.ca/2024/06/ravens-basketball-to-open-at-home-october-25/"
+              className="cu-button cu-button--red"
+            >
+              Read more
             </Link>
           </ButtonGroup>
         </TextMedia.Content>
         <TextMedia.BgImage
-          imageUrl="https://picsum.photos/id/516/600/400"
+          imageUrl="/assets/homepage/wave-ravens-basketball.jpg"
           border="lg"
         />
       </TextMedia>

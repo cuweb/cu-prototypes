@@ -24,9 +24,9 @@ export default function AttendCarleton() {
                   <Image src={image} alt={alt} width="200" height="133" />
                 </Card.Figure>
                 <Card.Header title={title} />
-                <Card.Body>
+                {/* <Card.Body>
                   <Card.Excerpt text={excerpt} />
-                </Card.Body>
+                </Card.Body> */}
                 <Card.Footer>
                   <Link
                     href={link}

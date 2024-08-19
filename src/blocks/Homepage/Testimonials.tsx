@@ -7,7 +7,7 @@ export default function Testimonials() {
     <Section maxWidth="7xl">
       <Testimonial
         name="John Doe"
-        imageUrl="https://picsum.photos/id/342/600/460"
+        imageUrl="https://picsum.photos/id/342/600/400"
         focalPointX="60"
         focalPointY="100"
       >

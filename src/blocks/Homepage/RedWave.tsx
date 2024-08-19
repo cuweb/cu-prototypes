@@ -10,43 +10,31 @@ export default function RedWave() {
     <WideWave hasRaven>
       <TextMedia maxWidth="7xl">
         <TextMedia.Content
-          title="Red Wave with Text & Media"
-          width={60}
+          title="Detecting Alzheimer's and Parkinson's Early: Researchers Create Non-Invasive Tool That Uses Saliva"
+          width={50}
           hasUnderline
         >
           <p>
-            The Wide Wave block has been created as a layout component and has
-            the ability to switch between red and black, as well as the
-            flexibility to use a variety of new or existing blocks inside of it,
-            such as a refactored Text & Media block from RDS, formerly known as
-            the Text & Image component.
-          </p>
-          <p>
-            The new Text & Media component used inside Wide Wave carries over
-            all the features of the original component, such as a customizable
-            content width while adding more flexibility in the accompanying
-            media column. There are currently two media column options, one is a
-            previously existing option, a background image that matches the
-            height of the content. A new option allows for embedding other forms
-            of media such as set width images or videos, with vertical aligment
-            options.
-          </p>
-          <p>
-            This red wave example uses the new embedded option with an image
-            that is vertically centered and uses a customized border.
+            Alzheimer&apos;s and Parkinson&apos;s are devastating
+            neurodegenerative diseases, primarily seen in those over the age of
+            65 and collectively affecting nearly one million Canadians. Where
+            Parkinson&apos;s affects the part of the brain that controls
+            movement, Alzheimer&apos;s targets memory and cognition. Both result
+            in progressive cognitive and physical decline and eventually lead to
+            the inability to function independently.
           </p>
           <ButtonGroup>
-            <Link href="#" className="cu-button cu-button--white">
-              Apply Now
-            </Link>
-            <Link href="#" className="cu-button cu-button--black">
-              More Information
+            <Link
+              href="https://challenge.carleton.ca/parkinsons-alzheimers-early-detection/"
+              className="cu-button cu-button--white"
+            >
+              Read more
             </Link>
           </ButtonGroup>
         </TextMedia.Content>
         <TextMedia.Aside align="center" border="lg" borderColor="white">
           <Image
-            src="https://picsum.photos/id/431/600/460"
+            src="/assets/homepage/wave-elder-patient-care.jpg"
             alt="Presentation only"
             width="600"
             height="460"
