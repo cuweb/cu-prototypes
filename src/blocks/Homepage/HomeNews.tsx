@@ -16,7 +16,7 @@ export default function HomeNews() {
     <Section as="div" maxWidth="7xl">
       <Column cols="4" maxWidth="7xl">
         {NewsData.slice(0, 4).map(
-          ({ id, link, title, date, image, alt, badge }) => (
+          ({ id, link, title, date, image, alt, excerpt, badge }) => (
             <Card key={id}>
               <Card.Figure>
                 <BadgeGroup gap="2" isAbsolute top={10} left={10}>
@@ -26,7 +26,7 @@ export default function HomeNews() {
               </Card.Figure>
               <Card.Header title={title} date={date} />
               <Card.Body>
-                <Card.Excerpt text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst." />
+                <Card.Excerpt text={excerpt} />
               </Card.Body>
               <Card.Footer>
                 <Link
